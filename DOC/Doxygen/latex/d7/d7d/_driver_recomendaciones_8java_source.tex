@@ -1,0 +1,72 @@
+\hypertarget{_driver_recomendaciones_8java_source}{}\doxysection{Driver\+Recomendaciones.\+java}
+\label{_driver_recomendaciones_8java_source}\index{DriverRecomendaciones.java@{DriverRecomendaciones.java}}
+\mbox{\hyperlink{_driver_recomendaciones_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00001}00001 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceclases}{clases}}.\mbox{\hyperlink{classclases_1_1_items}{Items}};}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00002}00002 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceclases}{clases}}.\mbox{\hyperlink{classclases_1_1inout}{inout}};}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00003}00003 \textcolor{keyword}{import} \mbox{\hyperlink{namespacecontroladores}{controladores}}.\mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio}{CtrlDominio}};}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00004}00004 \textcolor{keyword}{import} \mbox{\hyperlink{namespacecontroladores}{controladores}}.\mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_preprocesar_datos}{CtrlDominioPreprocesarDatos}};}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00005}00005 \textcolor{keyword}{import} \mbox{\hyperlink{namespacecontroladores}{controladores}}.\mbox{\hyperlink{classcontroladores_1_1_ctrl_persistencia}{CtrlPersistencia}};}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00007}00007 \textcolor{keyword}{import} java.util.Vector;}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00016}\mbox{\hyperlink{class_driver_recomendaciones}{00016}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_driver_recomendaciones}{DriverRecomendaciones}} \{}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00017}\mbox{\hyperlink{class_driver_recomendaciones_a0b377a8d96f93d7b75aef0657e3ccd3f}{00017}}     \textcolor{keyword}{private} \textcolor{keyword}{static} \mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{class_driver_recomendaciones_a0b377a8d96f93d7b75aef0657e3ccd3f}{items}} = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_items}{Items}}();}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00019}\mbox{\hyperlink{class_driver_recomendaciones_a8de5e9d4c9bfad1422fd9f66f3c8508b}{00019}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_driver_recomendaciones_a8de5e9d4c9bfad1422fd9f66f3c8508b}{main}}(String args[]) \textcolor{keywordflow}{throws} Exception \{}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00020}00020         String eval;}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00021}00021         String recomAlg;}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00022}00022         \mbox{\hyperlink{classclases_1_1inout}{inout}} INOUT = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1inout}{inout}}();}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00024}00024         String command = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00025}00025         \textcolor{keywordflow}{while} (!command.equals(\textcolor{stringliteral}{"{}NO"{}})) \{}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00026}00026             INOUT.\mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}}(\textcolor{stringliteral}{"{}Introduce el id del usuario: "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00027}00027             \textcolor{keywordtype}{int} userId = INOUT.\mbox{\hyperlink{classclases_1_1inout_abfdd688a299edbc7e41f49087ef121d8}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00029}00029             INOUT.\mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}}(\textcolor{stringliteral}{"{}Introduce el número de ítems para recomendar: "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00030}00030             \textcolor{keywordtype}{int} size = INOUT.\mbox{\hyperlink{classclases_1_1inout_abfdd688a299edbc7e41f49087ef121d8}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00032}00032             INOUT.\mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}(\textcolor{stringliteral}{"{}De qué fuente de datos quieres leer los archivos? "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00033}00033             INOUT.\mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}(\textcolor{stringliteral}{"{}Opciones:"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00034}00034             \mbox{\hyperlink{classcontroladores_1_1_ctrl_persistencia}{CtrlPersistencia}}.\mbox{\hyperlink{classcontroladores_1_1_ctrl_persistencia_a64d3e6ee7f53d3f11b2aad32c9cc3259}{mostrarDirectorios}}();}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00036}00036             INOUT.\mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}}(\textcolor{stringliteral}{"{}Introduce tu selección completa (por ejemplo: data.peliculas/250) "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00037}00037             String path = INOUT.\mbox{\hyperlink{classclases_1_1inout_a70039326dbdb0e51ef526e97464599d6}{readword}}();}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00038}00038             path = path.toLowerCase() + \textcolor{stringliteral}{"{}/"{}};}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00039}00039             INOUT.\mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}();}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00041}00041             \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio}{CtrlDominio}}.\mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a3886afc4bdb9c12c181250d3025bad0d}{cargarDatos}}(\textcolor{stringliteral}{"{}DATA/csv/"{}} + path);}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00043}00043             \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio}{CtrlDominio}}.\mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_aac2822f1b1e12d3a34c2da6227ad7fbe}{enterNewUser}}(userId, \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00045}00045             INOUT.\mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}(\textcolor{stringliteral}{"{}Algoritmos: "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00046}00046             INOUT.\mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}(\textcolor{stringliteral}{"{} -\/ CF: Collaborative Filtering [K-\/Means + Slope One]"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00047}00047             INOUT.\mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}(\textcolor{stringliteral}{"{} -\/ CB: Content Based Filtering [K Nearest Neighbors]"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00048}00048             INOUT.\mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}(\textcolor{stringliteral}{"{} -\/ HYBRID: Collaborative \& Content Based Filtering"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00049}00049             \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00050}00050                 INOUT.\mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}();}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00051}00051                 INOUT.\mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}} (\textcolor{stringliteral}{"{}Escoge algoritmo de recomendación: "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00052}00052                 recomAlg = INOUT.\mbox{\hyperlink{classclases_1_1inout_a70039326dbdb0e51ef526e97464599d6}{readword}}();}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00053}00053                 recomAlg = recomAlg.trim().toUpperCase();}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00054}00054             \} \textcolor{keywordflow}{while} (!recomAlg.equals(\textcolor{stringliteral}{"{}CF"{}}) \&\& !recomAlg.equals(\textcolor{stringliteral}{"{}CB"{}}));}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00056}00056             \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00057}00057                 INOUT.\mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}} (\textcolor{stringliteral}{"{}Quiere evaluar la recomendación? (SI/NO): "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00058}00058                 eval = INOUT.\mbox{\hyperlink{classclases_1_1inout_a70039326dbdb0e51ef526e97464599d6}{readword}}();}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00059}00059                 eval = eval.trim().toUpperCase();}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00060}00060             \} \textcolor{keywordflow}{while} (!eval.equals(\textcolor{stringliteral}{"{}SI"{}}) \&\& !eval.equals(\textcolor{stringliteral}{"{}NO"{}}));}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00062}00062             INOUT.\mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}();}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00064}00064             \textcolor{keywordflow}{if} (eval.equals(\textcolor{stringliteral}{"{}SI"{}})) \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_preprocesar_datos}{CtrlDominioPreprocesarDatos}}.\mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_preprocesar_datos_a661e73341200f704e7ae03ce8b4beff8}{preprocesarRatingsUknown}}(\textcolor{stringliteral}{"{}DATA/csv/"{}} + path + \textcolor{stringliteral}{"{}/ratings.test.unknown.csv"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00065}00065             Vector v = \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio}{CtrlDominio}}.\mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a2eb394a6ef40977f54ac31fa794f9ab7}{getPredicciones}}(recomAlg.toLowerCase(), \textcolor{stringliteral}{"{}"{}}, size);}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00066}00066             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < v.size(); i++) INOUT.\mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}((i+1) + \textcolor{stringliteral}{"{}-\/ "{}} + ((Vector) v.get(i)).get(0).toString());}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00068}00068             INOUT.\mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}}(\textcolor{stringliteral}{"{}¿Desea obtener una nueva recomendación? (SI/NO) "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00069}00069             command = INOUT.\mbox{\hyperlink{classclases_1_1inout_a70039326dbdb0e51ef526e97464599d6}{readword}}();}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00070}00070             INOUT.\mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}();}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00071}00071         \}}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00072}00072     \}}
+\DoxyCodeLine{\Hypertarget{_driver_recomendaciones_8java_source_l00073}00073 \}}
+
+\end{DoxyCode}

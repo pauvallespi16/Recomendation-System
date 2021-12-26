@@ -1,0 +1,197 @@
+\hypertarget{classcontroladores_1_1_ctrl_persistencia}{}\doxysection{Referencia de la Clase controladores.\+Ctrl\+Persistencia}
+\label{classcontroladores_1_1_ctrl_persistencia}\index{controladores.CtrlPersistencia@{controladores.CtrlPersistencia}}
+
+
+Clase utilizada como controlador de la capa de persistencia.  
+
+
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static Array\+List$<$ String $>$ \mbox{\hyperlink{classcontroladores_1_1_ctrl_persistencia_a6f12d7e9e38c00c8bd8fd2425500e949}{leer\+Fichero}} (String path)  throws Exception 
+\begin{DoxyCompactList}\small\item\em Función utilitzada para leer un fichero. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_persistencia_a599cf98a2ff8a7c725ea008f727942d4}{guardar\+Fichero}} (String datos, String path)  throws Exception 
+\begin{DoxyCompactList}\small\item\em Función utilitzada para guardar un fichero. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_persistencia_a2fd8662d5f72941e5195dc95c6315f65}{borrar\+Fichero}} (String path)  throws Exception 
+\begin{DoxyCompactList}\small\item\em Función utilitzada para borrar archivos. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_persistencia_a3d7337e9449433c9f9fa142d396b212c}{borrar\+Carpeta}} (String path)
+\begin{DoxyCompactList}\small\item\em Función utilitzada para borrar carpetas. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_persistencia_a64d3e6ee7f53d3f11b2aad32c9cc3259}{mostrar\+Directorios}} ()  throws Exception 
+\begin{DoxyCompactList}\small\item\em Función utilitzada para mostrar los directorios. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_persistencia_a5c69ede276d8032977d24a8a4a672772}{escribir\+Pantalla}} (String valor)
+\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_persistencia_a55ed071396961e86e594f9cdc4b3055d}{comprobar\+Carpeta}} (String path)  throws Exception 
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase utilizada como controlador de la capa de persistencia. 
+
+Esta clase lee los datos que nos llegan en los ficheros .csv (items, ratings, ratings\+Known, ratings\+Unkown, types). Trata estos ficheros para poder usar los datos que nos llegan en los algoritmos de recomendación.
+
+\begin{DoxyAuthor}{Autor}
+Pau Vallespí Monclús 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+Diciembre 2021 
+\end{DoxyDate}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_persistencia_8java_source_l00023}{23}} del archivo \mbox{\hyperlink{_ctrl_persistencia_8java_source}{Ctrl\+Persistencia.\+java}}.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_persistencia_a3d7337e9449433c9f9fa142d396b212c}\label{classcontroladores_1_1_ctrl_persistencia_a3d7337e9449433c9f9fa142d396b212c}} 
+\index{controladores.CtrlPersistencia@{controladores.CtrlPersistencia}!borrarCarpeta@{borrarCarpeta}}
+\index{borrarCarpeta@{borrarCarpeta}!controladores.CtrlPersistencia@{controladores.CtrlPersistencia}}
+\doxysubsubsection{\texorpdfstring{borrarCarpeta()}{borrarCarpeta()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Persistencia.\+borrar\+Carpeta (\begin{DoxyParamCaption}\item[{String}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilitzada para borrar carpetas. 
+
+\begin{DoxyPrecond}{Precondición}
+path válido 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha borrado los archivos de la carpeta 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em path} & Path del archivo que queremos borrar \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_persistencia_8java_source_l00057}{57}} del archivo \mbox{\hyperlink{_ctrl_persistencia_8java_source}{Ctrl\+Persistencia.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_persistencia_a2fd8662d5f72941e5195dc95c6315f65}\label{classcontroladores_1_1_ctrl_persistencia_a2fd8662d5f72941e5195dc95c6315f65}} 
+\index{controladores.CtrlPersistencia@{controladores.CtrlPersistencia}!borrarFichero@{borrarFichero}}
+\index{borrarFichero@{borrarFichero}!controladores.CtrlPersistencia@{controladores.CtrlPersistencia}}
+\doxysubsubsection{\texorpdfstring{borrarFichero()}{borrarFichero()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Persistencia.\+borrar\+Fichero (\begin{DoxyParamCaption}\item[{String}]{path }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilitzada para borrar archivos. 
+
+\begin{DoxyPrecond}{Precondición}
+path válido 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha borrado el archivo 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em path} & Path del archivo que queremos borrar \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_persistencia_8java_source_l00049}{49}} del archivo \mbox{\hyperlink{_ctrl_persistencia_8java_source}{Ctrl\+Persistencia.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_persistencia_a55ed071396961e86e594f9cdc4b3055d}\label{classcontroladores_1_1_ctrl_persistencia_a55ed071396961e86e594f9cdc4b3055d}} 
+\index{controladores.CtrlPersistencia@{controladores.CtrlPersistencia}!comprobarCarpeta@{comprobarCarpeta}}
+\index{comprobarCarpeta@{comprobarCarpeta}!controladores.CtrlPersistencia@{controladores.CtrlPersistencia}}
+\doxysubsubsection{\texorpdfstring{comprobarCarpeta()}{comprobarCarpeta()}}
+{\footnotesize\ttfamily static void controladores.\+Ctrl\+Persistencia.\+comprobar\+Carpeta (\begin{DoxyParamCaption}\item[{String}]{path }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_persistencia_8java_source_l00068}{68}} del archivo \mbox{\hyperlink{_ctrl_persistencia_8java_source}{Ctrl\+Persistencia.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_persistencia_a5c69ede276d8032977d24a8a4a672772}\label{classcontroladores_1_1_ctrl_persistencia_a5c69ede276d8032977d24a8a4a672772}} 
+\index{controladores.CtrlPersistencia@{controladores.CtrlPersistencia}!escribirPantalla@{escribirPantalla}}
+\index{escribirPantalla@{escribirPantalla}!controladores.CtrlPersistencia@{controladores.CtrlPersistencia}}
+\doxysubsubsection{\texorpdfstring{escribirPantalla()}{escribirPantalla()}}
+{\footnotesize\ttfamily static void controladores.\+Ctrl\+Persistencia.\+escribir\+Pantalla (\begin{DoxyParamCaption}\item[{String}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_persistencia_8java_source_l00066}{66}} del archivo \mbox{\hyperlink{_ctrl_persistencia_8java_source}{Ctrl\+Persistencia.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_persistencia_a599cf98a2ff8a7c725ea008f727942d4}\label{classcontroladores_1_1_ctrl_persistencia_a599cf98a2ff8a7c725ea008f727942d4}} 
+\index{controladores.CtrlPersistencia@{controladores.CtrlPersistencia}!guardarFichero@{guardarFichero}}
+\index{guardarFichero@{guardarFichero}!controladores.CtrlPersistencia@{controladores.CtrlPersistencia}}
+\doxysubsubsection{\texorpdfstring{guardarFichero()}{guardarFichero()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Persistencia.\+guardar\+Fichero (\begin{DoxyParamCaption}\item[{String}]{datos,  }\item[{String}]{path }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilitzada para guardar un fichero. 
+
+\begin{DoxyPrecond}{Precondición}
+path válido 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto un array list que contiene los datos del fichero 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em datos} & Representa los datos que queremos guardar \\
+\hline
+{\em path} & Representa el path donde queremos guardar los datos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve los datos en formato Array\+List$<$\+String$>$ 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_persistencia_8java_source_l00041}{41}} del archivo \mbox{\hyperlink{_ctrl_persistencia_8java_source}{Ctrl\+Persistencia.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_persistencia_a6f12d7e9e38c00c8bd8fd2425500e949}\label{classcontroladores_1_1_ctrl_persistencia_a6f12d7e9e38c00c8bd8fd2425500e949}} 
+\index{controladores.CtrlPersistencia@{controladores.CtrlPersistencia}!leerFichero@{leerFichero}}
+\index{leerFichero@{leerFichero}!controladores.CtrlPersistencia@{controladores.CtrlPersistencia}}
+\doxysubsubsection{\texorpdfstring{leerFichero()}{leerFichero()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Persistencia.\+leer\+Fichero (\begin{DoxyParamCaption}\item[{String}]{path }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilitzada para leer un fichero. 
+
+\begin{DoxyPrecond}{Precondición}
+path válido 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto un array list que contiene los datos del fichero 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em path} & Path del cuál se lee \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve los datos en formato Array\+List$<$\+String$>$ 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_persistencia_8java_source_l00031}{31}} del archivo \mbox{\hyperlink{_ctrl_persistencia_8java_source}{Ctrl\+Persistencia.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_persistencia_a64d3e6ee7f53d3f11b2aad32c9cc3259}\label{classcontroladores_1_1_ctrl_persistencia_a64d3e6ee7f53d3f11b2aad32c9cc3259}} 
+\index{controladores.CtrlPersistencia@{controladores.CtrlPersistencia}!mostrarDirectorios@{mostrarDirectorios}}
+\index{mostrarDirectorios@{mostrarDirectorios}!controladores.CtrlPersistencia@{controladores.CtrlPersistencia}}
+\doxysubsubsection{\texorpdfstring{mostrarDirectorios()}{mostrarDirectorios()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Persistencia.\+mostrar\+Directorios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilitzada para mostrar los directorios. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se escriben por pantalla los directorios y sus subdirectorios 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_persistencia_8java_source_l00064}{64}} del archivo \mbox{\hyperlink{_ctrl_persistencia_8java_source}{Ctrl\+Persistencia.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_ctrl_persistencia_8java}{Ctrl\+Persistencia.\+java}}\end{DoxyCompactItemize}

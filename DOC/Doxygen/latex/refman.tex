@@ -1,0 +1,340 @@
+  % Handle batch mode
+  % to overcome problems with too many open files
+  \let\mypdfximage\pdfximage\def\pdfximage{\immediate\mypdfximage}
+  % Set document class depending on configuration
+  \documentclass[twoside]{book}
+  %% moved from doxygen.sty due to workaround for LaTex 2019 version and unmaintained tabu package
+  \usepackage{ifthen}
+  \ifx\requestedLaTeXdate\undefined
+    \usepackage{array}
+  \else
+    \usepackage{array}[=2016-10-06]
+  \fi
+  %%
+  % Packages required by doxygen
+  \usepackage{fixltx2e} % for \textsubscript
+  \usepackage{doxygen}
+  \usepackage{graphicx}
+  \usepackage[utf8]{inputenc}
+  \usepackage{makeidx}
+  \PassOptionsToPackage{warn}{textcomp}
+  \usepackage{textcomp}
+  \usepackage[nointegrals]{wasysym}
+  \usepackage{ifxetex}
+  % NLS support packages
+  \usepackage[spanish]{babel}
+  % Define default fonts
+  % Font selection
+  \usepackage[T1]{fontenc}
+  % set main and monospaced font
+  \usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\renewcommand{\familydefault}{\sfdefault}
+  \usepackage{sectsty}
+  \allsectionsfont{%
+    \fontseries{bc}\selectfont%
+    \color{darkgray}%
+  }
+  \renewcommand{\DoxyLabelFont}{%
+    \fontseries{bc}\selectfont%
+    \color{darkgray}%
+  }
+  \newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+   % Arguments of doxygenemoji:
+   % 1) ':<text>:' form of the emoji, already LaTeX-escaped
+   % 2) file with the name of the emoji without the .png extension
+   % in case image exist use this otherwise use the ':<text>:' form
+   \newcommand{\doxygenemoji}[2]{%
+     \IfFileExists{./#2.png}{\raisebox{-0.1em}{\includegraphics[height=0.9em]{./#2.png}}}{#1}%
+   }
+  % Page & text layout
+  \usepackage{geometry}
+  \geometry{%
+    a4paper,%
+    top=2.5cm,%
+    bottom=2.5cm,%
+    left=2.5cm,%
+    right=2.5cm%
+  }
+  % Allow a bit of overflow to go unnoticed by other means
+  \tolerance=750
+  \hfuzz=15pt
+  \hbadness=750
+  \setlength{\emergencystretch}{15pt}
+  \setlength{\parindent}{0cm}
+  \newcommand{\doxynormalparskip}{\setlength{\parskip}{3ex plus 2ex minus 2ex}}
+  \newcommand{\doxytocparskip}{\setlength{\parskip}{1ex plus 0ex minus 0ex}}
+  \doxynormalparskip
+  % Redefine paragraph/subparagraph environments, using sectsty fonts
+  \makeatletter
+  \renewcommand{\paragraph}{%
+    \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+      \normalfont\normalsize\bfseries\SS@parafont%
+    }%
+  }
+  \renewcommand{\subparagraph}{%
+    \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+      \normalfont\normalsize\bfseries\SS@subparafont%
+    }%
+  }
+  \makeatother
+  \makeatletter
+  \newcommand\hrulefilll{\leavevmode\leaders\hrule\hskip 0pt plus 1filll\kern\z@}
+  \makeatother
+  % Headers & footers
+  \usepackage{fancyhdr}
+  \pagestyle{fancyplain}
+  \renewcommand{\footrulewidth}{0.4pt}
+  \fancypagestyle{fancyplain}{
+    \fancyhf{}
+    \fancyhead[LE, RO]{\bfseries\thepage}
+    \fancyhead[LO]{\bfseries\rightmark}
+    \fancyhead[RE]{\bfseries\leftmark}
+    \fancyfoot[LO, RE]{\bfseries\scriptsize Generado por Doxygen }
+  }
+  \fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[LO, RE]{\bfseries\scriptsize Generado por Doxygen }
+    \renewcommand{\headrulewidth}{0pt}
+  }
+  \pagestyle{fancyplain}
+  \renewcommand{\chaptermark}[1]{%
+    \markboth{#1}{}%
+  }
+  \renewcommand{\sectionmark}[1]{%
+    \markright{\thesection\ #1}%
+  }
+  % ToC, LoF, LoT, bibliography, and index
+  % Indices & bibliography
+  \usepackage{natbib}
+  \usepackage[titles]{tocloft}
+  \setcounter{tocdepth}{3}
+  \setcounter{secnumdepth}{5}
+  % creating indexes
+  \makeindex
+  \usepackage{newunicodechar}
+  \newunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \newunicodechar{²}{${}^{2}$}% Superscript two
+  \newunicodechar{³}{${}^{3}$}% Superscript three
+  % Hyperlinks
+    % Hyperlinks (required, but should be loaded last)
+    \ifpdf
+      \usepackage[pdftex,pagebackref=true]{hyperref}
+    \else
+      \ifxetex
+        \usepackage[pagebackref=true]{hyperref}
+      \else
+        \usepackage[ps2pdf,pagebackref=true]{hyperref}
+      \fi
+    \fi
+    \hypersetup{%
+      colorlinks=true,%
+      linkcolor=blue,%
+      citecolor=blue,%
+      unicode%
+    }
+  % Custom commands used by the header
+  % Custom commands
+  \newcommand{\clearemptydoublepage}{%
+    \newpage{\pagestyle{empty}\cleardoublepage}%
+  }
+  % caption style definition
+  \usepackage{caption}
+  \captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+  % in page table of contents
+  \usepackage{etoc}
+  \etocsettocstyle{\doxytocparskip}{\doxynormalparskip}
+  % prevent numbers overlap the titles in toc
+  \renewcommand{\numberline}[1]{#1~}
+% End of preamble, now comes the document contents
+%===== C O N T E N T S =====
+\begin{document}
+  \raggedbottom
+  % Titlepage & ToC
+    % To avoid duplicate page anchors due to reuse of same numbers for
+    % the index (be it as roman numbers)
+    \hypersetup{pageanchor=false,
+                bookmarksnumbered=true,
+                pdfencoding=unicode
+               }
+  \pagenumbering{alph}
+  \begin{titlepage}
+  \vspace*{7cm}
+  \begin{center}%
+  {\Large PROP subgrup-\/prop2-\/1}\\
+  \vspace*{1cm}
+  {\large Generado por Doxygen 1.9.2}\\
+  \end{center}
+  \end{titlepage}
+  \clearemptydoublepage
+  \pagenumbering{roman}
+  \tableofcontents
+  \clearemptydoublepage
+  \pagenumbering{arabic}
+  % re-enable anchors again
+  \hypersetup{pageanchor=true}
+%--- Begin generated contents ---
+\chapter{Indice de namespaces}
+\input{namespaces}
+\chapter{Indice jerárquico}
+\input{hierarchy}
+\chapter{Índice de clases}
+\input{annotated}
+\chapter{Indice de archivos}
+\input{files}
+\chapter{Documentación de namespaces}
+\input{d8/ddb/namespaceclases}
+\input{db/d23/namespacecontroladores}
+\input{d5/d44/namespacepersistencia}
+\input{d1/ddb/namespacepresentacion}
+\chapter{Documentación de las clases}
+\input{df/ddc/classcontroladores_1_1_algoritmos}
+\input{d5/d52/classclases_1_1_atributo}
+\input{d4/d1c/classclases_1_1_atributo_boolean}
+\input{df/de0/classclases_1_1_atributo_categorico}
+\input{d0/d5b/classclases_1_1_atributo_categorico_multiple}
+\input{de/d5e/classclases_1_1_atributo_fecha}
+\input{d2/def/classclases_1_1_atributo_numerico}
+\input{dd/ded/classclases_1_1_atributo_texto}
+\input{dd/dcd/classpresentacion_1_1añdir_item}
+\input{d4/da2/classpresentacion_1_1cargar_datos}
+\input{d4/dd8/classclases_1_1_centroide}
+\input{d5/df5/classcontroladores_1_1_ctrl_dominio}
+\input{d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos}
+\input{de/d05/classcontroladores_1_1_ctrl_dominio_preprocesar_datos}
+\input{d5/d41/classcontroladores_1_1_ctrl_persistencia}
+\input{d1/d34/classpresentacion_1_1_ctrl_presentacion}
+\input{dc/d2d/class_driver_k_means}
+\input{d0/dd9/class_driver_nearest_neighbors}
+\input{d4/d05/class_driver_recomendaciones}
+\input{d3/dd4/class_driver_slope_one}
+\input{df/dcf/classpersistencia_1_1_escritura}
+\input{d8/d3a/classpersistencia_1_1_gestion}
+\input{d3/dd8/class_guardado}
+\input{d7/db5/classpresentacion_1_1historial_recomendaciones}
+\input{d7/da7/classclases_1_1inout}
+\input{d8/d01/classclases_1_1_item}
+\input{d2/d44/classclases_1_1_items}
+\input{d6/de9/classcontroladores_1_1_k_means}
+\input{df/d68/class_k_means_test}
+\input{dd/d97/classpersistencia_1_1_lectura}
+\input{d8/d88/classpresentacion_1_1_main}
+\input{d9/df8/classpresentacion_1_1_main_terminal}
+\input{d9/d93/classcontroladores_1_1_nearest_neighbors}
+\input{d7/dd9/class_nearest_neighbors_test}
+\input{d0/d77/classclases_1_1_parser}
+\input{d9/d63/class_parser_test}
+\input{d1/d14/enumclases_1_1_parser_1_1_path}
+\input{dc/d0e/class_preproceso}
+\input{da/d84/classclases_1_1_recomendacion}
+\input{d8/d3c/classclases_1_1_recomendaciones}
+\input{d3/dc4/class_slope}
+\input{da/d5c/classcontroladores_1_1_slope_one}
+\input{d0/d0d/class_slope_one_test}
+\input{df/db9/classclases_1_1_usuario}
+\input{dc/d01/classpresentacion_1_1usuario_main}
+\input{d4/db9/classclases_1_1_usuarios}
+\input{de/d8f/classpresentacion_1_1vista_items}
+\input{dd/d77/classpresentacion_1_1vista_principal}
+\input{d1/df8/classpresentacion_1_1vista_recomendaciones}
+\chapter{Documentación de archivos}
+\input{dd/d67/_atributo_8java}
+\input{dd/d67/_atributo_8java_source}
+\input{dd/d31/_atributo_boolean_8java}
+\input{dd/d31/_atributo_boolean_8java_source}
+\input{da/ddf/_atributo_categorico_8java}
+\input{da/ddf/_atributo_categorico_8java_source}
+\input{df/d6f/_atributo_categorico_multiple_8java}
+\input{df/d6f/_atributo_categorico_multiple_8java_source}
+\input{d7/dea/_atributo_fecha_8java}
+\input{d7/dea/_atributo_fecha_8java_source}
+\input{d8/dc9/_atributo_numerico_8java}
+\input{d8/dc9/_atributo_numerico_8java_source}
+\input{d6/d14/_atributo_texto_8java}
+\input{d6/d14/_atributo_texto_8java_source}
+\input{d8/dcf/_centroide_8java}
+\input{d8/dcf/_centroide_8java_source}
+\input{d7/dba/_item_8java}
+\input{d7/dba/_item_8java_source}
+\input{df/d61/_items_8java}
+\input{df/d61/_items_8java_source}
+\input{d2/de6/_parser_8java}
+\input{d2/de6/_parser_8java_source}
+\input{d5/dd5/_recomendacion_8java}
+\input{d5/dd5/_recomendacion_8java_source}
+\input{d0/d24/_recomendaciones_8java}
+\input{d0/d24/_recomendaciones_8java_source}
+\input{dc/de6/_usuario_8java}
+\input{dc/de6/_usuario_8java_source}
+\input{d6/db7/_usuarios_8java}
+\input{d6/db7/_usuarios_8java_source}
+\input{df/d33/_algoritmos_8java}
+\input{df/d33/_algoritmos_8java_source}
+\input{d7/db1/_ctrl_dominio_8java}
+\input{d7/db1/_ctrl_dominio_8java_source}
+\input{dc/d20/_ctrl_dominio_cargar_datos_8java}
+\input{dc/d20/_ctrl_dominio_cargar_datos_8java_source}
+\input{de/d00/_ctrl_dominio_preprocesar_datos_8java}
+\input{de/d00/_ctrl_dominio_preprocesar_datos_8java_source}
+\input{da/d42/_ctrl_persistencia_8java}
+\input{da/d42/_ctrl_persistencia_8java_source}
+\input{d6/d26/_driver_k_means_8java}
+\input{d6/d26/_driver_k_means_8java_source}
+\input{d3/dc3/_driver_nearest_neighbors_8java}
+\input{d3/dc3/_driver_nearest_neighbors_8java_source}
+\input{d7/d7d/_driver_recomendaciones_8java}
+\input{d7/d7d/_driver_recomendaciones_8java_source}
+\input{db/d81/_driver_slope_one_8java}
+\input{db/d81/_driver_slope_one_8java_source}
+\input{d6/d8f/_k_means_8java}
+\input{d6/d8f/_k_means_8java_source}
+\input{d2/d56/_nearest_neighbors_8java}
+\input{d2/d56/_nearest_neighbors_8java_source}
+\input{d3/de8/_slope_one_8java}
+\input{d3/de8/_slope_one_8java_source}
+\input{dc/dec/_k_means_test_8java}
+\input{dc/dec/_k_means_test_8java_source}
+\input{d2/dc2/_nearest_neighbors_test_8java}
+\input{d2/dc2/_nearest_neighbors_test_8java_source}
+\input{d1/dc1/_parser_test_8java}
+\input{d1/dc1/_parser_test_8java_source}
+\input{db/d36/_slope_one_test_8java}
+\input{db/d36/_slope_one_test_8java_source}
+\input{d3/d00/_escritura_8java}
+\input{d3/d00/_escritura_8java_source}
+\input{db/d6f/_gestion_8java}
+\input{db/d6f/_gestion_8java_source}
+\input{de/dca/_lectura_8java}
+\input{de/dca/_lectura_8java_source}
+\input{d2/d87/añdir_item_8java}
+\input{d2/d87/añdir_item_8java_source}
+\input{d6/d21/cargar_datos_8java}
+\input{d6/d21/cargar_datos_8java_source}
+\input{dd/d3a/_ctrl_presentacion_8java}
+\input{dd/d3a/_ctrl_presentacion_8java_source}
+\input{d9/d54/historial_recomendaciones_8java}
+\input{d9/d54/historial_recomendaciones_8java_source}
+\input{d0/da5/_main_8java}
+\input{d0/da5/_main_8java_source}
+\input{d6/dea/_main_terminal_8java}
+\input{d6/dea/_main_terminal_8java_source}
+\input{db/dac/usuario_main_8java}
+\input{db/dac/usuario_main_8java_source}
+\input{d4/d69/vista_items_8java}
+\input{d4/d69/vista_items_8java_source}
+\input{d0/dfc/vista_principal_8java}
+\input{d0/dfc/vista_principal_8java_source}
+\input{d3/de1/vista_recomendaciones_8java}
+\input{d3/de1/vista_recomendaciones_8java_source}
+\input{dd/d3e/inout_8java}
+\input{dd/d3e/inout_8java_source}
+%--- End generated contents ---
+% Index
+  \backmatter
+  \newpage
+  \phantomsection
+  \clearemptydoublepage
+  \addcontentsline{toc}{chapter}{\indexname}
+  \printindex
+% Required for some languages (in combination with latexdocumentpre from the header)
+\end{document}

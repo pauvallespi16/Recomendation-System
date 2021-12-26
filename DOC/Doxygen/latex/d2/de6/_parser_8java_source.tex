@@ -1,0 +1,584 @@
+\hypertarget{_parser_8java_source}{}\doxysection{Parser.\+java}
+\label{_parser_8java_source}\index{Parser.java@{Parser.java}}
+\mbox{\hyperlink{_parser_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00001}00001 \textcolor{keyword}{package }clases;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00006}00006 \textcolor{keyword}{import} \mbox{\hyperlink{namespacecontroladores}{controladores}}.\mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio}{CtrlDominio}};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00008}00008 \textcolor{keyword}{import} java.text.ParseException;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00009}00009 \textcolor{keyword}{import} java.text.SimpleDateFormat;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00010}00010 \textcolor{keyword}{import} java.util.*;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00025}\mbox{\hyperlink{classclases_1_1_parser}{00025}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classclases_1_1_parser}{Parser}} \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00030}\mbox{\hyperlink{enumclases_1_1_parser_1_1_path}{00030}}     \textcolor{keyword}{public} \textcolor{keyword}{enum} \mbox{\hyperlink{enumclases_1_1_parser_1_1_path}{Path}} \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00031}\mbox{\hyperlink{enumclases_1_1_parser_1_1_path_a86e9394f48694a0d0dad7406edf93343}{00031}}         \mbox{\hyperlink{enumclases_1_1_parser_1_1_path_a86e9394f48694a0d0dad7406edf93343}{ratings}},}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00035}\mbox{\hyperlink{enumclases_1_1_parser_1_1_path_aba005170dacf792978f6728f99249207}{00035}}         \mbox{\hyperlink{enumclases_1_1_parser_1_1_path_aba005170dacf792978f6728f99249207}{ratingsKnown}},}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00039}00039         ratingsUnknown    }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00040}\mbox{\hyperlink{enumclases_1_1_parser_1_1_path_a50c652ee719a0f6c78f650cf285a82d6}{00040}}     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00046}\mbox{\hyperlink{classclases_1_1_parser_ab6b92a0be033043e66f9ba604a795b38}{00046}}     \textcolor{keyword}{private} \textcolor{keyword}{static} \mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{classclases_1_1_parser_ab6b92a0be033043e66f9ba604a795b38}{items}} = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_items}{Items}}();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00052}\mbox{\hyperlink{classclases_1_1_parser_a848c66c3bd34a2c5f3b19137f8b63bb3}{00052}}     \textcolor{keyword}{private} \textcolor{keyword}{static} Map<Integer, Integer> \mbox{\hyperlink{classclases_1_1_parser_a848c66c3bd34a2c5f3b19137f8b63bb3}{itemsTable}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00058}\mbox{\hyperlink{classclases_1_1_parser_aafbddfc002eaf4b9b23c8d585ea35352}{00058}}     \textcolor{keyword}{private} \textcolor{keyword}{static} Map<Integer, Integer> \mbox{\hyperlink{classclases_1_1_parser_aafbddfc002eaf4b9b23c8d585ea35352}{usersTable}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00064}\mbox{\hyperlink{classclases_1_1_parser_a5dcbba6a59c40cf4a8b756f98fc7b039}{00064}}     \textcolor{keyword}{private} \textcolor{keyword}{static} Map<String, Integer> \mbox{\hyperlink{classclases_1_1_parser_a5dcbba6a59c40cf4a8b756f98fc7b039}{bitsTable}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00071}\mbox{\hyperlink{classclases_1_1_parser_ac7ef9a07b1251f2e939f90a9b6c88635}{00071}}     \textcolor{keyword}{private} \textcolor{keyword}{static} Map<String, Map<String, Integer>> \mbox{\hyperlink{classclases_1_1_parser_ac7ef9a07b1251f2e939f90a9b6c88635}{IDF}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00077}\mbox{\hyperlink{classclases_1_1_parser_a6c6840ab1e59649e52159d9513900d28}{00077}}     \textcolor{keyword}{private} \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{classclases_1_1_parser_a6c6840ab1e59649e52159d9513900d28}{bitIndex}} = 0;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00083}\mbox{\hyperlink{classclases_1_1_parser_a1076c7d435a868cc293d8e90a640f56c}{00083}}     \textcolor{keyword}{private} \textcolor{keyword}{static} String[] \mbox{\hyperlink{classclases_1_1_parser_a1076c7d435a868cc293d8e90a640f56c}{types}};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00089}\mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{00089}}     \textcolor{keyword}{private} \textcolor{keyword}{static} String[] \mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{headersItems}};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00095}\mbox{\hyperlink{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}{00095}}     \textcolor{keyword}{private} \textcolor{keyword}{static} String[] \mbox{\hyperlink{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}{words}};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00102}\mbox{\hyperlink{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}{00102}}     \textcolor{keyword}{private} \textcolor{keyword}{static} Double[][] \mbox{\hyperlink{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}{auxNormalizeNumeros}};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00109}\mbox{\hyperlink{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}{00109}}     \textcolor{keyword}{private} \textcolor{keyword}{static} Long[][] \mbox{\hyperlink{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}{auxNormalizeFechas}};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00115}\mbox{\hyperlink{classclases_1_1_parser_a1ee668ced91fc2e3a3b3184a642ff9b0}{00115}}     \textcolor{keyword}{private} \textcolor{keyword}{static} \textcolor{keywordtype}{double} \mbox{\hyperlink{classclases_1_1_parser_a1ee668ced91fc2e3a3b3184a642ff9b0}{maxScore}} = 0;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00121}\mbox{\hyperlink{classclases_1_1_parser_aed4bf8bf8ab94534b423ce588977c849}{00121}}     \textcolor{keyword}{private} \textcolor{keyword}{static} \textcolor{keywordtype}{double} \mbox{\hyperlink{classclases_1_1_parser_aed4bf8bf8ab94534b423ce588977c849}{minScore}} = Double.MAX\_VALUE;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00122}00122 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00127}\mbox{\hyperlink{classclases_1_1_parser_aa38bc596818f2127f23b35ed7a760fe9}{00127}}     \mbox{\hyperlink{classclases_1_1_parser_aa38bc596818f2127f23b35ed7a760fe9}{Parser}}() \{\}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00128}00128 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00136}\mbox{\hyperlink{classclases_1_1_parser_a7c84ef1abefc019ba9f72209625cc9d3}{00136}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{classclases_1_1_parser_a7c84ef1abefc019ba9f72209625cc9d3}{getAllItems}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classclases_1_1_parser_ab6b92a0be033043e66f9ba604a795b38}{items}}; \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00145}\mbox{\hyperlink{classclases_1_1_parser_a01c3a8605626849ebf3374cdb2da8522}{00145}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_parser_a01c3a8605626849ebf3374cdb2da8522}{setAllItems}}(\mbox{\hyperlink{classclases_1_1_items}{Items}} it) \{ \mbox{\hyperlink{classclases_1_1_parser_ab6b92a0be033043e66f9ba604a795b38}{items}} = it; \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00146}00146 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00155}\mbox{\hyperlink{classclases_1_1_parser_a4f51f101787b28f6b69475ccc66873dd}{00155}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_parser_a4f51f101787b28f6b69475ccc66873dd}{setTypes}}(ArrayList<String> \mbox{\hyperlink{classclases_1_1_parser_a1076c7d435a868cc293d8e90a640f56c}{types}}) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00156}00156         \mbox{\hyperlink{classclases_1_1_parser}{Parser}}.\mbox{\hyperlink{classclases_1_1_parser_a1076c7d435a868cc293d8e90a640f56c}{types}} = \mbox{\hyperlink{classclases_1_1_parser_a1076c7d435a868cc293d8e90a640f56c}{types}}.get(0).split(\textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00157}00157     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00158}00158 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00167}\mbox{\hyperlink{classclases_1_1_parser_a6b5e8ab3075cf80e438d8f16852914eb}{00167}}     \textcolor{keyword}{public} \textcolor{keyword}{static} String[] \mbox{\hyperlink{classclases_1_1_parser_a6b5e8ab3075cf80e438d8f16852914eb}{getTypes}}() \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00168}00168         \textcolor{keywordflow}{return} \mbox{\hyperlink{classclases_1_1_parser_a1076c7d435a868cc293d8e90a640f56c}{types}};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00169}00169     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00170}00170 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00179}\mbox{\hyperlink{classclases_1_1_parser_a785f38bfe19efaef24a2e518624252f7}{00179}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_parser_a785f38bfe19efaef24a2e518624252f7}{setHeaders}}(String[] headers) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00180}00180         \mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{headersItems}} = headers;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00181}00181     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00182}00182 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00191}\mbox{\hyperlink{classclases_1_1_parser_aaf45b745213092d3971f824c7e995dc0}{00191}}     \textcolor{keyword}{public} \textcolor{keyword}{static} String[] \mbox{\hyperlink{classclases_1_1_parser_aaf45b745213092d3971f824c7e995dc0}{getHeaders}}() \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00192}00192         \textcolor{keywordflow}{return} \mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{headersItems}};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00193}00193     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00194}00194 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00203}\mbox{\hyperlink{classclases_1_1_parser_a485076dfaad35b1c9cd36d3903ed208b}{00203}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_parser_a485076dfaad35b1c9cd36d3903ed208b}{setScoreLimits}}(\textcolor{keywordtype}{double} max, \textcolor{keywordtype}{double} min) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00204}00204         \mbox{\hyperlink{classclases_1_1_parser_a1ee668ced91fc2e3a3b3184a642ff9b0}{maxScore}} = max;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00205}00205         \mbox{\hyperlink{classclases_1_1_parser_aed4bf8bf8ab94534b423ce588977c849}{minScore}} = min;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00206}00206     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00207}00207 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00215}\mbox{\hyperlink{classclases_1_1_parser_a7011757774a5ed28dc07d774d24c41cb}{00215}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{double} \mbox{\hyperlink{classclases_1_1_parser_a7011757774a5ed28dc07d774d24c41cb}{getMaxScore}}() \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00216}00216         \textcolor{keywordflow}{return} \mbox{\hyperlink{classclases_1_1_parser_a1ee668ced91fc2e3a3b3184a642ff9b0}{maxScore}};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00217}00217     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00218}00218 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00226}\mbox{\hyperlink{classclases_1_1_parser_a670730b2743b36f57b64dd2a69a6297c}{00226}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{double} \mbox{\hyperlink{classclases_1_1_parser_a670730b2743b36f57b64dd2a69a6297c}{getMinScore}}() \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00227}00227         \textcolor{keywordflow}{return} \mbox{\hyperlink{classclases_1_1_parser_aed4bf8bf8ab94534b423ce588977c849}{minScore}};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00228}00228     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00229}00229 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00237}\mbox{\hyperlink{classclases_1_1_parser_ac78efff9db43c4eba53e53b287067b42}{00237}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_parser_ac78efff9db43c4eba53e53b287067b42}{setIDF}}(Map<String, Map<String, Integer>> idf) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00238}00238         \mbox{\hyperlink{classclases_1_1_parser_ac7ef9a07b1251f2e939f90a9b6c88635}{IDF}} = \textcolor{keyword}{new} HashMap<>(idf);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00239}00239     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00240}00240 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00247}\mbox{\hyperlink{classclases_1_1_parser_a49751e85dde70ffc687ec7a646ad7124}{00247}}     \textcolor{keyword}{public} \textcolor{keyword}{static} Map<String, Map<String, Integer>> \mbox{\hyperlink{classclases_1_1_parser_a49751e85dde70ffc687ec7a646ad7124}{getIDF}}() \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00248}00248         \textcolor{keywordflow}{return} \mbox{\hyperlink{classclases_1_1_parser_ac7ef9a07b1251f2e939f90a9b6c88635}{IDF}};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00249}00249     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00250}00250 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00258}\mbox{\hyperlink{classclases_1_1_parser_a9d07c4e9721044400d335acd45f0fa68}{00258}}     \textcolor{keyword}{public} \textcolor{keyword}{static} Map<String, Integer> \mbox{\hyperlink{classclases_1_1_parser_a9d07c4e9721044400d335acd45f0fa68}{getBitsTable}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classclases_1_1_parser_a5dcbba6a59c40cf4a8b756f98fc7b039}{bitsTable}}; \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00259}00259 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00269}\mbox{\hyperlink{classclases_1_1_parser_aacb886f38f2f6eef2a0cab155d2a5f52}{00269}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_parser_aacb886f38f2f6eef2a0cab155d2a5f52}{setNormalize}}(Double[][] normNums, Long[][] normFechas) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00270}00270         \mbox{\hyperlink{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}{auxNormalizeNumeros}} = normNums;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00271}00271         \mbox{\hyperlink{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}{auxNormalizeFechas}} = normFechas;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00272}00272     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00273}00273 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00281}\mbox{\hyperlink{classclases_1_1_parser_a4c6e263bce13468bca6024bf2fb1a2fd}{00281}}     \textcolor{keyword}{public} \textcolor{keyword}{static} Double[][] \mbox{\hyperlink{classclases_1_1_parser_a4c6e263bce13468bca6024bf2fb1a2fd}{getAuxNormalizeNumeros}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}{auxNormalizeNumeros}}; \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00282}00282 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00290}\mbox{\hyperlink{classclases_1_1_parser_a98bf9bd3a276fe6a16a8b3c07d484a41}{00290}}     \textcolor{keyword}{public} \textcolor{keyword}{static} Long[][] \mbox{\hyperlink{classclases_1_1_parser_a98bf9bd3a276fe6a16a8b3c07d484a41}{getAuxNormalizeFechas}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}{auxNormalizeFechas}}; \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00291}00291 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00300}\mbox{\hyperlink{classclases_1_1_parser_acbdc5f643616b1c7b213e8c2d9d69f93}{00300}}     \textcolor{keyword}{private} \textcolor{keyword}{static} String \mbox{\hyperlink{classclases_1_1_parser_acbdc5f643616b1c7b213e8c2d9d69f93}{validRegex}}() \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00301}00301         String otherThanQuote = \textcolor{stringliteral}{"{} [\string^\(\backslash\)"{}] "{}};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00302}00302         String quotedString = String.format(\textcolor{stringliteral}{"{} \(\backslash\)"{} \%s* \(\backslash\)"{} "{}}, otherThanQuote);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00303}00303         \textcolor{keywordflow}{return} String.format(\textcolor{stringliteral}{"{}(?x) "{}} + \textcolor{comment}{// enable comments, ignore white spaces}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00304}00304                         \textcolor{stringliteral}{"{},                         "{}} + \textcolor{comment}{// match a comma}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00305}00305                         \textcolor{stringliteral}{"{}(?=                       "{}} + \textcolor{comment}{// start positive look ahead}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00306}00306                         \textcolor{stringliteral}{"{}  (?:                     "{}} + \textcolor{comment}{//   start non-\/capturing group 1}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00307}00307                         \textcolor{stringliteral}{"{}    \%s*                   "{}} + \textcolor{comment}{//     match 'otherThanQuote' zero or more times}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00308}00308                         \textcolor{stringliteral}{"{}    \%s                    "{}} + \textcolor{comment}{//     match 'quotedString'}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00309}00309                         \textcolor{stringliteral}{"{}  )*                      "{}} + \textcolor{comment}{//   end group 1 and repeat it zero or more times}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00310}00310                         \textcolor{stringliteral}{"{}  \%s*                     "{}} + \textcolor{comment}{//   match 'otherThanQuote'}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00311}00311                         \textcolor{stringliteral}{"{}  \$                       "{}} + \textcolor{comment}{// match the end of the string}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00312}00312                         \textcolor{stringliteral}{"{})                         "{}}, \textcolor{comment}{// stop positive look ahead}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00313}00313                 otherThanQuote, quotedString, otherThanQuote);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00314}00314     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00315}00315 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00324}\mbox{\hyperlink{classclases_1_1_parser_a2904c888fd6fbdd54acafb9c11dd35b0}{00324}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{classclases_1_1_parser_a2904c888fd6fbdd54acafb9c11dd35b0}{translateItem}}(\textcolor{keywordtype}{int} originalId) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00325}00325         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classclases_1_1_parser_a848c66c3bd34a2c5f3b19137f8b63bb3}{itemsTable}}.containsKey(originalId)) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00326}00326         \textcolor{keywordflow}{return} \mbox{\hyperlink{classclases_1_1_parser_a848c66c3bd34a2c5f3b19137f8b63bb3}{itemsTable}}.get(originalId);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00327}00327     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00328}00328 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00337}\mbox{\hyperlink{classclases_1_1_parser_a44d03043006e391e2156f0d86db95bec}{00337}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{classclases_1_1_parser_a44d03043006e391e2156f0d86db95bec}{translateUser}}(\textcolor{keywordtype}{int} originalId) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00338}00338         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classclases_1_1_parser_aafbddfc002eaf4b9b23c8d585ea35352}{usersTable}}.containsKey(originalId)) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00339}00339         \textcolor{keywordflow}{return} \mbox{\hyperlink{classclases_1_1_parser_aafbddfc002eaf4b9b23c8d585ea35352}{usersTable}}.get(originalId);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00340}00340     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00341}00341 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00349}\mbox{\hyperlink{classclases_1_1_parser_ac7fae5c1a9ac8344f63254acf69337d6}{00349}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_parser_ac7fae5c1a9ac8344f63254acf69337d6}{updateContents}}(\mbox{\hyperlink{classclases_1_1_item}{Item}} it) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00350}00350         \mbox{\hyperlink{classclases_1_1_parser_ab6b92a0be033043e66f9ba604a795b38}{items}}.\mbox{\hyperlink{classclases_1_1_items_a094c01938cc06eff0c8a4276eeff4ab3}{addItem}}(it);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00351}00351         \mbox{\hyperlink{classclases_1_1_parser_a848c66c3bd34a2c5f3b19137f8b63bb3}{itemsTable}}.put(it.\mbox{\hyperlink{classclases_1_1_item_a7921c40d719e9784719c9b11c9f307a8}{getOriginalId}}(), it.\mbox{\hyperlink{classclases_1_1_item_abb998d6f938daefaf94539d731ec349a}{getId}}());}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00352}00352         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{headersItems}}.length; i++) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00353}00353             String header = \mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{headersItems}}[i];}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00354}00354             \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} at = it.\mbox{\hyperlink{classclases_1_1_item_adccef6881276e5158e19e4cacabe986a}{getAtributos}}().get(header);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00355}00355 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00356}00356             \textcolor{comment}{// separamos por casos según el tipo}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00357}00357             \textcolor{keywordflow}{if} (at instanceof \mbox{\hyperlink{classclases_1_1_atributo_numerico}{AtributoNumerico}}) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00358}00358                 \mbox{\hyperlink{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}{auxNormalizeNumeros}}[i][0] = Math.min(\mbox{\hyperlink{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}{auxNormalizeNumeros}}[i][0], (Double) at.\mbox{\hyperlink{classclases_1_1_atributo_a2ff99227e5f6a6d75ad26857c0df611d}{getValor}}());}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00359}00359                 \mbox{\hyperlink{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}{auxNormalizeNumeros}}[i][1] = Math.max(\mbox{\hyperlink{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}{auxNormalizeNumeros}}[i][1], (Double) at.\mbox{\hyperlink{classclases_1_1_atributo_a2ff99227e5f6a6d75ad26857c0df611d}{getValor}}());}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00360}00360             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (at instanceof \mbox{\hyperlink{classclases_1_1_atributo_fecha}{AtributoFecha}}) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00361}00361                 \mbox{\hyperlink{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}{auxNormalizeFechas}}[i][0] = Math.min(\mbox{\hyperlink{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}{auxNormalizeFechas}}[i][0], (Long) at.\mbox{\hyperlink{classclases_1_1_atributo_a2ff99227e5f6a6d75ad26857c0df611d}{getValor}}());}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00362}00362                 \mbox{\hyperlink{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}{auxNormalizeFechas}}[i][1] = Math.max(\mbox{\hyperlink{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}{auxNormalizeFechas}}[i][1], (Long) at.\mbox{\hyperlink{classclases_1_1_atributo_a2ff99227e5f6a6d75ad26857c0df611d}{getValor}}());}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00363}00363             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (at instanceof \mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple}{AtributoCategoricoMultiple}}) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00364}00364                 Set<String> \textcolor{keyword}{set} = ((\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple}{AtributoCategoricoMultiple}}) at).getValor();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00365}00365                 \textcolor{keywordflow}{for} (String s : \textcolor{keyword}{set}) \{ \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classclases_1_1_parser_a5dcbba6a59c40cf4a8b756f98fc7b039}{bitsTable}}.containsKey(s)) \{ \mbox{\hyperlink{classclases_1_1_parser_a5dcbba6a59c40cf4a8b756f98fc7b039}{bitsTable}}.put(s, \mbox{\hyperlink{classclases_1_1_parser_a6c6840ab1e59649e52159d9513900d28}{bitIndex}}); \mbox{\hyperlink{classclases_1_1_parser_a6c6840ab1e59649e52159d9513900d28}{bitIndex}}++; \} \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00366}00366                 ((\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple}{AtributoCategoricoMultiple}}) at).setBitSetSize(\mbox{\hyperlink{classclases_1_1_parser_a5dcbba6a59c40cf4a8b756f98fc7b039}{bitsTable}}.size());}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00367}00367                 \textcolor{keywordflow}{for} (String s : \textcolor{keyword}{set}) ((\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple}{AtributoCategoricoMultiple}}) at).setBitSetValue(\mbox{\hyperlink{classclases_1_1_parser_a5dcbba6a59c40cf4a8b756f98fc7b039}{bitsTable}}.get(s));}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00368}00368             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (at instanceof \mbox{\hyperlink{classclases_1_1_atributo_texto}{AtributoTexto}}) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00369}00369                 Map<String, Integer> freq = ((\mbox{\hyperlink{classclases_1_1_atributo_texto}{AtributoTexto}}) at).getValor();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00370}00370                 Map<String, Integer> idfMap = \mbox{\hyperlink{classclases_1_1_parser_ac7ef9a07b1251f2e939f90a9b6c88635}{IDF}}.get(header);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00371}00371                 \textcolor{keywordflow}{for} (Map.Entry<String, Integer> word : freq.entrySet()) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00372}00372                     \textcolor{keywordflow}{if} (idfMap.containsKey(word.getKey())) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00373}00373                         \textcolor{keywordtype}{int} n = idfMap.get(word.getKey());}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00374}00374                         idfMap.put(word.getKey(), n + 1);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00375}00375                     \} \textcolor{keywordflow}{else} idfMap.put(word.getKey(), 1);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00376}00376                 \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00377}00377                 \mbox{\hyperlink{classclases_1_1_parser_ac7ef9a07b1251f2e939f90a9b6c88635}{IDF}}.put(\mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{headersItems}}[i], idfMap);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00378}00378             \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00379}00379         \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00380}00380         \mbox{\hyperlink{classclases_1_1_parser_a255cd7a63338b7b0e6ba88340b114200}{normalizarItems}}();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00381}00381     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00382}00382 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00389}\mbox{\hyperlink{classclases_1_1_parser_a255cd7a63338b7b0e6ba88340b114200}{00389}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_parser_a255cd7a63338b7b0e6ba88340b114200}{normalizarItems}}() \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00390}00390         ArrayList<Item> arr = \textcolor{keyword}{new} ArrayList(\mbox{\hyperlink{classclases_1_1_parser_ab6b92a0be033043e66f9ba604a795b38}{items}}.\mbox{\hyperlink{classclases_1_1_items_a4b59e5773f15df8bc7ddc2e0b8852c6f}{getItems}}().values());}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00391}00391 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00392}00392         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < arr.size(); i++) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00393}00393             \mbox{\hyperlink{classclases_1_1_item}{Item}} it = arr.get(i);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00394}00394             Map<String, Atributo> atts = it.\mbox{\hyperlink{classclases_1_1_item_adccef6881276e5158e19e4cacabe986a}{getAtributos}}();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00395}00395 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00396}00396             \textcolor{comment}{// iteramos sobre todos los elementos de la cabecera}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00397}00397             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{headersItems}}.length; j++) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00398}00398                 \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} atr = atts.get(\mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{headersItems}}[j]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00399}00399 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00400}00400                 \textcolor{comment}{// si el elemento es texto}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00401}00401                 \textcolor{keywordflow}{if} (atr instanceof \mbox{\hyperlink{classclases_1_1_atributo_texto}{AtributoTexto}}) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00402}00402                     Map<String, Integer> idfMap = \mbox{\hyperlink{classclases_1_1_parser_ac7ef9a07b1251f2e939f90a9b6c88635}{IDF}}.get(\mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{headersItems}}[j]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00403}00403                     Map<String, Integer> freq = ((\mbox{\hyperlink{classclases_1_1_atributo_texto}{AtributoTexto}}) atr).getValor();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00404}00404                     \textcolor{keywordflow}{for} (Map.Entry<String, Integer> word : freq.entrySet()) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00405}00405                         \textcolor{keywordflow}{if} (idfMap.containsKey(word.getKey())) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00406}00406                             \textcolor{keywordtype}{int} n = idfMap.get(word.getKey());}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00407}00407                             idfMap.put(word.getKey(), n + 1);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00408}00408                         \} \textcolor{keywordflow}{else} idfMap.put(word.getKey(), 1);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00409}00409                     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00410}00410                     \mbox{\hyperlink{classclases_1_1_parser_ac7ef9a07b1251f2e939f90a9b6c88635}{IDF}}.put(\mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{headersItems}}[j], idfMap);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00411}00411                 \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00412}00412 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00413}00413                 \textcolor{comment}{// si el elemento es categórico múltiple}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00414}00414                 \textcolor{keywordflow}{if} (atr instanceof \mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple}{AtributoCategoricoMultiple}}) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00415}00415                     ((\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple}{AtributoCategoricoMultiple}}) atr).setBitSetSize(\mbox{\hyperlink{classclases_1_1_parser_a5dcbba6a59c40cf4a8b756f98fc7b039}{bitsTable}}.size());}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00416}00416                     \textcolor{comment}{// ponemos a 1 los bits que representen los strings del atributo}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00417}00417                     \textcolor{keywordflow}{for} (String s : ((\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple}{AtributoCategoricoMultiple}}) atr).getValor()) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00418}00418                         ((\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple}{AtributoCategoricoMultiple}}) atr).setBitSetValue(\mbox{\hyperlink{classclases_1_1_parser_a5dcbba6a59c40cf4a8b756f98fc7b039}{bitsTable}}.get(s));}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00419}00419                     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00420}00420                 \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00421}00421 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00422}00422                 \textcolor{comment}{// si el elemento es númerico o de fecha}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00423}00423                 \textcolor{keywordflow}{if} (atr instanceof \mbox{\hyperlink{classclases_1_1_atributo_numerico}{AtributoNumerico}} || atr instanceof \mbox{\hyperlink{classclases_1_1_atributo_fecha}{AtributoFecha}}) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00424}00424                     \textcolor{comment}{// norm = (num -\/ min) / (max -\/ min)}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00425}00425                     \textcolor{keywordtype}{double} valorNormalizado;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00426}00426 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00427}00427                     \textcolor{keywordflow}{if} (atr instanceof \mbox{\hyperlink{classclases_1_1_atributo_numerico}{AtributoNumerico}}) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00428}00428                         \textcolor{comment}{// el caso de las series en el que hay un valor erróneo}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00429}00429                         \textcolor{keywordflow}{if} (((\mbox{\hyperlink{classclases_1_1_atributo_numerico}{AtributoNumerico}}) atr).getValor() == Double.MAX\_VALUE) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00430}00430                             ((\mbox{\hyperlink{classclases_1_1_atributo_numerico}{AtributoNumerico}}) atr).setValorNormalizado(-\/1.0);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00431}00431                         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00432}00432                             \textcolor{keywordtype}{double} minNum = \mbox{\hyperlink{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}{auxNormalizeNumeros}}[j][0];}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00433}00433                             \textcolor{keywordtype}{double} maxNum = \mbox{\hyperlink{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}{auxNormalizeNumeros}}[j][1];}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00434}00434                             valorNormalizado = (((\mbox{\hyperlink{classclases_1_1_atributo_numerico}{AtributoNumerico}}) atr).getValor() -\/ minNum) / (maxNum -\/ minNum);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00435}00435                             ((\mbox{\hyperlink{classclases_1_1_atributo_numerico}{AtributoNumerico}}) atr).setValorNormalizado(valorNormalizado);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00436}00436                         \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00437}00437                     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00438}00438 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00439}00439                     \textcolor{keywordflow}{if} (atr instanceof \mbox{\hyperlink{classclases_1_1_atributo_fecha}{AtributoFecha}}) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00440}00440                         \textcolor{keywordtype}{long} minLong = \mbox{\hyperlink{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}{auxNormalizeFechas}}[j][0];}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00441}00441                         \textcolor{keywordtype}{long} maxLong = \mbox{\hyperlink{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}{auxNormalizeFechas}}[j][1];}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00442}00442                         valorNormalizado = (double) (((\mbox{\hyperlink{classclases_1_1_atributo_fecha}{AtributoFecha}}) atr).getValor() -\/ minLong) / (maxLong -\/ minLong);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00443}00443                         ((\mbox{\hyperlink{classclases_1_1_atributo_fecha}{AtributoFecha}}) atr).setValorNormalizado(valorNormalizado);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00444}00444                     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00445}00445 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00446}00446                     \textcolor{comment}{// actualizamos el ítem}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00447}00447                     it.\mbox{\hyperlink{classclases_1_1_item_a669090b4081803f7bcbb829f52f8ec80}{setAtributo}}(\mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{headersItems}}[j], atr);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00448}00448                 \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00449}00449             \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00450}00450 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00451}00451             \textcolor{comment}{// actualizamos el array}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00452}00452             arr.set(i, it);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00453}00453         \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00454}00454         \mbox{\hyperlink{classclases_1_1_parser_ab6b92a0be033043e66f9ba604a795b38}{items}}.\mbox{\hyperlink{classclases_1_1_items_a8c8be69090dbbacb94e8c65a1064f7f3}{setItems}}(arr);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00455}00455     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00456}00456 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00465}\mbox{\hyperlink{classclases_1_1_parser_abe03afa12b41b9e4f07e99fc8d2b7af6}{00465}}     \textcolor{keyword}{private} \textcolor{keyword}{static} \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} \mbox{\hyperlink{classclases_1_1_parser_abe03afa12b41b9e4f07e99fc8d2b7af6}{transformarAtributo}}(\textcolor{keywordtype}{int} i) \textcolor{keywordflow}{throws} ParseException \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00466}00466         \textcolor{keywordflow}{switch} (\mbox{\hyperlink{classclases_1_1_parser_a1076c7d435a868cc293d8e90a640f56c}{types}}[i]) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00467}00467             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}bool"{}}:}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00468}00468                 \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_atributo_boolean}{AtributoBoolean}}(\mbox{\hyperlink{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}{words}}[i]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00469}00469             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}string"{}}:}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00470}00470                 \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_atributo_categorico}{AtributoCategorico}}(\mbox{\hyperlink{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}{words}}[i]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00471}00471             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}double"{}}:}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00472}00472                 \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} atrNum = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_atributo_numerico}{AtributoNumerico}}(\mbox{\hyperlink{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}{words}}[i]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00473}00473                 \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}{words}}[i].equals(\textcolor{stringliteral}{"{}"{}}) \&\& !\mbox{\hyperlink{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}{words}}[i].equals(\textcolor{stringliteral}{"{}-\/9223372036854775808"{}})) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00474}00474                     \mbox{\hyperlink{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}{auxNormalizeNumeros}}[i][0] = Math.min(\mbox{\hyperlink{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}{auxNormalizeNumeros}}[i][0], (Double) atrNum.\mbox{\hyperlink{classclases_1_1_atributo_a2ff99227e5f6a6d75ad26857c0df611d}{getValor}}());}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00475}00475                     \mbox{\hyperlink{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}{auxNormalizeNumeros}}[i][1] = Math.max(\mbox{\hyperlink{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}{auxNormalizeNumeros}}[i][1], (Double) atrNum.\mbox{\hyperlink{classclases_1_1_atributo_a2ff99227e5f6a6d75ad26857c0df611d}{getValor}}());}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00476}00476                 \} \textcolor{keywordflow}{else} atrNum = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_atributo_numerico}{AtributoNumerico}}(String.valueOf(Double.MAX\_VALUE));}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00477}00477                 \textcolor{keywordflow}{return} atrNum;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00478}00478             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}set"{}}:}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00479}00479                 String[] list = \mbox{\hyperlink{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}{words}}[i].split(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00480}00480                 \textcolor{keywordflow}{for} (String s : list) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00481}00481                     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classclases_1_1_parser_a5dcbba6a59c40cf4a8b756f98fc7b039}{bitsTable}}.containsKey(s)) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00482}00482                         \mbox{\hyperlink{classclases_1_1_parser_a5dcbba6a59c40cf4a8b756f98fc7b039}{bitsTable}}.put(s, \mbox{\hyperlink{classclases_1_1_parser_a6c6840ab1e59649e52159d9513900d28}{bitIndex}});}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00483}00483                         \mbox{\hyperlink{classclases_1_1_parser_a6c6840ab1e59649e52159d9513900d28}{bitIndex}}++;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00484}00484                     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00485}00485                 \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00486}00486                 \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple}{AtributoCategoricoMultiple}}(\mbox{\hyperlink{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}{words}}[i]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00487}00487             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}fecha"{}}:}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00488}00488                 \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} atrFecha = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_atributo_fecha}{AtributoFecha}}(\mbox{\hyperlink{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}{words}}[i]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00489}00489                 \mbox{\hyperlink{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}{auxNormalizeFechas}}[i][0] = Math.min(\mbox{\hyperlink{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}{auxNormalizeFechas}}[i][0], (Long) atrFecha.\mbox{\hyperlink{classclases_1_1_atributo_a2ff99227e5f6a6d75ad26857c0df611d}{getValor}}());}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00490}00490                 \mbox{\hyperlink{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}{auxNormalizeFechas}}[i][1] = Math.max(\mbox{\hyperlink{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}{auxNormalizeFechas}}[i][1], (Long) atrFecha.\mbox{\hyperlink{classclases_1_1_atributo_a2ff99227e5f6a6d75ad26857c0df611d}{getValor}}());}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00491}00491                 \textcolor{keywordflow}{return} atrFecha;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00492}00492             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}texto"{}}:}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00493}00493                 \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_atributo_texto}{AtributoTexto}}(\mbox{\hyperlink{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}{words}}[i]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00494}00494             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00495}00495                 \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00496}00496         \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00497}00497     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00498}00498 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00507}\mbox{\hyperlink{classclases_1_1_parser_a39a7f8e6644c09de800e073a14c4ef26}{00507}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_parser_a39a7f8e6644c09de800e073a14c4ef26}{processItems}}(ArrayList<String> data) \textcolor{keywordflow}{throws} Exception \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00508}00508         \textcolor{comment}{// obtenemos la cabecera y los tipos}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00509}00509         \mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{headersItems}} = data.get(0).split(\textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00510}00510 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00511}00511         \mbox{\hyperlink{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}{auxNormalizeNumeros}} = \textcolor{keyword}{new} Double[\mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{headersItems}}.length][2];}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00512}00512         \mbox{\hyperlink{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}{auxNormalizeFechas}} = \textcolor{keyword}{new} Long[\mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{headersItems}}.length][2];}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00513}00513 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00514}00514         \textcolor{comment}{// inicializamos la estructura de datos al máximo y mínimo valor respectivamente}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00515}00515         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{headersItems}}.length; i++) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00516}00516             \mbox{\hyperlink{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}{auxNormalizeNumeros}}[i][0] = Double.MAX\_VALUE;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00517}00517             \mbox{\hyperlink{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}{auxNormalizeNumeros}}[i][1] = Double.MIN\_VALUE;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00518}00518             \mbox{\hyperlink{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}{auxNormalizeFechas}}[i][0] = Long.MAX\_VALUE;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00519}00519             \mbox{\hyperlink{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}{auxNormalizeFechas}}[i][1] = Long.MIN\_VALUE;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00520}00520         \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00521}00521 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00522}00522         \textcolor{keywordtype}{int} itemId = 0;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00523}00523         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} line = 1; line < data.size(); line++) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00524}00524             \mbox{\hyperlink{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}{words}} = data.get(line).split(\mbox{\hyperlink{classclases_1_1_parser_acbdc5f643616b1c7b213e8c2d9d69f93}{validRegex}}(), -\/1);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00525}00525 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00526}00526             \textcolor{comment}{// if para tratar los saltos de linea}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00527}00527             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}{words}}.length != \mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{headersItems}}.length) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00528}00528                 String actualLine = data.get(line) + data.get(line + 1);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00529}00529                 \mbox{\hyperlink{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}{words}} = actualLine.split(\mbox{\hyperlink{classclases_1_1_parser_acbdc5f643616b1c7b213e8c2d9d69f93}{validRegex}}(), -\/1);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00530}00530                 data.set(line + 1, actualLine);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00531}00531             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00532}00532                 \textcolor{comment}{// iteramos sobre todos elementos de la cabecera y lo asignamos con su tipo}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00533}00533                 \textcolor{comment}{// correspondiente}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00534}00534                 \mbox{\hyperlink{classclases_1_1_item}{Item}} item = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_item}{Item}}(itemId, \textcolor{keyword}{new} HashMap<>());}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00535}00535                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{headersItems}}.length; i++) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00536}00536                     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classclases_1_1_parser_a1076c7d435a868cc293d8e90a640f56c}{types}}[i].equals(\textcolor{stringliteral}{"{}other"{}})) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00537}00537                         \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} atr = \mbox{\hyperlink{classclases_1_1_parser_abe03afa12b41b9e4f07e99fc8d2b7af6}{transformarAtributo}}(i);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00538}00538                         \mbox{\hyperlink{classclases_1_1_parser_ac7ef9a07b1251f2e939f90a9b6c88635}{IDF}}.put(\mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{headersItems}}[i], \textcolor{keyword}{new} HashMap<>());}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00539}00539 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00540}00540                         \textcolor{comment}{// guardamos el "{}id"{} original para posteriormente traducir}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00541}00541                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{headersItems}}[i].equals(\textcolor{stringliteral}{"{}id"{}}) \&\& !\mbox{\hyperlink{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}{words}}[i].equals(\textcolor{stringliteral}{"{}"{}})) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00542}00542                             \mbox{\hyperlink{classclases_1_1_parser_a848c66c3bd34a2c5f3b19137f8b63bb3}{itemsTable}}.put(Integer.parseInt(\mbox{\hyperlink{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}{words}}[i]), itemId);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00543}00543                             item.\mbox{\hyperlink{classclases_1_1_item_a4d5710463358fd66f8664e634f95f9b6}{setOriginalId}}(Integer.parseInt(\mbox{\hyperlink{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}{words}}[i]));}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00544}00544                         \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00545}00545                         item.\mbox{\hyperlink{classclases_1_1_item_a669090b4081803f7bcbb829f52f8ec80}{setAtributo}}(\mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{headersItems}}[i], atr);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00546}00546                     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00547}00547                 \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00548}00548                 itemId++;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00549}00549 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00550}00550                 \textcolor{comment}{// añadimos el ítem}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00551}00551                 \mbox{\hyperlink{classclases_1_1_parser_ab6b92a0be033043e66f9ba604a795b38}{items}}.\mbox{\hyperlink{classclases_1_1_items_a094c01938cc06eff0c8a4276eeff4ab3}{addItem}}(item);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00552}00552             \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00553}00553         \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00554}00554         \mbox{\hyperlink{classclases_1_1_parser_a255cd7a63338b7b0e6ba88340b114200}{normalizarItems}}();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00555}00555     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00556}00556 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00567}\mbox{\hyperlink{classclases_1_1_parser_adb27e97969663bf44c7e39e988f2c7f5}{00567}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classclases_1_1_parser_adb27e97969663bf44c7e39e988f2c7f5}{processUsers}}(ArrayList<String> data, \mbox{\hyperlink{enumclases_1_1_parser_1_1_path}{Path}} op) \textcolor{keywordflow}{throws} Exception \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00568}00568         \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} users = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}}();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00569}00569 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00570}00570         \textcolor{comment}{// generamos su id manualmente}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00571}00571         \textcolor{keywordtype}{int} userId = 0;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00572}00572 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00573}00573         String[] headersUsers = data.get(0).split(\textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00574}00574 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00575}00575         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} line = 1; line < data.size(); line++) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00576}00576             \mbox{\hyperlink{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}{words}} = data.get(line).split(\mbox{\hyperlink{classclases_1_1_parser_acbdc5f643616b1c7b213e8c2d9d69f93}{validRegex}}(), -\/1);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00577}00577 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00578}00578             \textcolor{keywordtype}{int} originalId = 0;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00579}00579             \textcolor{keywordtype}{int} originalItemId = 0;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00580}00580             \textcolor{keywordtype}{double} score = 0;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00581}00581 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00582}00582             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < headersUsers.length; i++) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00583}00583                 \textcolor{comment}{// enlazamos cada elemento de la cabecera}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00584}00584                 \textcolor{keywordflow}{if} (headersUsers[i].contains(\textcolor{stringliteral}{"{}user"{}})) originalId = Integer.parseInt(\mbox{\hyperlink{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}{words}}[i]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00585}00585                 \textcolor{keywordflow}{if} (headersUsers[i].contains(\textcolor{stringliteral}{"{}item"{}})) originalItemId = Integer.parseInt(\mbox{\hyperlink{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}{words}}[i]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00586}00586                 \textcolor{keywordflow}{if} (headersUsers[i].equals(\textcolor{stringliteral}{"{}rating"{}})) score = Double.parseDouble(\mbox{\hyperlink{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}{words}}[i]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00587}00587             \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00588}00588 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00589}00589             \textcolor{comment}{// obtenemos el "{}id"{} del ítem generado manualmente mediante itemsTable}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00590}00590             \textcolor{keywordtype}{int} itemId = \mbox{\hyperlink{classclases_1_1_parser_a848c66c3bd34a2c5f3b19137f8b63bb3}{itemsTable}}.get(originalItemId);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00591}00591             \mbox{\hyperlink{classclases_1_1_item}{Item}} it = \mbox{\hyperlink{classclases_1_1_parser_ab6b92a0be033043e66f9ba604a795b38}{items}}.\mbox{\hyperlink{classclases_1_1_items_aea1fe18eea7924c662d5ac23513538d9}{getItem}}(itemId);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00592}00592 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00593}00593             \textcolor{keywordtype}{boolean} inList = \textcolor{keyword}{true}; \textcolor{comment}{// variable usada para comprobar que un usuario esté en el array}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00594}00594             Map<Integer, Double> valoraciones = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00595}00595 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00596}00596             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classclases_1_1_parser_aafbddfc002eaf4b9b23c8d585ea35352}{usersTable}}.containsKey(originalId)) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00597}00597                 \textcolor{keywordflow}{if} (users.\mbox{\hyperlink{classclases_1_1_usuarios_a839970c68b14c6f00581627d055d6f11}{containsUser}}(\mbox{\hyperlink{classclases_1_1_parser_aafbddfc002eaf4b9b23c8d585ea35352}{usersTable}}.get(originalId)))}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00598}00598                     valoraciones = users.\mbox{\hyperlink{classclases_1_1_usuarios_a85c335169bb9b2cebfe6276848d24e2c}{getUser}}(\mbox{\hyperlink{classclases_1_1_parser_aafbddfc002eaf4b9b23c8d585ea35352}{usersTable}}.get(originalId)).\mbox{\hyperlink{classclases_1_1_usuario_aea18bbbfd60937a39ca6ffaf41c00f2d}{getValoraciones}}();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00599}00599                 \textcolor{keywordflow}{else} inList = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00600}00600             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00601}00601                 \mbox{\hyperlink{classclases_1_1_parser_aafbddfc002eaf4b9b23c8d585ea35352}{usersTable}}.put(originalId, userId);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00602}00602                 inList = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00603}00603             \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00604}00604 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00605}00605             \textcolor{comment}{// añadimos la valoración}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00606}00606             valoraciones.put(itemId, score);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00607}00607 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00608}00608             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classclases_1_1_parser_a1ee668ced91fc2e3a3b3184a642ff9b0}{maxScore}} < score) \mbox{\hyperlink{classclases_1_1_parser_a1ee668ced91fc2e3a3b3184a642ff9b0}{maxScore}} = score;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00609}00609             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classclases_1_1_parser_aed4bf8bf8ab94534b423ce588977c849}{minScore}} > score) \mbox{\hyperlink{classclases_1_1_parser_aed4bf8bf8ab94534b423ce588977c849}{minScore}} = score;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00610}00610 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00611}00611             \textcolor{comment}{// actualizamos el ítem}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00612}00612             \mbox{\hyperlink{classclases_1_1_parser_ab6b92a0be033043e66f9ba604a795b38}{items}}.\mbox{\hyperlink{classclases_1_1_items_abf8d7caa7d0fa907028258f77becae1a}{setItem}}(itemId, it);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00613}00613 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00614}00614             \textcolor{comment}{// creamos un nuevo usuario con los ítems}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00615}00615             \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} user = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}(\mbox{\hyperlink{classclases_1_1_parser_aafbddfc002eaf4b9b23c8d585ea35352}{usersTable}}.get(originalId), valoraciones);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00616}00616             user.\mbox{\hyperlink{classclases_1_1_usuario_a88820499f9e2a8532a9cd6d9df6fa9ab}{setOriginalUserId}}(originalId);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00617}00617 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00618}00618             \textcolor{comment}{// añadimos el usuario si no estaba, sino simplemente lo modificamos}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00619}00619             \textcolor{keywordflow}{if} (inList) users.\mbox{\hyperlink{classclases_1_1_usuarios_aad6b0f6581bf91e9322ad956696659b7}{setUser}}(\mbox{\hyperlink{classclases_1_1_parser_aafbddfc002eaf4b9b23c8d585ea35352}{usersTable}}.get(originalId), user);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00620}00620             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00621}00621                 users.\mbox{\hyperlink{classclases_1_1_usuarios_a2b75d102bd18d9efa80137eda4e613b3}{addUser}}(user);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00622}00622                 userId++;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00623}00623             \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00624}00624         \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00625}00625 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00626}00626         \textcolor{keywordflow}{return} users;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00627}00627     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00628}00628 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00637}\mbox{\hyperlink{classclases_1_1_parser_ab1911b83409593ba16415057c553d974}{00637}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_parser_ab1911b83409593ba16415057c553d974}{loadItems}}(ArrayList<String> data) \textcolor{keywordflow}{throws} Exception \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00638}00638         \mbox{\hyperlink{classclases_1_1_parser_ab6b92a0be033043e66f9ba604a795b38}{items}} = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_items}{Items}}();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00639}00639 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00640}00640         \textcolor{comment}{// variables que iremos reutilizando}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00641}00641         \textcolor{keywordtype}{int} itemId = 0, originalId = 0, size = 0;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00642}00642         Map<String, Atributo> atrs = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00643}00643 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00644}00644         ArrayList<String> headers = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00645}00645         ArrayList<String> tipos = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00646}00646 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00647}00647         ArrayList<ArrayList<Double>> tablaNormNums = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00648}00648         ArrayList<ArrayList<Long>> tablaNormFechas = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00649}00649 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00650}00650         \textcolor{keywordtype}{boolean} finishedHeaders = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00651}00651         String typeOfData = \textcolor{stringliteral}{"{}BITSTABLE"{}};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00652}00652         \textcolor{keywordflow}{for} (String datum : data) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00653}00653             String[] dataLine = datum.split(\textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)|"{}});}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00654}00654 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00655}00655             \textcolor{comment}{// cambiamos el modo de lectura segun el titulo}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00656}00656             \textcolor{keywordflow}{if} (datum.equals(\textcolor{stringliteral}{"{}ITEMS"{}}) || datum.equals(\textcolor{stringliteral}{"{}NORMITEMS"{}}) || datum.equals(\textcolor{stringliteral}{"{}NORMFECHAS"{}})) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00657}00657                 typeOfData = datum;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00658}00658                 \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00659}00659             \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00660}00660 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00661}00661             \textcolor{comment}{// segun el tipo}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00662}00662             \textcolor{keywordflow}{if} (datum.equals(\textcolor{stringliteral}{"{}\#"{}})) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00663}00663                 finishedHeaders = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00664}00664 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00665}00665                 \textcolor{comment}{// creamos el objeto}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00666}00666                 \mbox{\hyperlink{classclases_1_1_item}{Item}} it = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_item}{Item}}(itemId, atrs);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00667}00667                 it.\mbox{\hyperlink{classclases_1_1_item_a4d5710463358fd66f8664e634f95f9b6}{setOriginalId}}(originalId);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00668}00668                 \mbox{\hyperlink{classclases_1_1_parser_ab6b92a0be033043e66f9ba604a795b38}{items}}.\mbox{\hyperlink{classclases_1_1_items_a094c01938cc06eff0c8a4276eeff4ab3}{addItem}}(it);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00669}00669 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00670}00670                 itemId++;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00671}00671                 atrs = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00672}00672             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (typeOfData.equals(\textcolor{stringliteral}{"{}BITSTABLE"{}})) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00673}00673                 String[] splitedData = datum.split(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00674}00674                 \textcolor{keywordflow}{if} (splitedData.length > 1) \mbox{\hyperlink{classclases_1_1_parser_a5dcbba6a59c40cf4a8b756f98fc7b039}{bitsTable}}.put(splitedData[0], Integer.parseInt(splitedData[1]));}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00675}00675             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (typeOfData.equals(\textcolor{stringliteral}{"{}NORMITEMS"{}})) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00676}00676                 String[] splitedData = datum.split(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00677}00677                 ArrayList<Double> vals = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00678}00678                 vals.add(Double.parseDouble(splitedData[0]));}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00679}00679                 vals.add(Double.parseDouble(splitedData[1]));}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00680}00680                 tablaNormNums.add(vals);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00681}00681             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (typeOfData.equals(\textcolor{stringliteral}{"{}NORMFECHAS"{}}))\{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00682}00682                 String[] splitedData = datum.split(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00683}00683                 ArrayList<Long> vals = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00684}00684                 vals.add(Long.parseLong(splitedData[0]));}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00685}00685                 vals.add(Long.parseLong(splitedData[1]));}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00686}00686                 tablaNormFechas.add(vals);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00687}00687             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (typeOfData.equals(\textcolor{stringliteral}{"{}ITEMS"{}})) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00688}00688                 \textcolor{keywordflow}{if} (size == 0) size = \mbox{\hyperlink{classclases_1_1_parser_a5dcbba6a59c40cf4a8b756f98fc7b039}{bitsTable}}.size();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00689}00689                 \textcolor{keywordflow}{if} (!finishedHeaders) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00690}00690                     headers.add(dataLine[0]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00691}00691                 \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00692}00692                 String tipoAtr = dataLine[1];}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00693}00693 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00694}00694                 \textcolor{comment}{// tenemos en cuenta el id original}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00695}00695                 \textcolor{keywordflow}{if} (dataLine[0].equals(\textcolor{stringliteral}{"{}id"{}})) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00696}00696                     originalId = Integer.parseInt(dataLine[2]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00697}00697                     \mbox{\hyperlink{classclases_1_1_parser_a848c66c3bd34a2c5f3b19137f8b63bb3}{itemsTable}}.put(originalId, itemId);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00698}00698                 \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00699}00699 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00700}00700                 \textcolor{comment}{// dividimos y instanciamos los atributos segun el archivo}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00701}00701                 \textcolor{keywordflow}{switch} (tipoAtr) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00702}00702                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}AtributoNumerico"{}}:}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00703}00703                         \mbox{\hyperlink{classclases_1_1_atributo_numerico}{AtributoNumerico}} atrNum = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_atributo_numerico}{AtributoNumerico}}(dataLine[2]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00704}00704                         \textcolor{keywordtype}{double} valueNorm = Double.parseDouble(dataLine[3]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00705}00705                         atrNum.\mbox{\hyperlink{classclases_1_1_atributo_numerico_a8f7001beb075cd713a4250a561b3ee77}{setValorNormalizado}}(valueNorm);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00706}00706                         atrs.put(dataLine[0], atrNum);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00707}00707                         \textcolor{keywordflow}{if} (!finishedHeaders) \{ tipos.add(\textcolor{stringliteral}{"{}double"{}}); \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00708}00708                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00709}00709                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}AtributoBoolean"{}}:}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00710}00710                         \mbox{\hyperlink{classclases_1_1_atributo_boolean}{AtributoBoolean}} atrBool = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_atributo_boolean}{AtributoBoolean}}(dataLine[2]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00711}00711                         atrs.put(dataLine[0], atrBool);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00712}00712                         \textcolor{keywordflow}{if} (!finishedHeaders) \{ tipos.add(\textcolor{stringliteral}{"{}bool"{}}); \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00713}00713                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00714}00714                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}AtributoFecha"{}}:}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00715}00715                         \mbox{\hyperlink{classclases_1_1_atributo_fecha}{AtributoFecha}} atrFecha = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_atributo_fecha}{AtributoFecha}}(Long.parseLong(dataLine[2]));}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00716}00716                         valueNorm = Double.parseDouble(dataLine[3]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00717}00717                         atrFecha.\mbox{\hyperlink{classclases_1_1_atributo_fecha_a896881e97e12c491c9b72a1ac8b13e67}{setValorNormalizado}}(valueNorm);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00718}00718                         atrs.put(dataLine[0], atrFecha);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00719}00719                         \textcolor{keywordflow}{if} (!finishedHeaders) \{ tipos.add(\textcolor{stringliteral}{"{}fecha"{}}); \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00720}00720                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00721}00721                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}AtributoCategorico"{}}:}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00722}00722                         \mbox{\hyperlink{classclases_1_1_atributo_categorico}{AtributoCategorico}} atrCat = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_atributo_categorico}{AtributoCategorico}}(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00723}00723                         \textcolor{keywordflow}{if} (dataLine.length > 2)}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00724}00724                             atrCat = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_atributo_categorico}{AtributoCategorico}}(dataLine[2]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00725}00725                         atrs.put(dataLine[0], atrCat);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00726}00726                         \textcolor{keywordflow}{if} (!finishedHeaders) \{ tipos.add(\textcolor{stringliteral}{"{}string"{}}); \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00727}00727                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00728}00728                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}AtributoCategoricoMultiple"{}}:}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00729}00729                         \mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple}{AtributoCategoricoMultiple}} atrCatMult = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple}{AtributoCategoricoMultiple}}(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00730}00730                         \textcolor{comment}{// primero convertimos a set}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00731}00731                         \textcolor{keywordflow}{if} (dataLine.length > 2) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00732}00732                             String dataLineFixed = dataLine[2].replace(\textcolor{stringliteral}{"{}["{}}, \textcolor{stringliteral}{"{}"{}}).replace(\textcolor{stringliteral}{"{}]"{}}, \textcolor{stringliteral}{"{}"{}}).replace(\textcolor{stringliteral}{"{}, "{}}, \textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00733}00733                             atrCatMult = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple}{AtributoCategoricoMultiple}}(dataLineFixed);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00734}00734 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00735}00735                             \textcolor{comment}{//ahora convertimos el bitset}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00736}00736                             \textcolor{keywordflow}{if} (dataLine.length > 3) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00737}00737                                 dataLineFixed = dataLine[3].replace(\textcolor{stringliteral}{"{}\{"{}}, \textcolor{stringliteral}{"{}"{}}).replace(\textcolor{stringliteral}{"{}\}"{}}, \textcolor{stringliteral}{"{}"{}}).replace(\textcolor{stringliteral}{"{}, "{}}, \textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00738}00738                                 String[] valores = dataLineFixed.split(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00739}00739                                 atrCatMult.\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple_a0dcc22d8b5fe72f4ee97fbf2cfebc3d7}{setBitSetSize}}(size);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00740}00740                                 \textcolor{keywordflow}{for} (String val : valores) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00741}00741                                     \textcolor{keywordtype}{int} n = Integer.parseInt(val);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00742}00742                                     atrCatMult.\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple_a4c27054b8d8780c3e3d20b7072f5c140}{setBitSetValue}}(n);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00743}00743                                 \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00744}00744                                 \textcolor{keywordtype}{int} idx = 0;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00745}00745                             \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00746}00746                         \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00747}00747                         atrs.put(dataLine[0], atrCatMult);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00748}00748                         \textcolor{keywordflow}{if} (!finishedHeaders) \{ tipos.add(\textcolor{stringliteral}{"{}set"{}}); \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00749}00749                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00750}00750                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}AtributoTexto"{}}:}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00751}00751                         String dataLineFixed = (dataLine[2].replace(\textcolor{stringliteral}{"{}\{"{}}, \textcolor{stringliteral}{"{}"{}})).replace(\textcolor{stringliteral}{"{}\}"{}}, \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00752}00752                         Map<String, Integer> valoresMap = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00753}00753                         String[] valores = dataLineFixed.split(\textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00754}00754 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00755}00755                         \textcolor{comment}{// convertimos el map}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00756}00756                         \textcolor{keywordflow}{for} (String line : valores) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00757}00757                             String[] vals = line.split(\textcolor{stringliteral}{"{}="{}});}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00758}00758                             \textcolor{keywordflow}{if} (vals.length > 1) valoresMap.put(vals[0].trim(), Integer.parseInt(vals[1]));}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00759}00759                         \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00760}00760                         \mbox{\hyperlink{classclases_1_1_atributo_texto}{AtributoTexto}} atrText = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_atributo_texto}{AtributoTexto}}(valoresMap, Integer.parseInt(dataLine[3]));}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00761}00761                         atrs.put(dataLine[0], atrText);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00762}00762                         \textcolor{keywordflow}{if} (!finishedHeaders) \{ tipos.add(\textcolor{stringliteral}{"{}texto"{}}); \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00763}00763                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00764}00764                 \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00765}00765             \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00766}00766         \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00767}00767 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00768}00768         \textcolor{comment}{// convertimso arrayList a arrays}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00769}00769         \mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{headersItems}} = headers.toArray(\textcolor{keyword}{new} String[0]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00770}00770         \mbox{\hyperlink{classclases_1_1_parser_a1076c7d435a868cc293d8e90a640f56c}{types}} = tipos.toArray(\textcolor{keyword}{new} String[0]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00771}00771 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00772}00772         \textcolor{comment}{// convertimos los arrayList a las matrices}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00773}00773         \mbox{\hyperlink{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}{auxNormalizeNumeros}} = \textcolor{keyword}{new} Double[tablaNormNums.size()][2];}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00774}00774         \mbox{\hyperlink{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}{auxNormalizeFechas}} = \textcolor{keyword}{new} Long[tablaNormFechas.size()][2];}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00775}00775         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < tablaNormNums.size(); i++)  \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00776}00776             \mbox{\hyperlink{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}{auxNormalizeNumeros}}[i][0] = tablaNormNums.get(i).get(0);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00777}00777             \mbox{\hyperlink{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}{auxNormalizeNumeros}}[i][1] = tablaNormNums.get(i).get(1);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00778}00778             \mbox{\hyperlink{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}{auxNormalizeFechas}}[i][0] = tablaNormFechas.get(i).get(0);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00779}00779             \mbox{\hyperlink{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}{auxNormalizeFechas}}[i][1] = tablaNormFechas.get(i).get(1);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00780}00780         \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00781}00781     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00782}00782 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00793}\mbox{\hyperlink{classclases_1_1_parser_ac246168127022c8396db0192c739738f}{00793}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classclases_1_1_parser_ac246168127022c8396db0192c739738f}{loadUsers}}(ArrayList<String> data, \mbox{\hyperlink{enumclases_1_1_parser_1_1_path}{Path}} op) \textcolor{keywordflow}{throws} Exception \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00794}00794         \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} users = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}}();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00795}00795 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00796}00796         \textcolor{comment}{// variables que iremos reutilizando}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00797}00797         \textcolor{keywordtype}{int} userId = 0, originalId = 0;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00798}00798         Map<Integer, Double> valoraciones = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00799}00799 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00800}00800         \textcolor{keywordflow}{for} (String datum : data) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00801}00801             String[] dataLine = datum.split(\textcolor{stringliteral}{"{} "{}});}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00802}00802             \textcolor{keywordflow}{if} (dataLine.length == 1 \&\& !datum.equals(\textcolor{stringliteral}{"{}|"{}})) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00803}00803                 \textcolor{comment}{// caso en el que es un id}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00804}00804                 originalId = Integer.parseInt(dataLine[0]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00805}00805                 \mbox{\hyperlink{classclases_1_1_parser_aafbddfc002eaf4b9b23c8d585ea35352}{usersTable}}.put(originalId, userId);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00806}00806             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (dataLine.length == 2) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00807}00807                 \textcolor{comment}{// caso en el que hay valoraciones}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00808}00808                 \textcolor{keywordtype}{int} itemId = Integer.parseInt(dataLine[0]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00809}00809                 \textcolor{keywordtype}{double} score = Double.parseDouble(dataLine[1]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00810}00810                 valoraciones.put(itemId, score);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00811}00811             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (datum.equals(\textcolor{stringliteral}{"{}|"{}})) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00812}00812                 \textcolor{comment}{// caso en el que hay que cambiar de usuario}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00813}00813                 \textcolor{keywordtype}{boolean} inList = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00814}00814                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classclases_1_1_parser_aafbddfc002eaf4b9b23c8d585ea35352}{usersTable}}.containsKey(originalId)) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00815}00815                     \textcolor{keywordflow}{if} (users.\mbox{\hyperlink{classclases_1_1_usuarios_a839970c68b14c6f00581627d055d6f11}{containsUser}}(\mbox{\hyperlink{classclases_1_1_parser_aafbddfc002eaf4b9b23c8d585ea35352}{usersTable}}.get(originalId)))}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00816}00816                         valoraciones = users.\mbox{\hyperlink{classclases_1_1_usuarios_a85c335169bb9b2cebfe6276848d24e2c}{getUser}}(\mbox{\hyperlink{classclases_1_1_parser_aafbddfc002eaf4b9b23c8d585ea35352}{usersTable}}.get(originalId)).\mbox{\hyperlink{classclases_1_1_usuario_aea18bbbfd60937a39ca6ffaf41c00f2d}{getValoraciones}}();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00817}00817                     \textcolor{keywordflow}{else} inList = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00818}00818                 \} \textcolor{keywordflow}{else} \{ \mbox{\hyperlink{classclases_1_1_parser_aafbddfc002eaf4b9b23c8d585ea35352}{usersTable}}.put(originalId, userId); inList = \textcolor{keyword}{false}; \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00819}00819 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00820}00820                 \textcolor{comment}{// creamos un nuevo usuario con los ítems}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00821}00821                 \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} us = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}(\mbox{\hyperlink{classclases_1_1_parser_aafbddfc002eaf4b9b23c8d585ea35352}{usersTable}}.get(originalId), valoraciones);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00822}00822                 us.\mbox{\hyperlink{classclases_1_1_usuario_a88820499f9e2a8532a9cd6d9df6fa9ab}{setOriginalUserId}}(originalId);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00823}00823 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00824}00824                 \textcolor{comment}{// añadimos el usuario si no estaba, sino simplemente lo modificamos}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00825}00825                 \textcolor{keywordflow}{if} (inList) users.\mbox{\hyperlink{classclases_1_1_usuarios_aad6b0f6581bf91e9322ad956696659b7}{setUser}}(\mbox{\hyperlink{classclases_1_1_parser_aafbddfc002eaf4b9b23c8d585ea35352}{usersTable}}.get(originalId), us);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00826}00826                 \textcolor{keywordflow}{else} \{ users.\mbox{\hyperlink{classclases_1_1_usuarios_a2b75d102bd18d9efa80137eda4e613b3}{addUser}}(us); userId++; \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00827}00827 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00828}00828                 valoraciones = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00829}00829             \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00830}00830         \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00831}00831         \textcolor{keywordflow}{return} users;}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00832}00832     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00833}00833 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00845}\mbox{\hyperlink{classclases_1_1_parser_a11eb0b8ba7f98eb1e79ab8cabaffcc23}{00845}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{classclases_1_1_recomendacion}{Recomendacion}} \mbox{\hyperlink{classclases_1_1_parser_a11eb0b8ba7f98eb1e79ab8cabaffcc23}{loadRecoms}}(\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} u, \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} us, ArrayList<String> data) \textcolor{keywordflow}{throws} Exception \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00846}00846         Map<Integer, Double> mapRecom = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00847}00847         \textcolor{keywordflow}{for} (String datum : data) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00848}00848             String[] datos = datum.split(\textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00849}00849             mapRecom.put(Integer.parseInt(datos[0]), Double.parseDouble(datos[1]));}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00850}00850         \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00851}00851         \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_recomendacion}{Recomendacion}}(u, us, mapRecom);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00852}00852     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00853}00853 }
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00863}\mbox{\hyperlink{classclases_1_1_parser_aa5b74af01b5b0857b0c92e781bc0c409}{00863}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{classclases_1_1_recomendaciones}{Recomendaciones}} \mbox{\hyperlink{classclases_1_1_parser_aa5b74af01b5b0857b0c92e781bc0c409}{loadHistorial}}(ArrayList<String> data) \textcolor{keywordflow}{throws} Exception \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00864}00864         ArrayList<Recomendacion> recomendaciones = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00865}00865         \textcolor{keywordflow}{for} (String datum : data) \{}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00866}00866             String[] aux = datum.split(\textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00867}00867             \mbox{\hyperlink{classclases_1_1_recomendacion}{Recomendacion}} recom =  \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio}{CtrlDominio}}.\mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a90b19ea0c62561c0005e5eacd0ebc296}{cargarRecomendacion}}(aux[0]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00868}00868             recom.\mbox{\hyperlink{classclases_1_1_recomendacion_af9fa5122fd6d1046e2a7824884383dac}{setName}}(aux[0]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00869}00869             recom.\mbox{\hyperlink{classclases_1_1_recomendacion_aa2497fd8b66e747d5b84bd0f32262110}{setType}}(aux[1]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00870}00870             recom.\mbox{\hyperlink{classclases_1_1_recomendacion_a6e3c8ace310a89d299c05a8d75314fb6}{setDate}}(aux[2]);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00871}00871             recomendaciones.add(recom);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00872}00872         \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00873}00873         \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_recomendaciones}{Recomendaciones}}(recomendaciones);}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00874}00874     \}}
+\DoxyCodeLine{\Hypertarget{_parser_8java_source_l00875}00875 \}}
+
+\end{DoxyCode}

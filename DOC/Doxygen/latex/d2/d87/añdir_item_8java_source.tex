@@ -1,0 +1,466 @@
+\hypertarget{añdir_item_8java_source}{}\doxysection{añadir\+Item.\+java}
+\label{añdir_item_8java_source}\index{añadirItem.java@{añadirItem.java}}
+\mbox{\hyperlink{añdir_item_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00001}\mbox{\hyperlink{namespacepresentacion}{00001}} \textcolor{keyword}{package }presentacion;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00005}00005 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceclases}{clases}}.*;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00006}00006 \textcolor{keyword}{import} com.intellij.uiDesigner.core.GridConstraints;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00007}00007 \textcolor{keyword}{import} com.intellij.uiDesigner.core.GridLayoutManager;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00008}00008 \textcolor{keyword}{import} \mbox{\hyperlink{namespacepresentacion}{presentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion}{CtrlPresentacion}};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00010}00010 \textcolor{keyword}{import} javax.swing.*;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00011}00011 \textcolor{keyword}{import} javax.swing.border.TitledBorder;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00012}00012 \textcolor{keyword}{import} javax.swing.plaf.FontUIResource;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00013}00013 \textcolor{keyword}{import} javax.swing.text.StyleContext;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00014}00014 \textcolor{keyword}{import} java.awt.*;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00015}00015 \textcolor{keyword}{import} java.awt.event.ActionEvent;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00016}00016 \textcolor{keyword}{import} java.awt.event.ActionListener;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00017}00017 \textcolor{keyword}{import} java.awt.event.MouseAdapter;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00018}00018 \textcolor{keyword}{import} java.awt.event.MouseEvent;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00019}00019 \textcolor{keyword}{import} java.sql.Date;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00020}00020 \textcolor{keyword}{import} java.text.*;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00021}00021 \textcolor{keyword}{import} java.util.*;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00029}\mbox{\hyperlink{classpresentacion_1_1añdir_item}{00029}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classpresentacion_1_1añdir_item}{añadirItem}} \textcolor{keyword}{extends} JFrame \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00030}\mbox{\hyperlink{classpresentacion_1_1añdir_item_a9ae8a246dbf2cafd43e4ef49cb3b3fc4}{00030}}     \mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion}{CtrlPresentacion}} \mbox{\hyperlink{classpresentacion_1_1añdir_item_a9ae8a246dbf2cafd43e4ef49cb3b3fc4}{pCtrlPresentacion}};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00031}\mbox{\hyperlink{classpresentacion_1_1añdir_item_a68206b2f5e2edb0c50d1420cdf1c39be}{00031}}     \textcolor{keyword}{private} JPanel \mbox{\hyperlink{classpresentacion_1_1añdir_item_a68206b2f5e2edb0c50d1420cdf1c39be}{panel1}};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00032}\mbox{\hyperlink{classpresentacion_1_1añdir_item_ad043f2e85916a22d4f35927d3df36353}{00032}}     \textcolor{keyword}{private} JScrollPane \mbox{\hyperlink{classpresentacion_1_1añdir_item_ad043f2e85916a22d4f35927d3df36353}{scrollContentPanel}};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00033}\mbox{\hyperlink{classpresentacion_1_1añdir_item_aebd947851a77544264161e71ca8e713e}{00033}}     \textcolor{keyword}{private} JPanel \mbox{\hyperlink{classpresentacion_1_1añdir_item_aebd947851a77544264161e71ca8e713e}{contentsPanel}};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00034}\mbox{\hyperlink{classpresentacion_1_1añdir_item_a04385db145b96014fcb70bb51849355c}{00034}}     \textcolor{keyword}{private} JButton \mbox{\hyperlink{classpresentacion_1_1añdir_item_a04385db145b96014fcb70bb51849355c}{añadirItemButton}};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00035}\mbox{\hyperlink{classpresentacion_1_1añdir_item_a3d606cd4ade080403730866c179529ba}{00035}}     \textcolor{keyword}{private} JButton \mbox{\hyperlink{classpresentacion_1_1añdir_item_a3d606cd4ade080403730866c179529ba}{modificarItemButton}};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00036}\mbox{\hyperlink{classpresentacion_1_1añdir_item_ab8c9df777488e503b89cf3e8a9385ce8}{00036}}     \textcolor{keyword}{private} JButton \mbox{\hyperlink{classpresentacion_1_1añdir_item_ab8c9df777488e503b89cf3e8a9385ce8}{volverButton}};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00037}\mbox{\hyperlink{classpresentacion_1_1añdir_item_a6051625255f9be8b047acaf0a5953faa}{00037}}     \textcolor{keyword}{private} JTable \mbox{\hyperlink{classpresentacion_1_1añdir_item_a6051625255f9be8b047acaf0a5953faa}{table1}};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00038}\mbox{\hyperlink{classpresentacion_1_1añdir_item_a93994d7e8fefd4ba08feb186e69cf7e0}{00038}}     \textcolor{keyword}{private} JScrollPane \mbox{\hyperlink{classpresentacion_1_1añdir_item_a93994d7e8fefd4ba08feb186e69cf7e0}{scrollPane1}};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00039}\mbox{\hyperlink{classpresentacion_1_1añdir_item_acad13523067e106103fb8bf3f2966f01}{00039}}     \textcolor{keyword}{private} String[] \mbox{\hyperlink{classpresentacion_1_1añdir_item_acad13523067e106103fb8bf3f2966f01}{headers}};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00040}\mbox{\hyperlink{classpresentacion_1_1añdir_item_aaa8f976b58e1624159950b0b909c6248}{00040}}     \textcolor{keyword}{private} String[] \mbox{\hyperlink{classpresentacion_1_1añdir_item_aaa8f976b58e1624159950b0b909c6248}{types}};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00041}\mbox{\hyperlink{classpresentacion_1_1añdir_item_afb43be5928ecb6085d513f770e647e11}{00041}}     \textcolor{keyword}{private} ArrayList<JPanel> \mbox{\hyperlink{classpresentacion_1_1añdir_item_afb43be5928ecb6085d513f770e647e11}{dynPanels}} = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00042}\mbox{\hyperlink{classpresentacion_1_1añdir_item_acca54cfdd5ce61356063a266c7600395}{00042}}     \textcolor{keyword}{private} ArrayList<JComponent> \mbox{\hyperlink{classpresentacion_1_1añdir_item_acca54cfdd5ce61356063a266c7600395}{dataComponents}} = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00043}\mbox{\hyperlink{classpresentacion_1_1añdir_item_ae8bacf2778879be732cd945578ece12a}{00043}}     \textcolor{keyword}{private} Map<String, Atributo> \mbox{\hyperlink{classpresentacion_1_1añdir_item_ae8bacf2778879be732cd945578ece12a}{attributes}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00044}\mbox{\hyperlink{classpresentacion_1_1añdir_item_a2cd135b548cfcfbd4ffd0fa38be6b107}{00044}}     \textcolor{keyword}{private} String \mbox{\hyperlink{classpresentacion_1_1añdir_item_a2cd135b548cfcfbd4ffd0fa38be6b107}{id}};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00046}\mbox{\hyperlink{classpresentacion_1_1añdir_item_a108232d4dc705cdfb7ae748ab89ff5b5}{00046}}     Map<Integer, Double> \mbox{\hyperlink{classpresentacion_1_1añdir_item_a108232d4dc705cdfb7ae748ab89ff5b5}{atributos}};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00047}\mbox{\hyperlink{classpresentacion_1_1añdir_item_a4af57e7dd573dcea1458aa035a84babf}{00047}}     \textcolor{keyword}{private} JLabel[] \mbox{\hyperlink{classpresentacion_1_1añdir_item_a4af57e7dd573dcea1458aa035a84babf}{labels}};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00048}\mbox{\hyperlink{classpresentacion_1_1añdir_item_a83ceb50c752536eeaaf7e62902aa4dee}{00048}}     \textcolor{keyword}{private} JMenuBar \mbox{\hyperlink{classpresentacion_1_1añdir_item_a83ceb50c752536eeaaf7e62902aa4dee}{menubar}};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00049}\mbox{\hyperlink{classpresentacion_1_1añdir_item_af6f2220aa15bc01e6d1b05f4ec3f9cb4}{00049}}     \textcolor{keyword}{private} JMenu \mbox{\hyperlink{classpresentacion_1_1añdir_item_af6f2220aa15bc01e6d1b05f4ec3f9cb4}{actividad}};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00050}\mbox{\hyperlink{classpresentacion_1_1añdir_item_ad1e13cc21a2131cd50051e88a71cd5bd}{00050}}     \textcolor{keyword}{private} JMenuItem[] \mbox{\hyperlink{classpresentacion_1_1añdir_item_ad1e13cc21a2131cd50051e88a71cd5bd}{itemsMenu}};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00052}\mbox{\hyperlink{classpresentacion_1_1añdir_item_ac2cc6170c658c0832e34e27746d44db4}{00052}}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpresentacion_1_1añdir_item_ac2cc6170c658c0832e34e27746d44db4}{setAttributes}}() throws ParseException \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00053}00053         \textcolor{keywordtype}{int} p = 0;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00054}00054         \textcolor{keywordflow}{for} (String t : \mbox{\hyperlink{classpresentacion_1_1añdir_item_aaa8f976b58e1624159950b0b909c6248}{types}}) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00055}00055             \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} at = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00056}00056             JComponent jc = \mbox{\hyperlink{classpresentacion_1_1añdir_item_acca54cfdd5ce61356063a266c7600395}{dataComponents}}.get(p);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00057}00057             \textcolor{keywordflow}{switch} (t) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00058}00058                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}bool"{}}:}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00059}00059                     JCheckBox cbComp = (JCheckBox) jc;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00060}00060                     \textcolor{keywordflow}{if} (cbComp.isSelected()) at = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_atributo_boolean}{AtributoBoolean}}(\textcolor{stringliteral}{"{}true"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00061}00061                     \textcolor{keywordflow}{else} at = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_atributo_boolean}{AtributoBoolean}}(\textcolor{stringliteral}{"{}false"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00062}00062                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00064}00064                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}string"{}}:}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00065}00065                     JTextField tfStrComp = (JTextField) jc;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00066}00066                     String valueStr = tfStrComp.getText();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00067}00067                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpresentacion_1_1añdir_item_acad13523067e106103fb8bf3f2966f01}{headers}}[\mbox{\hyperlink{classpresentacion_1_1añdir_item_acca54cfdd5ce61356063a266c7600395}{dataComponents}}.indexOf(jc)].equals(\textcolor{stringliteral}{"{}id"{}})) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00068}00068                         \textcolor{keywordtype}{id} = valueStr;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00069}00069                     \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00070}00070                     at = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_atributo_categorico}{AtributoCategorico}}(valueStr);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00071}00071                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00073}00073                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}set"{}}:}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00074}00074                     JTextField tfSetComp = (JTextField) jc;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00075}00075                     String valueSet = tfSetComp.getText();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00076}00076                     at = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple}{AtributoCategoricoMultiple}}(valueSet);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00077}00077                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00078}00078                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}fecha"{}}:}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00079}00079                     JTextField ftfFechaComp = (JFormattedTextField) jc;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00080}00080                     String valueFecha = ftfFechaComp.getText();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00081}00081                     at = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_atributo_fecha}{AtributoFecha}}(valueFecha);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00082}00082                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00084}00084                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}double"{}}:}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00085}00085                     JTextField ftfDbComp = (JFormattedTextField) jc;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00086}00086                     String valueDouble = ftfDbComp.getText();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00087}00087                     at = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_atributo_fecha}{AtributoFecha}}(valueDouble);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00088}00088                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00090}00090                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}texto"{}}:}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00091}00091                     JTextArea textAComp = (JTextArea) jc;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00092}00092                     String valueTxt = textAComp.getText();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00093}00093                     at = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_atributo_texto}{AtributoTexto}}(valueTxt);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00094}00094                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00095}00095             \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00096}00096             \mbox{\hyperlink{classpresentacion_1_1añdir_item_ae8bacf2778879be732cd945578ece12a}{attributes}}.put(\mbox{\hyperlink{classpresentacion_1_1añdir_item_acad13523067e106103fb8bf3f2966f01}{headers}}[\mbox{\hyperlink{classpresentacion_1_1añdir_item_acca54cfdd5ce61356063a266c7600395}{dataComponents}}.indexOf(jc)], at);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00097}00097             p++;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00098}00098         \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00100}00100     \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00101}00101 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00106}\mbox{\hyperlink{classpresentacion_1_1añdir_item_a421dd690506f38eac47546a1e97a601c}{00106}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpresentacion_1_1añdir_item_a421dd690506f38eac47546a1e97a601c}{initMenu}}() \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00107}00107         \mbox{\hyperlink{classpresentacion_1_1añdir_item_a83ceb50c752536eeaaf7e62902aa4dee}{menubar}} = \textcolor{keyword}{new} JMenuBar();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00108}00108         \mbox{\hyperlink{classpresentacion_1_1añdir_item_af6f2220aa15bc01e6d1b05f4ec3f9cb4}{actividad}} = \textcolor{keyword}{new} JMenu(\textcolor{stringliteral}{"{}actividad"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00110}00110         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ad1e13cc21a2131cd50051e88a71cd5bd}{itemsMenu}} = \textcolor{keyword}{new} JMenuItem[7];}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00111}00111         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ad1e13cc21a2131cd50051e88a71cd5bd}{itemsMenu}}[0] = \textcolor{keyword}{new} JMenuItem(\textcolor{stringliteral}{"{}cargar archivo nuevo"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00112}00112         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ad1e13cc21a2131cd50051e88a71cd5bd}{itemsMenu}}[0].addActionListener(\textcolor{keyword}{new} AbstractAction() \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00113}00113             @Override}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00114}00114             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00115}00115                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00116}00116                     \mbox{\hyperlink{classpresentacion_1_1añdir_item_a9ae8a246dbf2cafd43e4ef49cb3b3fc4}{pCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_a31b82a15f99228fa612f3fcf6d97c405}{changeFrame}}(\textcolor{stringliteral}{"{}cargarDatos"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00117}00117                 \} \textcolor{keywordflow}{catch} (Exception ex) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00118}00118                     ex.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00119}00119                 \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00120}00120             \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00121}00121         \});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00122}00122         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ad1e13cc21a2131cd50051e88a71cd5bd}{itemsMenu}}[1] = \textcolor{keyword}{new} JMenuItem(\textcolor{stringliteral}{"{}ver recomendaciones"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00123}00123         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ad1e13cc21a2131cd50051e88a71cd5bd}{itemsMenu}}[1].addActionListener(\textcolor{keyword}{new} AbstractAction() \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00124}00124             @Override}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00125}00125             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00126}00126                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00127}00127                     \mbox{\hyperlink{classpresentacion_1_1añdir_item_a9ae8a246dbf2cafd43e4ef49cb3b3fc4}{pCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_a31b82a15f99228fa612f3fcf6d97c405}{changeFrame}}(\textcolor{stringliteral}{"{}vistaRecomendaciones"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00128}00128                 \} \textcolor{keywordflow}{catch} (Exception ex) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00129}00129                     ex.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00130}00130                 \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00131}00131             \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00132}00132         \});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00133}00133         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ad1e13cc21a2131cd50051e88a71cd5bd}{itemsMenu}}[2] = \textcolor{keyword}{new} JMenuItem(\textcolor{stringliteral}{"{}elegir usuario/cambiar datos"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00134}00134         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ad1e13cc21a2131cd50051e88a71cd5bd}{itemsMenu}}[2].addActionListener(\textcolor{keyword}{new} AbstractAction() \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00135}00135             @Override}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00136}00136             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00137}00137                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00138}00138                     \mbox{\hyperlink{classpresentacion_1_1añdir_item_a9ae8a246dbf2cafd43e4ef49cb3b3fc4}{pCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_a31b82a15f99228fa612f3fcf6d97c405}{changeFrame}}(\textcolor{stringliteral}{"{}vistaItems"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00139}00139                 \} \textcolor{keywordflow}{catch} (Exception ex) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00140}00140                     ex.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00141}00141                 \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00142}00142             \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00143}00143         \});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00144}00144         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ad1e13cc21a2131cd50051e88a71cd5bd}{itemsMenu}}[3] = \textcolor{keyword}{new} JMenuItem(\textcolor{stringliteral}{"{}ver items"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00145}00145         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ad1e13cc21a2131cd50051e88a71cd5bd}{itemsMenu}}[3].addActionListener(\textcolor{keyword}{new} AbstractAction() \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00146}00146             @Override}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00147}00147             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00148}00148                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00149}00149                     \mbox{\hyperlink{classpresentacion_1_1añdir_item_a9ae8a246dbf2cafd43e4ef49cb3b3fc4}{pCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_a31b82a15f99228fa612f3fcf6d97c405}{changeFrame}}(\textcolor{stringliteral}{"{}vistaItems"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00150}00150                 \} \textcolor{keywordflow}{catch} (Exception ex) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00151}00151                     ex.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00152}00152                 \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00153}00153             \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00154}00154         \});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00155}00155         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ad1e13cc21a2131cd50051e88a71cd5bd}{itemsMenu}}[4] = \textcolor{keyword}{new} JMenuItem(\textcolor{stringliteral}{"{}ver/añadir valoraciones"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00156}00156         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ad1e13cc21a2131cd50051e88a71cd5bd}{itemsMenu}}[4].addActionListener(\textcolor{keyword}{new} AbstractAction() \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00157}00157             @Override}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00158}00158             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00159}00159                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00160}00160                     \mbox{\hyperlink{classpresentacion_1_1añdir_item_a9ae8a246dbf2cafd43e4ef49cb3b3fc4}{pCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_a31b82a15f99228fa612f3fcf6d97c405}{changeFrame}}(\textcolor{stringliteral}{"{}usuarioMain"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00161}00161                 \} \textcolor{keywordflow}{catch} (Exception ex) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00162}00162                     ex.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00163}00163                 \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00164}00164             \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00165}00165         \});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00166}00166         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ad1e13cc21a2131cd50051e88a71cd5bd}{itemsMenu}}[5] = \textcolor{keyword}{new} JMenuItem(\textcolor{stringliteral}{"{}historial recomendaciones"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00167}00167         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ad1e13cc21a2131cd50051e88a71cd5bd}{itemsMenu}}[5].addActionListener(\textcolor{keyword}{new} AbstractAction() \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00168}00168             @Override}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00169}00169             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00170}00170                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00171}00171                     \mbox{\hyperlink{classpresentacion_1_1añdir_item_a9ae8a246dbf2cafd43e4ef49cb3b3fc4}{pCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_a31b82a15f99228fa612f3fcf6d97c405}{changeFrame}}(\textcolor{stringliteral}{"{}historialRecomendaciones"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00172}00172                 \} \textcolor{keywordflow}{catch} (Exception ex) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00173}00173                     ex.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00174}00174                 \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00175}00175             \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00176}00176         \});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00177}00177         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ad1e13cc21a2131cd50051e88a71cd5bd}{itemsMenu}}[6] = \textcolor{keyword}{new} JMenuItem(\textcolor{stringliteral}{"{}salir"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00178}00178         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ad1e13cc21a2131cd50051e88a71cd5bd}{itemsMenu}}[6].addActionListener(\textcolor{keyword}{new} AbstractAction() \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00179}00179             @Override}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00180}00180             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00181}00181                 setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00182}00182             \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00183}00183         \});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00184}00184 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00185}00185         \mbox{\hyperlink{classpresentacion_1_1añdir_item_a83ceb50c752536eeaaf7e62902aa4dee}{menubar}}.add(\mbox{\hyperlink{classpresentacion_1_1añdir_item_af6f2220aa15bc01e6d1b05f4ec3f9cb4}{actividad}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00186}00186         \textcolor{keywordflow}{for} (JMenuItem it : \mbox{\hyperlink{classpresentacion_1_1añdir_item_ad1e13cc21a2131cd50051e88a71cd5bd}{itemsMenu}}) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00187}00187             \mbox{\hyperlink{classpresentacion_1_1añdir_item_af6f2220aa15bc01e6d1b05f4ec3f9cb4}{actividad}}.add(it);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00188}00188         \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00189}00189     \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00190}00190 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00191}\mbox{\hyperlink{classpresentacion_1_1añdir_item_a5fefac046cc4c5b2718221b840f3659a}{00191}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpresentacion_1_1añdir_item_a5fefac046cc4c5b2718221b840f3659a}{setContentsPanel}}() \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00192}00192         \mbox{\hyperlink{classpresentacion_1_1añdir_item_acad13523067e106103fb8bf3f2966f01}{headers}} = \mbox{\hyperlink{classpresentacion_1_1añdir_item_a9ae8a246dbf2cafd43e4ef49cb3b3fc4}{pCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_ab0302e15887c0c347eb11bf90e8587cd}{getHeaders}}();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00193}00193         \mbox{\hyperlink{classpresentacion_1_1añdir_item_aaa8f976b58e1624159950b0b909c6248}{types}} = \mbox{\hyperlink{classpresentacion_1_1añdir_item_a9ae8a246dbf2cafd43e4ef49cb3b3fc4}{pCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_aa337d63916f13f0f3e2a22cd571eabe9}{getTypes}}();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00194}00194 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00195}00195         \textcolor{keywordflow}{for} (String h : \mbox{\hyperlink{classpresentacion_1_1añdir_item_acad13523067e106103fb8bf3f2966f01}{headers}}) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00196}00196             \textcolor{keywordtype}{int} index = Arrays.asList(\mbox{\hyperlink{classpresentacion_1_1añdir_item_acad13523067e106103fb8bf3f2966f01}{headers}}).indexOf(h);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00197}00197 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00198}00198             \textcolor{keywordflow}{switch} (\mbox{\hyperlink{classpresentacion_1_1añdir_item_aaa8f976b58e1624159950b0b909c6248}{types}}[index]) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00199}00199                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}bool"{}}:}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00200}00200                     JPanel boolQ = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00201}00201                     boolQ.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00202}00202                     boolQ.setLayout(\textcolor{keyword}{new} BorderLayout(0, 0));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00203}00203 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00204}00204                     JCheckBox cbBoolQ = \textcolor{keyword}{new} JCheckBox();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00205}00205                     cbBoolQ.setText(\textcolor{stringliteral}{"{}<html>¿"{}} + h + \textcolor{stringliteral}{"{}?</html>"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00206}00206                     cbBoolQ.setBackground(\textcolor{keyword}{new} Color((-\/1)));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00207}00207                     \mbox{\hyperlink{classpresentacion_1_1añdir_item_acca54cfdd5ce61356063a266c7600395}{dataComponents}}.add(cbBoolQ);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00208}00208 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00209}00209                     boolQ.add(cbBoolQ, BorderLayout.CENTER);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00210}00210                     \mbox{\hyperlink{classpresentacion_1_1añdir_item_afb43be5928ecb6085d513f770e647e11}{dynPanels}}.add(boolQ);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00211}00211                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00212}00212 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00213}00213                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}string"{}}:}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00214}00214                     JPanel stringQ = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00215}00215                     stringQ.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00216}00216                     stringQ.setLayout(\textcolor{keyword}{new} BorderLayout(0, 0));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00217}00217 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00218}00218                     JTextField tfStringQ = \textcolor{keyword}{new} JTextField();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00219}00219                     tfStringQ.setBackground(\textcolor{keyword}{new} Color((-\/1)));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00220}00220                     \mbox{\hyperlink{classpresentacion_1_1añdir_item_acca54cfdd5ce61356063a266c7600395}{dataComponents}}.add(tfStringQ);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00221}00221 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00222}00222                     JLabel lStringQ = \textcolor{keyword}{new} JLabel();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00223}00223                     lStringQ.setText(\textcolor{stringliteral}{"{}<html>"{}} + h + \textcolor{stringliteral}{"{}</html>"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00224}00224                     lStringQ.setBackground(\textcolor{keyword}{new} Color((-\/1)));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00225}00225 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00226}00226                     stringQ.add(lStringQ, BorderLayout.NORTH);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00227}00227                     stringQ.add(tfStringQ, BorderLayout.CENTER);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00228}00228 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00229}00229                     \mbox{\hyperlink{classpresentacion_1_1añdir_item_afb43be5928ecb6085d513f770e647e11}{dynPanels}}.add(stringQ);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00230}00230                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00231}00231 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00232}00232                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}double"{}}:}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00233}00233                     JPanel doubleQ = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00234}00234                     doubleQ.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00235}00235                     doubleQ.setLayout(\textcolor{keyword}{new} BorderLayout(0, 0));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00236}00236 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00237}00237                     JLabel lDoubleQ = \textcolor{keyword}{new} JLabel();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00238}00238                     lDoubleQ.setText(\textcolor{stringliteral}{"{}<html>"{}} + h + \textcolor{stringliteral}{"{}</html>"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00239}00239                     lDoubleQ.setBackground(\textcolor{keyword}{new} Color((-\/1)));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00240}00240 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00241}00241                     NumberFormat doubleFormat = DecimalFormat.getInstance();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00242}00242                     JFormattedTextField ftfDoubleQ = \textcolor{keyword}{new} JFormattedTextField(doubleFormat);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00243}00243                     \mbox{\hyperlink{classpresentacion_1_1añdir_item_acca54cfdd5ce61356063a266c7600395}{dataComponents}}.add(ftfDoubleQ);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00244}00244 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00245}00245                     doubleQ.add(lDoubleQ, BorderLayout.NORTH);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00246}00246                     doubleQ.add(ftfDoubleQ, BorderLayout.CENTER);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00247}00247 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00248}00248                     \mbox{\hyperlink{classpresentacion_1_1añdir_item_afb43be5928ecb6085d513f770e647e11}{dynPanels}}.add(doubleQ);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00249}00249                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00250}00250 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00251}00251                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}set"{}}:}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00252}00252                     JPanel setQ = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00253}00253                     setQ.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00254}00254                     setQ.setLayout(\textcolor{keyword}{new} BorderLayout(0, 0));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00255}00255 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00256}00256                     JTextField tfSetQ = \textcolor{keyword}{new} JTextField();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00257}00257                     tfSetQ.setBackground(\textcolor{keyword}{new} Color((-\/1)));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00258}00258                     \mbox{\hyperlink{classpresentacion_1_1añdir_item_acca54cfdd5ce61356063a266c7600395}{dataComponents}}.add(tfSetQ);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00259}00259 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00260}00260                     JLabel lSetQ = \textcolor{keyword}{new} JLabel();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00261}00261                     lSetQ.setText(\textcolor{stringliteral}{"{}<html>"{}} + h + \textcolor{stringliteral}{"{}. Por favor, introduzca los elementos separados por comas. </html>"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00262}00262                     lSetQ.setBackground(\textcolor{keyword}{new} Color((-\/1)));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00263}00263 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00264}00264                     setQ.add(lSetQ, BorderLayout.NORTH);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00265}00265                     setQ.add(tfSetQ, BorderLayout.CENTER);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00266}00266 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00267}00267                     \mbox{\hyperlink{classpresentacion_1_1añdir_item_afb43be5928ecb6085d513f770e647e11}{dynPanels}}.add(setQ);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00268}00268                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00269}00269 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00270}00270                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}fecha"{}}:}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00271}00271                     JPanel dateQ = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00272}00272                     dateQ.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00273}00273                     dateQ.setLayout(\textcolor{keyword}{new} BorderLayout(0, 0));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00274}00274 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00275}00275                     JLabel lDateQ = \textcolor{keyword}{new} JLabel();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00276}00276                     lDateQ.setText(\textcolor{stringliteral}{"{}<html>"{}} + h + \textcolor{stringliteral}{"{}</html>"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00277}00277                     lDateQ.setBackground(\textcolor{keyword}{new} Color((-\/1)));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00278}00278 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00279}00279                     DateFormat dateFormat = \textcolor{keyword}{new} SimpleDateFormat(\textcolor{stringliteral}{"{}yyyy/MM/dd"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00280}00280                     JFormattedTextField ftfDateQ = \textcolor{keyword}{new} JFormattedTextField(dateFormat);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00281}00281                     \mbox{\hyperlink{classpresentacion_1_1añdir_item_acca54cfdd5ce61356063a266c7600395}{dataComponents}}.add(ftfDateQ);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00282}00282 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00283}00283                     dateQ.add(lDateQ, BorderLayout.NORTH);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00284}00284                     dateQ.add(ftfDateQ, BorderLayout.CENTER);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00285}00285 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00286}00286                     \mbox{\hyperlink{classpresentacion_1_1añdir_item_afb43be5928ecb6085d513f770e647e11}{dynPanels}}.add(dateQ);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00287}00287                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00288}00288 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00289}00289                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}texto"{}}:}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00290}00290                     JPanel txtQ = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00291}00291                     txtQ.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00292}00292                     txtQ.setLayout(\textcolor{keyword}{new} BorderLayout(0, 0));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00293}00293 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00294}00294 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00295}00295                     JTextArea taTxtQ = \textcolor{keyword}{new} JTextArea();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00296}00296                     taTxtQ.setBackground(\textcolor{keyword}{new} Color((-\/1)));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00297}00297                     \mbox{\hyperlink{classpresentacion_1_1añdir_item_acca54cfdd5ce61356063a266c7600395}{dataComponents}}.add(taTxtQ);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00298}00298 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00299}00299                     JLabel lTxtQ = \textcolor{keyword}{new} JLabel();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00300}00300                     lTxtQ.setText(\textcolor{stringliteral}{"{}<html>"{}} + h + \textcolor{stringliteral}{"{}</html>"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00301}00301                     lTxtQ.setBackground(\textcolor{keyword}{new} Color((-\/1)));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00302}00302 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00303}00303                     txtQ.add(lTxtQ, BorderLayout.NORTH);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00304}00304                     txtQ.add(taTxtQ, BorderLayout.CENTER);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00305}00305 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00306}00306                     \mbox{\hyperlink{classpresentacion_1_1añdir_item_afb43be5928ecb6085d513f770e647e11}{dynPanels}}.add(txtQ);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00307}00307                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00308}00308             \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00309}00309         \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00310}00310         JPanel \mbox{\hyperlink{classpresentacion_1_1añdir_item_aebd947851a77544264161e71ca8e713e}{contentsPanel}} = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00311}00311         \mbox{\hyperlink{classpresentacion_1_1añdir_item_aebd947851a77544264161e71ca8e713e}{contentsPanel}}.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00312}00312         \mbox{\hyperlink{classpresentacion_1_1añdir_item_aebd947851a77544264161e71ca8e713e}{contentsPanel}}.setLayout(\textcolor{keyword}{new} GridLayoutManager(\mbox{\hyperlink{classpresentacion_1_1añdir_item_afb43be5928ecb6085d513f770e647e11}{dynPanels}}.size(), 1, \textcolor{keyword}{new} Insets(0, 0, 0, 0), -\/1, -\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00313}00313 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00314}00314         \textcolor{keywordflow}{for} (JPanel jp : \mbox{\hyperlink{classpresentacion_1_1añdir_item_afb43be5928ecb6085d513f770e647e11}{dynPanels}}) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00315}00315             \mbox{\hyperlink{classpresentacion_1_1añdir_item_aebd947851a77544264161e71ca8e713e}{contentsPanel}}.add(jp, \textcolor{keyword}{new} GridConstraints(\mbox{\hyperlink{classpresentacion_1_1añdir_item_afb43be5928ecb6085d513f770e647e11}{dynPanels}}.indexOf(jp), 0, 1, 1, GridConstraints.ANCHOR\_CENTER, GridConstraints.FILL\_BOTH, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, \textcolor{keyword}{null}, \textcolor{keyword}{null}, \textcolor{keyword}{null}, 0, \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00316}00316         \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00317}00317         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ad043f2e85916a22d4f35927d3df36353}{scrollContentPanel}}.setViewportView(\mbox{\hyperlink{classpresentacion_1_1añdir_item_aebd947851a77544264161e71ca8e713e}{contentsPanel}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00318}00318     \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00319}00319 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00325}\mbox{\hyperlink{classpresentacion_1_1añdir_item_a4dbab36ddc219fdd477cfad05d281e95}{00325}}     \textcolor{keyword}{public} \mbox{\hyperlink{classpresentacion_1_1añdir_item_a3b393af0349b9d8c107b0fbacb198acf}{añadirItem}}(\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion}{CtrlPresentacion}} iCtrlPresentacion) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00326}00326         \mbox{\hyperlink{classpresentacion_1_1añdir_item_a9ae8a246dbf2cafd43e4ef49cb3b3fc4}{pCtrlPresentacion}} = iCtrlPresentacion;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00327}00327         \mbox{\hyperlink{classpresentacion_1_1añdir_item_a5fefac046cc4c5b2718221b840f3659a}{setContentsPanel}}();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00328}00328         \mbox{\hyperlink{classpresentacion_1_1añdir_item_a421dd690506f38eac47546a1e97a601c}{initMenu}}();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00329}00329 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00330}00330 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00331}00331         SwingUtilities.invokeLater(\textcolor{keyword}{new} Runnable() \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00332}00332             @Override}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00333}00333             \textcolor{keyword}{public} \textcolor{keywordtype}{void} run() \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00334}00334                 add(\mbox{\hyperlink{classpresentacion_1_1añdir_item_a68206b2f5e2edb0c50d1420cdf1c39be}{panel1}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00335}00335                 setJMenuBar(\mbox{\hyperlink{classpresentacion_1_1añdir_item_a83ceb50c752536eeaaf7e62902aa4dee}{menubar}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00336}00336                 setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00337}00337             \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00338}00338         \});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00339}00339 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00340}00340         \mbox{\hyperlink{classpresentacion_1_1añdir_item_a04385db145b96014fcb70bb51849355c}{añadirItemButton}}.addActionListener(\textcolor{keyword}{new} ActionListener() \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00341}00341             @Override}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00342}00342             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00343}00343                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00344}00344                     \mbox{\hyperlink{classpresentacion_1_1añdir_item_ac2cc6170c658c0832e34e27746d44db4}{setAttributes}}();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00345}00345                 \} \textcolor{keywordflow}{catch} (ParseException ex) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00346}00346                     ex.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00347}00347                 \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00348}00348                 \textcolor{keywordflow}{for} (\mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} at : \mbox{\hyperlink{classpresentacion_1_1añdir_item_ae8bacf2778879be732cd945578ece12a}{attributes}}.values()) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00349}00349                     System.out.println();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00350}00350                 \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00351}00351                 \mbox{\hyperlink{classpresentacion_1_1añdir_item_a9ae8a246dbf2cafd43e4ef49cb3b3fc4}{pCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_acc81d815335d09d782acab2038893082}{addNewItem}}(\textcolor{keywordtype}{id}, \mbox{\hyperlink{classpresentacion_1_1añdir_item_ae8bacf2778879be732cd945578ece12a}{attributes}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00352}00352             \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00353}00353         \});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00354}00354         \mbox{\hyperlink{classpresentacion_1_1añdir_item_a3d606cd4ade080403730866c179529ba}{modificarItemButton}}.addActionListener(\textcolor{keyword}{new} ActionListener() \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00355}00355             @Override}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00356}00356             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00357}00357                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00358}00358                     \mbox{\hyperlink{classpresentacion_1_1añdir_item_ac2cc6170c658c0832e34e27746d44db4}{setAttributes}}();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00359}00359                 \} \textcolor{keywordflow}{catch} (ParseException ex) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00360}00360                     ex.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00361}00361                 \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00362}00362                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpresentacion_1_1añdir_item_a9ae8a246dbf2cafd43e4ef49cb3b3fc4}{pCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_ac4acb1ff67e097422b5cedc935f28d00}{existsId}}(Integer.parseInt(\textcolor{keywordtype}{id}))) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00363}00363 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00364}00364                 \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00365}00365 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00366}00366 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00367}00367             \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00368}00368         \});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00369}00369         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ab8c9df777488e503b89cf3e8a9385ce8}{volverButton}}.addActionListener(\textcolor{keyword}{new} ActionListener() \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00370}00370             @Override}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00371}00371             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00372}00372                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00373}00373                     iCtrlPresentacion.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_a31b82a15f99228fa612f3fcf6d97c405}{changeFrame}}(\textcolor{stringliteral}{"{}vistaItems"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00374}00374                 \} \textcolor{keywordflow}{catch} (Exception ex) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00375}00375                     ex.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00376}00376                 \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00377}00377             \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00378}00378         \});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00379}00379     \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00380}00380 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00381}00381     \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00382}00382 \textcolor{comment}{// GUI initializer generated by IntelliJ IDEA GUI Designer}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00383}00383 \textcolor{comment}{// >>> IMPORTANT!! <<<}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00384}00384 \textcolor{comment}{// DO NOT EDIT OR ADD ANY CODE HERE!}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00385}00385         \mbox{\hyperlink{classpresentacion_1_1añdir_item_a44a75ea3257fda48ad94b27389d338ef}{\$\$\$setupUI\$\$\$}}();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00386}00386     \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00387}00387 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00395}\mbox{\hyperlink{classpresentacion_1_1añdir_item_a44a75ea3257fda48ad94b27389d338ef}{00395}}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpresentacion_1_1añdir_item_a44a75ea3257fda48ad94b27389d338ef}{\$\$\$setupUI\$\$\$}}() \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00396}00396         \mbox{\hyperlink{classpresentacion_1_1añdir_item_a68206b2f5e2edb0c50d1420cdf1c39be}{panel1}} = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00397}00397         \mbox{\hyperlink{classpresentacion_1_1añdir_item_a68206b2f5e2edb0c50d1420cdf1c39be}{panel1}}.setLayout(\textcolor{keyword}{new} BorderLayout(0, 0));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00398}00398         \mbox{\hyperlink{classpresentacion_1_1añdir_item_a68206b2f5e2edb0c50d1420cdf1c39be}{panel1}}.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00399}00399         \mbox{\hyperlink{classpresentacion_1_1añdir_item_a68206b2f5e2edb0c50d1420cdf1c39be}{panel1}}.setMaximumSize(\textcolor{keyword}{new} Dimension(750, 500));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00400}00400         \mbox{\hyperlink{classpresentacion_1_1añdir_item_a68206b2f5e2edb0c50d1420cdf1c39be}{panel1}}.setMinimumSize(\textcolor{keyword}{new} Dimension(750, 500));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00401}00401         \mbox{\hyperlink{classpresentacion_1_1añdir_item_a68206b2f5e2edb0c50d1420cdf1c39be}{panel1}}.setPreferredSize(\textcolor{keyword}{new} Dimension(750, 500));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00402}00402         \textcolor{keyword}{final} JPanel panel2 = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00403}00403         panel2.setLayout(\textcolor{keyword}{new} GridLayoutManager(1, 1, \textcolor{keyword}{new} Insets(0, 0, 0, 0), -\/1, -\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00404}00404         panel2.setBackground(\textcolor{keyword}{new} Color(-\/13421238));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00405}00405         panel2.setMaximumSize(\textcolor{keyword}{new} Dimension(250, 500));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00406}00406         panel2.setMinimumSize(\textcolor{keyword}{new} Dimension(250, 500));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00407}00407         panel2.setPreferredSize(\textcolor{keyword}{new} Dimension(250, 500));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00408}00408         \mbox{\hyperlink{classpresentacion_1_1añdir_item_a68206b2f5e2edb0c50d1420cdf1c39be}{panel1}}.add(panel2, BorderLayout.WEST);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00409}00409         \textcolor{keyword}{final} JPanel panel3 = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00410}00410         panel3.setLayout(\textcolor{keyword}{new} GridLayoutManager(1, 1, \textcolor{keyword}{new} Insets(0, 0, 0, 0), -\/1, -\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00411}00411         panel3.setBackground(\textcolor{keyword}{new} Color(-\/13421238));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00412}00412         panel2.add(panel3, \textcolor{keyword}{new} GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR\_CENTER, GridConstraints.FILL\_NONE, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, \textcolor{keyword}{null}, \textcolor{keyword}{null}, \textcolor{keyword}{null}, 0, \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00413}00413         \textcolor{keyword}{final} JLabel label1 = \textcolor{keyword}{new} JLabel();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00414}00414         Font label1Font = this.\mbox{\hyperlink{classpresentacion_1_1añdir_item_aec7b143fa894070324b3693390fc54da}{\$\$\$getFont\$\$\$}}(\textcolor{stringliteral}{"{}Bangla MN"{}}, -\/1, 36, label1.getFont());}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00415}00415         \textcolor{keywordflow}{if} (label1Font != \textcolor{keyword}{null}) label1.setFont(label1Font);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00416}00416         label1.setForeground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00417}00417         label1.setText(\textcolor{stringliteral}{"{}Items"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00418}00418         panel3.add(label1, \textcolor{keyword}{new} GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR\_WEST, GridConstraints.FILL\_NONE, GridConstraints.SIZEPOLICY\_FIXED, GridConstraints.SIZEPOLICY\_FIXED, \textcolor{keyword}{null}, \textcolor{keyword}{null}, \textcolor{keyword}{null}, 0, \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00419}00419         \textcolor{keyword}{final} JPanel panel4 = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00420}00420         panel4.setLayout(\textcolor{keyword}{new} GridLayoutManager(2, 1, \textcolor{keyword}{new} Insets(20, 20, 20, 20), -\/1, -\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00421}00421         panel4.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00422}00422         panel4.setMaximumSize(\textcolor{keyword}{new} Dimension(500, 500));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00423}00423         panel4.setMinimumSize(\textcolor{keyword}{new} Dimension(500, 500));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00424}00424         panel4.setPreferredSize(\textcolor{keyword}{new} Dimension(500, 500));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00425}00425         \mbox{\hyperlink{classpresentacion_1_1añdir_item_a68206b2f5e2edb0c50d1420cdf1c39be}{panel1}}.add(panel4, BorderLayout.CENTER);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00426}00426         \textcolor{keyword}{final} JPanel panel5 = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00427}00427         panel5.setLayout(\textcolor{keyword}{new} BorderLayout(0, 0));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00428}00428         panel5.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00429}00429         panel4.add(panel5, \textcolor{keyword}{new} GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR\_CENTER, GridConstraints.FILL\_BOTH, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, \textcolor{keyword}{null}, \textcolor{keyword}{null}, \textcolor{keyword}{null}, 0, \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00430}00430         \textcolor{keyword}{final} JLabel label2 = \textcolor{keyword}{new} JLabel();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00431}00431         label2.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00432}00432         Font label2Font = this.\mbox{\hyperlink{classpresentacion_1_1añdir_item_aec7b143fa894070324b3693390fc54da}{\$\$\$getFont\$\$\$}}(\textcolor{stringliteral}{"{}Bangla MN"{}}, -\/1, 14, label2.getFont());}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00433}00433         \textcolor{keywordflow}{if} (label2Font != \textcolor{keyword}{null}) label2.setFont(label2Font);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00434}00434         label2.setForeground(\textcolor{keyword}{new} Color(-\/13421238));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00435}00435         label2.setText(\textcolor{stringliteral}{"{}<html> Introduzca la información requerida para añadir o modificar un ítem en el sistema </html>"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00436}00436         panel5.add(label2, BorderLayout.NORTH);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00437}00437         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ad043f2e85916a22d4f35927d3df36353}{scrollContentPanel}} = \textcolor{keyword}{new} JScrollPane();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00438}00438         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ad043f2e85916a22d4f35927d3df36353}{scrollContentPanel}}.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00439}00439         panel5.add(\mbox{\hyperlink{classpresentacion_1_1añdir_item_ad043f2e85916a22d4f35927d3df36353}{scrollContentPanel}}, BorderLayout.CENTER);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00440}00440         \mbox{\hyperlink{classpresentacion_1_1añdir_item_aebd947851a77544264161e71ca8e713e}{contentsPanel}} = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00441}00441         \mbox{\hyperlink{classpresentacion_1_1añdir_item_aebd947851a77544264161e71ca8e713e}{contentsPanel}}.setLayout(\textcolor{keyword}{new} GridLayoutManager(1, 1, \textcolor{keyword}{new} Insets(20, 20, 20, 20), -\/1, -\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00442}00442         \mbox{\hyperlink{classpresentacion_1_1añdir_item_aebd947851a77544264161e71ca8e713e}{contentsPanel}}.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00443}00443         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ad043f2e85916a22d4f35927d3df36353}{scrollContentPanel}}.setViewportView(\mbox{\hyperlink{classpresentacion_1_1añdir_item_aebd947851a77544264161e71ca8e713e}{contentsPanel}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00444}00444         \textcolor{keyword}{final} JPanel panel6 = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00445}00445         panel6.setLayout(\textcolor{keyword}{new} GridLayoutManager(1, 2, \textcolor{keyword}{new} Insets(0, 0, 0, 0), -\/1, -\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00446}00446         panel6.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00447}00447         panel5.add(panel6, BorderLayout.SOUTH);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00448}00448         \mbox{\hyperlink{classpresentacion_1_1añdir_item_a04385db145b96014fcb70bb51849355c}{añadirItemButton}} = \textcolor{keyword}{new} JButton();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00449}00449         \mbox{\hyperlink{classpresentacion_1_1añdir_item_a04385db145b96014fcb70bb51849355c}{añadirItemButton}}.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00450}00450         \mbox{\hyperlink{classpresentacion_1_1añdir_item_a04385db145b96014fcb70bb51849355c}{añadirItemButton}}.setText(\textcolor{stringliteral}{"{}Añadir Item"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00451}00451         panel6.add(\mbox{\hyperlink{classpresentacion_1_1añdir_item_a04385db145b96014fcb70bb51849355c}{añadirItemButton}}, \textcolor{keyword}{new} GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR\_CENTER, GridConstraints.FILL\_HORIZONTAL, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, GridConstraints.SIZEPOLICY\_FIXED, \textcolor{keyword}{null}, \textcolor{keyword}{null}, \textcolor{keyword}{null}, 0, \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00452}00452         \mbox{\hyperlink{classpresentacion_1_1añdir_item_a3d606cd4ade080403730866c179529ba}{modificarItemButton}} = \textcolor{keyword}{new} JButton();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00453}00453         \mbox{\hyperlink{classpresentacion_1_1añdir_item_a3d606cd4ade080403730866c179529ba}{modificarItemButton}}.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00454}00454         \mbox{\hyperlink{classpresentacion_1_1añdir_item_a3d606cd4ade080403730866c179529ba}{modificarItemButton}}.setText(\textcolor{stringliteral}{"{}Modificar Item"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00455}00455         panel6.add(\mbox{\hyperlink{classpresentacion_1_1añdir_item_a3d606cd4ade080403730866c179529ba}{modificarItemButton}}, \textcolor{keyword}{new} GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR\_CENTER, GridConstraints.FILL\_HORIZONTAL, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, GridConstraints.SIZEPOLICY\_FIXED, \textcolor{keyword}{null}, \textcolor{keyword}{null}, \textcolor{keyword}{null}, 0, \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00456}00456         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ab8c9df777488e503b89cf3e8a9385ce8}{volverButton}} = \textcolor{keyword}{new} JButton();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00457}00457         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ab8c9df777488e503b89cf3e8a9385ce8}{volverButton}}.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00458}00458         \mbox{\hyperlink{classpresentacion_1_1añdir_item_ab8c9df777488e503b89cf3e8a9385ce8}{volverButton}}.setText(\textcolor{stringliteral}{"{}Volver"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00459}00459         panel4.add(\mbox{\hyperlink{classpresentacion_1_1añdir_item_ab8c9df777488e503b89cf3e8a9385ce8}{volverButton}}, \textcolor{keyword}{new} GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR\_WEST, GridConstraints.FILL\_NONE, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, GridConstraints.SIZEPOLICY\_FIXED, \textcolor{keyword}{null}, \textcolor{keyword}{null}, \textcolor{keyword}{null}, 0, \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00460}00460     \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00461}00461 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00465}\mbox{\hyperlink{classpresentacion_1_1añdir_item_aec7b143fa894070324b3693390fc54da}{00465}}     \textcolor{keyword}{private} Font \mbox{\hyperlink{classpresentacion_1_1añdir_item_aec7b143fa894070324b3693390fc54da}{\$\$\$getFont\$\$\$}}(String fontName, \textcolor{keywordtype}{int} style, \textcolor{keywordtype}{int} size, Font currentFont) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00466}00466         \textcolor{keywordflow}{if} (currentFont == \textcolor{keyword}{null}) \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00467}00467         String resultName;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00468}00468         \textcolor{keywordflow}{if} (fontName == \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00469}00469             resultName = currentFont.getName();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00470}00470         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00471}00471             Font testFont = \textcolor{keyword}{new} Font(fontName, Font.PLAIN, 10);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00472}00472             \textcolor{keywordflow}{if} (testFont.canDisplay(\textcolor{charliteral}{'a'}) \&\& testFont.canDisplay(\textcolor{charliteral}{'1'})) \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00473}00473                 resultName = fontName;}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00474}00474             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00475}00475                 resultName = currentFont.getName();}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00476}00476             \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00477}00477         \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00478}00478         Font font = \textcolor{keyword}{new} Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00479}00479         \textcolor{keywordtype}{boolean} isMac = System.getProperty(\textcolor{stringliteral}{"{}os.name"{}}, \textcolor{stringliteral}{"{}"{}}).toLowerCase(Locale.ENGLISH).startsWith(\textcolor{stringliteral}{"{}mac"{}});}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00480}00480         Font fontWithFallback = isMac ? \textcolor{keyword}{new} Font(font.getFamily(), font.getStyle(), font.getSize()) : \textcolor{keyword}{new} StyleContext().getFont(font.getFamily(), font.getStyle(), font.getSize());}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00481}00481         \textcolor{keywordflow}{return} fontWithFallback instanceof FontUIResource ? fontWithFallback : \textcolor{keyword}{new} FontUIResource(fontWithFallback);}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00482}00482     \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00483}00483 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00487}\mbox{\hyperlink{classpresentacion_1_1añdir_item_a1bd0c6292f134f9bf9393646710fec2b}{00487}}     \textcolor{keyword}{public} JComponent \mbox{\hyperlink{classpresentacion_1_1añdir_item_a1bd0c6292f134f9bf9393646710fec2b}{\$\$\$getRootComponent\$\$\$}}() \{}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00488}00488         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentacion_1_1añdir_item_a68206b2f5e2edb0c50d1420cdf1c39be}{panel1}};}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00489}00489     \}}
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00490}00490 }
+\DoxyCodeLine{\Hypertarget{añdir_item_8java_source_l00491}00491 \}}
+
+\end{DoxyCode}

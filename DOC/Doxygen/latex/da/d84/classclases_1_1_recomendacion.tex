@@ -1,0 +1,602 @@
+\hypertarget{classclases_1_1_recomendacion}{}\doxysection{Referencia de la Clase clases.\+Recomendacion}
+\label{classclases_1_1_recomendacion}\index{clases.Recomendacion@{clases.Recomendacion}}
+
+
+La clase de recomendacion controla las llamadas a los algoritmos.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classclases_1_1_recomendacion_a589277387f14cfae380f53f02ba2c815}{Recomendacion}} ()
+\begin{DoxyCompactList}\small\item\em Constructora por defecto, objeto vacío. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclases_1_1_recomendacion_a101c1a029b1e655bca74962a7da697b0}{Recomendacion}} (\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}{u}})
+\item 
+\mbox{\hyperlink{classclases_1_1_recomendacion_a3d1380107d8dd9ebfa7294880bc19cb5}{Recomendacion}} (\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classclases_1_1_recomendacion_a2e9249894ac1bb32d9e3d9947d603987}{us}}, \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}{u}})
+\item 
+\mbox{\hyperlink{classclases_1_1_recomendacion_a0c337b03e59c4abd72cecb42d567795e}{Recomendacion}} (\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classclases_1_1_recomendacion_a2e9249894ac1bb32d9e3d9947d603987}{us}}, \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}{u}}, \mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{classclases_1_1_recomendacion_a2cf9c1ff0dbbd651beb77379e9ca84ed}{it}})
+\item 
+\mbox{\hyperlink{classclases_1_1_recomendacion_a476b181a4d40ddf462f9b1b5713f2656}{Recomendacion}} (\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}{u}}, \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classclases_1_1_recomendacion_a2e9249894ac1bb32d9e3d9947d603987}{us}}, Map$<$ Integer, Double $>$ recoms)
+\item 
+Array\+List$<$ Integer $>$ \mbox{\hyperlink{classclases_1_1_recomendacion_a98c954c169db8ada68dd3bf6e9908f6a}{get\+Recom\+Items}} ()
+\item 
+Map$<$ Integer, Double $>$ \mbox{\hyperlink{classclases_1_1_recomendacion_aa3876cd1858efc49e6e6a663e3d3e8e3}{get\+Recomendaciones}} ()
+\item 
+void \mbox{\hyperlink{classclases_1_1_recomendacion_a6e3c8ace310a89d299c05a8d75314fb6}{set\+Date}} (String \mbox{\hyperlink{classclases_1_1_recomendacion_a1c562259ba8bcb989b7f882707e9bd6d}{fecha}})
+\item 
+String \mbox{\hyperlink{classclases_1_1_recomendacion_ad5de8a6b9b06d589c893311f2908aa0b}{get\+Date}} ()
+\item 
+void \mbox{\hyperlink{classclases_1_1_recomendacion_af9fa5122fd6d1046e2a7824884383dac}{set\+Name}} (String \mbox{\hyperlink{classclases_1_1_recomendacion_a26582373300fcb394a642576ae5a8684}{nombre}})
+\item 
+String \mbox{\hyperlink{classclases_1_1_recomendacion_ac67fde97e6f25ab55bd3381e6d86731a}{get\+Name}} ()
+\item 
+void \mbox{\hyperlink{classclases_1_1_recomendacion_aa2497fd8b66e747d5b84bd0f32262110}{set\+Type}} (String \mbox{\hyperlink{classclases_1_1_recomendacion_a54af10d15ff84d42498425818856c974}{type}})
+\item 
+String \mbox{\hyperlink{classclases_1_1_recomendacion_aee138fa8b230d71a90b2a16b03de4b65}{get\+Type}} ()
+\item 
+void \mbox{\hyperlink{classclases_1_1_recomendacion_abc853cdfdc08a1233de3722c3d15b62f}{set\+Size}} (int \mbox{\hyperlink{classclases_1_1_recomendacion_a2bf4a0f760dc1008f0f2de672af54027}{size}})
+\item 
+int \mbox{\hyperlink{classclases_1_1_recomendacion_a4137749e4a29936952098064a57a3b29}{get\+Size}} ()
+\item 
+void \mbox{\hyperlink{classclases_1_1_recomendacion_a6f45c48cfb46eafb6ebc672f3e50cb79}{remove\+Valoracion}} (int item\+ID)
+\item 
+void \mbox{\hyperlink{classclases_1_1_recomendacion_ab7634fceb401a40e459b4af4b47e932d}{procesar\+Items}} ()
+\begin{DoxyCompactList}\small\item\em Procesado de los items para que esten acorde con lo que necesitamso en las predicciones Los items que el usuario ya ha valorado no queremos que sean predecidos, los eliminamos del conjunto general de items. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_recomendacion_a1c4d184c8289eef97791f4cba28759d9}{collaborative\+Filtering}} ()
+\begin{DoxyCompactList}\small\item\em Llamada a creación de recomendaciones usando los métodos de collaborative filtering (K-\/\+Means + \mbox{\hyperlink{class_slope}{Slope}} One). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_recomendacion_af987dcd29b5d90d0b6d1554f05e0fcfa}{content\+Based\+Filtering}} ()
+\begin{DoxyCompactList}\small\item\em Llamada a creación de recomendaciones usando los metodos de content based filtering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_recomendacion_ae81a9e62eea0a299d3edaaa7f969e8f4}{hybrid}} ()
+\begin{DoxyCompactList}\small\item\em Llamada a la creación de recomendaciones utilizando un metodo hibrido (content based y collaborative) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classclases_1_1_recomendacion_ae734427fbb34230f4e02fc55dc74c4c1}{evaluar\+IDCG}} (List$<$ Map.\+Entry$<$ Integer, Double $>$ $>$ lt)
+\begin{DoxyCompactList}\small\item\em Computa el ideal discounted cumulative value para una recomendación determinada. \end{DoxyCompactList}\item 
+Array\+List$<$ Array\+List$<$ Integer $>$ $>$ \mbox{\hyperlink{classclases_1_1_recomendacion_a62f3f8a36295becfa095cd27efdac6a8}{generate\+Array\+Recom}} ()
+\item 
+double \mbox{\hyperlink{classclases_1_1_recomendacion_ad71da8786906ce98822adee7b82421e0}{evaluar\+Recomendacion}} (Map$<$ Integer, Double $>$ lt)
+\begin{DoxyCompactList}\small\item\em Computa el discounted cumulative value para una recomendación determinada. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classclases_1_1_recomendacion_a0a0cd1f76a943917eab9ecc4e5dc1a98}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em Hace override de la funcion to\+String. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos del \textquotesingle{}package\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classclases_1_1_recomendacion_a2bf4a0f760dc1008f0f2de672af54027}{size}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+Map$<$ Integer, Double $>$ \mbox{\hyperlink{classclases_1_1_recomendacion_a0c4e2dfceab553f31c495ab9289c2911}{recom\+Items}}
+\begin{DoxyCompactList}\small\item\em array list de items recomendados en orden \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classclases_1_1_recomendacion_a54af10d15ff84d42498425818856c974}{type}}
+\begin{DoxyCompactList}\small\item\em tipo de algoritmo que se ha usado para la prediccion de las recomendaciones \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classclases_1_1_recomendacion_a26582373300fcb394a642576ae5a8684}{nombre}}
+\begin{DoxyCompactList}\small\item\em identificador que le damos a la recomendacion \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classclases_1_1_recomendacion_a1c562259ba8bcb989b7f882707e9bd6d}{fecha}}
+\begin{DoxyCompactList}\small\item\em fecha en la que se produce la recomendacion \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{classclases_1_1_recomendacion_a2cf9c1ff0dbbd651beb77379e9ca84ed}{it}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classclases_1_1_items}{Items}} que se usaran para hacer recomendaciones al usuario. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classclases_1_1_recomendacion_a2e9249894ac1bb32d9e3d9947d603987}{us}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} que se usaran para clusterizar en el caso del collaborative filtering. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}{u}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} que pide las recomendaciones al sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+La clase de recomendacion controla las llamadas a los algoritmos. 
+
+\begin{DoxyAuthor}{Autor}
+Carla Campàs Gené
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+December 2021 
+\end{DoxyDate}
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00020}{20}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classclases_1_1_recomendacion_a589277387f14cfae380f53f02ba2c815}\label{classclases_1_1_recomendacion_a589277387f14cfae380f53f02ba2c815}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!Recomendacion@{Recomendacion}}
+\index{Recomendacion@{Recomendacion}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{Recomendacion()}{Recomendacion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily clases.\+Recomendacion.\+Recomendacion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructora por defecto, objeto vacío. 
+
+Constructora para inicializar un objeto de la clase.
+
+Constructora por defecto, inicializa la clase con el conjunto de usuarios, el conjunto de items y el usuario.
+
+Constructora para inicializar un objeto de la clase. \begin{DoxyPrecond}{Precondición}
+No hay objeto de la clase recomendacion 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Existe el objeto vacío de la clase recomendacion
+\end{DoxyPostcond}
+\begin{DoxyPrecond}{Precondición}
+No hay objeto de la clase recomendacion 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Existe el objeto de la clase recomendacion con variables globales u e it inicializadas Solo podremos usar esto en el caso de llamar a los algoritmos de content based filtering. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em u} & \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} al que le queremos recomendar items\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondición}
+No hay objeto de la clase recomendacion 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Existe el objeto de la clase recomendacion con variables globales us, u e it inicializadas 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em us} & Conjunto de usuarios que usaremos para los algoritmos de recomendación \\
+\hline
+{\em u} & \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} al que le queremos recomendar items\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondición}
+No hay objeto de la clase recomendacion 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Existe el objeto de la clase recomendacion con variables globales us, u e it inicializadas 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em us} & Conjunto de usuarios que usaremos para los algoritmos de recomendación \\
+\hline
+{\em u} & \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} al que le queremos recomendar items \\
+\hline
+{\em it} & items a recomendar\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondición}
+No hay objeto de la clase recomendacion 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Existe el objeto vacío de la clase recomendacion 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em u} & \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} al que le recomendamos \\
+\hline
+{\em us} & \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} totales \\
+\hline
+{\em recoms} & \mbox{\hyperlink{classclases_1_1_recomendaciones}{Recomendaciones}} del usuario \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00064}{64}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_a101c1a029b1e655bca74962a7da697b0}\label{classclases_1_1_recomendacion_a101c1a029b1e655bca74962a7da697b0}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!Recomendacion@{Recomendacion}}
+\index{Recomendacion@{Recomendacion}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{Recomendacion()}{Recomendacion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily clases.\+Recomendacion.\+Recomendacion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}}]{u }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00073}{73}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_a3d1380107d8dd9ebfa7294880bc19cb5}\label{classclases_1_1_recomendacion_a3d1380107d8dd9ebfa7294880bc19cb5}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!Recomendacion@{Recomendacion}}
+\index{Recomendacion@{Recomendacion}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{Recomendacion()}{Recomendacion()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily clases.\+Recomendacion.\+Recomendacion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}}}]{us,  }\item[{\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}}]{u }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00086}{86}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_a0c337b03e59c4abd72cecb42d567795e}\label{classclases_1_1_recomendacion_a0c337b03e59c4abd72cecb42d567795e}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!Recomendacion@{Recomendacion}}
+\index{Recomendacion@{Recomendacion}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{Recomendacion()}{Recomendacion()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily clases.\+Recomendacion.\+Recomendacion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}}}]{us,  }\item[{\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}}]{u,  }\item[{\mbox{\hyperlink{classclases_1_1_items}{Items}}}]{it }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00100}{100}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_a476b181a4d40ddf462f9b1b5713f2656}\label{classclases_1_1_recomendacion_a476b181a4d40ddf462f9b1b5713f2656}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!Recomendacion@{Recomendacion}}
+\index{Recomendacion@{Recomendacion}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{Recomendacion()}{Recomendacion()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily clases.\+Recomendacion.\+Recomendacion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}}]{u,  }\item[{\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}}}]{us,  }\item[{Map$<$ Integer, Double $>$}]{recoms }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00119}{119}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classclases_1_1_recomendacion_a1c4d184c8289eef97791f4cba28759d9}\label{classclases_1_1_recomendacion_a1c4d184c8289eef97791f4cba28759d9}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!collaborativeFiltering@{collaborativeFiltering}}
+\index{collaborativeFiltering@{collaborativeFiltering}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{collaborativeFiltering()}{collaborativeFiltering()}}
+{\footnotesize\ttfamily clases.\+Recomendacion.\+collaborative\+Filtering (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Llamada a creación de recomendaciones usando los métodos de collaborative filtering (K-\/\+Means + \mbox{\hyperlink{class_slope}{Slope}} One). 
+
+\begin{DoxyPrecond}{Precondición}
+La clase de \mbox{\hyperlink{classclases_1_1_recomendacion}{Recomendacion}} ha sido inicializada 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha llamado a las subclases K-\/\+Means y Slope\+One para crear las recomendaciones para un usuario u. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00170}{170}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_af987dcd29b5d90d0b6d1554f05e0fcfa}\label{classclases_1_1_recomendacion_af987dcd29b5d90d0b6d1554f05e0fcfa}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!contentBasedFiltering@{contentBasedFiltering}}
+\index{contentBasedFiltering@{contentBasedFiltering}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{contentBasedFiltering()}{contentBasedFiltering()}}
+{\footnotesize\ttfamily clases.\+Recomendacion.\+content\+Based\+Filtering (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Llamada a creación de recomendaciones usando los metodos de content based filtering. 
+
+\begin{DoxyPrecond}{Precondición}
+La clase de \mbox{\hyperlink{classclases_1_1_recomendacion}{Recomendacion}} ha sido inicializada 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han ejecutado los algoritmos de content based filtering 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00185}{185}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_ae734427fbb34230f4e02fc55dc74c4c1}\label{classclases_1_1_recomendacion_ae734427fbb34230f4e02fc55dc74c4c1}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!evaluarIDCG@{evaluarIDCG}}
+\index{evaluarIDCG@{evaluarIDCG}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{evaluarIDCG()}{evaluarIDCG()}}
+{\footnotesize\ttfamily clases.\+Recomendacion.\+evaluar\+IDCG (\begin{DoxyParamCaption}\item[{List$<$ Map.\+Entry$<$ Integer, Double $>$ $>$}]{lt }\end{DoxyParamCaption})}
+
+
+
+Computa el ideal discounted cumulative value para una recomendación determinada. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em lt} & Map$<$\+Integer, Integer$>$ en formato Map\texorpdfstring{$<$}{<}item\+ID, posiciónI\texorpdfstring{$>$}{>} donde posiciónI es la posición que ocupa en la permutación ideal, cada elemento en lr \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+devuelve el ideal discounted cumulative gain 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00224}{224}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_ad71da8786906ce98822adee7b82421e0}\label{classclases_1_1_recomendacion_ad71da8786906ce98822adee7b82421e0}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!evaluarRecomendacion@{evaluarRecomendacion}}
+\index{evaluarRecomendacion@{evaluarRecomendacion}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{evaluarRecomendacion()}{evaluarRecomendacion()}}
+{\footnotesize\ttfamily clases.\+Recomendacion.\+evaluar\+Recomendacion (\begin{DoxyParamCaption}\item[{Map$<$ Integer, Double $>$}]{lt }\end{DoxyParamCaption})}
+
+
+
+Computa el discounted cumulative value para una recomendación determinada. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em lt} & Map$<$\+Integer, Integer$>$ en formato Map\texorpdfstring{$<$}{<}item\+ID, posiciónI\texorpdfstring{$>$}{>} donde posiciónI es la posición que ocupa en la permutación ideal, cada elemento en lr \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+devuelve el Discounted Cumulative Gain para la recomendación hecha al usuario u. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00262}{262}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_a62f3f8a36295becfa095cd27efdac6a8}\label{classclases_1_1_recomendacion_a62f3f8a36295becfa095cd27efdac6a8}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!generateArrayRecom@{generateArrayRecom}}
+\index{generateArrayRecom@{generateArrayRecom}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{generateArrayRecom()}{generateArrayRecom()}}
+{\footnotesize\ttfamily Array\+List$<$ Array\+List$<$ Integer $>$ $>$ clases.\+Recomendacion.\+generate\+Array\+Recom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00237}{237}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_ad5de8a6b9b06d589c893311f2908aa0b}\label{classclases_1_1_recomendacion_ad5de8a6b9b06d589c893311f2908aa0b}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!getDate@{getDate}}
+\index{getDate@{getDate}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily String clases.\+Recomendacion.\+get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00132}{132}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_ac67fde97e6f25ab55bd3381e6d86731a}\label{classclases_1_1_recomendacion_ac67fde97e6f25ab55bd3381e6d86731a}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!getName@{getName}}
+\index{getName@{getName}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily String clases.\+Recomendacion.\+get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00136}{136}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_aa3876cd1858efc49e6e6a663e3d3e8e3}\label{classclases_1_1_recomendacion_aa3876cd1858efc49e6e6a663e3d3e8e3}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!getRecomendaciones@{getRecomendaciones}}
+\index{getRecomendaciones@{getRecomendaciones}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{getRecomendaciones()}{getRecomendaciones()}}
+{\footnotesize\ttfamily Map$<$ Integer, Double $>$ clases.\+Recomendacion.\+get\+Recomendaciones (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00128}{128}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_a98c954c169db8ada68dd3bf6e9908f6a}\label{classclases_1_1_recomendacion_a98c954c169db8ada68dd3bf6e9908f6a}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!getRecomItems@{getRecomItems}}
+\index{getRecomItems@{getRecomItems}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{getRecomItems()}{getRecomItems()}}
+{\footnotesize\ttfamily Array\+List$<$ Integer $>$ clases.\+Recomendacion.\+get\+Recom\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00126}{126}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_a4137749e4a29936952098064a57a3b29}\label{classclases_1_1_recomendacion_a4137749e4a29936952098064a57a3b29}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!getSize@{getSize}}
+\index{getSize@{getSize}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int clases.\+Recomendacion.\+get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00144}{144}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_aee138fa8b230d71a90b2a16b03de4b65}\label{classclases_1_1_recomendacion_aee138fa8b230d71a90b2a16b03de4b65}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!getType@{getType}}
+\index{getType@{getType}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily String clases.\+Recomendacion.\+get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00140}{140}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_ae81a9e62eea0a299d3edaaa7f969e8f4}\label{classclases_1_1_recomendacion_ae81a9e62eea0a299d3edaaa7f969e8f4}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!hybrid@{hybrid}}
+\index{hybrid@{hybrid}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{hybrid()}{hybrid()}}
+{\footnotesize\ttfamily clases.\+Recomendacion.\+hybrid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Llamada a la creación de recomendaciones utilizando un metodo hibrido (content based y collaborative) 
+
+\begin{DoxyPrecond}{Precondición}
+La clase de \mbox{\hyperlink{classclases_1_1_recomendacion}{Recomendacion}} ha sido inicializada 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han ejecutado los algoritmos de content based y collaborative filtering para sacar unas recomendaciones hibridas 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00196}{196}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_ab7634fceb401a40e459b4af4b47e932d}\label{classclases_1_1_recomendacion_ab7634fceb401a40e459b4af4b47e932d}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!procesarItems@{procesarItems}}
+\index{procesarItems@{procesarItems}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{procesarItems()}{procesarItems()}}
+{\footnotesize\ttfamily clases.\+Recomendacion.\+procesar\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Procesado de los items para que esten acorde con lo que necesitamso en las predicciones Los items que el usuario ya ha valorado no queremos que sean predecidos, los eliminamos del conjunto general de items. 
+
+Los items restantes los vamos a querer valorar. \begin{DoxyPrecond}{Precondición}
+El usuario ya ha sido inicializado 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El conjunto de items que van a ser valorados estan en la variable global it. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00157}{157}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_a6f45c48cfb46eafb6ebc672f3e50cb79}\label{classclases_1_1_recomendacion_a6f45c48cfb46eafb6ebc672f3e50cb79}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!removeValoracion@{removeValoracion}}
+\index{removeValoracion@{removeValoracion}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{removeValoracion()}{removeValoracion()}}
+{\footnotesize\ttfamily void clases.\+Recomendacion.\+remove\+Valoracion (\begin{DoxyParamCaption}\item[{int}]{item\+ID }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00146}{146}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_a6e3c8ace310a89d299c05a8d75314fb6}\label{classclases_1_1_recomendacion_a6e3c8ace310a89d299c05a8d75314fb6}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!setDate@{setDate}}
+\index{setDate@{setDate}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{setDate()}{setDate()}}
+{\footnotesize\ttfamily void clases.\+Recomendacion.\+set\+Date (\begin{DoxyParamCaption}\item[{String}]{fecha }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00130}{130}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_af9fa5122fd6d1046e2a7824884383dac}\label{classclases_1_1_recomendacion_af9fa5122fd6d1046e2a7824884383dac}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!setName@{setName}}
+\index{setName@{setName}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void clases.\+Recomendacion.\+set\+Name (\begin{DoxyParamCaption}\item[{String}]{nombre }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00134}{134}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_abc853cdfdc08a1233de3722c3d15b62f}\label{classclases_1_1_recomendacion_abc853cdfdc08a1233de3722c3d15b62f}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!setSize@{setSize}}
+\index{setSize@{setSize}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily void clases.\+Recomendacion.\+set\+Size (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00142}{142}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_aa2497fd8b66e747d5b84bd0f32262110}\label{classclases_1_1_recomendacion_aa2497fd8b66e747d5b84bd0f32262110}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!setType@{setType}}
+\index{setType@{setType}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily void clases.\+Recomendacion.\+set\+Type (\begin{DoxyParamCaption}\item[{String}]{type }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00138}{138}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_a0a0cd1f76a943917eab9ecc4e5dc1a98}\label{classclases_1_1_recomendacion_a0a0cd1f76a943917eab9ecc4e5dc1a98}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!toString@{toString}}
+\index{toString@{toString}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily clases.\+Recomendacion.\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Hace override de la funcion to\+String. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La recomendacion se ha traducido a String para poder imprimirse 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+Devuelve la recomendacion traducido a String 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00288}{288}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classclases_1_1_recomendacion_a1c562259ba8bcb989b7f882707e9bd6d}\label{classclases_1_1_recomendacion_a1c562259ba8bcb989b7f882707e9bd6d}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!fecha@{fecha}}
+\index{fecha@{fecha}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{fecha}{fecha}}
+{\footnotesize\ttfamily String clases.\+Recomendacion.\+fecha\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+fecha en la que se produce la recomendacion 
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00039}{39}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_a2cf9c1ff0dbbd651beb77379e9ca84ed}\label{classclases_1_1_recomendacion_a2cf9c1ff0dbbd651beb77379e9ca84ed}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!it@{it}}
+\index{it@{it}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{it}{it}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classclases_1_1_items}{Items}} clases.\+Recomendacion.\+it\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classclases_1_1_items}{Items}} que se usaran para hacer recomendaciones al usuario. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00044}{44}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_a26582373300fcb394a642576ae5a8684}\label{classclases_1_1_recomendacion_a26582373300fcb394a642576ae5a8684}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!nombre@{nombre}}
+\index{nombre@{nombre}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{nombre}{nombre}}
+{\footnotesize\ttfamily String clases.\+Recomendacion.\+nombre\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+identificador que le damos a la recomendacion 
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00034}{34}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_a0c4e2dfceab553f31c495ab9289c2911}\label{classclases_1_1_recomendacion_a0c4e2dfceab553f31c495ab9289c2911}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!recomItems@{recomItems}}
+\index{recomItems@{recomItems}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{recomItems}{recomItems}}
+{\footnotesize\ttfamily Map$<$ Integer, Double $>$ clases.\+Recomendacion.\+recom\+Items\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+array list de items recomendados en orden 
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00024}{24}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_a2bf4a0f760dc1008f0f2de672af54027}\label{classclases_1_1_recomendacion_a2bf4a0f760dc1008f0f2de672af54027}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!size@{size}}
+\index{size@{size}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int clases.\+Recomendacion.\+size\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00056}{56}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_a54af10d15ff84d42498425818856c974}\label{classclases_1_1_recomendacion_a54af10d15ff84d42498425818856c974}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!type@{type}}
+\index{type@{type}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily String clases.\+Recomendacion.\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+tipo de algoritmo que se ha usado para la prediccion de las recomendaciones 
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00029}{29}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}\label{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!u@{u}}
+\index{u@{u}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{u}{u}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} clases.\+Recomendacion.\+u\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} que pide las recomendaciones al sistema. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00054}{54}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_recomendacion_a2e9249894ac1bb32d9e3d9947d603987}\label{classclases_1_1_recomendacion_a2e9249894ac1bb32d9e3d9947d603987}} 
+\index{clases.Recomendacion@{clases.Recomendacion}!us@{us}}
+\index{us@{us}!clases.Recomendacion@{clases.Recomendacion}}
+\doxysubsubsection{\texorpdfstring{us}{us}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} clases.\+Recomendacion.\+us\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} que se usaran para clusterizar en el caso del collaborative filtering. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_recomendacion_8java_source_l00049}{49}} del archivo \mbox{\hyperlink{_recomendacion_8java_source}{Recomendacion.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_recomendacion_8java}{Recomendacion.\+java}}\end{DoxyCompactItemize}

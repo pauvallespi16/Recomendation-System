@@ -1,0 +1,181 @@
+\hypertarget{_slope_one_8java_source}{}\doxysection{Slope\+One.\+java}
+\label{_slope_one_8java_source}\index{SlopeOne.java@{SlopeOne.java}}
+\mbox{\hyperlink{_slope_one_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00001}00001 \textcolor{keyword}{package }controladores; }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00005}00005 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceclases}{clases}}.\mbox{\hyperlink{classclases_1_1_items}{Items}};}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00006}00006 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceclases}{clases}}.\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}};}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00007}00007 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceclases}{clases}}.\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}};}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00009}00009 \textcolor{keyword}{import} java.util.Comparator;}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00010}00010 \textcolor{keyword}{import} java.util.HashMap;}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00011}00011 \textcolor{keyword}{import} java.util.Map;}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00012}00012 \textcolor{keyword}{import} java.util.Map.Entry;}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00031}\mbox{\hyperlink{classcontroladores_1_1_slope_one}{00031}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classcontroladores_1_1_slope_one}{SlopeOne}} \textcolor{keyword}{extends} \mbox{\hyperlink{classcontroladores_1_1_algoritmos}{Algoritmos}} \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00036}\mbox{\hyperlink{classcontroladores_1_1_slope_one_aab4eda1d6cfd04afa92b1d91318e3d41}{00036}}     \textcolor{keyword}{private} Map <Integer, Map <Integer, Double> > \mbox{\hyperlink{classcontroladores_1_1_slope_one_aab4eda1d6cfd04afa92b1d91318e3d41}{diff}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00044}\mbox{\hyperlink{classcontroladores_1_1_slope_one_af8eea6b2dc1390d92a3b51475e0d263b}{00044}}     \textcolor{keyword}{private} Map <Integer, Map <Integer, Integer> > \mbox{\hyperlink{classcontroladores_1_1_slope_one_af8eea6b2dc1390d92a3b51475e0d263b}{freq}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00049}\mbox{\hyperlink{classcontroladores_1_1_slope_one_a91d4213bed258afd5b3adeb14d8dabe9}{00049}}     \textcolor{keyword}{private} Map <Integer, Double> \mbox{\hyperlink{classcontroladores_1_1_slope_one_a91d4213bed258afd5b3adeb14d8dabe9}{pred}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00054}\mbox{\hyperlink{classcontroladores_1_1_slope_one_a4b8024a1ad49a58c1e9828e7af12173a}{00054}}     \textcolor{keyword}{private} \textcolor{keywordtype}{double} \mbox{\hyperlink{classcontroladores_1_1_slope_one_a4b8024a1ad49a58c1e9828e7af12173a}{mediana}} = 0.0;}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00063}\mbox{\hyperlink{classcontroladores_1_1_slope_one_abc650dec2fe6f52072ae33b6e80c23e1}{00063}}     \textcolor{keyword}{public} \mbox{\hyperlink{classcontroladores_1_1_slope_one_abc650dec2fe6f52072ae33b6e80c23e1}{SlopeOne}}()\{\}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00065}\mbox{\hyperlink{classcontroladores_1_1_slope_one_a9c3aba7bf6be3ec337aed74704c6add0}{00065}}     \textcolor{keyword}{public} \mbox{\hyperlink{classcontroladores_1_1_slope_one_a9c3aba7bf6be3ec337aed74704c6add0}{SlopeOne}}(\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}{us}}, \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}, \mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a12da803fac97be1ebc727d328872df83}{it}})\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00066}00066         super (\mbox{\hyperlink{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}{us}}, \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}, \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a12da803fac97be1ebc727d328872df83}{it}});}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00067}00067     \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00075}\mbox{\hyperlink{classcontroladores_1_1_slope_one_a3fbd457bae9bd6abe7a5adb87b26a656}{00075}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_slope_one_a3fbd457bae9bd6abe7a5adb87b26a656}{setUsuarios}} (\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} users) \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00076}00076         super.us = users;}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00077}00077         \textcolor{comment}{/*for (Usuario u : us.getUsers())\{}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00078}00078 \textcolor{comment}{            System.out.print (u.getUserId() + "{}: "{});}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00079}00079 \textcolor{comment}{            System.out.println (u.getValoraciones());}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00080}00080 \textcolor{comment}{        \}}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00081}00081 \textcolor{comment}{        System.out.println();*/}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00082}00082     \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00093}\mbox{\hyperlink{classcontroladores_1_1_slope_one_a32b294504fe7d2a4f1a501e59456b38f}{00093}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_slope_one_a32b294504fe7d2a4f1a501e59456b38f}{setUser}} (\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} user) \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00094}00094         super.u = user;}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00095}00095         \mbox{\hyperlink{classcontroladores_1_1_slope_one_a17caa9012c5302340671597339937cf3}{calcularMediana}}();}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00096}00096     \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00098}\mbox{\hyperlink{classcontroladores_1_1_slope_one_a12b230f0df9cef20072c435d061f60a7}{00098}}     \textcolor{keyword}{public} \textcolor{keywordtype}{double} \mbox{\hyperlink{classcontroladores_1_1_slope_one_a12b230f0df9cef20072c435d061f60a7}{getMediana}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classcontroladores_1_1_slope_one_a4b8024a1ad49a58c1e9828e7af12173a}{mediana}}; \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00107}\mbox{\hyperlink{classcontroladores_1_1_slope_one_ac530318b4357c0e777d854a99d4d3469}{00107}}     \textcolor{keyword}{public} \textcolor{keywordtype}{double} \mbox{\hyperlink{classcontroladores_1_1_slope_one_ac530318b4357c0e777d854a99d4d3469}{getPredictionOnItem}} (Integer item)\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00108}00108         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}.\mbox{\hyperlink{classclases_1_1_usuario_ae06c17c56b3db583f44f38c3d5972932}{tieneValoracion}}(item)) \textcolor{keywordflow}{return} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}.\mbox{\hyperlink{classclases_1_1_usuario_aba022c735eed5fea5c32b760e482531c}{getValoracio}}(item);}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00110}00110         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classcontroladores_1_1_slope_one_a91d4213bed258afd5b3adeb14d8dabe9}{pred}}.containsKey(item)) \textcolor{keywordflow}{return} -\/1.0;}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00111}00111         \textcolor{keywordflow}{return} \mbox{\hyperlink{classcontroladores_1_1_slope_one_a91d4213bed258afd5b3adeb14d8dabe9}{pred}}.get(item);}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00112}00112     \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00113}00113 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00120}\mbox{\hyperlink{classcontroladores_1_1_slope_one_a2b9ba9f885c4bd02f4c1c8cef9b8b81d}{00120}}     \textcolor{keyword}{public} Map <Integer, Double> \mbox{\hyperlink{classcontroladores_1_1_slope_one_a2b9ba9f885c4bd02f4c1c8cef9b8b81d}{getAllPredictions}}() \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00121}00121         \textcolor{keywordflow}{return} \mbox{\hyperlink{classcontroladores_1_1_slope_one_a91d4213bed258afd5b3adeb14d8dabe9}{pred}};}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00122}00122     \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00130}\mbox{\hyperlink{classcontroladores_1_1_slope_one_a8f185d5f24cbde6f4aeec8b2ebcf91e8}{00130}}     \textcolor{keyword}{public} Map <Integer, Map <Integer, Double> > \mbox{\hyperlink{classcontroladores_1_1_slope_one_a8f185d5f24cbde6f4aeec8b2ebcf91e8}{getDiff}}() \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00131}00131         \textcolor{keywordflow}{return} \mbox{\hyperlink{classcontroladores_1_1_slope_one_aab4eda1d6cfd04afa92b1d91318e3d41}{diff}};}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00132}00132     \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00133}00133 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00140}\mbox{\hyperlink{classcontroladores_1_1_slope_one_afb9989c2efbb1138d1c905f4c2b307d6}{00140}}     \textcolor{keyword}{public} Map <Integer, Map <Integer, Integer> > \mbox{\hyperlink{classcontroladores_1_1_slope_one_afb9989c2efbb1138d1c905f4c2b307d6}{getFreq}}() \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00141}00141         \textcolor{keywordflow}{return} \mbox{\hyperlink{classcontroladores_1_1_slope_one_af8eea6b2dc1390d92a3b51475e0d263b}{freq}};}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00142}00142     \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00143}00143 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00150}\mbox{\hyperlink{classcontroladores_1_1_slope_one_a9fbd0108a7c4b17983e1b1b10719692f}{00150}}     \textcolor{keyword}{public} Map <Integer, Double> \mbox{\hyperlink{classcontroladores_1_1_slope_one_a9fbd0108a7c4b17983e1b1b10719692f}{getPred}} () \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00151}00151         \textcolor{keywordflow}{return} \mbox{\hyperlink{classcontroladores_1_1_slope_one_a91d4213bed258afd5b3adeb14d8dabe9}{pred}};}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00152}00152     \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00153}00153 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00159}\mbox{\hyperlink{classcontroladores_1_1_slope_one_a17caa9012c5302340671597339937cf3}{00159}}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_slope_one_a17caa9012c5302340671597339937cf3}{calcularMediana}} () \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00160}00160         \textcolor{keywordflow}{for} (Double e : \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}.\mbox{\hyperlink{classclases_1_1_usuario_aea18bbbfd60937a39ca6ffaf41c00f2d}{getValoraciones}}().values())\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00161}00161             \mbox{\hyperlink{classcontroladores_1_1_slope_one_a4b8024a1ad49a58c1e9828e7af12173a}{mediana}} += e.doubleValue();}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00162}00162         \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00163}00163         \mbox{\hyperlink{classcontroladores_1_1_slope_one_a4b8024a1ad49a58c1e9828e7af12173a}{mediana}} /= \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}.\mbox{\hyperlink{classclases_1_1_usuario_aea18bbbfd60937a39ca6ffaf41c00f2d}{getValoraciones}}().size();}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00164}00164         \textcolor{comment}{//System.out.println("{}MEDIANA"{} + mediana);}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00165}00165     \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00166}00166 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00182}\mbox{\hyperlink{classcontroladores_1_1_slope_one_a09aab59b76227e4fb793b4bea937556c}{00182}}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_slope_one_a09aab59b76227e4fb793b4bea937556c}{computarDesviacion}}() \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00183}00183         \mbox{\hyperlink{classcontroladores_1_1_slope_one_aab4eda1d6cfd04afa92b1d91318e3d41}{diff}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00184}00184         \mbox{\hyperlink{classcontroladores_1_1_slope_one_af8eea6b2dc1390d92a3b51475e0d263b}{freq}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00185}00185 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00186}00186         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} u1 : \mbox{\hyperlink{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}{us}}.\mbox{\hyperlink{classclases_1_1_usuarios_a51cd118515e98557b0fe657e1cbda5cb}{getUsers}}())\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00187}00187             \textcolor{keywordflow}{for} (Entry <Integer, Double> e : u1.getValoraciones().entrySet())\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00188}00188                 \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classcontroladores_1_1_slope_one_aab4eda1d6cfd04afa92b1d91318e3d41}{diff}}.containsKey(e.getKey()))\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00189}00189                     \mbox{\hyperlink{classcontroladores_1_1_slope_one_aab4eda1d6cfd04afa92b1d91318e3d41}{diff}}.put(e.getKey(), \textcolor{keyword}{new} HashMap<>());}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00190}00190                     \mbox{\hyperlink{classcontroladores_1_1_slope_one_af8eea6b2dc1390d92a3b51475e0d263b}{freq}}.put(e.getKey(), \textcolor{keyword}{new} HashMap<>());}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00191}00191                 \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00192}00192                 \textcolor{keywordflow}{for} (Entry <Integer, Double> e2 : u1.getValoraciones().entrySet())\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00193}00193                     \textcolor{keywordtype}{int} oldCount = 0;}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00194}00194                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcontroladores_1_1_slope_one_af8eea6b2dc1390d92a3b51475e0d263b}{freq}}.get(e.getKey()).containsKey(e2.getKey()))\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00195}00195                         oldCount = \mbox{\hyperlink{classcontroladores_1_1_slope_one_af8eea6b2dc1390d92a3b51475e0d263b}{freq}}.get(e.getKey()).get(e2.getKey()).intValue();}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00196}00196                     \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00197}00197                     \textcolor{keywordtype}{double} oldDiff = 0.0;}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00198}00198                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcontroladores_1_1_slope_one_aab4eda1d6cfd04afa92b1d91318e3d41}{diff}}.get(e.getKey()).containsKey(e2.getKey()))\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00199}00199                         oldDiff = \mbox{\hyperlink{classcontroladores_1_1_slope_one_aab4eda1d6cfd04afa92b1d91318e3d41}{diff}}.get(e.getKey()).get(e2.getKey()).doubleValue();}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00200}00200                     \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00201}00201                     \textcolor{keywordtype}{double} obsDiff = e.getValue() -\/ e2.getValue();}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00202}00202                     \mbox{\hyperlink{classcontroladores_1_1_slope_one_af8eea6b2dc1390d92a3b51475e0d263b}{freq}}.get(e.getKey()).put(e2.getKey(), oldCount + 1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00203}00203                     \mbox{\hyperlink{classcontroladores_1_1_slope_one_aab4eda1d6cfd04afa92b1d91318e3d41}{diff}}.get(e.getKey()).put(e2.getKey(), oldDiff + obsDiff);}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00204}00204                 \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00205}00205             \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00206}00206         \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00207}00207 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00208}00208         \textcolor{keywordflow}{for} (Integer j : \mbox{\hyperlink{classcontroladores_1_1_slope_one_aab4eda1d6cfd04afa92b1d91318e3d41}{diff}}.keySet())\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00209}00209             \textcolor{keywordflow}{for} (Integer i : \mbox{\hyperlink{classcontroladores_1_1_slope_one_aab4eda1d6cfd04afa92b1d91318e3d41}{diff}}.get(j).keySet())\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00210}00210                 \textcolor{keywordtype}{double} oldValue = \mbox{\hyperlink{classcontroladores_1_1_slope_one_aab4eda1d6cfd04afa92b1d91318e3d41}{diff}}.get(j).get(i).doubleValue();}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00211}00211                 \textcolor{keywordtype}{int} count = \mbox{\hyperlink{classcontroladores_1_1_slope_one_af8eea6b2dc1390d92a3b51475e0d263b}{freq}}.get(j).get(i).intValue();}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00212}00212                 \mbox{\hyperlink{classcontroladores_1_1_slope_one_aab4eda1d6cfd04afa92b1d91318e3d41}{diff}}.get(j).put(i, oldValue/count);}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00213}00213             \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00214}00214         \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00215}00215     \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00216}00216 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00236}\mbox{\hyperlink{classcontroladores_1_1_slope_one_a777c5f7d682d912b8a6878fa749de87d}{00236}}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_slope_one_a777c5f7d682d912b8a6878fa749de87d}{computarPredicciones}} ()\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00237}00237         Map<Integer, Double> pAux = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00238}00238         Map<Integer, Integer> fAux = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00239}00239 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00240}00240         \textcolor{keywordflow}{for} (Integer i : \mbox{\hyperlink{classcontroladores_1_1_slope_one_aab4eda1d6cfd04afa92b1d91318e3d41}{diff}}.keySet())\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00241}00241             fAux.put(i, 0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00242}00242             pAux.put(i, 0.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00243}00243         \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00244}00244 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00245}00245         \textcolor{comment}{//for (Usuario u1 : us.getUsers())\{}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00246}00246         \textcolor{keywordflow}{for} (Integer j : \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}.\mbox{\hyperlink{classclases_1_1_usuario_aea18bbbfd60937a39ca6ffaf41c00f2d}{getValoraciones}}().keySet())\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00247}00247             \textcolor{keywordflow}{for} (Integer i : \mbox{\hyperlink{classcontroladores_1_1_slope_one_aab4eda1d6cfd04afa92b1d91318e3d41}{diff}}.keySet())\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00248}00248                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00249}00249                     \textcolor{keywordtype}{double} predVal = \mbox{\hyperlink{classcontroladores_1_1_slope_one_aab4eda1d6cfd04afa92b1d91318e3d41}{diff}}.get(i).get(j).doubleValue() + \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}.\mbox{\hyperlink{classclases_1_1_usuario_aba022c735eed5fea5c32b760e482531c}{getValoracio}}(j);}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00250}00250                     \textcolor{keywordtype}{double} finVal = predVal * \mbox{\hyperlink{classcontroladores_1_1_slope_one_af8eea6b2dc1390d92a3b51475e0d263b}{freq}}.get(i).get(j).intValue();}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00251}00251                     pAux.put(i, pAux.get(i) + finVal);}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00252}00252                     fAux.put(i, fAux.get(i) + \mbox{\hyperlink{classcontroladores_1_1_slope_one_af8eea6b2dc1390d92a3b51475e0d263b}{freq}}.get(i).get(j).intValue());}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00253}00253                 \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00254}00254                 \textcolor{keywordflow}{catch} (NullPointerException e)\{\}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00255}00255             \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00256}00256         \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00257}00257         \textcolor{keywordflow}{for} (Integer j : pAux.keySet()) \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00258}00258             \textcolor{keywordflow}{if} (super.it.containsItem(j) \&\& fAux.get(j) > 0) \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00259}00259                 \mbox{\hyperlink{classcontroladores_1_1_slope_one_a91d4213bed258afd5b3adeb14d8dabe9}{pred}}.put(j, pAux.get(j).doubleValue() / fAux.get(j).intValue());}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00260}00260             \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00261}00261         \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00262}00262     \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00263}00263 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00270}\mbox{\hyperlink{classcontroladores_1_1_slope_one_a933a1fe9a2c2fcca0805edecbfef677d}{00270}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_slope_one_a933a1fe9a2c2fcca0805edecbfef677d}{printDiff}} () \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00271}00271         \textcolor{keywordflow}{for} (Map.Entry<Integer, Map <Integer, Double>> e : \mbox{\hyperlink{classcontroladores_1_1_slope_one_aab4eda1d6cfd04afa92b1d91318e3d41}{diff}}.entrySet()) \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00272}00272             System.out.print(\textcolor{stringliteral}{"{}Item "{}} + e.getKey() + \textcolor{stringliteral}{"{}: "{}});}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00273}00273             \textcolor{keywordflow}{for} (Map.Entry<Integer, Double> e1 : e.getValue().entrySet())\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00274}00274                 System.out.print(\textcolor{stringliteral}{"{}("{}} + e1.getKey() + \textcolor{stringliteral}{"{},"{}} + e1.getValue() + \textcolor{stringliteral}{"{})"{}});}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00275}00275             \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00276}00276             System.out.println();}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00277}00277         \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00278}00278     \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00279}00279 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00286}\mbox{\hyperlink{classcontroladores_1_1_slope_one_a22b8af94c931737c25a0bd97ee8b191b}{00286}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_slope_one_a22b8af94c931737c25a0bd97ee8b191b}{printFreq}} () \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00287}00287         \textcolor{keywordflow}{for} (Map.Entry<Integer, Map <Integer, Integer>> e : \mbox{\hyperlink{classcontroladores_1_1_slope_one_af8eea6b2dc1390d92a3b51475e0d263b}{freq}}.entrySet()) \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00288}00288             System.out.print(\textcolor{stringliteral}{"{}Item "{}} + e.getKey() + \textcolor{stringliteral}{"{}: "{}});}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00289}00289             \textcolor{keywordflow}{for} (Map.Entry<Integer, Integer> e1 : e.getValue().entrySet())\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00290}00290                 System.out.print(\textcolor{stringliteral}{"{}("{}} + e1.getKey() + \textcolor{stringliteral}{"{},"{}} + e1.getValue() + \textcolor{stringliteral}{"{})"{}});}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00291}00291             \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00292}00292             System.out.println();}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00293}00293         \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00294}00294     \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00295}00295 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00302}\mbox{\hyperlink{classcontroladores_1_1_slope_one_a9f65f180edc2e31f3b78d323e28e86f5}{00302}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_slope_one_a9f65f180edc2e31f3b78d323e28e86f5}{printPred}} () \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00303}00303         \textcolor{keywordflow}{for} (Map.Entry<Integer, Double> p : \mbox{\hyperlink{classcontroladores_1_1_slope_one_a91d4213bed258afd5b3adeb14d8dabe9}{pred}}.entrySet())\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00304}00304             System.out.println (\textcolor{stringliteral}{"{}PREDICTION ITEM "{}} + p.getKey() + \textcolor{stringliteral}{"{} IS "{}} + p.getValue());}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00305}00305         \}System.out.println();}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00306}00306     \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00307}00307 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00313}\mbox{\hyperlink{classcontroladores_1_1_slope_one_a9b9c6d819375c3b5041fdaab87b6b57a}{00313}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_slope_one_a9b9c6d819375c3b5041fdaab87b6b57a}{calcularRecomendaciones}} (\textcolor{keywordtype}{int} size) \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00314}00314         \mbox{\hyperlink{classcontroladores_1_1_slope_one_a09aab59b76227e4fb793b4bea937556c}{computarDesviacion}}();}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00315}00315         \mbox{\hyperlink{classcontroladores_1_1_slope_one_a777c5f7d682d912b8a6878fa749de87d}{computarPredicciones}}();}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00316}00316         Map <Integer, Double> orderedItems = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00317}00317 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00318}00318         \mbox{\hyperlink{classcontroladores_1_1_slope_one_a91d4213bed258afd5b3adeb14d8dabe9}{pred}}.entrySet()}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00319}00319                 .stream()}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00320}00320                 .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00321}00321                 .forEachOrdered(x -\/> orderedItems.put(x.getKey(), x.getValue()));}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00322}00322 }
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00323}00323         super.predictions = orderedItems;}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00324}00324     \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00325}00325 \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_8java_source_l00326}00326 }
+
+\end{DoxyCode}

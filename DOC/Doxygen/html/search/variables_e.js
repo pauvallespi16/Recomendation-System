@@ -1,0 +1,11 @@
+var searchData=
+[
+  ['panel1_0',['panel1',['../dd/dcd/classpresentacion_1_1añdir_item.html#a68206b2f5e2edb0c50d1420cdf1c39be',1,'presentacion.añadirItem.panel1()'],['../d4/da2/classpresentacion_1_1cargar_datos.html#a0cbcdd806c0d82f4dcaa449dd47592ea',1,'presentacion.cargarDatos.panel1()'],['../d7/db5/classpresentacion_1_1historial_recomendaciones.html#a3df9eb636983e1f94d6ec134a51cc827',1,'presentacion.historialRecomendaciones.panel1()'],['../dc/d01/classpresentacion_1_1usuario_main.html#ae39343eec82e99733777eee90ae50b0c',1,'presentacion.usuarioMain.panel1()'],['../de/d8f/classpresentacion_1_1vista_items.html#a36894acf53be13525a22e9d1c06b1db2',1,'presentacion.vistaItems.panel1()'],['../dd/d77/classpresentacion_1_1vista_principal.html#a97b79775ad3e629df31f1500dba39c09',1,'presentacion.vistaPrincipal.panel1()'],['../d1/df8/classpresentacion_1_1vista_recomendaciones.html#a5078b328354f29eab5a607d4f568b148',1,'presentacion.vistaRecomendaciones.panel1()']]],
+  ['panelpanel_1',['panelpanel',['../dc/d01/classpresentacion_1_1usuario_main.html#a473ffb82e804502af1cc326205f060c3',1,'presentacion::usuarioMain']]],
+  ['path_2',['path',['../d5/df5/classcontroladores_1_1_ctrl_dominio.html#a21f1b7fdd3aa253cf85ec069c57e8c06',1,'controladores::CtrlDominio']]],
+  ['pathneeded_3',['pathNeeded',['../d5/df5/classcontroladores_1_1_ctrl_dominio.html#ad97ecef54759972e15053fbf4b4a2004',1,'controladores::CtrlDominio']]],
+  ['pctrlpresentacion_4',['pCtrlPresentacion',['../dd/dcd/classpresentacion_1_1añdir_item.html#a9ae8a246dbf2cafd43e4ef49cb3b3fc4',1,'presentacion.añadirItem.pCtrlPresentacion()'],['../d4/da2/classpresentacion_1_1cargar_datos.html#a987eb2826729c9139f5041152a23e03d',1,'presentacion.cargarDatos.pCtrlPresentacion()'],['../d1/df8/classpresentacion_1_1vista_recomendaciones.html#a8d5ef4f7e9b6a7f46f03441e429e9252',1,'presentacion.vistaRecomendaciones.pCtrlPresentacion()']]],
+  ['pred_5',['pred',['../da/d5c/classcontroladores_1_1_slope_one.html#a91d4213bed258afd5b3adeb14d8dabe9',1,'controladores::SlopeOne']]],
+  ['predictions_6',['predictions',['../df/ddc/classcontroladores_1_1_algoritmos.html#a65c7b4dfdc13c5a8be71386e1744c647',1,'controladores::Algoritmos']]],
+  ['proc_7',['proc',['../d4/da2/classpresentacion_1_1cargar_datos.html#aa7572da6970187984f05662694d41e15',1,'presentacion::cargarDatos']]]
+];

@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROP subgrup-prop2-1: Fichero Fuente Usuario.java</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PROP subgrup-prop2-1<span id="projectnumber">&#160;Entrega 3</span>
+   </div>
+   <div id="projectbrief">Sistema de recomendaciones</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_d2a81fcb9e0344d06f49c2bd6fcf908f.html">FONTS</a></li><li class="navelem"><a class="el" href="../../dir_7342359a9f41e5e9b1850f624169c539.html">dominio</a></li><li class="navelem"><a class="el" href="../../dir_906deb1fc8c8a8e69c46817070623746.html">clases</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Usuario.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dc/de6/_usuario_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>clases; </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> java.util.*;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../df/db9/classclases_1_1_usuario.html">   15</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../df/db9/classclases_1_1_usuario.html">Usuario</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../df/db9/classclases_1_1_usuario.html#ab7e6730556cd58dd81751a9d7ab5535c">   18</a></span>    <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../df/db9/classclases_1_1_usuario.html#ab7e6730556cd58dd81751a9d7ab5535c">userId</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../df/db9/classclases_1_1_usuario.html#a68a6cee69f38d4ad0cc317584d9989fe">   22</a></span>    <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../df/db9/classclases_1_1_usuario.html#a68a6cee69f38d4ad0cc317584d9989fe">originalUserId</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../df/db9/classclases_1_1_usuario.html#a3f82218a96ab364e686ce52dd384235b">   28</a></span>    <span class="keyword">private</span> Map &lt;Integer, Double&gt; <a class="code hl_variable" href="../../df/db9/classclases_1_1_usuario.html#a3f82218a96ab364e686ce52dd384235b">valoraciones</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../df/db9/classclases_1_1_usuario.html#a4a96a3512ddeafe1055941405535437d">   35</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../df/db9/classclases_1_1_usuario.html#a4a96a3512ddeafe1055941405535437d">Usuario</a>(){}</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../df/db9/classclases_1_1_usuario.html#a4004f8f1b40ce5e46bff10c10b5640f7">   44</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../df/db9/classclases_1_1_usuario.html#a4004f8f1b40ce5e46bff10c10b5640f7">Usuario</a> (Integer <a class="code hl_variable" href="../../df/db9/classclases_1_1_usuario.html#ab7e6730556cd58dd81751a9d7ab5535c">userId</a>, Map &lt;Integer, Double&gt; <a class="code hl_variable" href="../../df/db9/classclases_1_1_usuario.html#a3f82218a96ab364e686ce52dd384235b">valoraciones</a>){</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        this.userId = <a class="code hl_variable" href="../../df/db9/classclases_1_1_usuario.html#ab7e6730556cd58dd81751a9d7ab5535c">userId</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        this.valoraciones = <span class="keyword">new</span> HashMap&lt;&gt;(<a class="code hl_variable" href="../../df/db9/classclases_1_1_usuario.html#a3f82218a96ab364e686ce52dd384235b">valoraciones</a>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    @Override</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="../../df/db9/classclases_1_1_usuario.html#ad97a6e7cca896e9d1db194f3e4eff778">   57</a></span>    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../df/db9/classclases_1_1_usuario.html#ad97a6e7cca896e9d1db194f3e4eff778">equals</a>(Object o) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_class" href="../../df/db9/classclases_1_1_usuario.html">Usuario</a> us = (<a class="code hl_function" href="../../df/db9/classclases_1_1_usuario.html#a4a96a3512ddeafe1055941405535437d">Usuario</a>) o;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">return</span> this.userId == us.<a class="code hl_variable" href="../../df/db9/classclases_1_1_usuario.html#ab7e6730556cd58dd81751a9d7ab5535c">userId</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="../../df/db9/classclases_1_1_usuario.html#aea18bbbfd60937a39ca6ffaf41c00f2d">   68</a></span>    <span class="keyword">public</span> Map &lt;Integer, Double&gt; <a class="code hl_function" href="../../df/db9/classclases_1_1_usuario.html#aea18bbbfd60937a39ca6ffaf41c00f2d">getValoraciones</a>() { <span class="keywordflow">return</span> this.<a class="code hl_variable" href="../../df/db9/classclases_1_1_usuario.html#a3f82218a96ab364e686ce52dd384235b">valoraciones</a>; }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="../../df/db9/classclases_1_1_usuario.html#afa103718afa1a7eaf9ee3dd3d6c4a324">   76</a></span>    <span class="keyword">public</span> Integer <a class="code hl_function" href="../../df/db9/classclases_1_1_usuario.html#afa103718afa1a7eaf9ee3dd3d6c4a324">getUserId</a>() { <span class="keywordflow">return</span> this.<a class="code hl_variable" href="../../df/db9/classclases_1_1_usuario.html#ab7e6730556cd58dd81751a9d7ab5535c">userId</a>; }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="../../df/db9/classclases_1_1_usuario.html#a622325f19fe565bdd228502feb853a36">   84</a></span>    <span class="keyword">public</span> Integer <a class="code hl_function" href="../../df/db9/classclases_1_1_usuario.html#a622325f19fe565bdd228502feb853a36">getOriginalUserId</a>() { <span class="keywordflow">return</span> this.<a class="code hl_variable" href="../../df/db9/classclases_1_1_usuario.html#a68a6cee69f38d4ad0cc317584d9989fe">originalUserId</a>; }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="../../df/db9/classclases_1_1_usuario.html#aa4a35ab7d8631d63775fb60d74d2fb1e">   92</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/db9/classclases_1_1_usuario.html#aa4a35ab7d8631d63775fb60d74d2fb1e">setValoraciones</a>(Map &lt;Integer, Double&gt; v) { this.valoraciones = <span class="keyword">new</span> HashMap&lt;&gt;(v); }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="../../df/db9/classclases_1_1_usuario.html#a88820499f9e2a8532a9cd6d9df6fa9ab">  100</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/db9/classclases_1_1_usuario.html#a88820499f9e2a8532a9cd6d9df6fa9ab">setOriginalUserId</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="../../df/db9/classclases_1_1_usuario.html#a68a6cee69f38d4ad0cc317584d9989fe">originalUserId</a>) { this.originalUserId = <a class="code hl_variable" href="../../df/db9/classclases_1_1_usuario.html#a68a6cee69f38d4ad0cc317584d9989fe">originalUserId</a>; }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="../../df/db9/classclases_1_1_usuario.html#af522cc6e31a1f00b24fe619b04232cb3">  109</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/db9/classclases_1_1_usuario.html#af522cc6e31a1f00b24fe619b04232cb3">addValoracion</a>(Integer <span class="keywordtype">id</span>, Double v) { <a class="code hl_variable" href="../../df/db9/classclases_1_1_usuario.html#a3f82218a96ab364e686ce52dd384235b">valoraciones</a>.put(<span class="keywordtype">id</span>, v); }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="../../df/db9/classclases_1_1_usuario.html#ae06c17c56b3db583f44f38c3d5972932">  118</a></span>    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="../../df/db9/classclases_1_1_usuario.html#ae06c17c56b3db583f44f38c3d5972932">tieneValoracion</a> (Integer idItem) { <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/db9/classclases_1_1_usuario.html#a3f82218a96ab364e686ce52dd384235b">valoraciones</a>.containsKey(idItem); }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="../../df/db9/classclases_1_1_usuario.html#aba022c735eed5fea5c32b760e482531c">  127</a></span>    <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code hl_function" href="../../df/db9/classclases_1_1_usuario.html#aba022c735eed5fea5c32b760e482531c">getValoracio</a> (Integer item) {  <span class="keywordflow">return</span> <a class="code hl_variable" href="../../df/db9/classclases_1_1_usuario.html#a3f82218a96ab364e686ce52dd384235b">valoraciones</a>.get(item).doubleValue(); }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="../../df/db9/classclases_1_1_usuario.html#a084a37d4e20b19dd3742a24a5fdf756f">  135</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/db9/classclases_1_1_usuario.html#a084a37d4e20b19dd3742a24a5fdf756f">borrarValoracion</a> (Integer itemID) {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="../../df/db9/classclases_1_1_usuario.html#aea18bbbfd60937a39ca6ffaf41c00f2d">getValoraciones</a>().containsKey(itemID)){</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            <a class="code hl_variable" href="../../df/db9/classclases_1_1_usuario.html#a3f82218a96ab364e686ce52dd384235b">valoraciones</a>.remove(itemID);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    @Override</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="../../df/db9/classclases_1_1_usuario.html#aaa005b5b8018798006b2c472882e0a36">  148</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="../../df/db9/classclases_1_1_usuario.html#aaa005b5b8018798006b2c472882e0a36">toString</a>() {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        String valor = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        valor += <a class="code hl_variable" href="../../df/db9/classclases_1_1_usuario.html#a68a6cee69f38d4ad0cc317584d9989fe">originalUserId</a> + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="keywordflow">for</span> (Map.Entry&lt;Integer, Double&gt; entry : <a class="code hl_variable" href="../../df/db9/classclases_1_1_usuario.html#a3f82218a96ab364e686ce52dd384235b">valoraciones</a>.entrySet())</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            valor += entry.getKey() + <span class="stringliteral">&quot; &quot;</span> + entry.getValue() + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keywordflow">return</span> valor;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    }</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>}</div>
+<div class="ttc" id="aclassclases_1_1_usuario_html"><div class="ttname"><a href="../../df/db9/classclases_1_1_usuario.html">clases.Usuario</a></div><div class="ttdoc">@Class Usuario</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/_usuario_8java_source.html#l00015">Usuario.java:15</a></div></div>
+<div class="ttc" id="aclassclases_1_1_usuario_html_a084a37d4e20b19dd3742a24a5fdf756f"><div class="ttname"><a href="../../df/db9/classclases_1_1_usuario.html#a084a37d4e20b19dd3742a24a5fdf756f">clases.Usuario.borrarValoracion</a></div><div class="ttdeci">void borrarValoracion(Integer itemID)</div><div class="ttdoc">quitar una valoracion hecha por el usuario</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/_usuario_8java_source.html#l00135">Usuario.java:135</a></div></div>
+<div class="ttc" id="aclassclases_1_1_usuario_html_a3f82218a96ab364e686ce52dd384235b"><div class="ttname"><a href="../../df/db9/classclases_1_1_usuario.html#a3f82218a96ab364e686ce52dd384235b">clases.Usuario.valoraciones</a></div><div class="ttdeci">Map&lt; Integer, Double &gt; valoraciones</div><div class="ttdoc">Variable valoraciones contiene todas las valoraciones que ha hecho el item @format Map &lt;ItemId,...</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/_usuario_8java_source.html#l00028">Usuario.java:28</a></div></div>
+<div class="ttc" id="aclassclases_1_1_usuario_html_a4004f8f1b40ce5e46bff10c10b5640f7"><div class="ttname"><a href="../../df/db9/classclases_1_1_usuario.html#a4004f8f1b40ce5e46bff10c10b5640f7">clases.Usuario.Usuario</a></div><div class="ttdeci">Usuario(Integer userId, Map&lt; Integer, Double &gt; valoraciones)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/_usuario_8java_source.html#l00044">Usuario.java:44</a></div></div>
+<div class="ttc" id="aclassclases_1_1_usuario_html_a4a96a3512ddeafe1055941405535437d"><div class="ttname"><a href="../../df/db9/classclases_1_1_usuario.html#a4a96a3512ddeafe1055941405535437d">clases.Usuario.Usuario</a></div><div class="ttdeci">Usuario()</div><div class="ttdoc">Constructora por defecto, inicializa un usuario vacío.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/_usuario_8java_source.html#l00035">Usuario.java:35</a></div></div>
+<div class="ttc" id="aclassclases_1_1_usuario_html_a622325f19fe565bdd228502feb853a36"><div class="ttname"><a href="../../df/db9/classclases_1_1_usuario.html#a622325f19fe565bdd228502feb853a36">clases.Usuario.getOriginalUserId</a></div><div class="ttdeci">Integer getOriginalUserId()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/_usuario_8java_source.html#l00084">Usuario.java:84</a></div></div>
+<div class="ttc" id="aclassclases_1_1_usuario_html_a68a6cee69f38d4ad0cc317584d9989fe"><div class="ttname"><a href="../../df/db9/classclases_1_1_usuario.html#a68a6cee69f38d4ad0cc317584d9989fe">clases.Usuario.originalUserId</a></div><div class="ttdeci">int originalUserId</div><div class="ttdoc">El id del usuario instanciado en los archivos.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/_usuario_8java_source.html#l00022">Usuario.java:22</a></div></div>
+<div class="ttc" id="aclassclases_1_1_usuario_html_a88820499f9e2a8532a9cd6d9df6fa9ab"><div class="ttname"><a href="../../df/db9/classclases_1_1_usuario.html#a88820499f9e2a8532a9cd6d9df6fa9ab">clases.Usuario.setOriginalUserId</a></div><div class="ttdeci">void setOriginalUserId(int originalUserId)</div><div class="ttdoc">Setter del originalUserId.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/_usuario_8java_source.html#l00100">Usuario.java:100</a></div></div>
+<div class="ttc" id="aclassclases_1_1_usuario_html_aa4a35ab7d8631d63775fb60d74d2fb1e"><div class="ttname"><a href="../../df/db9/classclases_1_1_usuario.html#aa4a35ab7d8631d63775fb60d74d2fb1e">clases.Usuario.setValoraciones</a></div><div class="ttdeci">void setValoraciones(Map&lt; Integer, Double &gt; v)</div><div class="ttdoc">Setter del mapa de valoraciones.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/_usuario_8java_source.html#l00092">Usuario.java:92</a></div></div>
+<div class="ttc" id="aclassclases_1_1_usuario_html_aaa005b5b8018798006b2c472882e0a36"><div class="ttname"><a href="../../df/db9/classclases_1_1_usuario.html#aaa005b5b8018798006b2c472882e0a36">clases.Usuario.toString</a></div><div class="ttdeci">String toString()</div><div class="ttdoc">Hace override de la funcion toString.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/_usuario_8java_source.html#l00148">Usuario.java:148</a></div></div>
+<div class="ttc" id="aclassclases_1_1_usuario_html_ab7e6730556cd58dd81751a9d7ab5535c"><div class="ttname"><a href="../../df/db9/classclases_1_1_usuario.html#ab7e6730556cd58dd81751a9d7ab5535c">clases.Usuario.userId</a></div><div class="ttdeci">int userId</div><div class="ttdoc">El id del usuario instanciado en la clase.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/_usuario_8java_source.html#l00018">Usuario.java:18</a></div></div>
+<div class="ttc" id="aclassclases_1_1_usuario_html_aba022c735eed5fea5c32b760e482531c"><div class="ttname"><a href="../../df/db9/classclases_1_1_usuario.html#aba022c735eed5fea5c32b760e482531c">clases.Usuario.getValoracio</a></div><div class="ttdeci">double getValoracio(Integer item)</div><div class="ttdoc">Coger la valoración del item con id &quot;item&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/_usuario_8java_source.html#l00127">Usuario.java:127</a></div></div>
+<div class="ttc" id="aclassclases_1_1_usuario_html_ad97a6e7cca896e9d1db194f3e4eff778"><div class="ttname"><a href="../../df/db9/classclases_1_1_usuario.html#ad97a6e7cca896e9d1db194f3e4eff778">clases.Usuario.equals</a></div><div class="ttdeci">boolean equals(Object o)</div><div class="ttdoc">Comprueba la igualdad entre los dos objetos de la clase Usuario.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/_usuario_8java_source.html#l00057">Usuario.java:57</a></div></div>
+<div class="ttc" id="aclassclases_1_1_usuario_html_ae06c17c56b3db583f44f38c3d5972932"><div class="ttname"><a href="../../df/db9/classclases_1_1_usuario.html#ae06c17c56b3db583f44f38c3d5972932">clases.Usuario.tieneValoracion</a></div><div class="ttdeci">boolean tieneValoracion(Integer idItem)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/_usuario_8java_source.html#l00118">Usuario.java:118</a></div></div>
+<div class="ttc" id="aclassclases_1_1_usuario_html_aea18bbbfd60937a39ca6ffaf41c00f2d"><div class="ttname"><a href="../../df/db9/classclases_1_1_usuario.html#aea18bbbfd60937a39ca6ffaf41c00f2d">clases.Usuario.getValoraciones</a></div><div class="ttdeci">Map&lt; Integer, Double &gt; getValoraciones()</div><div class="ttdoc">Getter del mapa de valoraciones.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/_usuario_8java_source.html#l00068">Usuario.java:68</a></div></div>
+<div class="ttc" id="aclassclases_1_1_usuario_html_af522cc6e31a1f00b24fe619b04232cb3"><div class="ttname"><a href="../../df/db9/classclases_1_1_usuario.html#af522cc6e31a1f00b24fe619b04232cb3">clases.Usuario.addValoracion</a></div><div class="ttdeci">void addValoracion(Integer id, Double v)</div><div class="ttdoc">Añadir una valoración al mapa de valoraciones del usuario.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/_usuario_8java_source.html#l00109">Usuario.java:109</a></div></div>
+<div class="ttc" id="aclassclases_1_1_usuario_html_afa103718afa1a7eaf9ee3dd3d6c4a324"><div class="ttname"><a href="../../df/db9/classclases_1_1_usuario.html#afa103718afa1a7eaf9ee3dd3d6c4a324">clases.Usuario.getUserId</a></div><div class="ttdeci">Integer getUserId()</div><div class="ttdoc">Getter del id del usuario.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/_usuario_8java_source.html#l00076">Usuario.java:76</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

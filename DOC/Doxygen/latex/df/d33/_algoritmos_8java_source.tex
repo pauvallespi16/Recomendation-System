@@ -1,0 +1,50 @@
+\hypertarget{_algoritmos_8java_source}{}\doxysection{Algoritmos.\+java}
+\label{_algoritmos_8java_source}\index{Algoritmos.java@{Algoritmos.java}}
+\mbox{\hyperlink{_algoritmos_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00001}\mbox{\hyperlink{namespacecontroladores}{00001}} \textcolor{keyword}{package }controladores; }
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00005}00005 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceclases}{clases}}.\mbox{\hyperlink{classclases_1_1_item}{Item}};}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00006}00006 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceclases}{clases}}.\mbox{\hyperlink{classclases_1_1_items}{Items}};}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00007}00007 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceclases}{clases}}.\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}};}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00008}00008 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceclases}{clases}}.\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}};}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00010}00010 \textcolor{keyword}{import} java.util.*;}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00019}\mbox{\hyperlink{classcontroladores_1_1_algoritmos}{00019}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classcontroladores_1_1_algoritmos}{Algoritmos}} \{}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00024}\mbox{\hyperlink{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}{00024}}     \textcolor{keyword}{protected} \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}{us}};}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00030}\mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{00030}}     \textcolor{keyword}{protected} \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}};}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00035}\mbox{\hyperlink{classcontroladores_1_1_algoritmos_a65c7b4dfdc13c5a8be71386e1744c647}{00035}}     \textcolor{keyword}{protected} Map <Integer, Double> \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a65c7b4dfdc13c5a8be71386e1744c647}{predictions}};}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00040}\mbox{\hyperlink{classcontroladores_1_1_algoritmos_a12da803fac97be1ebc727d328872df83}{00040}}     \textcolor{keyword}{protected} \mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a12da803fac97be1ebc727d328872df83}{it}};}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00048}\mbox{\hyperlink{classcontroladores_1_1_algoritmos_aa76c4ec299a3d3e622e3d42275cdbb3e}{00048}}     \textcolor{keyword}{public} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_aa76c4ec299a3d3e622e3d42275cdbb3e}{Algoritmos}}() \{}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00049}00049         \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a65c7b4dfdc13c5a8be71386e1744c647}{predictions}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00050}00050     \}}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00060}\mbox{\hyperlink{classcontroladores_1_1_algoritmos_a4839bda5c82e12f7a02bc7ca72c2b797}{00060}}     \textcolor{keyword}{public} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a4839bda5c82e12f7a02bc7ca72c2b797}{Algoritmos}}(\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}{us}}, \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}, \mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a12da803fac97be1ebc727d328872df83}{it}}) \{}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00061}00061         \textcolor{keyword}{this}();}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00062}00062         this.us = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}}(\mbox{\hyperlink{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}{us}}.\mbox{\hyperlink{classclases_1_1_usuarios_a51cd118515e98557b0fe657e1cbda5cb}{getUsers}}());}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00063}00063         this.u = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}(\mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}.\mbox{\hyperlink{classclases_1_1_usuario_afa103718afa1a7eaf9ee3dd3d6c4a324}{getUserId}}(), \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}.\mbox{\hyperlink{classclases_1_1_usuario_aea18bbbfd60937a39ca6ffaf41c00f2d}{getValoraciones}}());}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00064}00064         this.it = \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a12da803fac97be1ebc727d328872df83}{it}};}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00065}00065         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classclases_1_1_item}{Item}} i : \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a12da803fac97be1ebc727d328872df83}{it}}.\mbox{\hyperlink{classclases_1_1_items_a4b59e5773f15df8bc7ddc2e0b8852c6f}{getItems}}().values()) \{}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00066}00066             System.out.println (\textcolor{stringliteral}{"{}slopeone"{}});}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00067}00067             System.out.println (i.getId());}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00068}00068         \}}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00069}00069     \}}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00074}\mbox{\hyperlink{classcontroladores_1_1_algoritmos_a9e030b799aff56e24c6b9df3b7f7a7ff}{00074}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a9e030b799aff56e24c6b9df3b7f7a7ff}{calcularRecomendaciones}} (\textcolor{keywordtype}{int} size) \{\}}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00080}\mbox{\hyperlink{classcontroladores_1_1_algoritmos_adbb9d686216172569e50f0ff41960130}{00080}}     \textcolor{keyword}{public} Map <Integer, Double> \mbox{\hyperlink{classcontroladores_1_1_algoritmos_adbb9d686216172569e50f0ff41960130}{getPredicciones}}(\textcolor{keywordtype}{int} k) \{}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00081}00081         Map <Integer, Double> aux = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00082}00082         \textcolor{keywordflow}{for} (Map.Entry <Integer, Double> e : \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a65c7b4dfdc13c5a8be71386e1744c647}{predictions}}.entrySet())\{}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00083}00083             \textcolor{keywordflow}{if} (k == 0) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00084}00084             aux.put(e.getKey(), e.getValue());}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00085}00085             k-\/-\/;}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00086}00086         \}}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00087}00087         \textcolor{keywordflow}{return} aux;}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00088}00088     \}}
+\DoxyCodeLine{\Hypertarget{_algoritmos_8java_source_l00089}00089 \}}
+
+\end{DoxyCode}

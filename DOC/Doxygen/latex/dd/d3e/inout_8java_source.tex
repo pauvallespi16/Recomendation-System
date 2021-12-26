@@ -1,0 +1,388 @@
+\hypertarget{inout_8java_source}{}\doxysection{inout.\+java}
+\label{inout_8java_source}\index{inout.java@{inout.java}}
+\mbox{\hyperlink{inout_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00001}00001 \textcolor{comment}{/* Aquesta es una adaptacio d'un conjunt de classes}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00002}00002 \textcolor{comment}{   per a fer entrada/sortida de texte amb Java.}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00003}00003 \textcolor{comment}{   La versio original va ser creada per Per Brinch}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00004}00004 \textcolor{comment}{   Hansen (s'inclou el copyright de la versio original)}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00005}00005 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00007}00007 \textcolor{comment}{/*                 THE JAVA TEXT PROGRAM    }}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00008}00008 \textcolor{comment}{                       28 April 1999}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00009}00009 \textcolor{comment}{            Copyright (c) 1999 Per Brinch Hansen}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00010}00010 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00011}00011 \textcolor{comment}{This program defines a set of Java classes for text}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00012}00012 \textcolor{comment}{processing. These text classes enable Java programs to}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00013}00013 \textcolor{comment}{output text to screen and disk files and input text from}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00014}00014 \textcolor{comment}{keyboard and disk files. The present version runs on}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00015}00015 \textcolor{comment}{Macintosh, Unix, and Windows 95 systems.}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00016}00016 \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00018}00018 \textcolor{keyword}{package }clases;}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00019}00019 \textcolor{keyword}{import} java.io.*;}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00021}\mbox{\hyperlink{classclases_1_1inout}{00021}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classclases_1_1inout}{inout}}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00022}\mbox{\hyperlink{classclases_1_1inout_a17fc1a8c55f04b58d248c90209f8e74a}{00022}} \{ \textcolor{keyword}{private} \textcolor{keyword}{final} \textcolor{keywordtype}{char} \mbox{\hyperlink{classclases_1_1inout_a17fc1a8c55f04b58d248c90209f8e74a}{cr}} = \textcolor{charliteral}{'\(\backslash\)r'},  \mbox{\hyperlink{classclases_1_1inout_a0a5ab4d70207d682c8564385f5a017dd}{eof}} = \textcolor{stringliteral}{'\(\backslash\)uFFFF'},}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00023}\mbox{\hyperlink{classclases_1_1inout_a4d834213277cc3e5bc69e39e3d4fbdc3}{00023}}     \mbox{\hyperlink{classclases_1_1inout_a4d834213277cc3e5bc69e39e3d4fbdc3}{nl}} = \textcolor{charliteral}{'\(\backslash\)n'}, \mbox{\hyperlink{classclases_1_1inout_a1ecf4c3f5c649be5b7e5d8c67957fbdd}{sp}} = \textcolor{charliteral}{' '};}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00024}\mbox{\hyperlink{classclases_1_1inout_a4b853547380c7fd7484b8467f0562f6c}{00024}}   \textcolor{keyword}{private} \textcolor{keyword}{final} String \mbox{\hyperlink{classclases_1_1inout_a4b853547380c7fd7484b8467f0562f6c}{EOF}} = \textcolor{stringliteral}{"{}eof"{}};}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00025}00025   }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00027}\mbox{\hyperlink{classclases_1_1inout_ad02e8158024332d2f852e2d0d88c554b}{00027}}   \textcolor{keyword}{public} \mbox{\hyperlink{classclases_1_1inout_ad02e8158024332d2f852e2d0d88c554b}{inout}}() \{ \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00029}00029   \textcolor{comment}{/* instruccions d'escriptura */}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00031}\mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{00031}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}}(\textcolor{keywordtype}{boolean} value) \textcolor{keywordflow}{throws} Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00032}00032   \{ \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}}(value, 1); \} }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00034}\mbox{\hyperlink{classclases_1_1inout_abbcb3b1e04514c0f34e70fb6e6474a5c}{00034}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_abbcb3b1e04514c0f34e70fb6e6474a5c}{write}}(\textcolor{keywordtype}{boolean} value, \textcolor{keywordtype}{int} width) }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00035}00035     \textcolor{keywordflow}{throws} Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00036}00036   \{ String word = (String)(value?\textcolor{stringliteral}{"{}true"{}}:\textcolor{stringliteral}{"{}false"{}});}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00037}00037     \mbox{\hyperlink{classclases_1_1inout_ad1ecb02575a39142cc413f10147f862a}{writespace}}(width -\/ word.length());}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00038}00038     \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}}(word);}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00039}00039   \} }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00041}\mbox{\hyperlink{classclases_1_1inout_a0249e3103762cf4a9638b23cdb37de86}{00041}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a0249e3103762cf4a9638b23cdb37de86}{write}}(\textcolor{keywordtype}{char} value) \textcolor{keywordflow}{throws} Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00042}00042   \{ System.out.print(value); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00044}\mbox{\hyperlink{classclases_1_1inout_a418f58485f584efdbbfdd823cccf200d}{00044}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a418f58485f584efdbbfdd823cccf200d}{write}}(\textcolor{keywordtype}{char} value, \textcolor{keywordtype}{int} width) \textcolor{keywordflow}{throws} Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00045}00045   \{ \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}}(value); \mbox{\hyperlink{classclases_1_1inout_ad1ecb02575a39142cc413f10147f862a}{writespace}}(width -\/ 1); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00047}\mbox{\hyperlink{classclases_1_1inout_a90c5d06e729fcf83ec18451115d6ab7d}{00047}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a90c5d06e729fcf83ec18451115d6ab7d}{write}}(\textcolor{keywordtype}{double} value) \textcolor{keywordflow}{throws} Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00048}00048   \{ \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}}(value, 1); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00050}\mbox{\hyperlink{classclases_1_1inout_a23b44d3f2dc48686674612f0f6f6d0c4}{00050}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a23b44d3f2dc48686674612f0f6f6d0c4}{write}}(\textcolor{keywordtype}{double} value, \textcolor{keywordtype}{int} width)}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00051}00051     \textcolor{keywordflow}{throws} Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00052}00052   \{ String numeral = String.valueOf(value);}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00053}00053     \mbox{\hyperlink{classclases_1_1inout_ad1ecb02575a39142cc413f10147f862a}{writespace}}(width -\/ numeral.length());}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00054}00054     \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}}(numeral);}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00055}00055   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00057}\mbox{\hyperlink{classclases_1_1inout_a265600d1879f337313170f0d83572b3d}{00057}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a265600d1879f337313170f0d83572b3d}{write}}(\textcolor{keywordtype}{int} value) \textcolor{keywordflow}{throws} Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00058}00058   \{ \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}}(value, 1); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00060}\mbox{\hyperlink{classclases_1_1inout_a755ef470ec59bd505f3b28c2f5b464e2}{00060}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a755ef470ec59bd505f3b28c2f5b464e2}{write}}(\textcolor{keywordtype}{int} value, \textcolor{keywordtype}{int} width) \textcolor{keywordflow}{throws} Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00061}00061   \{ String numeral = String.valueOf((\textcolor{keywordtype}{int})value);}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00062}00062     \mbox{\hyperlink{classclases_1_1inout_ad1ecb02575a39142cc413f10147f862a}{writespace}}(width -\/ numeral.length());}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00063}00063     \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}}(numeral); }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00064}00064   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00066}\mbox{\hyperlink{classclases_1_1inout_a21ba2963da4f9fb3bbe6f262d60cca94}{00066}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a21ba2963da4f9fb3bbe6f262d60cca94}{write}}(String value) \textcolor{keywordflow}{throws} Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00067}00067   \{ \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}}(value, 1); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00069}\mbox{\hyperlink{classclases_1_1inout_abf41daf68fd08d8bb52d7c94dd669ebd}{00069}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_abf41daf68fd08d8bb52d7c94dd669ebd}{write}}(String value, \textcolor{keywordtype}{int} width) }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00070}00070     \textcolor{keywordflow}{throws} Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00071}00071   \{ \textcolor{keywordtype}{int} length = value.length();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00072}00072     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < length; i++)}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00073}00073       \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}}(value.charAt(i));}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00074}00074     \mbox{\hyperlink{classclases_1_1inout_ad1ecb02575a39142cc413f10147f862a}{writespace}}(width -\/ length);}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00075}00075   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00077}\mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{00077}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}() throws Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00078}00078   \{ \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}}(\mbox{\hyperlink{classclases_1_1inout_a4d834213277cc3e5bc69e39e3d4fbdc3}{nl}}); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00080}\mbox{\hyperlink{classclases_1_1inout_a6ccaf2bd78ad5219cfbc0b05e6b3a2d8}{00080}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a6ccaf2bd78ad5219cfbc0b05e6b3a2d8}{writeln}}(\textcolor{keywordtype}{boolean} value) \textcolor{keywordflow}{throws} Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00081}00081   \{ \mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}(value, 1); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00083}\mbox{\hyperlink{classclases_1_1inout_ad3156887fec26df351c975d0672a6d26}{00083}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_ad3156887fec26df351c975d0672a6d26}{writeln}}(\textcolor{keywordtype}{boolean} value, \textcolor{keywordtype}{int} width) }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00084}00084     \textcolor{keywordflow}{throws} Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00085}00085   \{ \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}}(value, width); \mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}(); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00087}\mbox{\hyperlink{classclases_1_1inout_a72d90f4729fefe52977af37a2e163bf6}{00087}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a72d90f4729fefe52977af37a2e163bf6}{writeln}}(\textcolor{keywordtype}{char} value) \textcolor{keywordflow}{throws} Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00088}00088   \{ \mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}(value, 1); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00090}\mbox{\hyperlink{classclases_1_1inout_a167fa288f90865493571f7926ba93bf5}{00090}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a167fa288f90865493571f7926ba93bf5}{writeln}}(\textcolor{keywordtype}{char} value, \textcolor{keywordtype}{int} width) }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00091}00091     \textcolor{keywordflow}{throws} Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00092}00092   \{ \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}}(value, width); \mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}(); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00094}\mbox{\hyperlink{classclases_1_1inout_ac004c044f91efa7943b349c64ed72118}{00094}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_ac004c044f91efa7943b349c64ed72118}{writeln}}(\textcolor{keywordtype}{double} value) \textcolor{keywordflow}{throws} Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00095}00095   \{ \mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}(value, 1); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00097}\mbox{\hyperlink{classclases_1_1inout_a906959ddd525f604fd5f2d7a058b931b}{00097}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a906959ddd525f604fd5f2d7a058b931b}{writeln}}(\textcolor{keywordtype}{double} value, \textcolor{keywordtype}{int} width)}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00098}00098     \textcolor{keywordflow}{throws} Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00099}00099   \{ \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}}(value, width); \mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}(); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00101}\mbox{\hyperlink{classclases_1_1inout_a361333af917dadb001dd866c09689fe4}{00101}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a361333af917dadb001dd866c09689fe4}{writeln}}(\textcolor{keywordtype}{int} value) \textcolor{keywordflow}{throws} Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00102}00102   \{ \mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}(value, 1); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00104}\mbox{\hyperlink{classclases_1_1inout_a57ee60817e39f90514fc55f38b032aef}{00104}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a57ee60817e39f90514fc55f38b032aef}{writeln}}(\textcolor{keywordtype}{int} value, \textcolor{keywordtype}{int} width) \textcolor{keywordflow}{throws} Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00105}00105   \{ \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}}(value, width); \mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}(); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00107}\mbox{\hyperlink{classclases_1_1inout_abcf514c7d4108328c25458dcc79f84aa}{00107}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_abcf514c7d4108328c25458dcc79f84aa}{writeln}}(String value) \textcolor{keywordflow}{throws} Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00108}00108   \{ \mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}(value, 1); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00110}\mbox{\hyperlink{classclases_1_1inout_af08502e08f2db1297a3775f6e0779e4e}{00110}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_af08502e08f2db1297a3775f6e0779e4e}{writeln}}(String value, \textcolor{keywordtype}{int} width)}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00111}00111     \textcolor{keywordflow}{throws} Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00112}00112   \{ \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}}(value, width); \mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}(); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00113}00113 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00114}\mbox{\hyperlink{classclases_1_1inout_a2cde39ee988b6ff8079dbdded94a14e7}{00114}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a2cde39ee988b6ff8079dbdded94a14e7}{writesame}}(\textcolor{keywordtype}{char} value, \textcolor{keywordtype}{int} number)}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00115}00115     \textcolor{keywordflow}{throws} Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00116}00116   \{ \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i <= number; i++) \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}}(value); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00118}\mbox{\hyperlink{classclases_1_1inout_ad1ecb02575a39142cc413f10147f862a}{00118}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_ad1ecb02575a39142cc413f10147f862a}{writespace}}(\textcolor{keywordtype}{int} number) \textcolor{keywordflow}{throws} Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00119}00119   \{ \mbox{\hyperlink{classclases_1_1inout_a2cde39ee988b6ff8079dbdded94a14e7}{writesame}}(\mbox{\hyperlink{classclases_1_1inout_a1ecf4c3f5c649be5b7e5d8c67957fbdd}{sp}}, number); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00120}00120 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00122}00122   \textcolor{comment}{/* instruccions de lectura */}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00124}\mbox{\hyperlink{classclases_1_1inout_a740a746e659c6c026f6af67b807de56d}{00124}}   \textcolor{keyword}{private} BufferedReader \mbox{\hyperlink{classclases_1_1inout_a740a746e659c6c026f6af67b807de56d}{in}} = \textcolor{keyword}{new} BufferedReader(}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00125}00125                                   \textcolor{keyword}{new} InputStreamReader(System.in));}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00126}\mbox{\hyperlink{classclases_1_1inout_a95c0c99cc7deea926ae205ba37400d71}{00126}}   \textcolor{keyword}{private} \textcolor{keywordtype}{char}[] \mbox{\hyperlink{classclases_1_1inout_a95c0c99cc7deea926ae205ba37400d71}{buffer}} = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[80];}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00127}\mbox{\hyperlink{classclases_1_1inout_a91938bb3bdccd5e9a8235a803e6d4c91}{00127}}   \textcolor{keyword}{private} \textcolor{keywordtype}{int} \mbox{\hyperlink{classclases_1_1inout_a91938bb3bdccd5e9a8235a803e6d4c91}{typed}}= 0, \mbox{\hyperlink{classclases_1_1inout_afc1907485ba9d59fa269238a8aaed519}{used}}= 0;}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00128}00128 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00129}\mbox{\hyperlink{classclases_1_1inout_aae904ad43c6dba3ea2aa88aed1796ba6}{00129}}   \textcolor{keyword}{private} \textcolor{keywordtype}{char} \mbox{\hyperlink{classclases_1_1inout_aae904ad43c6dba3ea2aa88aed1796ba6}{readkey}}() throws Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00130}00130   \{ \textcolor{keywordflow}{if} (\mbox{\hyperlink{classclases_1_1inout_afc1907485ba9d59fa269238a8aaed519}{used}} == \mbox{\hyperlink{classclases_1_1inout_a91938bb3bdccd5e9a8235a803e6d4c91}{typed}}) }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00131}00131       \{ String line = \mbox{\hyperlink{classclases_1_1inout_a1f08b9505fe0a183ac844a2b032ee8e0}{readkeyline}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00132}00132         \textcolor{keywordflow}{if} (line.equals(\mbox{\hyperlink{classclases_1_1inout_a4b853547380c7fd7484b8467f0562f6c}{EOF}}))}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00133}00133           \{ \mbox{\hyperlink{classclases_1_1inout_a91938bb3bdccd5e9a8235a803e6d4c91}{typed}} = 0; \mbox{\hyperlink{classclases_1_1inout_a95c0c99cc7deea926ae205ba37400d71}{buffer}}[\mbox{\hyperlink{classclases_1_1inout_a91938bb3bdccd5e9a8235a803e6d4c91}{typed}}] = \mbox{\hyperlink{classclases_1_1inout_a0a5ab4d70207d682c8564385f5a017dd}{eof}}; \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00134}00134         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00135}00135           \{ \mbox{\hyperlink{classclases_1_1inout_a91938bb3bdccd5e9a8235a803e6d4c91}{typed}} = line.length();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00136}00136             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classclases_1_1inout_a91938bb3bdccd5e9a8235a803e6d4c91}{typed}}; i++) }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00137}00137               \mbox{\hyperlink{classclases_1_1inout_a95c0c99cc7deea926ae205ba37400d71}{buffer}}[i] = line.charAt(i);}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00138}00138             \mbox{\hyperlink{classclases_1_1inout_a95c0c99cc7deea926ae205ba37400d71}{buffer}}[\mbox{\hyperlink{classclases_1_1inout_a91938bb3bdccd5e9a8235a803e6d4c91}{typed}}] = \mbox{\hyperlink{classclases_1_1inout_a4d834213277cc3e5bc69e39e3d4fbdc3}{nl}};}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00139}00139           \}   }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00140}00140         \mbox{\hyperlink{classclases_1_1inout_a91938bb3bdccd5e9a8235a803e6d4c91}{typed}} = \mbox{\hyperlink{classclases_1_1inout_a91938bb3bdccd5e9a8235a803e6d4c91}{typed}} + 1; \mbox{\hyperlink{classclases_1_1inout_afc1907485ba9d59fa269238a8aaed519}{used}} = 0;}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00141}00141       \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00142}00142     \textcolor{keywordtype}{char} \mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}} = \mbox{\hyperlink{classclases_1_1inout_a95c0c99cc7deea926ae205ba37400d71}{buffer}}[\mbox{\hyperlink{classclases_1_1inout_afc1907485ba9d59fa269238a8aaed519}{used}}];}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00143}00143     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}} == \mbox{\hyperlink{classclases_1_1inout_a17fc1a8c55f04b58d248c90209f8e74a}{cr}}) \mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}} = \mbox{\hyperlink{classclases_1_1inout_a4d834213277cc3e5bc69e39e3d4fbdc3}{nl}};}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00144}00144     \mbox{\hyperlink{classclases_1_1inout_afc1907485ba9d59fa269238a8aaed519}{used}} = \mbox{\hyperlink{classclases_1_1inout_afc1907485ba9d59fa269238a8aaed519}{used}} + 1; \textcolor{keywordflow}{return} \mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}};}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00145}00145   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00146}00146 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00147}\mbox{\hyperlink{classclases_1_1inout_a1f08b9505fe0a183ac844a2b032ee8e0}{00147}}   \textcolor{keyword}{private} String \mbox{\hyperlink{classclases_1_1inout_a1f08b9505fe0a183ac844a2b032ee8e0}{readkeyline}}() throws Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00148}00148   \{ String line = \mbox{\hyperlink{classclases_1_1inout_a740a746e659c6c026f6af67b807de56d}{in}}.readLine();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00149}00149     \textcolor{keywordflow}{return} (line == \textcolor{keyword}{null}?\textcolor{stringliteral}{"{}"{}}:line);}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00150}00150   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00151}00151 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00152}\mbox{\hyperlink{classclases_1_1inout_a4eaab920fc152ffb37bf6f0ebda9b27d}{00152}}   \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classclases_1_1inout_a4eaab920fc152ffb37bf6f0ebda9b27d}{ahead}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00153}\mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{00153}}   \textcolor{keyword}{private} \textcolor{keywordtype}{char} \mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}} \textcolor{comment}{/*next character (if ahead)*/};}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00154}00154 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00155}00155 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00156}\mbox{\hyperlink{classclases_1_1inout_afd1449881183bf8f8b1e9581252109e6}{00156}}   \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classclases_1_1inout_afd1449881183bf8f8b1e9581252109e6}{blank}}() throws Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00157}00157   \{ \mbox{\hyperlink{classclases_1_1inout_a00f7f2c0ddf459782195fd7cf3b14a25}{getahead}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00158}00158     \textcolor{keywordflow}{return} (\mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}} == \mbox{\hyperlink{classclases_1_1inout_a17fc1a8c55f04b58d248c90209f8e74a}{cr}}) | (\mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}} == \mbox{\hyperlink{classclases_1_1inout_a4d834213277cc3e5bc69e39e3d4fbdc3}{nl}}) | (\mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}} == \mbox{\hyperlink{classclases_1_1inout_a1ecf4c3f5c649be5b7e5d8c67957fbdd}{sp}});}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00159}00159   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00160}00160 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00161}\mbox{\hyperlink{classclases_1_1inout_acf614f4a8101e20e271405e9a73dd671}{00161}}   \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classclases_1_1inout_acf614f4a8101e20e271405e9a73dd671}{digit}}() throws Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00162}00162   \{ \mbox{\hyperlink{classclases_1_1inout_a00f7f2c0ddf459782195fd7cf3b14a25}{getahead}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00163}00163     \textcolor{keywordflow}{return} (\textcolor{charliteral}{'0'} <= \mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}}) \& (\mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}} <= \textcolor{charliteral}{'9'});}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00164}00164   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00165}00165 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00166}\mbox{\hyperlink{classclases_1_1inout_a00f7f2c0ddf459782195fd7cf3b14a25}{00166}}   \textcolor{keyword}{private} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a00f7f2c0ddf459782195fd7cf3b14a25}{getahead}}() throws Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00167}00167   \{ \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classclases_1_1inout_a4eaab920fc152ffb37bf6f0ebda9b27d}{ahead}}) \mbox{\hyperlink{classclases_1_1inout_a6033688675959d689ed3729d17c2f8d5}{readnext}}(); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00168}00168 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00169}\mbox{\hyperlink{classclases_1_1inout_af89c9f522cf589cd45a4af2b15120476}{00169}}   \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classclases_1_1inout_af89c9f522cf589cd45a4af2b15120476}{letter}}() throws Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00170}00170   \{ \mbox{\hyperlink{classclases_1_1inout_a00f7f2c0ddf459782195fd7cf3b14a25}{getahead}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00171}00171     \textcolor{keywordflow}{return} ((\textcolor{charliteral}{'a'} <= \mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}}) \& (\mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}} <= \textcolor{charliteral}{'z'})) |}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00172}00172       ((\textcolor{charliteral}{'A'} <= \mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}}) \& (\mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}} <= \textcolor{charliteral}{'Z'}));}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00173}00173   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00174}00174 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00175}\mbox{\hyperlink{classclases_1_1inout_ad1df9bdc08369f5b5db509b6a45e7332}{00175}}   \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classclases_1_1inout_ad1df9bdc08369f5b5db509b6a45e7332}{more}}() throws Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00176}00176   \{ \mbox{\hyperlink{classclases_1_1inout_a00f7f2c0ddf459782195fd7cf3b14a25}{getahead}}(); \textcolor{keywordflow}{return} \mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}} != \mbox{\hyperlink{classclases_1_1inout_a0a5ab4d70207d682c8564385f5a017dd}{eof}}; \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00177}00177 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00178}\mbox{\hyperlink{classclases_1_1inout_ad82fb08514fe55d773d3b22bc349d775}{00178}}   \textcolor{keyword}{public} \textcolor{keywordtype}{char} \mbox{\hyperlink{classclases_1_1inout_ad82fb08514fe55d773d3b22bc349d775}{next}}() throws Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00179}00179   \{ \mbox{\hyperlink{classclases_1_1inout_a00f7f2c0ddf459782195fd7cf3b14a25}{getahead}}(); \textcolor{keywordflow}{return} \mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}}; \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00180}00180 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00181}\mbox{\hyperlink{classclases_1_1inout_a0e0994235a4efeac7a933e5db4ff69d7}{00181}}   \textcolor{keyword}{public} \textcolor{keywordtype}{char} \mbox{\hyperlink{classclases_1_1inout_a0e0994235a4efeac7a933e5db4ff69d7}{read}}() throws Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00182}00182   \{ \mbox{\hyperlink{classclases_1_1inout_a00f7f2c0ddf459782195fd7cf3b14a25}{getahead}}(); \mbox{\hyperlink{classclases_1_1inout_a4eaab920fc152ffb37bf6f0ebda9b27d}{ahead}} = \textcolor{keyword}{false}; \textcolor{keywordflow}{return} \mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}}; \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00183}00183 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00184}\mbox{\hyperlink{classclases_1_1inout_aa5d60ea2c87c4f2894c51cf05ce0b8a0}{00184}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_aa5d60ea2c87c4f2894c51cf05ce0b8a0}{readblanks}}() throws Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00185}00185   \{ \textcolor{keywordflow}{while} (\mbox{\hyperlink{classclases_1_1inout_afd1449881183bf8f8b1e9581252109e6}{blank}}()) \mbox{\hyperlink{classclases_1_1inout_a6033688675959d689ed3729d17c2f8d5}{readnext}}(); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00186}00186 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00187}\mbox{\hyperlink{classclases_1_1inout_a753cf9a9549000b798e6bf98c4108610}{00187}}   \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classclases_1_1inout_a753cf9a9549000b798e6bf98c4108610}{readboolean}}() throws Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00188}00188   \{ \textcolor{keywordtype}{boolean} value; String symbol = \mbox{\hyperlink{classclases_1_1inout_af20c8d18a84c2819fdddd2d082e2d216}{readname}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00189}00189     \textcolor{keywordflow}{if} (symbol.equals(\textcolor{stringliteral}{"{}false"{}})) value = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00190}00190     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (symbol.equals(\textcolor{stringliteral}{"{}true"{}})) value = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00191}00191     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00192}00192       \{ String error = \textcolor{stringliteral}{"{}boolean format: "{}};}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00193}00193         \textcolor{keywordflow}{throw} \textcolor{keyword}{new} Exception(error + symbol);}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00194}00194       \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00195}00195     \textcolor{keywordflow}{return} value;}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00196}00196   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00197}00197 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00198}\mbox{\hyperlink{classclases_1_1inout_a06206c694c30ba66b70be144277b4f5d}{00198}}   \textcolor{keyword}{public} \textcolor{keywordtype}{double} \mbox{\hyperlink{classclases_1_1inout_a06206c694c30ba66b70be144277b4f5d}{readdouble}}() throws Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00199}00199   \{ StringBuffer symbol = \textcolor{keyword}{new} StringBuffer();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00200}00200     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/MODIFICACIO-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00201}00201     \mbox{\hyperlink{classclases_1_1inout_aa5d60ea2c87c4f2894c51cf05ce0b8a0}{readblanks}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00202}00202     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}} == \textcolor{charliteral}{'+'}) \mbox{\hyperlink{classclases_1_1inout_a6033688675959d689ed3729d17c2f8d5}{readnext}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00203}00203     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}} == \textcolor{charliteral}{'-\/'}) }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00204}00204       symbol.append(\mbox{\hyperlink{classclases_1_1inout_a0e0994235a4efeac7a933e5db4ff69d7}{read}}());}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00205}00205     \textcolor{keywordflow}{while} (\mbox{\hyperlink{classclases_1_1inout_acf614f4a8101e20e271405e9a73dd671}{digit}}()) symbol.append(\mbox{\hyperlink{classclases_1_1inout_a0e0994235a4efeac7a933e5db4ff69d7}{read}}());}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00206}00206     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00207}00207     \textcolor{comment}{// hem substiuit el readint per aquest boci de codi.}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00208}00208     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}} == \textcolor{charliteral}{'.'})}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00209}00209       \{ symbol.append(\mbox{\hyperlink{classclases_1_1inout_a0e0994235a4efeac7a933e5db4ff69d7}{read}}());}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00210}00210         \textcolor{keywordflow}{while}(\mbox{\hyperlink{classclases_1_1inout_acf614f4a8101e20e271405e9a73dd671}{digit}}()) symbol.append(\mbox{\hyperlink{classclases_1_1inout_a0e0994235a4efeac7a933e5db4ff69d7}{read}}());}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00211}00211       \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00212}00212     \textcolor{keywordflow}{if} ((\mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}} == \textcolor{charliteral}{'e'}) | (\mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}} == \textcolor{charliteral}{'E'}))}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00213}00213       \{ symbol.append(\mbox{\hyperlink{classclases_1_1inout_a0e0994235a4efeac7a933e5db4ff69d7}{read}}());}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00214}00214         symbol.append(\mbox{\hyperlink{classclases_1_1inout_abfdd688a299edbc7e41f49087ef121d8}{readint}}());}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00215}00215       \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00216}00216     Double numeral =}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00217}00217       \textcolor{keyword}{new} Double(symbol.toString());}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00218}00218     \textcolor{keywordflow}{return} numeral.doubleValue();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00219}00219   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00220}00220 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00221}\mbox{\hyperlink{classclases_1_1inout_abfdd688a299edbc7e41f49087ef121d8}{00221}}   \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{classclases_1_1inout_abfdd688a299edbc7e41f49087ef121d8}{readint}}() throws Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00222}00222   \{ StringBuffer symbol = \textcolor{keyword}{new} StringBuffer();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00223}00223     \mbox{\hyperlink{classclases_1_1inout_aa5d60ea2c87c4f2894c51cf05ce0b8a0}{readblanks}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00224}00224     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}} == \textcolor{charliteral}{'+'}) \mbox{\hyperlink{classclases_1_1inout_a6033688675959d689ed3729d17c2f8d5}{readnext}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00225}00225     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}} == \textcolor{charliteral}{'-\/'}) }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00226}00226       symbol.append(\mbox{\hyperlink{classclases_1_1inout_a0e0994235a4efeac7a933e5db4ff69d7}{read}}());}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00227}00227     \textcolor{keywordflow}{while} (\mbox{\hyperlink{classclases_1_1inout_acf614f4a8101e20e271405e9a73dd671}{digit}}()) symbol.append(\mbox{\hyperlink{classclases_1_1inout_a0e0994235a4efeac7a933e5db4ff69d7}{read}}());}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00228}00228     Integer numeral =}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00229}00229       \textcolor{keyword}{new} Integer(symbol.toString());}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00230}00230     \textcolor{keywordflow}{return} numeral.intValue();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00231}00231   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00232}00232 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00233}\mbox{\hyperlink{classclases_1_1inout_a2c7aa7252d196df6bdf5b6336cf44093}{00233}}   \textcolor{keyword}{public} String \mbox{\hyperlink{classclases_1_1inout_a2c7aa7252d196df6bdf5b6336cf44093}{readline}}() throws Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00234}00234   \{ StringBuffer line = \textcolor{keyword}{new} StringBuffer();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00235}00235     \mbox{\hyperlink{classclases_1_1inout_a00f7f2c0ddf459782195fd7cf3b14a25}{getahead}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00236}00236     \textcolor{keywordflow}{while} (\mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}} != \mbox{\hyperlink{classclases_1_1inout_a4d834213277cc3e5bc69e39e3d4fbdc3}{nl}})}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00237}00237       \{ line.append(\mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}}); \mbox{\hyperlink{classclases_1_1inout_a6033688675959d689ed3729d17c2f8d5}{readnext}}(); \};}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00238}00238     \mbox{\hyperlink{classclases_1_1inout_a4eaab920fc152ffb37bf6f0ebda9b27d}{ahead}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00239}00239     \textcolor{keywordflow}{return} line.toString();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00240}00240   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00241}00241 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00242}\mbox{\hyperlink{classclases_1_1inout_aa646a94b8f5ab0a6c8bc18c346121655}{00242}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_aa646a94b8f5ab0a6c8bc18c346121655}{readln}}() throws Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00243}00243   \{ String skipped = \mbox{\hyperlink{classclases_1_1inout_a2c7aa7252d196df6bdf5b6336cf44093}{readline}}(); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00244}00244 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00245}\mbox{\hyperlink{classclases_1_1inout_af20c8d18a84c2819fdddd2d082e2d216}{00245}}   \textcolor{keyword}{public} String \mbox{\hyperlink{classclases_1_1inout_af20c8d18a84c2819fdddd2d082e2d216}{readname}}() throws Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00246}00246   \{ StringBuffer letters = \textcolor{keyword}{new} StringBuffer();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00247}00247     \mbox{\hyperlink{classclases_1_1inout_aa5d60ea2c87c4f2894c51cf05ce0b8a0}{readblanks}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00248}00248     \textcolor{keywordflow}{while} (\mbox{\hyperlink{classclases_1_1inout_af89c9f522cf589cd45a4af2b15120476}{letter}}() | \mbox{\hyperlink{classclases_1_1inout_acf614f4a8101e20e271405e9a73dd671}{digit}}() | (\mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}} == \textcolor{charliteral}{'\_'}))}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00249}00249       \{ letters.append(\mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}}); \mbox{\hyperlink{classclases_1_1inout_a6033688675959d689ed3729d17c2f8d5}{readnext}}(); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00250}00250     \textcolor{keywordflow}{return} letters.toString();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00251}00251   \}   }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00252}00252 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00253}\mbox{\hyperlink{classclases_1_1inout_a6033688675959d689ed3729d17c2f8d5}{00253}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a6033688675959d689ed3729d17c2f8d5}{readnext}}() throws Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00254}00254   \{ \mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}} = (char)\mbox{\hyperlink{classclases_1_1inout_aae904ad43c6dba3ea2aa88aed1796ba6}{readkey}}(); \mbox{\hyperlink{classclases_1_1inout_a4eaab920fc152ffb37bf6f0ebda9b27d}{ahead}} = \textcolor{keyword}{true}; \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00255}00255 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00256}\mbox{\hyperlink{classclases_1_1inout_a70039326dbdb0e51ef526e97464599d6}{00256}}   \textcolor{keyword}{public} String \mbox{\hyperlink{classclases_1_1inout_a70039326dbdb0e51ef526e97464599d6}{readword}}() throws Exception}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00257}00257   \{ StringBuffer word = \textcolor{keyword}{new} StringBuffer();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00258}00258     \mbox{\hyperlink{classclases_1_1inout_aa5d60ea2c87c4f2894c51cf05ce0b8a0}{readblanks}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00259}00259     \textcolor{keywordflow}{while} (!\mbox{\hyperlink{classclases_1_1inout_afd1449881183bf8f8b1e9581252109e6}{blank}}())}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00260}00260       \{ word.append(\mbox{\hyperlink{classclases_1_1inout_af6a5c278c929f12b42daffa34cb987f8}{ch}}); \mbox{\hyperlink{classclases_1_1inout_a6033688675959d689ed3729d17c2f8d5}{readnext}}(); \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00261}00261     \textcolor{keywordflow}{return} word.toString();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00262}00262   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00263}00263 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00264}00264 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00265}00265   \textcolor{comment}{// Instruccions per llegir vector i matrius d'enters i reals}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00266}00266 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00267}\mbox{\hyperlink{classclases_1_1inout_a028bfc988de4357f95c2f8e81f8e35a4}{00267}}   \textcolor{keyword}{public} \textcolor{keywordtype}{int}[] \mbox{\hyperlink{classclases_1_1inout_a028bfc988de4357f95c2f8e81f8e35a4}{read\_int\_array}} () throws Exception \{}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00268}00268     \textcolor{keywordtype}{int} v[] = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[100];}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00269}00269     \textcolor{keywordtype}{int} f[];}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00270}00270     \textcolor{keywordtype}{int} i=0;}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00271}00271     \mbox{\hyperlink{classclases_1_1inout_aa5d60ea2c87c4f2894c51cf05ce0b8a0}{readblanks}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00272}00272     \textcolor{keywordflow}{while} (\mbox{\hyperlink{classclases_1_1inout_ad82fb08514fe55d773d3b22bc349d775}{next}}() != \textcolor{charliteral}{';'}) \{}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00273}00273       v[i] = \mbox{\hyperlink{classclases_1_1inout_abfdd688a299edbc7e41f49087ef121d8}{readint}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00274}00274       \mbox{\hyperlink{classclases_1_1inout_aa5d60ea2c87c4f2894c51cf05ce0b8a0}{readblanks}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00275}00275       i = i+1;}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00276}00276     \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00277}00277     \mbox{\hyperlink{classclases_1_1inout_a0e0994235a4efeac7a933e5db4ff69d7}{read}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00278}00278     f = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[i];}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00279}00279     \textcolor{keywordflow}{for} (i=0; i < f.length; i++) f[i] = v[i];}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00280}00280     \textcolor{keywordflow}{return} f;}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00281}00281   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00282}00282 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00283}\mbox{\hyperlink{classclases_1_1inout_a7ed4eb9d4ef5a7f5cd0d3b7a871dcea1}{00283}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a7ed4eb9d4ef5a7f5cd0d3b7a871dcea1}{write}} (\textcolor{keywordtype}{int}[] v) \textcolor{keywordflow}{throws} Exception \{}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00284}00284     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i < v.length; i++) \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}} (\textcolor{stringliteral}{"{} "{}} + v[i]);}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00285}00285   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00286}00286 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00287}\mbox{\hyperlink{classclases_1_1inout_a58274cde5340da3fb7a2fae9a83ab83b}{00287}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a58274cde5340da3fb7a2fae9a83ab83b}{writeln}} (\textcolor{keywordtype}{int}[] v) \textcolor{keywordflow}{throws} Exception \{}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00288}00288     \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}} (v); \mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00289}00289   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00290}00290 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00291}\mbox{\hyperlink{classclases_1_1inout_a9469397bcec81437685f7c7051b8f2b2}{00291}}   \textcolor{keyword}{public} \textcolor{keywordtype}{double}[] \mbox{\hyperlink{classclases_1_1inout_a9469397bcec81437685f7c7051b8f2b2}{read\_double\_array}} () throws Exception \{}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00292}00292     \textcolor{keywordtype}{double} v[] = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[100];}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00293}00293     \textcolor{keywordtype}{double} f[];}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00294}00294     \textcolor{keywordtype}{int} i=0;}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00295}00295     \mbox{\hyperlink{classclases_1_1inout_aa5d60ea2c87c4f2894c51cf05ce0b8a0}{readblanks}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00296}00296     \textcolor{keywordflow}{while} (\mbox{\hyperlink{classclases_1_1inout_ad82fb08514fe55d773d3b22bc349d775}{next}}() != \textcolor{charliteral}{';'}) \{}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00297}00297       v[i] = \mbox{\hyperlink{classclases_1_1inout_a06206c694c30ba66b70be144277b4f5d}{readdouble}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00298}00298       \mbox{\hyperlink{classclases_1_1inout_aa5d60ea2c87c4f2894c51cf05ce0b8a0}{readblanks}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00299}00299       i = i+1;}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00300}00300     \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00301}00301     \mbox{\hyperlink{classclases_1_1inout_a0e0994235a4efeac7a933e5db4ff69d7}{read}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00302}00302     f = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[i];}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00303}00303     \textcolor{keywordflow}{for} (i=0; i < f.length; i++) f[i] = v[i];}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00304}00304     \textcolor{keywordflow}{return} f;}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00305}00305   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00306}00306 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00307}\mbox{\hyperlink{classclases_1_1inout_a8ffe1010e5ff3f8545850086cffc1ddf}{00307}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a8ffe1010e5ff3f8545850086cffc1ddf}{write}} (\textcolor{keywordtype}{double}[] v) \textcolor{keywordflow}{throws} Exception \{}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00308}00308     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i < v.length; i++) \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}} (\textcolor{stringliteral}{"{} "{}} + v[i]);}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00309}00309   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00310}00310 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00311}\mbox{\hyperlink{classclases_1_1inout_aace16b4226ba2d5a335888d2e13a9ef5}{00311}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_aace16b4226ba2d5a335888d2e13a9ef5}{writeln}} (\textcolor{keywordtype}{double}[] v) \textcolor{keywordflow}{throws} Exception \{}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00312}00312     \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}} (v); \mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00313}00313   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00314}00314 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00315}\mbox{\hyperlink{classclases_1_1inout_ab281f901b49a088bfd7db8926b1d9713}{00315}}   \textcolor{keyword}{public} \textcolor{keywordtype}{int}[][] \mbox{\hyperlink{classclases_1_1inout_ab281f901b49a088bfd7db8926b1d9713}{read\_int\_matrix}} () throws Exception \{}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00316}00316     \textcolor{keywordtype}{int} v[][] = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[100][100];}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00317}00317     \textcolor{keywordtype}{int} f[][];}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00318}00318     \textcolor{keywordtype}{int} i=0;}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00319}00319     \mbox{\hyperlink{classclases_1_1inout_aa5d60ea2c87c4f2894c51cf05ce0b8a0}{readblanks}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00320}00320     \textcolor{keywordflow}{while} (\mbox{\hyperlink{classclases_1_1inout_ad82fb08514fe55d773d3b22bc349d775}{next}}() != \textcolor{charliteral}{';'}) \{}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00321}00321       v[i] = \mbox{\hyperlink{classclases_1_1inout_a028bfc988de4357f95c2f8e81f8e35a4}{read\_int\_array}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00322}00322       \mbox{\hyperlink{classclases_1_1inout_aa5d60ea2c87c4f2894c51cf05ce0b8a0}{readblanks}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00323}00323       i = i+1;}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00324}00324     \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00325}00325     \mbox{\hyperlink{classclases_1_1inout_a0e0994235a4efeac7a933e5db4ff69d7}{read}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00326}00326     f = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[i][];}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00327}00327     \textcolor{keywordflow}{for} (i=0; i < f.length; i++) \{}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00328}00328       f[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[v[i].length];}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00329}00329       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j < v[i].length; j++) f[i][j] = v[i][j];}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00330}00330     \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00331}00331     \textcolor{keywordflow}{return} f;}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00332}00332   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00333}00333 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00334}\mbox{\hyperlink{classclases_1_1inout_a248e263d79dbef47b24359906064ea32}{00334}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a248e263d79dbef47b24359906064ea32}{write}} (\textcolor{keywordtype}{int}[][] m) \textcolor{keywordflow}{throws} Exception \{}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00335}00335     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i < m.length; i++) \{}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00336}00336       \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}} (m[i]);}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00337}00337       \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}} (\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00338}00338     \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00339}00339   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00340}00340 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00341}\mbox{\hyperlink{classclases_1_1inout_ae819660d4b04ba6df019c77018120293}{00341}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_ae819660d4b04ba6df019c77018120293}{writeln}} (\textcolor{keywordtype}{int}[][] m) \textcolor{keywordflow}{throws} Exception \{}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00342}00342     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i < m.length; i++) \{}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00343}00343       \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}} (m[i]);}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00344}00344       \mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}} (\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00345}00345     \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00346}00346   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00347}00347 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00348}\mbox{\hyperlink{classclases_1_1inout_a60edc9413ed9ce26b533210de07bb0c1}{00348}}   \textcolor{keyword}{public} \textcolor{keywordtype}{double}[][] \mbox{\hyperlink{classclases_1_1inout_a60edc9413ed9ce26b533210de07bb0c1}{read\_double\_matrix}} () throws Exception \{}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00349}00349     \textcolor{keywordtype}{double} v[][] = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[100][100];}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00350}00350     \textcolor{keywordtype}{double} f[][];}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00351}00351     \textcolor{keywordtype}{int} i=0;}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00352}00352     \mbox{\hyperlink{classclases_1_1inout_aa5d60ea2c87c4f2894c51cf05ce0b8a0}{readblanks}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00353}00353     \textcolor{keywordflow}{while} (\mbox{\hyperlink{classclases_1_1inout_ad82fb08514fe55d773d3b22bc349d775}{next}}() != \textcolor{charliteral}{';'}) \{}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00354}00354       v[i] = \mbox{\hyperlink{classclases_1_1inout_a9469397bcec81437685f7c7051b8f2b2}{read\_double\_array}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00355}00355       \mbox{\hyperlink{classclases_1_1inout_aa5d60ea2c87c4f2894c51cf05ce0b8a0}{readblanks}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00356}00356       i = i+1;}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00357}00357     \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00358}00358     \mbox{\hyperlink{classclases_1_1inout_a0e0994235a4efeac7a933e5db4ff69d7}{read}}();}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00359}00359     f = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[i][];}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00360}00360     \textcolor{keywordflow}{for} (i=0; i < f.length; i++) \{}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00361}00361       f[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[v[i].length];}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00362}00362       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j < v[i].length; j++) f[i][j] = v[i][j];}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00363}00363     \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00364}00364     \textcolor{keywordflow}{return} f;}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00365}00365   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00366}00366 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00367}\mbox{\hyperlink{classclases_1_1inout_a2d9661c6f6e3ec9c2c944a0c5a6ce84d}{00367}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_a2d9661c6f6e3ec9c2c944a0c5a6ce84d}{write}} (\textcolor{keywordtype}{double}[][] m) \textcolor{keywordflow}{throws} Exception \{}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00368}00368     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i < m.length; i++) \{}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00369}00369       \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}} (m[i]);}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00370}00370       \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}} (\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00371}00371     \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00372}00372   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00373}00373 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00374}\mbox{\hyperlink{classclases_1_1inout_af3840787ae127f8b200ff7db646be4fa}{00374}}   \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1inout_af3840787ae127f8b200ff7db646be4fa}{writeln}} (\textcolor{keywordtype}{double}[][] m) \textcolor{keywordflow}{throws} Exception \{}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00375}00375     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i < m.length; i++) \{}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00376}00376       \mbox{\hyperlink{classclases_1_1inout_a1c167e16ac1b39415964135c971a0927}{write}} (m[i]);}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00377}00377       \mbox{\hyperlink{classclases_1_1inout_a012f64bc1ee8dd78c74483b3348f2194}{writeln}} (\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00378}00378     \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00379}00379   \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00380}00380 \}}
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00381}00381 }
+\DoxyCodeLine{\Hypertarget{inout_8java_source_l00382}00382 }
+
+\end{DoxyCode}

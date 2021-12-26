@@ -1,0 +1,615 @@
+\hypertarget{classcontroladores_1_1_nearest_neighbors}{}\doxysection{Referencia de la Clase controladores.\+Nearest\+Neighbors}
+\label{classcontroladores_1_1_nearest_neighbors}\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+
+
+Implementación del algoritmo nearest neighbors, usando content based filtering.  
+
+
+Diagrama de herencias de controladores.\+Nearest\+Neighbors\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d9/d93/classcontroladores_1_1_nearest_neighbors}
+\end{center}
+\end{figure}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_ab2af7d30afcf14e56c49123fced3eee6}{Nearest\+Neighbors}} ()
+\begin{DoxyCompactList}\small\item\em Constructora por defecto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_aeebe0e5a875b5e404f97a480607cab57}{Nearest\+Neighbors}} (int \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a9238b0f9c62dffd981d157d1265eba4d}{k}})
+\item 
+\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a5bde56c23533f2311b41b21c7f2d7f18}{Nearest\+Neighbors}} (\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}{us}}, \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}, \mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a12da803fac97be1ebc727d328872df83}{it}})
+\item 
+void \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a0733d034fbc55464e51a4108fd573b3e}{set\+Neighbors}} (int \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a9238b0f9c62dffd981d157d1265eba4d}{k}})
+\begin{DoxyCompactList}\small\item\em Setter de la variable k. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a22cbd347987fa78a2b1bb0493106d63e}{cosine\+Similarity\+Bit\+Set}} (Bit\+Set bsA, Bit\+Set bsB)
+\begin{DoxyCompactList}\small\item\em Calcula el \char`\"{}cosine similarity\char`\"{} entre dos Bit\+Sets, que es una estructura de datos muy eficiente para hacer cálculos entre vectores booleanos como ANDS, y devuelve un valor entre 0 y 1, donde 1 es que son muy diferentes y 0 muy similares. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_ac5c5001e32c21ca567d1443f9899c904}{cosine\+Similarity}} (Map$<$ String, Double $>$ mapA, Map$<$ String, Double $>$ mapB)
+\begin{DoxyCompactList}\small\item\em Calcula el \char`\"{}cosine similarity\char`\"{} entre dos maps (string, valor) y devuelve un valor entre 0 y 1, donde 1 es que son muy diferentes y 0 muy similares. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_ab8c13ef123711e47edc2788f5dccbce2}{distance\+Nums}} (String att, \mbox{\hyperlink{classclases_1_1_item}{Item}} a, \mbox{\hyperlink{classclases_1_1_item}{Item}} b)
+\begin{DoxyCompactList}\small\item\em Calcula la distancia entre dos atributos numéricos. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a8a5bfad501f5ca010560bd73dd1590a8}{distance\+Fechas}} (String att, \mbox{\hyperlink{classclases_1_1_item}{Item}} a, \mbox{\hyperlink{classclases_1_1_item}{Item}} b)
+\begin{DoxyCompactList}\small\item\em Calcula la distancia entre dos atributos fecha. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a71334a19401c8800cfed9eca3c95d58d}{distance\+Booleans}} (String att, \mbox{\hyperlink{classclases_1_1_item}{Item}} a, \mbox{\hyperlink{classclases_1_1_item}{Item}} b)
+\begin{DoxyCompactList}\small\item\em Calcula la distancia entre dos atributos booleanos. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a8eda035cca42d0cb535d2123f3f35dff}{distance\+Categorico}} (String att, \mbox{\hyperlink{classclases_1_1_item}{Item}} a, \mbox{\hyperlink{classclases_1_1_item}{Item}} b)
+\begin{DoxyCompactList}\small\item\em Calcula la distancia entre dos atributos categóricos. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a1b9b39c88c182df6a83b10e2222b8b62}{distance\+Categorico\+Multiple}} (String att, \mbox{\hyperlink{classclases_1_1_item}{Item}} a, \mbox{\hyperlink{classclases_1_1_item}{Item}} b)
+\begin{DoxyCompactList}\small\item\em Calcula la distancia entre dos atributos categóricos múltiples. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a0613f3b0af9dc1fd6b844fe0f8a3961d}{distance\+Texto}} (String att, \mbox{\hyperlink{classclases_1_1_item}{Item}} a, \mbox{\hyperlink{classclases_1_1_item}{Item}} b)
+\begin{DoxyCompactList}\small\item\em Calcula la distancia entre dos atributos de tipo texto. \end{DoxyCompactList}\item 
+Double \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a384d771784705ebb8511026a5e58e56a}{prediccion\+Valoracion\+Item}} (\mbox{\hyperlink{classclases_1_1_item}{Item}} item)
+\begin{DoxyCompactList}\small\item\em Calcula las predicciones de valoraciones para un item que el usuario no ha valorado. \end{DoxyCompactList}\item 
+Map$<$ Integer, Double $>$ \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a31847d9351a0af6d61958a4dd47ba67a}{compute\+All\+Predicciones}} ()
+\item 
+void \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a81255daa09a672febc6284f7e5ca2faf}{calcular\+Recomendaciones}} (int \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a9238b0f9c62dffd981d157d1265eba4d}{k}})
+\begin{DoxyCompactList}\small\item\em para inicializar todo lo que debe calcular para sus recomendaciones \end{DoxyCompactList}\item 
+Map$<$ Integer, Double $>$ \mbox{\hyperlink{classcontroladores_1_1_algoritmos_adbb9d686216172569e50f0ff41960130}{get\+Predicciones}} (int \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a9238b0f9c62dffd981d157d1265eba4d}{k}})
+\begin{DoxyCompactList}\small\item\em coger el mapa de predicciones generado por la llama a los algoritmos \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}{us}}
+\begin{DoxyCompactList}\small\item\em Conjunto de usuarios que vamos a usar para inicializar nuestro algoritmo de collaborative filtering. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}
+\begin{DoxyCompactList}\small\item\em Usuario desde el cual vamos a hacer las predicciones de los items. \end{DoxyCompactList}\item 
+Map$<$ Integer, Double $>$ \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a65c7b4dfdc13c5a8be71386e1744c647}{predictions}}
+\begin{DoxyCompactList}\small\item\em Mapa de predicciones de los algoritmos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a12da803fac97be1ebc727d328872df83}{it}}
+\begin{DoxyCompactList}\small\item\em Conjunto de items que se usaran para las valoraciones. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a2cc0af27e488df6c1fe43c39c4c8cc1a}{get\+Max\+Word\+In\+Atributo\+Texto}} (\mbox{\hyperlink{classclases_1_1_atributo_texto}{Atributo\+Texto}} a)
+\begin{DoxyCompactList}\small\item\em Calcula la palabra con máxima frecuencia en un atributo\+Texto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a9238b0f9c62dffd981d157d1265eba4d}{k}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Implementación del algoritmo nearest neighbors, usando content based filtering. 
+
+El algoritmo Nearest Neighbors tiene en cuenta la distancia de cada item que ha valorado el usuario con el resto de items que existen, para así recomendarle los items mas similares. Ademas, también se tiene en cuenta la valoración que le ha dado el usuario a sus items.
+
+\begin{DoxyAuthor}{Autor}
+Andrés Eduardo Bercowsky Rama
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+December 2021 
+\end{DoxyDate}
+
+
+Definición en la línea \mbox{\hyperlink{_nearest_neighbors_8java_source_l00019}{19}} del archivo \mbox{\hyperlink{_nearest_neighbors_8java_source}{Nearest\+Neighbors.\+java}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classcontroladores_1_1_nearest_neighbors_ab2af7d30afcf14e56c49123fced3eee6}\label{classcontroladores_1_1_nearest_neighbors_ab2af7d30afcf14e56c49123fced3eee6}} 
+\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}!NearestNeighbors@{NearestNeighbors}}
+\index{NearestNeighbors@{NearestNeighbors}!controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+\doxysubsubsection{\texorpdfstring{NearestNeighbors()}{NearestNeighbors()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily controladores.\+Nearest\+Neighbors.\+Nearest\+Neighbors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructora por defecto. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se inicializa un objeto de la clase vacío.
+\end{DoxyPostcond}
+\begin{DoxyPrecond}{Precondición}
+El parámetro k es un entero positivo. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se inicializa un objeto de la clase con el atributo k inicializado. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em k} & indica el número de vecinos mas cercanos que tenemos que devolver.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondición}
+Los parametros us, u e it estan inicializados. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se inicializa un objeto de la clase con los atributos de la super clase inicializados. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em us} & indica los usuarios que existen. \\
+\hline
+{\em u} & indica el usuario del cual queremos hacer una recomendacion. \\
+\hline
+{\em it} & items de los que queremos recomendar alguno. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_nearest_neighbors_8java_source_l00031}{31}} del archivo \mbox{\hyperlink{_nearest_neighbors_8java_source}{Nearest\+Neighbors.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_nearest_neighbors_aeebe0e5a875b5e404f97a480607cab57}\label{classcontroladores_1_1_nearest_neighbors_aeebe0e5a875b5e404f97a480607cab57}} 
+\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}!NearestNeighbors@{NearestNeighbors}}
+\index{NearestNeighbors@{NearestNeighbors}!controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+\doxysubsubsection{\texorpdfstring{NearestNeighbors()}{NearestNeighbors()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily controladores.\+Nearest\+Neighbors.\+Nearest\+Neighbors (\begin{DoxyParamCaption}\item[{int}]{k }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_nearest_neighbors_8java_source_l00040}{40}} del archivo \mbox{\hyperlink{_nearest_neighbors_8java_source}{Nearest\+Neighbors.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_nearest_neighbors_a5bde56c23533f2311b41b21c7f2d7f18}\label{classcontroladores_1_1_nearest_neighbors_a5bde56c23533f2311b41b21c7f2d7f18}} 
+\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}!NearestNeighbors@{NearestNeighbors}}
+\index{NearestNeighbors@{NearestNeighbors}!controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+\doxysubsubsection{\texorpdfstring{NearestNeighbors()}{NearestNeighbors()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily controladores.\+Nearest\+Neighbors.\+Nearest\+Neighbors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}}}]{us,  }\item[{\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}}]{u,  }\item[{\mbox{\hyperlink{classclases_1_1_items}{Items}}}]{it }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_nearest_neighbors_8java_source_l00053}{53}} del archivo \mbox{\hyperlink{_nearest_neighbors_8java_source}{Nearest\+Neighbors.\+java}}.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classcontroladores_1_1_nearest_neighbors_a81255daa09a672febc6284f7e5ca2faf}\label{classcontroladores_1_1_nearest_neighbors_a81255daa09a672febc6284f7e5ca2faf}} 
+\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}!calcularRecomendaciones@{calcularRecomendaciones}}
+\index{calcularRecomendaciones@{calcularRecomendaciones}!controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+\doxysubsubsection{\texorpdfstring{calcularRecomendaciones()}{calcularRecomendaciones()}}
+{\footnotesize\ttfamily controladores.\+Nearest\+Neighbors.\+calcular\+Recomendaciones (\begin{DoxyParamCaption}\item[{int}]{k }\end{DoxyParamCaption})}
+
+
+
+para inicializar todo lo que debe calcular para sus recomendaciones 
+
+\begin{DoxyPrecond}{Precondición}
+existe clase de nearest neighbors 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha ejecutado la clase de nearest neighbors y puesto el vector de predicciones a las predicciones 
+\end{DoxyPostcond}
+
+
+Reimplementado de \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a9e030b799aff56e24c6b9df3b7f7a7ff}{controladores.\+Algoritmos}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{_nearest_neighbors_8java_source_l00325}{325}} del archivo \mbox{\hyperlink{_nearest_neighbors_8java_source}{Nearest\+Neighbors.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_nearest_neighbors_a31847d9351a0af6d61958a4dd47ba67a}\label{classcontroladores_1_1_nearest_neighbors_a31847d9351a0af6d61958a4dd47ba67a}} 
+\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}!computeAllPredicciones@{computeAllPredicciones}}
+\index{computeAllPredicciones@{computeAllPredicciones}!controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+\doxysubsubsection{\texorpdfstring{computeAllPredicciones()}{computeAllPredicciones()}}
+{\footnotesize\ttfamily Map$<$ Integer, Double $>$ controladores.\+Nearest\+Neighbors.\+compute\+All\+Predicciones (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_nearest_neighbors_8java_source_l00293}{293}} del archivo \mbox{\hyperlink{_nearest_neighbors_8java_source}{Nearest\+Neighbors.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_nearest_neighbors_ac5c5001e32c21ca567d1443f9899c904}\label{classcontroladores_1_1_nearest_neighbors_ac5c5001e32c21ca567d1443f9899c904}} 
+\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}!cosineSimilarity@{cosineSimilarity}}
+\index{cosineSimilarity@{cosineSimilarity}!controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+\doxysubsubsection{\texorpdfstring{cosineSimilarity()}{cosineSimilarity()}}
+{\footnotesize\ttfamily controladores.\+Nearest\+Neighbors.\+cosine\+Similarity (\begin{DoxyParamCaption}\item[{Map$<$ String, Double $>$}]{mapA,  }\item[{Map$<$ String, Double $>$}]{mapB }\end{DoxyParamCaption})}
+
+
+
+Calcula el \char`\"{}cosine similarity\char`\"{} entre dos maps (string, valor) y devuelve un valor entre 0 y 1, donde 1 es que son muy diferentes y 0 muy similares. 
+
+\begin{DoxyPrecond}{Precondición}
+Los maps pasados por parametro estan inicializados. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto el \char`\"{}cosine similarity\char`\"{} entre los maps. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em mapA} & map que contiene las palabras y valores de un atributo \\
+\hline
+{\em mapB} & map que contiene las palabras y valores de un atributo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve el \char`\"{}cosine similarity\char`\"{} entre ambos maps. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_nearest_neighbors_8java_source_l00113}{113}} del archivo \mbox{\hyperlink{_nearest_neighbors_8java_source}{Nearest\+Neighbors.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_nearest_neighbors_a22cbd347987fa78a2b1bb0493106d63e}\label{classcontroladores_1_1_nearest_neighbors_a22cbd347987fa78a2b1bb0493106d63e}} 
+\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}!cosineSimilarityBitSet@{cosineSimilarityBitSet}}
+\index{cosineSimilarityBitSet@{cosineSimilarityBitSet}!controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+\doxysubsubsection{\texorpdfstring{cosineSimilarityBitSet()}{cosineSimilarityBitSet()}}
+{\footnotesize\ttfamily controladores.\+Nearest\+Neighbors.\+cosine\+Similarity\+Bit\+Set (\begin{DoxyParamCaption}\item[{Bit\+Set}]{bsA,  }\item[{Bit\+Set}]{bsB }\end{DoxyParamCaption})}
+
+
+
+Calcula el \char`\"{}cosine similarity\char`\"{} entre dos Bit\+Sets, que es una estructura de datos muy eficiente para hacer cálculos entre vectores booleanos como ANDS, y devuelve un valor entre 0 y 1, donde 1 es que son muy diferentes y 0 muy similares. 
+
+\begin{DoxyPrecond}{Precondición}
+Los Bit\+Sets pasados por parametro estan inicializados. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto el \char`\"{}cosine similarity\char`\"{} entre los Bit\+Sets. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em bsA} & Bit\+Set en que para cada posicion, nos dice si tiene o no el elemento del atributo. \\
+\hline
+{\em bsB} & Bit\+Set en que para cada posicion, nos dice si tiene o no el elemento del atributo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve el \char`\"{}cosine similarity\char`\"{} entre ambos Bit\+Sets. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_nearest_neighbors_8java_source_l00092}{92}} del archivo \mbox{\hyperlink{_nearest_neighbors_8java_source}{Nearest\+Neighbors.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_nearest_neighbors_a71334a19401c8800cfed9eca3c95d58d}\label{classcontroladores_1_1_nearest_neighbors_a71334a19401c8800cfed9eca3c95d58d}} 
+\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}!distanceBooleans@{distanceBooleans}}
+\index{distanceBooleans@{distanceBooleans}!controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+\doxysubsubsection{\texorpdfstring{distanceBooleans()}{distanceBooleans()}}
+{\footnotesize\ttfamily controladores.\+Nearest\+Neighbors.\+distance\+Booleans (\begin{DoxyParamCaption}\item[{String}]{att,  }\item[{\mbox{\hyperlink{classclases_1_1_item}{Item}}}]{a,  }\item[{\mbox{\hyperlink{classclases_1_1_item}{Item}}}]{b }\end{DoxyParamCaption})}
+
+
+
+Calcula la distancia entre dos atributos booleanos. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe un atributo att. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha retornado la distancia entre el atributo att de los items a y b. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em att} & Nombre del atributo booleano. \\
+\hline
+{\em a} & Item del usuario. \\
+\hline
+{\em b} & Item del cual se quiere saber la distancia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve la distancia entre el atributo booleano de los dos items. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_nearest_neighbors_8java_source_l00171}{171}} del archivo \mbox{\hyperlink{_nearest_neighbors_8java_source}{Nearest\+Neighbors.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_nearest_neighbors_a8eda035cca42d0cb535d2123f3f35dff}\label{classcontroladores_1_1_nearest_neighbors_a8eda035cca42d0cb535d2123f3f35dff}} 
+\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}!distanceCategorico@{distanceCategorico}}
+\index{distanceCategorico@{distanceCategorico}!controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+\doxysubsubsection{\texorpdfstring{distanceCategorico()}{distanceCategorico()}}
+{\footnotesize\ttfamily controladores.\+Nearest\+Neighbors.\+distance\+Categorico (\begin{DoxyParamCaption}\item[{String}]{att,  }\item[{\mbox{\hyperlink{classclases_1_1_item}{Item}}}]{a,  }\item[{\mbox{\hyperlink{classclases_1_1_item}{Item}}}]{b }\end{DoxyParamCaption})}
+
+
+
+Calcula la distancia entre dos atributos categóricos. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe un atributo att. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha retornado la distancia entre el atributo att de los items a y b. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em att} & Nombre del atributo categórico. \\
+\hline
+{\em a} & Item del usuario. \\
+\hline
+{\em b} & Item del cual se quiere saber la distancia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve la distancia entre el atributo categórico de los dos items. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_nearest_neighbors_8java_source_l00187}{187}} del archivo \mbox{\hyperlink{_nearest_neighbors_8java_source}{Nearest\+Neighbors.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_nearest_neighbors_a1b9b39c88c182df6a83b10e2222b8b62}\label{classcontroladores_1_1_nearest_neighbors_a1b9b39c88c182df6a83b10e2222b8b62}} 
+\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}!distanceCategoricoMultiple@{distanceCategoricoMultiple}}
+\index{distanceCategoricoMultiple@{distanceCategoricoMultiple}!controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+\doxysubsubsection{\texorpdfstring{distanceCategoricoMultiple()}{distanceCategoricoMultiple()}}
+{\footnotesize\ttfamily controladores.\+Nearest\+Neighbors.\+distance\+Categorico\+Multiple (\begin{DoxyParamCaption}\item[{String}]{att,  }\item[{\mbox{\hyperlink{classclases_1_1_item}{Item}}}]{a,  }\item[{\mbox{\hyperlink{classclases_1_1_item}{Item}}}]{b }\end{DoxyParamCaption})}
+
+
+
+Calcula la distancia entre dos atributos categóricos múltiples. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe un atributo att. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha retornado la distancia entre el atributo att de los items a y b. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em att} & Nombre del atributo categórico múltiples. \\
+\hline
+{\em a} & Item del usuario. \\
+\hline
+{\em b} & Item del cual se quiere saber la distancia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve la distancia entre el atributo categórico múltiples de los dos items. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_nearest_neighbors_8java_source_l00203}{203}} del archivo \mbox{\hyperlink{_nearest_neighbors_8java_source}{Nearest\+Neighbors.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_nearest_neighbors_a8a5bfad501f5ca010560bd73dd1590a8}\label{classcontroladores_1_1_nearest_neighbors_a8a5bfad501f5ca010560bd73dd1590a8}} 
+\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}!distanceFechas@{distanceFechas}}
+\index{distanceFechas@{distanceFechas}!controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+\doxysubsubsection{\texorpdfstring{distanceFechas()}{distanceFechas()}}
+{\footnotesize\ttfamily controladores.\+Nearest\+Neighbors.\+distance\+Fechas (\begin{DoxyParamCaption}\item[{String}]{att,  }\item[{\mbox{\hyperlink{classclases_1_1_item}{Item}}}]{a,  }\item[{\mbox{\hyperlink{classclases_1_1_item}{Item}}}]{b }\end{DoxyParamCaption})}
+
+
+
+Calcula la distancia entre dos atributos fecha. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe un atributo att. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha retornado la distancia entre el atributo att de los items a y b. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em att} & Nombre del atributo numérico. \\
+\hline
+{\em a} & Item del usuario. \\
+\hline
+{\em b} & Item del cual se quiere saber la distancia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve la distancia entre el atributo numérico de los dos items. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_nearest_neighbors_8java_source_l00155}{155}} del archivo \mbox{\hyperlink{_nearest_neighbors_8java_source}{Nearest\+Neighbors.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_nearest_neighbors_ab8c13ef123711e47edc2788f5dccbce2}\label{classcontroladores_1_1_nearest_neighbors_ab8c13ef123711e47edc2788f5dccbce2}} 
+\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}!distanceNums@{distanceNums}}
+\index{distanceNums@{distanceNums}!controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+\doxysubsubsection{\texorpdfstring{distanceNums()}{distanceNums()}}
+{\footnotesize\ttfamily controladores.\+Nearest\+Neighbors.\+distance\+Nums (\begin{DoxyParamCaption}\item[{String}]{att,  }\item[{\mbox{\hyperlink{classclases_1_1_item}{Item}}}]{a,  }\item[{\mbox{\hyperlink{classclases_1_1_item}{Item}}}]{b }\end{DoxyParamCaption})}
+
+
+
+Calcula la distancia entre dos atributos numéricos. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe un atributo att. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha retornado la distancia entre el atributo att de los items a y b. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em att} & Nombre del atributo numérico. \\
+\hline
+{\em a} & Item del usuario. \\
+\hline
+{\em b} & Item del cual se quiere saber la distancia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve la distancia entre el atributo numérico de los dos items. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_nearest_neighbors_8java_source_l00139}{139}} del archivo \mbox{\hyperlink{_nearest_neighbors_8java_source}{Nearest\+Neighbors.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_nearest_neighbors_a0613f3b0af9dc1fd6b844fe0f8a3961d}\label{classcontroladores_1_1_nearest_neighbors_a0613f3b0af9dc1fd6b844fe0f8a3961d}} 
+\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}!distanceTexto@{distanceTexto}}
+\index{distanceTexto@{distanceTexto}!controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+\doxysubsubsection{\texorpdfstring{distanceTexto()}{distanceTexto()}}
+{\footnotesize\ttfamily controladores.\+Nearest\+Neighbors.\+distance\+Texto (\begin{DoxyParamCaption}\item[{String}]{att,  }\item[{\mbox{\hyperlink{classclases_1_1_item}{Item}}}]{a,  }\item[{\mbox{\hyperlink{classclases_1_1_item}{Item}}}]{b }\end{DoxyParamCaption})}
+
+
+
+Calcula la distancia entre dos atributos de tipo texto. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe un atributo att. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha retornado la distancia entre el atributo att de los items a y b. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em att} & Nombre del atributo categórico múltiples. \\
+\hline
+{\em a} & Item del usuario. \\
+\hline
+{\em b} & Item del cual se quiere saber la distancia. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_nearest_neighbors_8java_source_l00221}{221}} del archivo \mbox{\hyperlink{_nearest_neighbors_8java_source}{Nearest\+Neighbors.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_nearest_neighbors_a2cc0af27e488df6c1fe43c39c4c8cc1a}\label{classcontroladores_1_1_nearest_neighbors_a2cc0af27e488df6c1fe43c39c4c8cc1a}} 
+\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}!getMaxWordInAtributoTexto@{getMaxWordInAtributoTexto}}
+\index{getMaxWordInAtributoTexto@{getMaxWordInAtributoTexto}!controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+\doxysubsubsection{\texorpdfstring{getMaxWordInAtributoTexto()}{getMaxWordInAtributoTexto()}}
+{\footnotesize\ttfamily controladores.\+Nearest\+Neighbors.\+get\+Max\+Word\+In\+Atributo\+Texto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classclases_1_1_atributo_texto}{Atributo\+Texto}}}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calcula la palabra con máxima frecuencia en un atributo\+Texto. 
+
+\begin{DoxyPrecond}{Precondición}
+El atributo\+Texto está inicializado. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto la frecuencia máxima de la palabra que más aparece en el atributo. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em a} & atributo\+Texto del cual se quiere saber la frecuencia de la palabra que mas aparece en el texto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve la frecuencia máxima de la palabra que más aparece en el atributo. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_nearest_neighbors_8java_source_l00074}{74}} del archivo \mbox{\hyperlink{_nearest_neighbors_8java_source}{Nearest\+Neighbors.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_algoritmos_adbb9d686216172569e50f0ff41960130}\label{classcontroladores_1_1_algoritmos_adbb9d686216172569e50f0ff41960130}} 
+\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}!getPredicciones@{getPredicciones}}
+\index{getPredicciones@{getPredicciones}!controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+\doxysubsubsection{\texorpdfstring{getPredicciones()}{getPredicciones()}}
+{\footnotesize\ttfamily controladores.\+Algoritmos.\+get\+Predicciones (\begin{DoxyParamCaption}\item[{int}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+coger el mapa de predicciones generado por la llama a los algoritmos 
+
+\begin{DoxyReturn}{Devuelve}
+devuelve las predicciones hechas por el algoritmo de predicciones 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00080}{80}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_nearest_neighbors_a384d771784705ebb8511026a5e58e56a}\label{classcontroladores_1_1_nearest_neighbors_a384d771784705ebb8511026a5e58e56a}} 
+\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}!prediccionValoracionItem@{prediccionValoracionItem}}
+\index{prediccionValoracionItem@{prediccionValoracionItem}!controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+\doxysubsubsection{\texorpdfstring{prediccionValoracionItem()}{prediccionValoracionItem()}}
+{\footnotesize\ttfamily controladores.\+Nearest\+Neighbors.\+prediccion\+Valoracion\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classclases_1_1_item}{Item}}}]{item }\end{DoxyParamCaption})}
+
+
+
+Calcula las predicciones de valoraciones para un item que el usuario no ha valorado. 
+
+FORMULA\+: recom(u,i) = ∑j(recom(u,j) $\ast$ (1-\/dist (i,j))) Donde u es el usuario, i es el item del cual queremos predecir la valoración y j es cada uno de los items que ha valorado el usuario u.
+
+\begin{DoxyPrecond}{Precondición}
+Se ha inicializado la variable usuario a un usuario y la variable item a un item. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto la predicción de la valoración para el item dado. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em item} & Item del usuario. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve la predicción de la valoración para el item dado. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_nearest_neighbors_8java_source_l00261}{261}} del archivo \mbox{\hyperlink{_nearest_neighbors_8java_source}{Nearest\+Neighbors.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_nearest_neighbors_a0733d034fbc55464e51a4108fd573b3e}\label{classcontroladores_1_1_nearest_neighbors_a0733d034fbc55464e51a4108fd573b3e}} 
+\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}!setNeighbors@{setNeighbors}}
+\index{setNeighbors@{setNeighbors}!controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+\doxysubsubsection{\texorpdfstring{setNeighbors()}{setNeighbors()}}
+{\footnotesize\ttfamily controladores.\+Nearest\+Neighbors.\+set\+Neighbors (\begin{DoxyParamCaption}\item[{int}]{k }\end{DoxyParamCaption})}
+
+
+
+Setter de la variable k. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro que se le pasa a la función ha de ser un entero positivo. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha cambiado el valor de la variable k al parámetro k. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em k} & indica el número de vecinos mas cercanos que tenemos que devolver. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_nearest_neighbors_8java_source_l00064}{64}} del archivo \mbox{\hyperlink{_nearest_neighbors_8java_source}{Nearest\+Neighbors.\+java}}.
+
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classcontroladores_1_1_algoritmos_a12da803fac97be1ebc727d328872df83}\label{classcontroladores_1_1_algoritmos_a12da803fac97be1ebc727d328872df83}} 
+\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}!it@{it}}
+\index{it@{it}!controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+\doxysubsubsection{\texorpdfstring{it}{it}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classclases_1_1_items}{Items}} controladores.\+Algoritmos.\+it\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Conjunto de items que se usaran para las valoraciones. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00040}{40}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_nearest_neighbors_a9238b0f9c62dffd981d157d1265eba4d}\label{classcontroladores_1_1_nearest_neighbors_a9238b0f9c62dffd981d157d1265eba4d}} 
+\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}!k@{k}}
+\index{k@{k}!controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+\doxysubsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily int controladores.\+Nearest\+Neighbors.\+k = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_nearest_neighbors_8java_source_l00023}{23}} del archivo \mbox{\hyperlink{_nearest_neighbors_8java_source}{Nearest\+Neighbors.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_algoritmos_a65c7b4dfdc13c5a8be71386e1744c647}\label{classcontroladores_1_1_algoritmos_a65c7b4dfdc13c5a8be71386e1744c647}} 
+\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}!predictions@{predictions}}
+\index{predictions@{predictions}!controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+\doxysubsubsection{\texorpdfstring{predictions}{predictions}}
+{\footnotesize\ttfamily Map$<$ Integer, Double $>$ controladores.\+Algoritmos.\+predictions\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Mapa de predicciones de los algoritmos. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00035}{35}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}\label{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}} 
+\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}!u@{u}}
+\index{u@{u}!controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+\doxysubsubsection{\texorpdfstring{u}{u}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} controladores.\+Algoritmos.\+u\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Usuario desde el cual vamos a hacer las predicciones de los items. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00030}{30}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}\label{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}} 
+\index{controladores.NearestNeighbors@{controladores.NearestNeighbors}!us@{us}}
+\index{us@{us}!controladores.NearestNeighbors@{controladores.NearestNeighbors}}
+\doxysubsubsection{\texorpdfstring{us}{us}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} controladores.\+Algoritmos.\+us\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Conjunto de usuarios que vamos a usar para inicializar nuestro algoritmo de collaborative filtering. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00024}{24}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_nearest_neighbors_8java}{Nearest\+Neighbors.\+java}}\end{DoxyCompactItemize}

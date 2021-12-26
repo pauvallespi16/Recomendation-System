@@ -1,0 +1,90 @@
+\hypertarget{_items_8java_source}{}\doxysection{Items.\+java}
+\label{_items_8java_source}\index{Items.java@{Items.java}}
+\mbox{\hyperlink{_items_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00001}00001 \textcolor{keyword}{package }clases; }
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00005}00005 \textcolor{keyword}{import} java.util.*;}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00014}\mbox{\hyperlink{classclases_1_1_items}{00014}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classclases_1_1_items}{Items}} \{}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00017}\mbox{\hyperlink{classclases_1_1_items_a26b04fa3a405ce07407ff45d48e7f476}{00017}}     \textcolor{keyword}{private} Map<Integer, Item> \mbox{\hyperlink{classclases_1_1_items_a26b04fa3a405ce07407ff45d48e7f476}{items}};}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00024}\mbox{\hyperlink{classclases_1_1_items_a6ff5ea44117a02e05615cf12958986a0}{00024}}     \textcolor{keyword}{public} \mbox{\hyperlink{classclases_1_1_items_a6ff5ea44117a02e05615cf12958986a0}{Items}}() \{}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00025}00025         \mbox{\hyperlink{classclases_1_1_items_a26b04fa3a405ce07407ff45d48e7f476}{items}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00026}00026     \}}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00034}\mbox{\hyperlink{classclases_1_1_items_a4db5e02aa3d757c1bf85eccfb36e67ba}{00034}}     \textcolor{keyword}{public} \mbox{\hyperlink{classclases_1_1_items_a4db5e02aa3d757c1bf85eccfb36e67ba}{Items}}(Map<Integer, Item> \mbox{\hyperlink{classclases_1_1_items_a26b04fa3a405ce07407ff45d48e7f476}{items}}) \{}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00035}00035         this.items = \textcolor{keyword}{new} HashMap<>(\mbox{\hyperlink{classclases_1_1_items_a26b04fa3a405ce07407ff45d48e7f476}{items}});}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00036}00036     \}}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00044}\mbox{\hyperlink{classclases_1_1_items_a1edeb41d3f1245aa84bd3a7d2bc4ee2d}{00044}}     \textcolor{keyword}{public} \mbox{\hyperlink{classclases_1_1_items_a1edeb41d3f1245aa84bd3a7d2bc4ee2d}{Items}}(ArrayList<Item> \mbox{\hyperlink{classclases_1_1_items_a26b04fa3a405ce07407ff45d48e7f476}{items}}) \{}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00045}00045         Map <Integer, Item> aux = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00046}00046         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classclases_1_1_item}{Item}} i : \mbox{\hyperlink{classclases_1_1_items_a26b04fa3a405ce07407ff45d48e7f476}{items}}) aux.put(i.getId(), i);}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00047}00047         this.items = aux;}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00048}00048     \}}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00056}\mbox{\hyperlink{classclases_1_1_items_a4b59e5773f15df8bc7ddc2e0b8852c6f}{00056}}     \textcolor{keyword}{public} Map<Integer, Item> \mbox{\hyperlink{classclases_1_1_items_a4b59e5773f15df8bc7ddc2e0b8852c6f}{getItems}}() \{ \textcolor{keywordflow}{return} this.\mbox{\hyperlink{classclases_1_1_items_a26b04fa3a405ce07407ff45d48e7f476}{items}}; \}}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00064}\mbox{\hyperlink{classclases_1_1_items_a91b5721dd501093975dcf67defae307f}{00064}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{classclases_1_1_items_a91b5721dd501093975dcf67defae307f}{getSize}}() \{ \textcolor{keywordflow}{return} items.size(); \}}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00073}\mbox{\hyperlink{classclases_1_1_items_aea1fe18eea7924c662d5ac23513538d9}{00073}}     \textcolor{keyword}{public} \mbox{\hyperlink{classclases_1_1_item}{Item}} \mbox{\hyperlink{classclases_1_1_items_aea1fe18eea7924c662d5ac23513538d9}{getItem}} (\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}) \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classclases_1_1_items_a26b04fa3a405ce07407ff45d48e7f476}{items}}.get(\textcolor{keywordtype}{id}); \}}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00075}\mbox{\hyperlink{classclases_1_1_items_a17fc7f94185a30c8a1a0fec11441d25d}{00075}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{classclases_1_1_items_a17fc7f94185a30c8a1a0fec11441d25d}{findMaxId}} () \{}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00076}00076         \textcolor{keywordtype}{int} maxID = -\/1;}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00077}00077         \textcolor{keywordflow}{for} (Integer i : this.items.keySet())\{}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00078}00078             maxID = Math.max(maxID, i);}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00079}00079         \}}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00080}00080         \textcolor{keywordflow}{return} maxID;}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00081}00081     \}}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00088}\mbox{\hyperlink{classclases_1_1_items_a8c8be69090dbbacb94e8c65a1064f7f3}{00088}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_items_a8c8be69090dbbacb94e8c65a1064f7f3}{setItems}}(Map<Integer, Item> \mbox{\hyperlink{classclases_1_1_items_a26b04fa3a405ce07407ff45d48e7f476}{items}}) \{}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00089}00089         this.items = \textcolor{keyword}{new} HashMap<>(\mbox{\hyperlink{classclases_1_1_items_a26b04fa3a405ce07407ff45d48e7f476}{items}});}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00090}00090         \mbox{\hyperlink{classclases_1_1_items_a17fc7f94185a30c8a1a0fec11441d25d}{findMaxId}}();}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00091}00091     \}}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00098}\mbox{\hyperlink{classclases_1_1_items_a09d80b63689d1dae4fea77faccaca8db}{00098}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_items_a09d80b63689d1dae4fea77faccaca8db}{setItems}}(ArrayList<Item> \mbox{\hyperlink{classclases_1_1_items_a26b04fa3a405ce07407ff45d48e7f476}{items}}) \{}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00099}00099         Map <Integer, Item> aux = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00100}00100         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classclases_1_1_item}{Item}} i : \mbox{\hyperlink{classclases_1_1_items_a26b04fa3a405ce07407ff45d48e7f476}{items}}) aux.put(i.getId(), i);}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00101}00101         this.items = aux;}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00102}00102     \}}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00111}\mbox{\hyperlink{classclases_1_1_items_abf8d7caa7d0fa907028258f77becae1a}{00111}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_items_abf8d7caa7d0fa907028258f77becae1a}{setItem}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, \mbox{\hyperlink{classclases_1_1_item}{Item}} item) \{}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00112}00112         \mbox{\hyperlink{classclases_1_1_items_a26b04fa3a405ce07407ff45d48e7f476}{items}}.put(\textcolor{keywordtype}{id}, item);}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00113}00113         \mbox{\hyperlink{classclases_1_1_items_a17fc7f94185a30c8a1a0fec11441d25d}{findMaxId}}();}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00114}00114     \}}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00115}00115 }
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00122}\mbox{\hyperlink{classclases_1_1_items_a094c01938cc06eff0c8a4276eeff4ab3}{00122}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_items_a094c01938cc06eff0c8a4276eeff4ab3}{addItem}}(\mbox{\hyperlink{classclases_1_1_item}{Item}} item) \{ \mbox{\hyperlink{classclases_1_1_items_a26b04fa3a405ce07407ff45d48e7f476}{items}}.put(\mbox{\hyperlink{classclases_1_1_items_a17fc7f94185a30c8a1a0fec11441d25d}{findMaxId}}()+1, item); \}}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00124}\mbox{\hyperlink{classclases_1_1_items_a794f0df01126fa902c756c083bb5b5b9}{00124}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_items_a794f0df01126fa902c756c083bb5b5b9}{addItem}}(\mbox{\hyperlink{classclases_1_1_item}{Item}} item, \textcolor{keywordtype}{int} \textcolor{keywordtype}{id}) \{ \mbox{\hyperlink{classclases_1_1_items_a26b04fa3a405ce07407ff45d48e7f476}{items}}.put(\textcolor{keywordtype}{id}, item); \}}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00125}00125 }
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00132}\mbox{\hyperlink{classclases_1_1_items_a3a72e15b34cb41187f1debf495e4ce48}{00132}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_items_a3a72e15b34cb41187f1debf495e4ce48}{removeItem}}(\mbox{\hyperlink{classclases_1_1_item}{Item}} item) \{ \mbox{\hyperlink{classclases_1_1_items_a26b04fa3a405ce07407ff45d48e7f476}{items}}.remove(item.\mbox{\hyperlink{classclases_1_1_item_abb998d6f938daefaf94539d731ec349a}{getId}}()); \}}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00133}00133 }
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00140}\mbox{\hyperlink{classclases_1_1_items_a485afde4cd910d01c9a60d6540d8d465}{00140}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_items_a485afde4cd910d01c9a60d6540d8d465}{removeItem}}(Integer item) \{ \mbox{\hyperlink{classclases_1_1_items_a26b04fa3a405ce07407ff45d48e7f476}{items}}.remove(item); \}}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00141}00141 }
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00149}\mbox{\hyperlink{classclases_1_1_items_a24c9ec990e38a30880a06f0e438b7ece}{00149}}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classclases_1_1_items_a24c9ec990e38a30880a06f0e438b7ece}{containsItem}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}) \{}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00150}00150         \textcolor{keywordflow}{try} \{ \mbox{\hyperlink{classclases_1_1_items_a26b04fa3a405ce07407ff45d48e7f476}{items}}.get(\textcolor{keywordtype}{id}); \textcolor{keywordflow}{return} \textcolor{keyword}{true}; \}}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00151}00151         \textcolor{keywordflow}{catch}(Exception IndexOutOfBoundsException) \{ \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \}}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00152}00152     \}}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00153}00153 }
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00160}00160     @Override}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00161}\mbox{\hyperlink{classclases_1_1_items_a8ca95c8b13c714111e2ef3779a632474}{00161}}     \textcolor{keyword}{public} String \mbox{\hyperlink{classclases_1_1_items_a8ca95c8b13c714111e2ef3779a632474}{toString}}() \{}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00162}00162         String valor = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00163}00163         Map<String, Integer> bitsTable = \mbox{\hyperlink{classclases_1_1_parser}{Parser}}.\mbox{\hyperlink{classclases_1_1_parser_a9d07c4e9721044400d335acd45f0fa68}{getBitsTable}}();}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00164}00164         valor += \textcolor{stringliteral}{"{}BITSTABLE\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00165}00165         \textcolor{keywordflow}{for} (Map.Entry<String, Integer> entry : bitsTable.entrySet())}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00166}00166             valor += entry.getKey() +\textcolor{stringliteral}{"{};"{}}+entry.getValue() + \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00167}00167         valor += \textcolor{stringliteral}{"{}NORMITEMS\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00168}00168         Double[][] normItems = \mbox{\hyperlink{classclases_1_1_parser}{Parser}}.\mbox{\hyperlink{classclases_1_1_parser_a4c6e263bce13468bca6024bf2fb1a2fd}{getAuxNormalizeNumeros}}();}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00169}00169         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < normItems.length; i++)}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00170}00170             valor += normItems[i][0] + \textcolor{stringliteral}{"{};"{}} + normItems[i][1] + \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00171}00171         valor += \textcolor{stringliteral}{"{}NORMFECHAS\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00172}00172         Long[][] normFechas = \mbox{\hyperlink{classclases_1_1_parser}{Parser}}.\mbox{\hyperlink{classclases_1_1_parser_a98bf9bd3a276fe6a16a8b3c07d484a41}{getAuxNormalizeFechas}}();}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00173}00173         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < normFechas.length; i++)}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00174}00174             valor += normFechas[i][0] + \textcolor{stringliteral}{"{};"{}} + normFechas[i][1] + \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00175}00175         valor += \textcolor{stringliteral}{"{}ITEMS\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00176}00176         \textcolor{keywordflow}{for} (Map.Entry<Integer, \mbox{\hyperlink{classclases_1_1_item}{Item}}> entry : \mbox{\hyperlink{classclases_1_1_items_a26b04fa3a405ce07407ff45d48e7f476}{items}}.entrySet())}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00177}00177             valor += entry.getValue().toString() + \textcolor{stringliteral}{"{}\#\(\backslash\)n"{}} ;}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00178}00178 }
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00179}00179         \textcolor{keywordflow}{return} valor;}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00180}00180     \}}
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00181}00181 }
+\DoxyCodeLine{\Hypertarget{_items_8java_source_l00182}00182 \}}
+
+\end{DoxyCode}

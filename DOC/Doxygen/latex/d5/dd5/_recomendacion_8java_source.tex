@@ -1,0 +1,193 @@
+\hypertarget{_recomendacion_8java_source}{}\doxysection{Recomendacion.\+java}
+\label{_recomendacion_8java_source}\index{Recomendacion.java@{Recomendacion.java}}
+\mbox{\hyperlink{_recomendacion_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00005}00005 \textcolor{keyword}{package }clases;}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00007}00007 \textcolor{keyword}{import} \mbox{\hyperlink{namespacecontroladores}{controladores}}.\mbox{\hyperlink{classcontroladores_1_1_k_means}{KMeans}};}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00008}00008 \textcolor{keyword}{import} \mbox{\hyperlink{namespacecontroladores}{controladores}}.\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors}{NearestNeighbors}};}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00009}00009 \textcolor{keyword}{import} \mbox{\hyperlink{namespacecontroladores}{controladores}}.\mbox{\hyperlink{classcontroladores_1_1_slope_one}{SlopeOne}};}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00011}00011 \textcolor{keyword}{import} java.util.*;}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00020}\mbox{\hyperlink{classclases_1_1_recomendacion}{00020}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classclases_1_1_recomendacion}{Recomendacion}} \{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00024}\mbox{\hyperlink{classclases_1_1_recomendacion_a0c4e2dfceab553f31c495ab9289c2911}{00024}}     \textcolor{keyword}{private} Map <Integer, Double> \mbox{\hyperlink{classclases_1_1_recomendacion_a0c4e2dfceab553f31c495ab9289c2911}{recomItems}};}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00029}\mbox{\hyperlink{classclases_1_1_recomendacion_a54af10d15ff84d42498425818856c974}{00029}}     \textcolor{keyword}{private} String \mbox{\hyperlink{classclases_1_1_recomendacion_a54af10d15ff84d42498425818856c974}{type}};}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00034}\mbox{\hyperlink{classclases_1_1_recomendacion_a26582373300fcb394a642576ae5a8684}{00034}}     \textcolor{keyword}{private} String \mbox{\hyperlink{classclases_1_1_recomendacion_a26582373300fcb394a642576ae5a8684}{nombre}};}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00039}\mbox{\hyperlink{classclases_1_1_recomendacion_a1c562259ba8bcb989b7f882707e9bd6d}{00039}}     \textcolor{keyword}{private} String \mbox{\hyperlink{classclases_1_1_recomendacion_a1c562259ba8bcb989b7f882707e9bd6d}{fecha}};}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00044}\mbox{\hyperlink{classclases_1_1_recomendacion_a2cf9c1ff0dbbd651beb77379e9ca84ed}{00044}}     \textcolor{keyword}{private} \mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{classclases_1_1_recomendacion_a2cf9c1ff0dbbd651beb77379e9ca84ed}{it}};}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00049}\mbox{\hyperlink{classclases_1_1_recomendacion_a2e9249894ac1bb32d9e3d9947d603987}{00049}}     \textcolor{keyword}{private} \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classclases_1_1_recomendacion_a2e9249894ac1bb32d9e3d9947d603987}{us}};}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00054}\mbox{\hyperlink{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}{00054}}     \textcolor{keyword}{private} \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}{u}};}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00056}\mbox{\hyperlink{classclases_1_1_recomendacion_a2bf4a0f760dc1008f0f2de672af54027}{00056}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{classclases_1_1_recomendacion_a2bf4a0f760dc1008f0f2de672af54027}{size}};}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00064}\mbox{\hyperlink{classclases_1_1_recomendacion_a589277387f14cfae380f53f02ba2c815}{00064}}     \textcolor{keyword}{public} \mbox{\hyperlink{classclases_1_1_recomendacion_a589277387f14cfae380f53f02ba2c815}{Recomendacion}}()\{\}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00073}\mbox{\hyperlink{classclases_1_1_recomendacion_a101c1a029b1e655bca74962a7da697b0}{00073}}     \textcolor{keyword}{public} \mbox{\hyperlink{classclases_1_1_recomendacion_a101c1a029b1e655bca74962a7da697b0}{Recomendacion}}(\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}{u}}) \{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00074}00074         this.u = \mbox{\hyperlink{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}{u}};}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00075}00075         this.us = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}}();}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00076}00076         \mbox{\hyperlink{classclases_1_1_recomendacion_ab7634fceb401a40e459b4af4b47e932d}{procesarItems}}();}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00077}00077     \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00086}\mbox{\hyperlink{classclases_1_1_recomendacion_a3d1380107d8dd9ebfa7294880bc19cb5}{00086}}     \textcolor{keyword}{public} \mbox{\hyperlink{classclases_1_1_recomendacion_a3d1380107d8dd9ebfa7294880bc19cb5}{Recomendacion}}(\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classclases_1_1_recomendacion_a2e9249894ac1bb32d9e3d9947d603987}{us}}, \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}{u}}) \{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00087}00087         this.us = \mbox{\hyperlink{classclases_1_1_recomendacion_a2e9249894ac1bb32d9e3d9947d603987}{us}};}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00088}00088         this.u = \mbox{\hyperlink{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}{u}};}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00089}00089         \mbox{\hyperlink{classclases_1_1_recomendacion_ab7634fceb401a40e459b4af4b47e932d}{procesarItems}}();}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00090}00090     \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00100}\mbox{\hyperlink{classclases_1_1_recomendacion_a0c337b03e59c4abd72cecb42d567795e}{00100}}     \textcolor{keyword}{public} \mbox{\hyperlink{classclases_1_1_recomendacion_a0c337b03e59c4abd72cecb42d567795e}{Recomendacion}}(\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classclases_1_1_recomendacion_a2e9249894ac1bb32d9e3d9947d603987}{us}}, \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}{u}}, \mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{classclases_1_1_recomendacion_a2cf9c1ff0dbbd651beb77379e9ca84ed}{it}}) \{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00101}00101         System.out.println (\textcolor{stringliteral}{"{}here"{}});}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00102}00102         this.us = \mbox{\hyperlink{classclases_1_1_recomendacion_a2e9249894ac1bb32d9e3d9947d603987}{us}};}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00103}00103         this.u = \mbox{\hyperlink{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}{u}};}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00104}00104         this.it = \mbox{\hyperlink{classclases_1_1_recomendacion_a2cf9c1ff0dbbd651beb77379e9ca84ed}{it}};}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00105}00105         \mbox{\hyperlink{classclases_1_1_recomendacion_a2bf4a0f760dc1008f0f2de672af54027}{size}} = \mbox{\hyperlink{classclases_1_1_recomendacion_a2cf9c1ff0dbbd651beb77379e9ca84ed}{it}}.\mbox{\hyperlink{classclases_1_1_items_a4b59e5773f15df8bc7ddc2e0b8852c6f}{getItems}}().size();}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00106}00106         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classclases_1_1_item}{Item}} i : this.it.\mbox{\hyperlink{classclases_1_1_items_a4b59e5773f15df8bc7ddc2e0b8852c6f}{getItems}}().values())\{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00107}00107             System.out.println (i.getId());}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00108}00108         \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00109}00109     \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00119}\mbox{\hyperlink{classclases_1_1_recomendacion_a476b181a4d40ddf462f9b1b5713f2656}{00119}}     \textcolor{keyword}{public} \mbox{\hyperlink{classclases_1_1_recomendacion_a476b181a4d40ddf462f9b1b5713f2656}{Recomendacion}}(\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}{u}}, \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classclases_1_1_recomendacion_a2e9249894ac1bb32d9e3d9947d603987}{us}}, Map<Integer, Double> recoms) \{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00120}00120         this.u = \mbox{\hyperlink{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}{u}};}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00121}00121         this.us = \mbox{\hyperlink{classclases_1_1_recomendacion_a2e9249894ac1bb32d9e3d9947d603987}{us}};}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00122}00122         this.recomItems = recoms;}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00123}00123         \mbox{\hyperlink{classclases_1_1_recomendacion_ab7634fceb401a40e459b4af4b47e932d}{procesarItems}}();}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00124}00124     \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00125}00125 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00126}\mbox{\hyperlink{classclases_1_1_recomendacion_a98c954c169db8ada68dd3bf6e9908f6a}{00126}}     \textcolor{keyword}{public} ArrayList <Integer> \mbox{\hyperlink{classclases_1_1_recomendacion_a98c954c169db8ada68dd3bf6e9908f6a}{getRecomItems}} () \{ \textcolor{keywordflow}{return} \textcolor{keyword}{new} ArrayList<>(this.recomItems.keySet()); \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00128}\mbox{\hyperlink{classclases_1_1_recomendacion_aa3876cd1858efc49e6e6a663e3d3e8e3}{00128}}     \textcolor{keyword}{public} Map <Integer, Double> \mbox{\hyperlink{classclases_1_1_recomendacion_aa3876cd1858efc49e6e6a663e3d3e8e3}{getRecomendaciones}}() \{ \textcolor{keywordflow}{return} this.\mbox{\hyperlink{classclases_1_1_recomendacion_a0c4e2dfceab553f31c495ab9289c2911}{recomItems}}; \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00129}00129 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00130}\mbox{\hyperlink{classclases_1_1_recomendacion_a6e3c8ace310a89d299c05a8d75314fb6}{00130}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_recomendacion_a6e3c8ace310a89d299c05a8d75314fb6}{setDate}} (String \mbox{\hyperlink{classclases_1_1_recomendacion_a1c562259ba8bcb989b7f882707e9bd6d}{fecha}}) \{ this.fecha = \mbox{\hyperlink{classclases_1_1_recomendacion_a1c562259ba8bcb989b7f882707e9bd6d}{fecha}}; \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00131}00131 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00132}\mbox{\hyperlink{classclases_1_1_recomendacion_ad5de8a6b9b06d589c893311f2908aa0b}{00132}}     \textcolor{keyword}{public} String \mbox{\hyperlink{classclases_1_1_recomendacion_ad5de8a6b9b06d589c893311f2908aa0b}{getDate}} () \{ \textcolor{keywordflow}{return} this.\mbox{\hyperlink{classclases_1_1_recomendacion_a1c562259ba8bcb989b7f882707e9bd6d}{fecha}}; \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00133}00133 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00134}\mbox{\hyperlink{classclases_1_1_recomendacion_af9fa5122fd6d1046e2a7824884383dac}{00134}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_recomendacion_af9fa5122fd6d1046e2a7824884383dac}{setName}} (String \mbox{\hyperlink{classclases_1_1_recomendacion_a26582373300fcb394a642576ae5a8684}{nombre}}) \{ this.nombre = \mbox{\hyperlink{classclases_1_1_recomendacion_a26582373300fcb394a642576ae5a8684}{nombre}}; \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00135}00135 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00136}\mbox{\hyperlink{classclases_1_1_recomendacion_ac67fde97e6f25ab55bd3381e6d86731a}{00136}}     \textcolor{keyword}{public} String \mbox{\hyperlink{classclases_1_1_recomendacion_ac67fde97e6f25ab55bd3381e6d86731a}{getName}} () \{ \textcolor{keywordflow}{return} this.\mbox{\hyperlink{classclases_1_1_recomendacion_a26582373300fcb394a642576ae5a8684}{nombre}}; \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00138}\mbox{\hyperlink{classclases_1_1_recomendacion_aa2497fd8b66e747d5b84bd0f32262110}{00138}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_recomendacion_aa2497fd8b66e747d5b84bd0f32262110}{setType}}(String \mbox{\hyperlink{classclases_1_1_recomendacion_a54af10d15ff84d42498425818856c974}{type}}) \{ this.type = \mbox{\hyperlink{classclases_1_1_recomendacion_a54af10d15ff84d42498425818856c974}{type}}; \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00139}00139 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00140}\mbox{\hyperlink{classclases_1_1_recomendacion_aee138fa8b230d71a90b2a16b03de4b65}{00140}}     \textcolor{keyword}{public} String \mbox{\hyperlink{classclases_1_1_recomendacion_aee138fa8b230d71a90b2a16b03de4b65}{getType}} () \{ \textcolor{keywordflow}{return} this.\mbox{\hyperlink{classclases_1_1_recomendacion_a54af10d15ff84d42498425818856c974}{type}}; \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00141}00141 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00142}\mbox{\hyperlink{classclases_1_1_recomendacion_abc853cdfdc08a1233de3722c3d15b62f}{00142}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_recomendacion_abc853cdfdc08a1233de3722c3d15b62f}{setSize}}(\textcolor{keywordtype}{int} size) \{ this.size = \mbox{\hyperlink{classclases_1_1_recomendacion_a2bf4a0f760dc1008f0f2de672af54027}{size}}; \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00143}00143 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00144}\mbox{\hyperlink{classclases_1_1_recomendacion_a4137749e4a29936952098064a57a3b29}{00144}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{classclases_1_1_recomendacion_a4137749e4a29936952098064a57a3b29}{getSize}} () \{ \textcolor{keywordflow}{return} this.\mbox{\hyperlink{classclases_1_1_recomendacion_a2bf4a0f760dc1008f0f2de672af54027}{size}}; \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00145}00145 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00146}\mbox{\hyperlink{classclases_1_1_recomendacion_a6f45c48cfb46eafb6ebc672f3e50cb79}{00146}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_recomendacion_a6f45c48cfb46eafb6ebc672f3e50cb79}{removeValoracion}} (\textcolor{keywordtype}{int} itemID) \{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00147}00147         this.recomItems.remove(itemID);}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00148}00148     \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00149}00149 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00157}\mbox{\hyperlink{classclases_1_1_recomendacion_ab7634fceb401a40e459b4af4b47e932d}{00157}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_recomendacion_ab7634fceb401a40e459b4af4b47e932d}{procesarItems}} () \{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00158}00158         \mbox{\hyperlink{classclases_1_1_items}{Items}} aux = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_items}{Items}} (\mbox{\hyperlink{classclases_1_1_parser}{Parser}}.\mbox{\hyperlink{classclases_1_1_parser_a7c84ef1abefc019ba9f72209625cc9d3}{getAllItems}}().\mbox{\hyperlink{classclases_1_1_items_a4b59e5773f15df8bc7ddc2e0b8852c6f}{getItems}}());}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00159}00159         \textcolor{keywordflow}{for} (Integer i : \mbox{\hyperlink{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}{u}}.\mbox{\hyperlink{classclases_1_1_usuario_aea18bbbfd60937a39ca6ffaf41c00f2d}{getValoraciones}}().keySet())\{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00160}00160             aux.\mbox{\hyperlink{classclases_1_1_items_a3a72e15b34cb41187f1debf495e4ce48}{removeItem}}(i);}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00161}00161         \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00162}00162         \mbox{\hyperlink{classclases_1_1_recomendacion_a2cf9c1ff0dbbd651beb77379e9ca84ed}{it}} = aux;}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00163}00163     \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00164}00164 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00170}\mbox{\hyperlink{classclases_1_1_recomendacion_a1c4d184c8289eef97791f4cba28759d9}{00170}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_recomendacion_a1c4d184c8289eef97791f4cba28759d9}{collaborativeFiltering}} () \{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00171}00171         \mbox{\hyperlink{classcontroladores_1_1_k_means}{KMeans}} kMeans = \textcolor{keyword}{new} \mbox{\hyperlink{classcontroladores_1_1_k_means}{KMeans}}(\mbox{\hyperlink{classclases_1_1_recomendacion_a2e9249894ac1bb32d9e3d9947d603987}{us}}, \mbox{\hyperlink{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}{u}}, \mbox{\hyperlink{classclases_1_1_recomendacion_a2cf9c1ff0dbbd651beb77379e9ca84ed}{it}});}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00172}00172         this.us = kMeans.\mbox{\hyperlink{classcontroladores_1_1_k_means_a5b5b8482e30957f96d523eed5af59d64}{getUsersCluster}}();}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00173}00173 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00174}00174         \mbox{\hyperlink{classcontroladores_1_1_slope_one}{SlopeOne}} so = \textcolor{keyword}{new} \mbox{\hyperlink{classcontroladores_1_1_slope_one}{SlopeOne}}(\mbox{\hyperlink{classclases_1_1_recomendacion_a2e9249894ac1bb32d9e3d9947d603987}{us}}, \mbox{\hyperlink{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}{u}}, \mbox{\hyperlink{classclases_1_1_recomendacion_a2cf9c1ff0dbbd651beb77379e9ca84ed}{it}});}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00175}00175         so.\mbox{\hyperlink{classcontroladores_1_1_slope_one_a9b9c6d819375c3b5041fdaab87b6b57a}{calcularRecomendaciones}}(\mbox{\hyperlink{classclases_1_1_recomendacion_a2bf4a0f760dc1008f0f2de672af54027}{size}});}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00176}00176         so.\mbox{\hyperlink{classcontroladores_1_1_slope_one_a9f65f180edc2e31f3b78d323e28e86f5}{printPred}}();}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00177}00177         \mbox{\hyperlink{classclases_1_1_recomendacion_a0c4e2dfceab553f31c495ab9289c2911}{recomItems}} = so.\mbox{\hyperlink{classcontroladores_1_1_algoritmos_adbb9d686216172569e50f0ff41960130}{getPredicciones}}(\mbox{\hyperlink{classclases_1_1_recomendacion_a2bf4a0f760dc1008f0f2de672af54027}{size}});}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00178}00178     \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00179}00179 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00185}\mbox{\hyperlink{classclases_1_1_recomendacion_af987dcd29b5d90d0b6d1554f05e0fcfa}{00185}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_recomendacion_af987dcd29b5d90d0b6d1554f05e0fcfa}{contentBasedFiltering}} () \{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00186}00186         \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors}{NearestNeighbors}} nn = \textcolor{keyword}{new} \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors}{NearestNeighbors}}(\mbox{\hyperlink{classclases_1_1_recomendacion_a2e9249894ac1bb32d9e3d9947d603987}{us}}, \mbox{\hyperlink{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}{u}}, \mbox{\hyperlink{classclases_1_1_recomendacion_a2cf9c1ff0dbbd651beb77379e9ca84ed}{it}});}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00187}00187         nn.\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a81255daa09a672febc6284f7e5ca2faf}{calcularRecomendaciones}}(\mbox{\hyperlink{classclases_1_1_recomendacion_a2bf4a0f760dc1008f0f2de672af54027}{size}});}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00188}00188         \mbox{\hyperlink{classclases_1_1_recomendacion_a0c4e2dfceab553f31c495ab9289c2911}{recomItems}} = nn.\mbox{\hyperlink{classcontroladores_1_1_algoritmos_adbb9d686216172569e50f0ff41960130}{getPredicciones}}(\mbox{\hyperlink{classclases_1_1_recomendacion_a2bf4a0f760dc1008f0f2de672af54027}{size}});}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00189}00189     \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00190}00190 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00196}\mbox{\hyperlink{classclases_1_1_recomendacion_ae81a9e62eea0a299d3edaaa7f969e8f4}{00196}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_recomendacion_ae81a9e62eea0a299d3edaaa7f969e8f4}{hybrid}} () \{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00197}00197         \mbox{\hyperlink{classcontroladores_1_1_k_means}{KMeans}} kMeans = \textcolor{keyword}{new} \mbox{\hyperlink{classcontroladores_1_1_k_means}{KMeans}}(\mbox{\hyperlink{classclases_1_1_recomendacion_a2e9249894ac1bb32d9e3d9947d603987}{us}}, \mbox{\hyperlink{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}{u}}, \mbox{\hyperlink{classclases_1_1_recomendacion_a2cf9c1ff0dbbd651beb77379e9ca84ed}{it}});}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00198}00198         this.us = kMeans.\mbox{\hyperlink{classcontroladores_1_1_k_means_a5b5b8482e30957f96d523eed5af59d64}{getUsersCluster}}();}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00199}00199 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00200}00200         \mbox{\hyperlink{classcontroladores_1_1_slope_one}{SlopeOne}} so = \textcolor{keyword}{new} \mbox{\hyperlink{classcontroladores_1_1_slope_one}{SlopeOne}}(\mbox{\hyperlink{classclases_1_1_recomendacion_a2e9249894ac1bb32d9e3d9947d603987}{us}}, \mbox{\hyperlink{classclases_1_1_recomendacion_aeb7fdac1d04cf4d7dea6dc9d7b7f5dae}{u}}, \mbox{\hyperlink{classclases_1_1_recomendacion_a2cf9c1ff0dbbd651beb77379e9ca84ed}{it}});}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00201}00201         so.\mbox{\hyperlink{classcontroladores_1_1_slope_one_a9b9c6d819375c3b5041fdaab87b6b57a}{calcularRecomendaciones}}(\mbox{\hyperlink{classclases_1_1_recomendacion_a2bf4a0f760dc1008f0f2de672af54027}{size}});}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00202}00202         Map <Integer, Double> aux = so.\mbox{\hyperlink{classcontroladores_1_1_algoritmos_adbb9d686216172569e50f0ff41960130}{getPredicciones}}(\mbox{\hyperlink{classclases_1_1_recomendacion_a2bf4a0f760dc1008f0f2de672af54027}{size}});}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00203}00203 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00204}00204         \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors}{NearestNeighbors}} nn = \textcolor{keyword}{new} \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors}{NearestNeighbors}}();}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00205}00205         Map <Integer, Double> auxNN = nn.\mbox{\hyperlink{classcontroladores_1_1_algoritmos_adbb9d686216172569e50f0ff41960130}{getPredicciones}}(\mbox{\hyperlink{classclases_1_1_recomendacion_a2bf4a0f760dc1008f0f2de672af54027}{size}});}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00206}00206 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00207}00207         \textcolor{comment}{//media}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00208}00208         \textcolor{keywordflow}{for} (Map.Entry<Integer, Double> e : auxNN.entrySet())\{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00209}00209             Double predCF = aux.get(e.getKey());}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00210}00210             \textcolor{keywordflow}{if} (predCF == -\/1.0) \{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00211}00211                 \mbox{\hyperlink{classclases_1_1_recomendacion_a0c4e2dfceab553f31c495ab9289c2911}{recomItems}}.put(e.getKey(), e.getValue());}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00212}00212                 \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00213}00213             \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00214}00214             \mbox{\hyperlink{classclases_1_1_recomendacion_a0c4e2dfceab553f31c495ab9289c2911}{recomItems}}.put(e.getKey(), (e.getValue() + predCF)/2);}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00215}00215         \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00216}00216     \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00217}00217 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00224}\mbox{\hyperlink{classclases_1_1_recomendacion_ae734427fbb34230f4e02fc55dc74c4c1}{00224}}     \textcolor{keyword}{public} \textcolor{keywordtype}{double} \mbox{\hyperlink{classclases_1_1_recomendacion_ae734427fbb34230f4e02fc55dc74c4c1}{evaluarIDCG}}(List<Map.Entry<Integer, Double>> lt) \{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00225}00225         \textcolor{keywordtype}{int} pos = 1;}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00226}00226         \textcolor{keywordtype}{double} idcg = 0.0;}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00227}00227         \textcolor{keywordflow}{for} (Map.Entry<Integer, Double> k : lt)\{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00228}00228             Double val = k.getValue();}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00229}00229             \textcolor{keywordtype}{double} num = (Math.pow(2,val))-\/1;}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00230}00230             \textcolor{keywordtype}{double} denom = Math.log(pos + 1.0) / Math.log(2.0);}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00231}00231             idcg += (num / denom);}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00232}00232             pos++;}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00233}00233         \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00234}00234         \textcolor{keywordflow}{return} idcg;}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00235}00235     \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00236}00236 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00237}\mbox{\hyperlink{classclases_1_1_recomendacion_a62f3f8a36295becfa095cd27efdac6a8}{00237}}     \textcolor{keyword}{public} ArrayList<ArrayList<Integer>> \mbox{\hyperlink{classclases_1_1_recomendacion_a62f3f8a36295becfa095cd27efdac6a8}{generateArrayRecom}} () \{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00238}00238         ArrayList<ArrayList<Integer>> ret = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00239}00239         ArrayList<Integer> aux = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00240}00240         \textcolor{keywordtype}{double} last = -\/1.0;}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00241}00241         \textcolor{keywordflow}{for} (Map.Entry<Integer, Double> e : \mbox{\hyperlink{classclases_1_1_recomendacion_a0c4e2dfceab553f31c495ab9289c2911}{recomItems}}.entrySet()) \{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00242}00242             \textcolor{keywordflow}{if} (e.getValue() == last) \{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00243}00243                 aux.add(e.getKey());}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00244}00244             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00245}00245                 \textcolor{keywordflow}{if} (aux.size() > 0) \{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00246}00246                     ret.add(aux);}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00247}00247                     aux = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00248}00248                 \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00249}00249                 aux.add(e.getKey());}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00250}00250                 last = e.getValue();}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00251}00251             \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00252}00252         \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00253}00253         \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00254}00254     \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00255}00255 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00262}\mbox{\hyperlink{classclases_1_1_recomendacion_ad71da8786906ce98822adee7b82421e0}{00262}}     \textcolor{keyword}{public} \textcolor{keywordtype}{double} \mbox{\hyperlink{classclases_1_1_recomendacion_ad71da8786906ce98822adee7b82421e0}{evaluarRecomendacion}}(Map<Integer, Double> lt) \{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00263}00263         ArrayList<ArrayList<Integer>> lr = \mbox{\hyperlink{classclases_1_1_recomendacion_a62f3f8a36295becfa095cd27efdac6a8}{generateArrayRecom}} ();}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00264}00264         System.out.println (lr);}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00265}00265         System.out.println (lt);}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00266}00266         \textcolor{keywordtype}{double} dcg = 0.0;}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00267}00267         \textcolor{keywordtype}{int} pos = 1;}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00268}00268         \textcolor{keywordflow}{for} (ArrayList<Integer> items : lr) \{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00269}00269             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} idItem : items) \{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00270}00270                 \textcolor{keywordtype}{double} reli = 0.0;}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00271}00271                 \textcolor{keywordflow}{if} (lt.containsKey(idItem)) \{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00272}00272                     reli = lt.get(idItem);}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00273}00273                 \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00274}00274                 dcg += ((Math.pow(2, reli) -\/ 1) / (Math.log(pos + 1)/Math.log(2)));}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00275}00275             \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00276}00276             pos++;}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00277}00277         \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00278}00278         \textcolor{keywordflow}{return} dcg;}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00279}00279     \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00280}00280 }
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00287}00287     @Override}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00288}\mbox{\hyperlink{classclases_1_1_recomendacion_a0a0cd1f76a943917eab9ecc4e5dc1a98}{00288}}     \textcolor{keyword}{public} String \mbox{\hyperlink{classclases_1_1_recomendacion_a0a0cd1f76a943917eab9ecc4e5dc1a98}{toString}}() \{}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00289}00289         String valor = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00290}00290         \textcolor{keywordflow}{for} (Map.Entry<Integer, Double> recom : \mbox{\hyperlink{classclases_1_1_recomendacion_a0c4e2dfceab553f31c495ab9289c2911}{recomItems}}.entrySet())}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00291}00291             valor += recom.getKey() + \textcolor{stringliteral}{"{},"{}} + recom.getValue() + \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00292}00292         \textcolor{keywordflow}{return} valor;}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00293}00293     \}}
+\DoxyCodeLine{\Hypertarget{_recomendacion_8java_source_l00294}00294 \}}
+
+\end{DoxyCode}

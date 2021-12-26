@@ -1,0 +1,44 @@
+\hypertarget{_algoritmos_test_8java_source}{}\doxysection{Algoritmos\+Test.\+java}
+\label{_algoritmos_test_8java_source}\index{AlgoritmosTest.java@{AlgoritmosTest.java}}
+\mbox{\hyperlink{_algoritmos_test_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00005}00005 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceclases}{clases}}.*;}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00006}00006 \textcolor{keyword}{import} \mbox{\hyperlink{namespacecontroladores}{controladores}}.\mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio}{CtrlDominio}};}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00007}00007 \textcolor{keyword}{import} \mbox{\hyperlink{namespacecontroladores}{controladores}}.\mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_preprocesar_datos}{CtrlDominioPreprocesarDatos}};}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00008}00008 \textcolor{keyword}{import} org.junit.jupiter.api.DisplayName;}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00009}00009 \textcolor{keyword}{import} org.junit.jupiter.api.Test;}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00011}00011 \textcolor{keyword}{import} java.util.*;}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00013}00013 \textcolor{keyword}{import} \textcolor{keyword}{static} org.junit.jupiter.api.Assertions.assertEquals;}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00022}\mbox{\hyperlink{class_algoritmos_test}{00022}} \textcolor{keyword}{class }\mbox{\hyperlink{class_algoritmos_test}{AlgoritmosTest}} \{}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00023}00023     @Test}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00024}00024     @DisplayName(\textcolor{stringliteral}{"{}Evaluar recomendación (DCG)"{}})}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00025}\mbox{\hyperlink{class_algoritmos_test_a715bdb1059e1d60583e3dd88306ddd91}{00025}}     void \mbox{\hyperlink{class_algoritmos_test_a715bdb1059e1d60583e3dd88306ddd91}{evaluarRecomendacionTest}}() throws Exception \{}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00026}00026         ArrayList<Integer> lr = \textcolor{keyword}{new} ArrayList<>(}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00027}00027                 Arrays.asList(236, 163, 2692, 1358, 2699, 2640, 4886, 1639, 172, 592));}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00028}00028         Map<Integer, Double> lti = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00029}00029         lti.put(2699, 5.0);}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00030}00030         lti.put(172, 5.0);}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00031}00031         lti.put(4886, 4.5);}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00032}00032         lti.put(592, 4.5);}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00033}00033         lti.put(163, 3.0);}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00034}00034         lti.put(1358, 2.5);}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00035}00035         lti.put(2640, 1.0);}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00036}00036         lti.put(236, 0.5);}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00037}00037         lti.put(1639, 0.5);}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00038}00038         lti.put(2692, 0.5);}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00040}00040         List<Map.Entry<Integer, Double>> lt = \textcolor{keyword}{new} ArrayList<>(lti.entrySet());}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00041}00041         \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_preprocesar_datos}{CtrlDominioPreprocesarDatos}}.\mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_preprocesar_datos_ade555bfe27aea080419b8ccb904f33e2}{preprocesarArchivos}}(\textcolor{stringliteral}{"{}DATA/csv/data.peliculas/250/"{}});}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00042}00042         \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} usuariosRatingsUnknown = \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio}{CtrlDominio}}.\mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a3fd2cff194e2f60714877e2cd6848712}{getUsuariosRatingsKnown}}();}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00043}00043         \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} u = usuariosRatingsUnknown.\mbox{\hyperlink{classclases_1_1_usuarios_a85c335169bb9b2cebfe6276848d24e2c}{getUser}}(\mbox{\hyperlink{classclases_1_1_parser}{Parser}}.\mbox{\hyperlink{classclases_1_1_parser_a44d03043006e391e2156f0d86db95bec}{translateUser}}(2378));}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00045}00045         \textcolor{comment}{//Algoritmos a = new Algoritmos(usuariosRatingsUnknown, u);}}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00046}00046         \textcolor{comment}{//assertEquals(42.31553502310568, a.evaluarRecomendacion(lr, lt));}}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00047}00047     \}}
+\DoxyCodeLine{\Hypertarget{_algoritmos_test_8java_source_l00048}00048 \}}
+
+\end{DoxyCode}

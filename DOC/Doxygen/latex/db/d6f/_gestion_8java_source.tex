@@ -1,0 +1,38 @@
+\hypertarget{_gestion_8java_source}{}\doxysection{Gestion.\+java}
+\label{_gestion_8java_source}\index{Gestion.java@{Gestion.java}}
+\mbox{\hyperlink{_gestion_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00001}00001 \textcolor{keyword}{package }persistencia;}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00005}00005 \textcolor{keyword}{import} java.io.BufferedWriter;}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00006}00006 \textcolor{keyword}{import} java.io.File;}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00007}00007 \textcolor{keyword}{import} java.io.FileWriter;}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00008}00008 \textcolor{keyword}{import} java.io.IOException;}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00017}\mbox{\hyperlink{classpersistencia_1_1_gestion}{00017}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classpersistencia_1_1_gestion}{Gestion}} \{}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00025}\mbox{\hyperlink{classpersistencia_1_1_gestion_a6579d4adab5cf6973cbf67f2249eadd8}{00025}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpersistencia_1_1_gestion_a6579d4adab5cf6973cbf67f2249eadd8}{guardarFichero}}(String datos, String path) \textcolor{keywordflow}{throws} Exception \{}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00026}00026         \textcolor{keywordflow}{try} (BufferedWriter br = \textcolor{keyword}{new} BufferedWriter(\textcolor{keyword}{new} FileWriter(path))) \{}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00027}00027             br.write(datos);}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00028}00028         \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00029}00029             e.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00030}00030         \}}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00031}00031     \}}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00039}\mbox{\hyperlink{classpersistencia_1_1_gestion_ac9eceac2d8f01dd02597c7fac43d0325}{00039}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpersistencia_1_1_gestion_ac9eceac2d8f01dd02597c7fac43d0325}{borrarFichero}}(String path) \{}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00040}00040         File myObj = \textcolor{keyword}{new} File(path);}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00041}00041         \textcolor{keywordflow}{if} (myObj.exists()) myObj.delete();}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00042}00042     \}}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00050}\mbox{\hyperlink{classpersistencia_1_1_gestion_a2054dcf663237be277e274933ef27697}{00050}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpersistencia_1_1_gestion_a2054dcf663237be277e274933ef27697}{borrarCarpeta}}(String path) \{}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00051}00051         File index = \textcolor{keyword}{new} File(path);}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00052}00052         String[] entries = index.list();}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00053}00053         assert entries != \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00054}00054         \textcolor{keywordflow}{for} (String s: entries) \mbox{\hyperlink{classpersistencia_1_1_gestion_ac9eceac2d8f01dd02597c7fac43d0325}{borrarFichero}}(path + \textcolor{stringliteral}{"{}/"{}} + s);}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00055}00055     \}}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00063}\mbox{\hyperlink{classpersistencia_1_1_gestion_a4492cf42f0b28440d65ea1510e69e5ef}{00063}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpersistencia_1_1_gestion_a4492cf42f0b28440d65ea1510e69e5ef}{crearDirectorio}}(String path) \textcolor{keywordflow}{throws} IOException \{}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00064}00064         File myObj = \textcolor{keyword}{new} File(path);}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00065}00065         \textcolor{keywordflow}{if} (!myObj.exists()) myObj.mkdirs();}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00066}00066     \}}
+\DoxyCodeLine{\Hypertarget{_gestion_8java_source_l00067}00067 \}}
+
+\end{DoxyCode}

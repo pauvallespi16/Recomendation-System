@@ -1,0 +1,88 @@
+\hypertarget{_k_means_test_8java_source}{}\doxysection{KMeans\+Test.\+java}
+\label{_k_means_test_8java_source}\index{KMeansTest.java@{KMeansTest.java}}
+\mbox{\hyperlink{_k_means_test_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00005}00005 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceclases}{clases}}.*;}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00006}00006 \textcolor{keyword}{import} \mbox{\hyperlink{namespacecontroladores}{controladores}}.\mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_preprocesar_datos}{CtrlDominioPreprocesarDatos}};}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00007}00007 \textcolor{keyword}{import} \mbox{\hyperlink{namespacecontroladores}{controladores}}.\mbox{\hyperlink{classcontroladores_1_1_k_means}{KMeans}};}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00008}00008 \textcolor{keyword}{import} org.junit.jupiter.api.AfterEach;}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00009}00009 \textcolor{keyword}{import} org.junit.jupiter.api.Test;}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00011}00011 \textcolor{keyword}{import} java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00012}00012 \textcolor{keyword}{import} java.util.HashMap;}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00013}00013 \textcolor{keyword}{import} java.util.Map;}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00014}00014 \textcolor{keyword}{import} java.util.Random;}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00024}\mbox{\hyperlink{class_k_means_test}{00024}} \textcolor{keyword}{class }\mbox{\hyperlink{class_k_means_test}{KMeansTest}} \{}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00025}\mbox{\hyperlink{class_k_means_test_a151efad2550ccbaf0a207bd77fb3bb7a}{00025}}     \mbox{\hyperlink{classcontroladores_1_1_k_means}{KMeans}} \mbox{\hyperlink{class_k_means_test_a151efad2550ccbaf0a207bd77fb3bb7a}{kmeans}} = \textcolor{keyword}{new} \mbox{\hyperlink{classcontroladores_1_1_k_means}{KMeans}}();}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00026}00026     @AfterEach}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00027}\mbox{\hyperlink{class_k_means_test_a936b99c4c45a326a1567e57918fc7901}{00027}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_k_means_test_a936b99c4c45a326a1567e57918fc7901}{defaultSettings}}()\{ \mbox{\hyperlink{class_k_means_test_a151efad2550ccbaf0a207bd77fb3bb7a}{kmeans}}.\mbox{\hyperlink{classcontroladores_1_1_k_means_af0fe086d0edf646f61112cb1d7b0a743}{setDefaults}}(); \}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00028}00028  \textcolor{comment}{/* missing data  */}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00391}00391         \textcolor{comment}{/* uData4.put(1, 2.0); uData5.put(1, 2.5); /* missing data  */}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00392}00392         \textcolor{comment}{/* uData4.put(2, 1.5); /* missing data  */} \textcolor{comment}{/* uData6.put(2, 2.0);}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00393}00393 \textcolor{comment}{        /* missing data  */} \textcolor{comment}{/* uData5.put(3, 1.0); /* missing data}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00394}00394 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00395}00395 \textcolor{comment}{        Usuario f1 = new Usuario(1, uData1); cluster1.add(f1);}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00396}00396 \textcolor{comment}{        Usuario f2 = new Usuario(2, uData2); cluster1.add(f2);}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00397}00397 \textcolor{comment}{        Usuario f3 = new Usuario(3, uData3); cluster1.add(f3);}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00398}00398 \textcolor{comment}{        Usuario f4 = new Usuario(4, uData4); cluster2.add(f4);}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00399}00399 \textcolor{comment}{        Usuario f5 = new Usuario(5, uData5); cluster2.add(f5);}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00400}00400 \textcolor{comment}{        Usuario f6 = new Usuario(6, uData6); cluster2.add(f6);}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00401}00401 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00402}00402 \textcolor{comment}{        Map<Integer, ArrayList<Usuario>> cM = new HashMap<>();}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00403}00403 \textcolor{comment}{        cM.put(0, cluster1);}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00404}00404 \textcolor{comment}{        cM.put(1, cluster2);}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00405}00405 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00406}00406 \textcolor{comment}{        kmeans.setClusterMap(cM);}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00407}00407 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00408}00408 \textcolor{comment}{        double expected = 0.5416666666666667;}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00409}00409 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00410}00410 \textcolor{comment}{        assertEquals(expected, kmeans.computeAverageWSS());}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00411}00411 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00412}00412 \textcolor{comment}{    \}*/}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00413}00413 }
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00414}00414     @Test}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00415}\mbox{\hyperlink{class_k_means_test_a238f7d2d3d81197f5e4a9c8fe90dc8f8}{00415}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_k_means_test_a238f7d2d3d81197f5e4a9c8fe90dc8f8}{testOptimalK}}() throws Exception \{}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00416}00416         \textcolor{keywordtype}{int} n = 250, us = 400;}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00417}00417 }
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00418}00418         \textcolor{keywordtype}{double} minsc = 0, maxsc = 5;}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00419}00419         \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} v = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}}();}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00420}00420         \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} u = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}();}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00421}00421 }
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00422}00422         Random r = \textcolor{keyword}{new} Random();}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00423}00423 }
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00424}00424         System.out.println(\textcolor{stringliteral}{"{}generating numbers beween "{}} + minsc + \textcolor{stringliteral}{"{} and "{}} + maxsc);}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00425}00425 }
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00426}00426         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} userId = 0; userId <= us; userId++)\{}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00427}00427             Map<Integer, Double> uData = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00428}00428             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} itemId = 0; itemId < n; itemId++)\{}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00429}00429                uData.put(itemId, r.nextDouble() * (maxsc -\/ minsc) + minsc);}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00430}00430             \}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00431}00431             \textcolor{keywordflow}{if} (userId < us) v.\mbox{\hyperlink{classclases_1_1_usuarios_a2b75d102bd18d9efa80137eda4e613b3}{addUser}}(\textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}(userId, uData));}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00432}00432             \textcolor{keywordflow}{else} u = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}(userId, uData);}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00433}00433         \}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00434}00434 }
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00435}00435         \mbox{\hyperlink{classclases_1_1_items}{Items}} its = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_items}{Items}}();}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00436}00436         Map<String, Atributo> ats = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00437}00437 }
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00438}00438         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; i++)\{}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00439}00439            \mbox{\hyperlink{classclases_1_1_item}{Item}} it = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_item}{Item}}(i, ats);}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00440}00440            its.\mbox{\hyperlink{classclases_1_1_items_a094c01938cc06eff0c8a4276eeff4ab3}{addItem}}(it);}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00441}00441         \}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00442}00442 }
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00443}00443         \mbox{\hyperlink{classcontroladores_1_1_k_means}{KMeans}} \mbox{\hyperlink{class_k_means_test_a151efad2550ccbaf0a207bd77fb3bb7a}{kmeans}} = \textcolor{keyword}{new} \mbox{\hyperlink{classcontroladores_1_1_k_means}{KMeans}}(v, u, its);}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00444}00444         \mbox{\hyperlink{class_k_means_test_a151efad2550ccbaf0a207bd77fb3bb7a}{kmeans}}.\mbox{\hyperlink{classcontroladores_1_1_k_means_a46fc026af8e9f5861ff1522aa76c0e77}{setCota}}(100);}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00445}00445         \mbox{\hyperlink{class_k_means_test_a151efad2550ccbaf0a207bd77fb3bb7a}{kmeans}}.\mbox{\hyperlink{classcontroladores_1_1_k_means_a065bdc7f760a414772498078c2e8fae1}{setMaxsc}}(5.0);}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00446}00446         \mbox{\hyperlink{class_k_means_test_a151efad2550ccbaf0a207bd77fb3bb7a}{kmeans}}.\mbox{\hyperlink{classcontroladores_1_1_k_means_a8edf9893e906e53b3560595bd5d9c073}{setMinsc}}(0.0);}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00447}00447         \mbox{\hyperlink{class_k_means_test_a151efad2550ccbaf0a207bd77fb3bb7a}{kmeans}}.\mbox{\hyperlink{classcontroladores_1_1_k_means_a659acb3b0d653b7387ff46c0cb89abd0}{setK}}(3);}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00448}00448 }
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00449}00449         System.out.println(\textcolor{stringliteral}{"{}k before setting optimal: "{}} + \mbox{\hyperlink{class_k_means_test_a151efad2550ccbaf0a207bd77fb3bb7a}{kmeans}}.\mbox{\hyperlink{classcontroladores_1_1_k_means_a4b3c3291ea17064f6cbf69f2852a015b}{getK}}() );}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00450}00450         \mbox{\hyperlink{class_k_means_test_a151efad2550ccbaf0a207bd77fb3bb7a}{kmeans}}.\mbox{\hyperlink{classcontroladores_1_1_k_means_a6d6f377179f42d06b2e62694724d09d8}{setOptimalK}}(v);}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00451}00451         System.out.println(\textcolor{stringliteral}{"{}optimal k: "{}} + \mbox{\hyperlink{class_k_means_test_a151efad2550ccbaf0a207bd77fb3bb7a}{kmeans}}.\mbox{\hyperlink{classcontroladores_1_1_k_means_a4b3c3291ea17064f6cbf69f2852a015b}{getK}}() );}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00452}00452         \mbox{\hyperlink{class_k_means_test_a151efad2550ccbaf0a207bd77fb3bb7a}{kmeans}}.\mbox{\hyperlink{classcontroladores_1_1_k_means_ad8e922dceb2b2241ed5bb08c5f0506d6}{clusterFormation}}(v);}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00453}00453     \}}
+\DoxyCodeLine{\Hypertarget{_k_means_test_8java_source_l00454}00454 \}}
+
+\end{DoxyCode}

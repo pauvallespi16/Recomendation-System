@@ -1,0 +1,966 @@
+\hypertarget{classclases_1_1_parser}{}\doxysection{Referencia de la Clase clases.\+Parser}
+\label{classclases_1_1_parser}\index{clases.Parser@{clases.Parser}}
+\doxysubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{enumclases_1_1_parser_1_1_path}{Path}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{classclases_1_1_parser_a7c84ef1abefc019ba9f72209625cc9d3}{get\+All\+Items}} ()
+\begin{DoxyCompactList}\small\item\em Función utilizada para obtener los items. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classclases_1_1_parser_a01c3a8605626849ebf3374cdb2da8522}{set\+All\+Items}} (\mbox{\hyperlink{classclases_1_1_items}{Items}} it)
+\begin{DoxyCompactList}\small\item\em Función utilizada para establecer los items. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classclases_1_1_parser_a4f51f101787b28f6b69475ccc66873dd}{set\+Types}} (Array\+List$<$ String $>$ \mbox{\hyperlink{classclases_1_1_parser_a1076c7d435a868cc293d8e90a640f56c}{types}})
+\begin{DoxyCompactList}\small\item\em Función utilizada para establecer los valores que contiene el array que almacena los tipos. \end{DoxyCompactList}\item 
+static String\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classclases_1_1_parser_a6b5e8ab3075cf80e438d8f16852914eb}{get\+Types}} ()
+\begin{DoxyCompactList}\small\item\em Función utilizada para obtener el array types que almacena los tipos de los ítems. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classclases_1_1_parser_a785f38bfe19efaef24a2e518624252f7}{set\+Headers}} (String\mbox{[}$\,$\mbox{]} headers)
+\begin{DoxyCompactList}\small\item\em Función utilizada para establecer los valores que contiene el array que almacena la cabecera de los ítems. \end{DoxyCompactList}\item 
+static String\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classclases_1_1_parser_aaf45b745213092d3971f824c7e995dc0}{get\+Headers}} ()
+\begin{DoxyCompactList}\small\item\em Función utilizada para obtener el array headers que almacena la cabecera de los ítems. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classclases_1_1_parser_a485076dfaad35b1c9cd36d3903ed208b}{set\+Score\+Limits}} (double max, double min)
+\begin{DoxyCompactList}\small\item\em Función utilizada para establecer el máximo y el mínimo de las valoraciones. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{classclases_1_1_parser_a7011757774a5ed28dc07d774d24c41cb}{get\+Max\+Score}} ()
+\begin{DoxyCompactList}\small\item\em Función utilizada para adquirir la variable max\+Score. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{classclases_1_1_parser_a670730b2743b36f57b64dd2a69a6297c}{get\+Min\+Score}} ()
+\begin{DoxyCompactList}\small\item\em Función utilizada para adquirir la variable min\+Score. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classclases_1_1_parser_ac78efff9db43c4eba53e53b287067b42}{set\+IDF}} (Map$<$ String, Map$<$ String, Integer $>$ $>$ idf)
+\begin{DoxyCompactList}\small\item\em Función utilitzada para establecer el map que representa el IDF. \end{DoxyCompactList}\item 
+static Map$<$ String, Map$<$ String, Integer $>$ $>$ \mbox{\hyperlink{classclases_1_1_parser_a49751e85dde70ffc687ec7a646ad7124}{get\+IDF}} ()
+\begin{DoxyCompactList}\small\item\em Función utilitzada para obtener el map que representa el IDF. \end{DoxyCompactList}\item 
+static Map$<$ String, Integer $>$ \mbox{\hyperlink{classclases_1_1_parser_a9d07c4e9721044400d335acd45f0fa68}{get\+Bits\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Función utilitzada para obtener bits\+Table. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classclases_1_1_parser_aacb886f38f2f6eef2a0cab155d2a5f52}{set\+Normalize}} (Double\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} norm\+Nums, Long\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} norm\+Fechas)
+\begin{DoxyCompactList}\small\item\em Función utilizada en los test para establecer los valores que contienen los arrays utilizados para la posterior normalización de los datos. \end{DoxyCompactList}\item 
+static Double\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classclases_1_1_parser_a4c6e263bce13468bca6024bf2fb1a2fd}{get\+Aux\+Normalize\+Numeros}} ()
+\item 
+static Long\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classclases_1_1_parser_a98bf9bd3a276fe6a16a8b3c07d484a41}{get\+Aux\+Normalize\+Fechas}} ()
+\item 
+static int \mbox{\hyperlink{classclases_1_1_parser_a2904c888fd6fbdd54acafb9c11dd35b0}{translate\+Item}} (int original\+Id)
+\begin{DoxyCompactList}\small\item\em Función utilizada para obtener el identificador original del ítem. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classclases_1_1_parser_a44d03043006e391e2156f0d86db95bec}{translate\+User}} (int original\+Id)
+\begin{DoxyCompactList}\small\item\em Función utilizada para obtener el identificador original del usuario. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classclases_1_1_parser_ac7fae5c1a9ac8344f63254acf69337d6}{update\+Contents}} (\mbox{\hyperlink{classclases_1_1_item}{Item}} it)
+\begin{DoxyCompactList}\small\item\em Función utilizada para actualizar las funciones auxiliares al introducir un item. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classclases_1_1_parser_a255cd7a63338b7b0e6ba88340b114200}{normalizar\+Items}} ()
+\begin{DoxyCompactList}\small\item\em Función utilizada para normalizar los atributos númericos y de fecha de los ítems. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classclases_1_1_parser_a39a7f8e6644c09de800e073a14c4ef26}{process\+Items}} (Array\+List$<$ String $>$ data)  throws Exception 
+\begin{DoxyCompactList}\small\item\em Función utilizada para preprocesar los ítems. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classclases_1_1_parser_adb27e97969663bf44c7e39e988f2c7f5}{process\+Users}} (Array\+List$<$ String $>$ data, \mbox{\hyperlink{enumclases_1_1_parser_1_1_path}{Path}} op)  throws Exception 
+\begin{DoxyCompactList}\small\item\em Función utilizada para procesar los usuarios y sus valoraciones. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classclases_1_1_parser_ab1911b83409593ba16415057c553d974}{load\+Items}} (Array\+List$<$ String $>$ data)  throws Exception 
+\begin{DoxyCompactList}\small\item\em Función utilizada para cargar los ítems. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classclases_1_1_parser_ac246168127022c8396db0192c739738f}{load\+Users}} (Array\+List$<$ String $>$ data, \mbox{\hyperlink{enumclases_1_1_parser_1_1_path}{Path}} op)  throws Exception 
+\begin{DoxyCompactList}\small\item\em Función utilizada para cargar los usuarios y sus valoraciones. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classclases_1_1_recomendacion}{Recomendacion}} \mbox{\hyperlink{classclases_1_1_parser_a11eb0b8ba7f98eb1e79ab8cabaffcc23}{load\+Recoms}} (\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} u, \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} us, Array\+List$<$ String $>$ data)  throws Exception 
+\begin{DoxyCompactList}\small\item\em Función utilizada para cargar una recomendacion. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classclases_1_1_recomendaciones}{Recomendaciones}} \mbox{\hyperlink{classclases_1_1_parser_aa5b74af01b5b0857b0c92e781bc0c409}{load\+Historial}} (Array\+List$<$ String $>$ data)  throws Exception 
+\begin{DoxyCompactList}\small\item\em Función utilizada para cargar un conjunto de recomendaciones. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funciones del \textquotesingle{}package\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classclases_1_1_parser_aa38bc596818f2127f23b35ed7a760fe9}{Parser}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static String \mbox{\hyperlink{classclases_1_1_parser_acbdc5f643616b1c7b213e8c2d9d69f93}{valid\+Regex}} ()
+\begin{DoxyCompactList}\small\item\em Función auxiliar utilizada para dividir cada línea. Información obtenida de la página web\+: \href{https://www.it-swarm-es.com/es/java/java-dividir-una-cadena-separada-por-comas-pero-ignorar-comas-entre-comillas/969032997/}{\texttt{ https\+://www.\+it-\/swarm-\/es.\+com/es/java/java-\/dividir-\/una-\/cadena-\/separada-\/por-\/comas-\/pero-\/ignorar-\/comas-\/entre-\/comillas/969032997/}}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} \mbox{\hyperlink{classclases_1_1_parser_abe03afa12b41b9e4f07e99fc8d2b7af6}{transformar\+Atributo}} (int i)  throws Parse\+Exception 
+\begin{DoxyCompactList}\small\item\em Función utilizada para transformar el \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} en el tipo que realmente sea. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{classclases_1_1_parser_ab6b92a0be033043e66f9ba604a795b38}{items}} = new \mbox{\hyperlink{classclases_1_1_items}{Items}}()
+\begin{DoxyCompactList}\small\item\em Variable utilizada para almacenar los items. \end{DoxyCompactList}\item 
+static Map$<$ Integer, Integer $>$ \mbox{\hyperlink{classclases_1_1_parser_a848c66c3bd34a2c5f3b19137f8b63bb3}{items\+Table}} = new Hash\+Map$<$$>$()
+\begin{DoxyCompactList}\small\item\em Diccionario utilizado para traducir los ids de los ítems. \end{DoxyCompactList}\item 
+static Map$<$ Integer, Integer $>$ \mbox{\hyperlink{classclases_1_1_parser_aafbddfc002eaf4b9b23c8d585ea35352}{users\+Table}} = new Hash\+Map$<$$>$()
+\begin{DoxyCompactList}\small\item\em Diccionario utilizado para traducir los ids de los usuarios. \end{DoxyCompactList}\item 
+static Map$<$ String, Integer $>$ \mbox{\hyperlink{classclases_1_1_parser_a5dcbba6a59c40cf4a8b756f98fc7b039}{bits\+Table}} = new Hash\+Map$<$$>$()
+\begin{DoxyCompactList}\small\item\em Diccionario utilizado para traducir un género a una posición del bitset del atributo. \end{DoxyCompactList}\item 
+static Map$<$ String, Map$<$ String, Integer $>$ $>$ \mbox{\hyperlink{classclases_1_1_parser_ac7ef9a07b1251f2e939f90a9b6c88635}{IDF}} = new Hash\+Map$<$$>$()
+\item 
+static int \mbox{\hyperlink{classclases_1_1_parser_a6c6840ab1e59649e52159d9513900d28}{bit\+Index}} = 0
+\item 
+static String\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classclases_1_1_parser_a1076c7d435a868cc293d8e90a640f56c}{types}}
+\item 
+static String\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}{headers\+Items}}
+\item 
+static String\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}{words}}
+\item 
+static Double\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}{aux\+Normalize\+Numeros}}
+\begin{DoxyCompactList}\small\item\em Función utilitzada para obtener aux\+Normalize\+Numeros. \end{DoxyCompactList}\item 
+static Long\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}{aux\+Normalize\+Fechas}}
+\begin{DoxyCompactList}\small\item\em Función utilitzada para obtener aux\+Normalize\+Fechas. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{classclases_1_1_parser_a1ee668ced91fc2e3a3b3184a642ff9b0}{max\+Score}} = 0
+\begin{DoxyCompactList}\small\item\em Variable utilizada para almacenar el máximo de los valores de las valoraciones. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{classclases_1_1_parser_aed4bf8bf8ab94534b423ce588977c849}{min\+Score}} = Double.\+MAX\+\_\+\+VALUE
+\begin{DoxyCompactList}\small\item\em Variable utilizada para almacenar el mínimo de los valores de las valoraciones. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00025}{25}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classclases_1_1_parser_aa38bc596818f2127f23b35ed7a760fe9}\label{classclases_1_1_parser_aa38bc596818f2127f23b35ed7a760fe9}} 
+\index{clases.Parser@{clases.Parser}!Parser@{Parser}}
+\index{Parser@{Parser}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{Parser()}{Parser()}}
+{\footnotesize\ttfamily clases.\+Parser.\+Parser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00127}{127}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classclases_1_1_parser_a7c84ef1abefc019ba9f72209625cc9d3}\label{classclases_1_1_parser_a7c84ef1abefc019ba9f72209625cc9d3}} 
+\index{clases.Parser@{clases.Parser}!getAllItems@{getAllItems}}
+\index{getAllItems@{getAllItems}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{getAllItems()}{getAllItems()}}
+{\footnotesize\ttfamily clases.\+Parser.\+get\+All\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para obtener los items. 
+
+\begin{DoxyReturn}{Devuelve}
+\mbox{\hyperlink{classclases_1_1_items}{Items}} Representa el conjunto de items
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha obtenido \mbox{\hyperlink{classclases_1_1_items}{Items}} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00136}{136}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a98bf9bd3a276fe6a16a8b3c07d484a41}\label{classclases_1_1_parser_a98bf9bd3a276fe6a16a8b3c07d484a41}} 
+\index{clases.Parser@{clases.Parser}!getAuxNormalizeFechas@{getAuxNormalizeFechas}}
+\index{getAuxNormalizeFechas@{getAuxNormalizeFechas}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{getAuxNormalizeFechas()}{getAuxNormalizeFechas()}}
+{\footnotesize\ttfamily static Long\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} clases.\+Parser.\+get\+Aux\+Normalize\+Fechas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00290}{290}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a4c6e263bce13468bca6024bf2fb1a2fd}\label{classclases_1_1_parser_a4c6e263bce13468bca6024bf2fb1a2fd}} 
+\index{clases.Parser@{clases.Parser}!getAuxNormalizeNumeros@{getAuxNormalizeNumeros}}
+\index{getAuxNormalizeNumeros@{getAuxNormalizeNumeros}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{getAuxNormalizeNumeros()}{getAuxNormalizeNumeros()}}
+{\footnotesize\ttfamily static Double\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} clases.\+Parser.\+get\+Aux\+Normalize\+Numeros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00281}{281}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a9d07c4e9721044400d335acd45f0fa68}\label{classclases_1_1_parser_a9d07c4e9721044400d335acd45f0fa68}} 
+\index{clases.Parser@{clases.Parser}!getBitsTable@{getBitsTable}}
+\index{getBitsTable@{getBitsTable}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{getBitsTable()}{getBitsTable()}}
+{\footnotesize\ttfamily clases.\+Parser.\+get\+Bits\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilitzada para obtener bits\+Table. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha obtenido bits\+Table 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+El map bits\+Table 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00258}{258}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_aaf45b745213092d3971f824c7e995dc0}\label{classclases_1_1_parser_aaf45b745213092d3971f824c7e995dc0}} 
+\index{clases.Parser@{clases.Parser}!getHeaders@{getHeaders}}
+\index{getHeaders@{getHeaders}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{getHeaders()}{getHeaders()}}
+{\footnotesize\ttfamily clases.\+Parser.\+get\+Headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para obtener el array headers que almacena la cabecera de los ítems. 
+
+\begin{DoxyReturn}{Devuelve}
+String\mbox{[}\mbox{]} Representa un array que contiene las cabeceras
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha obtenido headers\+Items 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00191}{191}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a49751e85dde70ffc687ec7a646ad7124}\label{classclases_1_1_parser_a49751e85dde70ffc687ec7a646ad7124}} 
+\index{clases.Parser@{clases.Parser}!getIDF@{getIDF}}
+\index{getIDF@{getIDF}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{getIDF()}{getIDF()}}
+{\footnotesize\ttfamily clases.\+Parser.\+get\+IDF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilitzada para obtener el map que representa el IDF. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha obtenido IDF 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00247}{247}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a7011757774a5ed28dc07d774d24c41cb}\label{classclases_1_1_parser_a7011757774a5ed28dc07d774d24c41cb}} 
+\index{clases.Parser@{clases.Parser}!getMaxScore@{getMaxScore}}
+\index{getMaxScore@{getMaxScore}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{getMaxScore()}{getMaxScore()}}
+{\footnotesize\ttfamily clases.\+Parser.\+get\+Max\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para adquirir la variable max\+Score. 
+
+\begin{DoxyReturn}{Devuelve}
+Double max\+Score
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto max\+Score 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00215}{215}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a670730b2743b36f57b64dd2a69a6297c}\label{classclases_1_1_parser_a670730b2743b36f57b64dd2a69a6297c}} 
+\index{clases.Parser@{clases.Parser}!getMinScore@{getMinScore}}
+\index{getMinScore@{getMinScore}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{getMinScore()}{getMinScore()}}
+{\footnotesize\ttfamily clases.\+Parser.\+get\+Min\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para adquirir la variable min\+Score. 
+
+\begin{DoxyReturn}{Devuelve}
+Double min\+Score
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto min\+Score 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00226}{226}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a6b5e8ab3075cf80e438d8f16852914eb}\label{classclases_1_1_parser_a6b5e8ab3075cf80e438d8f16852914eb}} 
+\index{clases.Parser@{clases.Parser}!getTypes@{getTypes}}
+\index{getTypes@{getTypes}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{getTypes()}{getTypes()}}
+{\footnotesize\ttfamily clases.\+Parser.\+get\+Types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para obtener el array types que almacena los tipos de los ítems. 
+
+\begin{DoxyReturn}{Devuelve}
+String\mbox{[}\mbox{]} Representa un array que contiene los tipos
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha obtenido headers\+Items 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00167}{167}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_aa5b74af01b5b0857b0c92e781bc0c409}\label{classclases_1_1_parser_aa5b74af01b5b0857b0c92e781bc0c409}} 
+\index{clases.Parser@{clases.Parser}!loadHistorial@{loadHistorial}}
+\index{loadHistorial@{loadHistorial}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{loadHistorial()}{loadHistorial()}}
+{\footnotesize\ttfamily clases.\+Parser.\+load\+Historial (\begin{DoxyParamCaption}\item[{Array\+List$<$ String $>$}]{data }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para cargar un conjunto de recomendaciones. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han guardado los datos sobre el conjunto de recomendaciones en la estructura de datos correspondiente 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em data} & Datos sobre el conjunto de recomendaciones \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\mbox{\hyperlink{classclases_1_1_recomendaciones}{Recomendaciones}} que se han pedido 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00863}{863}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_ab1911b83409593ba16415057c553d974}\label{classclases_1_1_parser_ab1911b83409593ba16415057c553d974}} 
+\index{clases.Parser@{clases.Parser}!loadItems@{loadItems}}
+\index{loadItems@{loadItems}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{loadItems()}{loadItems()}}
+{\footnotesize\ttfamily clases.\+Parser.\+load\+Items (\begin{DoxyParamCaption}\item[{Array\+List$<$ String $>$}]{data }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para cargar los ítems. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han guardado los datos sobre los ítems en la estructura de datos correspondiente 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em data} & Datos sobre los items \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00637}{637}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a11eb0b8ba7f98eb1e79ab8cabaffcc23}\label{classclases_1_1_parser_a11eb0b8ba7f98eb1e79ab8cabaffcc23}} 
+\index{clases.Parser@{clases.Parser}!loadRecoms@{loadRecoms}}
+\index{loadRecoms@{loadRecoms}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{loadRecoms()}{loadRecoms()}}
+{\footnotesize\ttfamily clases.\+Parser.\+load\+Recoms (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}}]{u,  }\item[{\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}}}]{us,  }\item[{Array\+List$<$ String $>$}]{data }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para cargar una recomendacion. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han guardado los datos sobre la recomendacion en la estructura de datos correspondiente 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em u} & \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} del que queremos cargar la informacion \\
+\hline
+{\em us} & Conjunto de usuarios \\
+\hline
+{\em data} & Datos sobre el conjunto de recomendaciones \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\mbox{\hyperlink{classclases_1_1_recomendacion}{Recomendacion}} 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00845}{845}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_ac246168127022c8396db0192c739738f}\label{classclases_1_1_parser_ac246168127022c8396db0192c739738f}} 
+\index{clases.Parser@{clases.Parser}!loadUsers@{loadUsers}}
+\index{loadUsers@{loadUsers}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{loadUsers()}{loadUsers()}}
+{\footnotesize\ttfamily clases.\+Parser.\+load\+Users (\begin{DoxyParamCaption}\item[{Array\+List$<$ String $>$}]{data,  }\item[{\mbox{\hyperlink{enumclases_1_1_parser_1_1_path}{Path}}}]{op }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para cargar los usuarios y sus valoraciones. 
+
+\begin{DoxyPrecond}{Precondición}
+Parámetro correcto que represente uno de los paths disponibles 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han guardado los datos sobre los usuarios en la estructura de datos correspondiente 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em data} & Datos sobre los usuarios \\
+\hline
+{\em op} & Enum referenciando el path del archivo que queremos leer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00793}{793}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a255cd7a63338b7b0e6ba88340b114200}\label{classclases_1_1_parser_a255cd7a63338b7b0e6ba88340b114200}} 
+\index{clases.Parser@{clases.Parser}!normalizarItems@{normalizarItems}}
+\index{normalizarItems@{normalizarItems}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{normalizarItems()}{normalizarItems()}}
+{\footnotesize\ttfamily clases.\+Parser.\+normalizar\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para normalizar los atributos númericos y de fecha de los ítems. 
+
+\begin{DoxyPrecond}{Precondición}
+\mbox{\hyperlink{classclases_1_1_items}{Items}} no vacío 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Para cada ítem se han normalizado sus atributos numéricos y fechas 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00389}{389}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a39a7f8e6644c09de800e073a14c4ef26}\label{classclases_1_1_parser_a39a7f8e6644c09de800e073a14c4ef26}} 
+\index{clases.Parser@{clases.Parser}!processItems@{processItems}}
+\index{processItems@{processItems}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{processItems()}{processItems()}}
+{\footnotesize\ttfamily clases.\+Parser.\+process\+Items (\begin{DoxyParamCaption}\item[{Array\+List$<$ String $>$}]{data }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para preprocesar los ítems. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han guardado los datos sobre los ítems en la estructura de datos correspondiente 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em data} & Datos sobre los items \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00507}{507}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_adb27e97969663bf44c7e39e988f2c7f5}\label{classclases_1_1_parser_adb27e97969663bf44c7e39e988f2c7f5}} 
+\index{clases.Parser@{clases.Parser}!processUsers@{processUsers}}
+\index{processUsers@{processUsers}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{processUsers()}{processUsers()}}
+{\footnotesize\ttfamily clases.\+Parser.\+process\+Users (\begin{DoxyParamCaption}\item[{Array\+List$<$ String $>$}]{data,  }\item[{\mbox{\hyperlink{enumclases_1_1_parser_1_1_path}{Path}}}]{op }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para procesar los usuarios y sus valoraciones. 
+
+\begin{DoxyPrecond}{Precondición}
+Parámetro correcto que represente uno de los paths disponibles 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han guardado los datos sobre los usuarios en la estructura de datos correspondiente 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em data} & Datos sobre los usuarios \\
+\hline
+{\em op} & Enum referenciando el path del archivo que queremos leer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00567}{567}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a01c3a8605626849ebf3374cdb2da8522}\label{classclases_1_1_parser_a01c3a8605626849ebf3374cdb2da8522}} 
+\index{clases.Parser@{clases.Parser}!setAllItems@{setAllItems}}
+\index{setAllItems@{setAllItems}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{setAllItems()}{setAllItems()}}
+{\footnotesize\ttfamily clases.\+Parser.\+set\+All\+Items (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classclases_1_1_items}{Items}}}]{it }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para establecer los items. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em it} & Representa el conjunto de items\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha establecido \mbox{\hyperlink{classclases_1_1_items}{Items}} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00145}{145}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a785f38bfe19efaef24a2e518624252f7}\label{classclases_1_1_parser_a785f38bfe19efaef24a2e518624252f7}} 
+\index{clases.Parser@{clases.Parser}!setHeaders@{setHeaders}}
+\index{setHeaders@{setHeaders}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{setHeaders()}{setHeaders()}}
+{\footnotesize\ttfamily clases.\+Parser.\+set\+Headers (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{headers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para establecer los valores que contiene el array que almacena la cabecera de los ítems. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em headers} & contiene los headers que quieren incluirse\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+headers\+Items contiene los valores de headers 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00179}{179}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_ac78efff9db43c4eba53e53b287067b42}\label{classclases_1_1_parser_ac78efff9db43c4eba53e53b287067b42}} 
+\index{clases.Parser@{clases.Parser}!setIDF@{setIDF}}
+\index{setIDF@{setIDF}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{setIDF()}{setIDF()}}
+{\footnotesize\ttfamily clases.\+Parser.\+set\+IDF (\begin{DoxyParamCaption}\item[{Map$<$ String, Map$<$ String, Integer $>$ $>$}]{idf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilitzada para establecer el map que representa el IDF. 
+
+\begin{DoxyPrecond}{Precondición}
+Map válido 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha establecido IDF 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em idf} & Map que queremos establecer como IDF \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00237}{237}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_aacb886f38f2f6eef2a0cab155d2a5f52}\label{classclases_1_1_parser_aacb886f38f2f6eef2a0cab155d2a5f52}} 
+\index{clases.Parser@{clases.Parser}!setNormalize@{setNormalize}}
+\index{setNormalize@{setNormalize}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{setNormalize()}{setNormalize()}}
+{\footnotesize\ttfamily clases.\+Parser.\+set\+Normalize (\begin{DoxyParamCaption}\item[{Double}]{norm\+Nums\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{Long}]{norm\+Fechas\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada en los test para establecer los valores que contienen los arrays utilizados para la posterior normalización de los datos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em norm\+Nums} & Array de arrays que contiene los valores normalizados de los atributos numéricos \\
+\hline
+{\em norm\+Fechas} & Array de arrays que contiene los valores normalizados de los atributos de fecha\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+headers\+Items contiene los valores de headers 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00269}{269}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a485076dfaad35b1c9cd36d3903ed208b}\label{classclases_1_1_parser_a485076dfaad35b1c9cd36d3903ed208b}} 
+\index{clases.Parser@{clases.Parser}!setScoreLimits@{setScoreLimits}}
+\index{setScoreLimits@{setScoreLimits}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{setScoreLimits()}{setScoreLimits()}}
+{\footnotesize\ttfamily clases.\+Parser.\+set\+Score\+Limits (\begin{DoxyParamCaption}\item[{double}]{max,  }\item[{double}]{min }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para establecer el máximo y el mínimo de las valoraciones. 
+
+\begin{DoxyPrecond}{Precondición}
+max \texorpdfstring{$>$}{>} min 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha establecido el máximo y el mínimo de las valoraciones 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em max} & Representa el máximo \\
+\hline
+{\em min} & Representa el mínimo \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00203}{203}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a4f51f101787b28f6b69475ccc66873dd}\label{classclases_1_1_parser_a4f51f101787b28f6b69475ccc66873dd}} 
+\index{clases.Parser@{clases.Parser}!setTypes@{setTypes}}
+\index{setTypes@{setTypes}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{setTypes()}{setTypes()}}
+{\footnotesize\ttfamily clases.\+Parser.\+set\+Types (\begin{DoxyParamCaption}\item[{Array\+List$<$ String $>$}]{types }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para establecer los valores que contiene el array que almacena los tipos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em types} & contiene los tipos que quieren incluirse\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+types contiene los tipos de los items 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00155}{155}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_abe03afa12b41b9e4f07e99fc8d2b7af6}\label{classclases_1_1_parser_abe03afa12b41b9e4f07e99fc8d2b7af6}} 
+\index{clases.Parser@{clases.Parser}!transformarAtributo@{transformarAtributo}}
+\index{transformarAtributo@{transformarAtributo}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{transformarAtributo()}{transformarAtributo()}}
+{\footnotesize\ttfamily clases.\+Parser.\+transformar\+Atributo (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) throws Parse\+Exception\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Función utilizada para transformar el \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} en el tipo que realmente sea. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & Índice para el array \char`\"{}types\char`\"{} para obtener el tipo del elemento \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} del tipo que especifiquemos
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondición}
+Entero válido que represente una posición en el array words 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto un atributo del tipo que sea requerido 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00465}{465}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a2904c888fd6fbdd54acafb9c11dd35b0}\label{classclases_1_1_parser_a2904c888fd6fbdd54acafb9c11dd35b0}} 
+\index{clases.Parser@{clases.Parser}!translateItem@{translateItem}}
+\index{translateItem@{translateItem}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{translateItem()}{translateItem()}}
+{\footnotesize\ttfamily clases.\+Parser.\+translate\+Item (\begin{DoxyParamCaption}\item[{int}]{original\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para obtener el identificador original del ítem. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em original\+Id} & id original del ítem \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Identificador del ítem con \char`\"{}id\char`\"{} = original\+Id en el archivo original
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto la traducción del id 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00324}{324}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a44d03043006e391e2156f0d86db95bec}\label{classclases_1_1_parser_a44d03043006e391e2156f0d86db95bec}} 
+\index{clases.Parser@{clases.Parser}!translateUser@{translateUser}}
+\index{translateUser@{translateUser}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{translateUser()}{translateUser()}}
+{\footnotesize\ttfamily clases.\+Parser.\+translate\+User (\begin{DoxyParamCaption}\item[{int}]{original\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para obtener el identificador original del usuario. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em original\+Id} & id original del usuario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Identificador del usuario con user\+Id = original\+Id en el archivo original
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto la traducción del id 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00337}{337}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_ac7fae5c1a9ac8344f63254acf69337d6}\label{classclases_1_1_parser_ac7fae5c1a9ac8344f63254acf69337d6}} 
+\index{clases.Parser@{clases.Parser}!updateContents@{updateContents}}
+\index{updateContents@{updateContents}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{updateContents()}{updateContents()}}
+{\footnotesize\ttfamily clases.\+Parser.\+update\+Contents (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classclases_1_1_item}{Item}}}]{it }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para actualizar las funciones auxiliares al introducir un item. 
+
+\begin{DoxyPrecond}{Precondición}
+\mbox{\hyperlink{classclases_1_1_item}{Item}} válido 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Estructuras actualizadas 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em it} & \mbox{\hyperlink{classclases_1_1_item}{Item}} nuevo \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00349}{349}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_acbdc5f643616b1c7b213e8c2d9d69f93}\label{classclases_1_1_parser_acbdc5f643616b1c7b213e8c2d9d69f93}} 
+\index{clases.Parser@{clases.Parser}!validRegex@{validRegex}}
+\index{validRegex@{validRegex}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{validRegex()}{validRegex()}}
+{\footnotesize\ttfamily clases.\+Parser.\+valid\+Regex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Función auxiliar utilizada para dividir cada línea. Información obtenida de la página web\+: \href{https://www.it-swarm-es.com/es/java/java-dividir-una-cadena-separada-por-comas-pero-ignorar-comas-entre-comillas/969032997/}{\texttt{ https\+://www.\+it-\/swarm-\/es.\+com/es/java/java-\/dividir-\/una-\/cadena-\/separada-\/por-\/comas-\/pero-\/ignorar-\/comas-\/entre-\/comillas/969032997/}}. 
+
+\begin{DoxyReturn}{Devuelve}
+String que usaremos en el split
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto un string 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00300}{300}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}\label{classclases_1_1_parser_a4a0d6a4e055360528c579f2a4655503e}} 
+\index{clases.Parser@{clases.Parser}!auxNormalizeFechas@{auxNormalizeFechas}}
+\index{auxNormalizeFechas@{auxNormalizeFechas}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{auxNormalizeFechas}{auxNormalizeFechas}}
+{\footnotesize\ttfamily clases.\+Parser.\+aux\+Normalize\+Fechas\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Función utilitzada para obtener aux\+Normalize\+Fechas. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha obtenido aux\+Normalize\+Fechas 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+La tabla aux\+Normalize\+Fechas 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00109}{109}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}\label{classclases_1_1_parser_a5e63ceecb53adb1ae7df75d06e63ea6c}} 
+\index{clases.Parser@{clases.Parser}!auxNormalizeNumeros@{auxNormalizeNumeros}}
+\index{auxNormalizeNumeros@{auxNormalizeNumeros}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{auxNormalizeNumeros}{auxNormalizeNumeros}}
+{\footnotesize\ttfamily clases.\+Parser.\+aux\+Normalize\+Numeros\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Función utilitzada para obtener aux\+Normalize\+Numeros. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha obtenido aux\+Normalize\+Numeros 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+La tabla aux\+Normalize\+Numeros 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00102}{102}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a6c6840ab1e59649e52159d9513900d28}\label{classclases_1_1_parser_a6c6840ab1e59649e52159d9513900d28}} 
+\index{clases.Parser@{clases.Parser}!bitIndex@{bitIndex}}
+\index{bitIndex@{bitIndex}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{bitIndex}{bitIndex}}
+{\footnotesize\ttfamily int clases.\+Parser.\+bit\+Index = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00077}{77}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a5dcbba6a59c40cf4a8b756f98fc7b039}\label{classclases_1_1_parser_a5dcbba6a59c40cf4a8b756f98fc7b039}} 
+\index{clases.Parser@{clases.Parser}!bitsTable@{bitsTable}}
+\index{bitsTable@{bitsTable}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{bitsTable}{bitsTable}}
+{\footnotesize\ttfamily Map$<$ String, Integer $>$ clases.\+Parser.\+bits\+Table = new Hash\+Map$<$$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Diccionario utilizado para traducir un género a una posición del bitset del atributo. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00064}{64}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}\label{classclases_1_1_parser_a8492bc524632c3abf454d3b092b1f63f}} 
+\index{clases.Parser@{clases.Parser}!headersItems@{headersItems}}
+\index{headersItems@{headersItems}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{headersItems}{headersItems}}
+{\footnotesize\ttfamily String \mbox{[}$\,$\mbox{]} clases.\+Parser.\+headers\+Items\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00089}{89}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_ac7ef9a07b1251f2e939f90a9b6c88635}\label{classclases_1_1_parser_ac7ef9a07b1251f2e939f90a9b6c88635}} 
+\index{clases.Parser@{clases.Parser}!IDF@{IDF}}
+\index{IDF@{IDF}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{IDF}{IDF}}
+{\footnotesize\ttfamily Map$<$String, Map$<$String, Integer$>$ $>$ clases.\+Parser.\+IDF = new Hash\+Map$<$$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00071}{71}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_ab6b92a0be033043e66f9ba604a795b38}\label{classclases_1_1_parser_ab6b92a0be033043e66f9ba604a795b38}} 
+\index{clases.Parser@{clases.Parser}!items@{items}}
+\index{items@{items}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{items}{items}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classclases_1_1_items}{Items}} clases.\+Parser.\+items = new \mbox{\hyperlink{classclases_1_1_items}{Items}}()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Variable utilizada para almacenar los items. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00046}{46}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a848c66c3bd34a2c5f3b19137f8b63bb3}\label{classclases_1_1_parser_a848c66c3bd34a2c5f3b19137f8b63bb3}} 
+\index{clases.Parser@{clases.Parser}!itemsTable@{itemsTable}}
+\index{itemsTable@{itemsTable}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{itemsTable}{itemsTable}}
+{\footnotesize\ttfamily Map$<$ Integer, Integer $>$ clases.\+Parser.\+items\+Table = new Hash\+Map$<$$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Diccionario utilizado para traducir los ids de los ítems. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00052}{52}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a1ee668ced91fc2e3a3b3184a642ff9b0}\label{classclases_1_1_parser_a1ee668ced91fc2e3a3b3184a642ff9b0}} 
+\index{clases.Parser@{clases.Parser}!maxScore@{maxScore}}
+\index{maxScore@{maxScore}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{maxScore}{maxScore}}
+{\footnotesize\ttfamily double clases.\+Parser.\+max\+Score = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Variable utilizada para almacenar el máximo de los valores de las valoraciones. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00115}{115}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_aed4bf8bf8ab94534b423ce588977c849}\label{classclases_1_1_parser_aed4bf8bf8ab94534b423ce588977c849}} 
+\index{clases.Parser@{clases.Parser}!minScore@{minScore}}
+\index{minScore@{minScore}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{minScore}{minScore}}
+{\footnotesize\ttfamily double clases.\+Parser.\+min\+Score = Double.\+MAX\+\_\+\+VALUE\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Variable utilizada para almacenar el mínimo de los valores de las valoraciones. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00121}{121}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a1076c7d435a868cc293d8e90a640f56c}\label{classclases_1_1_parser_a1076c7d435a868cc293d8e90a640f56c}} 
+\index{clases.Parser@{clases.Parser}!types@{types}}
+\index{types@{types}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{types}{types}}
+{\footnotesize\ttfamily String \mbox{[}$\,$\mbox{]} clases.\+Parser.\+types\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00083}{83}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_aafbddfc002eaf4b9b23c8d585ea35352}\label{classclases_1_1_parser_aafbddfc002eaf4b9b23c8d585ea35352}} 
+\index{clases.Parser@{clases.Parser}!usersTable@{usersTable}}
+\index{usersTable@{usersTable}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{usersTable}{usersTable}}
+{\footnotesize\ttfamily Map$<$ Integer, Integer $>$ clases.\+Parser.\+users\+Table = new Hash\+Map$<$$>$()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Diccionario utilizado para traducir los ids de los usuarios. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00058}{58}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}\label{classclases_1_1_parser_a394c9a463eb7d15b4e57d4f7a88f8246}} 
+\index{clases.Parser@{clases.Parser}!words@{words}}
+\index{words@{words}!clases.Parser@{clases.Parser}}
+\doxysubsubsection{\texorpdfstring{words}{words}}
+{\footnotesize\ttfamily String \mbox{[}$\,$\mbox{]} clases.\+Parser.\+words\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_parser_8java_source_l00095}{95}} del archivo \mbox{\hyperlink{_parser_8java_source}{Parser.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_parser_8java}{Parser.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,369 @@
+\hypertarget{class_ctrl_presentacion}{}\doxysection{Referencia de la Clase Ctrl\+Presentacion}
+\label{class_ctrl_presentacion}\index{CtrlPresentacion@{CtrlPresentacion}}
+
+
+La clase del controlador de presentacion interactua entre la presentacion y el controlador de dominio.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ctrl_presentacion_a05d508b5f7b43ac6387aaf6bf6246151}{Ctrl\+Presentacion}} ()
+\begin{DoxyCompactList}\small\item\em constructora por defecto, inicializa todas las variables globales \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ctrl_presentacion_acabfe6d7cda5b7a0ab7d37e459583460}{enter\+New\+User}} (String file\+Type, int user\+ID, boolean eval)
+\begin{DoxyCompactList}\small\item\em entra un usuario nuevo a la aplicacion de unos ficheros selecionados \end{DoxyCompactList}\item 
+Map$<$ Integer, Double $>$ \mbox{\hyperlink{class_ctrl_presentacion_a7961755f39334811d39c124107ee9e70}{get\+Valoraciones\+De\+Usuario}} ()
+\begin{DoxyCompactList}\small\item\em coger el mapa de valoraciones del usuario \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ctrl_presentacion_a444681cca5289ecb37ff910a0be729ce}{create\+New\+Valoracion}} (int item\+ID, Double valoracion)
+\begin{DoxyCompactList}\small\item\em añadir una valoración para el usuario activo en la sesión activa \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ctrl_presentacion_a7d031a0c4568c83e440497cf80a841f2}{quitar\+Valoracion}} (int item\+ID)
+\begin{DoxyCompactList}\small\item\em quitar una valoración del conjunto de valoraciones del usuario \end{DoxyCompactList}\item 
+Vector \mbox{\hyperlink{class_ctrl_presentacion_a907209d7a1c0dd476e9d6b4a7e926cb6}{get\+All\+Item\+Atrbutes}} ()
+\begin{DoxyCompactList}\small\item\em coger atributos de todos los items \end{DoxyCompactList}\item 
+Vector \mbox{\hyperlink{class_ctrl_presentacion_a935e0275f754ef7a5133839c0fc6c1fe}{get\+Predicciones}} (String type)
+\begin{DoxyCompactList}\small\item\em coger predicciones de los algoritmos de recomendación \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_ctrl_presentacion_adb48ace1acde1b67c2d45cf364aa1f81}{start\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em abrir el frame para que lo pueda ver el usuario \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_ctrl_presentacion_a6af4c358a17380e252f465fd6e677aff}{ini\+Presentacion}} ()
+\begin{DoxyCompactList}\small\item\em inicializar la presentacion para el usuario \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_ctrl_presentacion_ae2584373758f380327039bba5374e50f}{change\+Frame}} (String view)
+\begin{DoxyCompactList}\small\item\em cambiar el panel que mostramos al usuario \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio}{Ctrl\+Dominio}} \mbox{\hyperlink{class_ctrl_presentacion_ab1c232a22f156a32c356e02a3d2ea93b}{ctrl\+Dominio}}
+\begin{DoxyCompactList}\small\item\em instancia del controlador de dominio \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classvista_principal}{vista\+Principal}} \mbox{\hyperlink{class_ctrl_presentacion_a00d7e29af185edd8eeb3e89c4a88cc77}{vista\+Principal}}
+\begin{DoxyCompactList}\small\item\em instancia de la vista principal usada para lanzar errores \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_ctrl_presentacion}{Ctrl\+Presentacion}} \mbox{\hyperlink{class_ctrl_presentacion_a59f58af43b7607976ad315ecf1cf75c7}{cp}} = new \mbox{\hyperlink{class_ctrl_presentacion}{Ctrl\+Presentacion}} ()
+\begin{DoxyCompactList}\small\item\em instancia de la clase, usada para mantener la clase estatica \end{DoxyCompactList}\item 
+static JFrame \mbox{\hyperlink{class_ctrl_presentacion_a74c9057b91b21143817f53b882592bd7}{frame}}
+\begin{DoxyCompactList}\small\item\em frame en el cual vamos a poner todas las vistas y controlar estas \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+La clase del controlador de presentacion interactua entre la presentacion y el controlador de dominio. 
+
+\begin{DoxyAuthor}{Autor}
+Carla Campàs Gené
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+December 2021 
+\end{DoxyDate}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_presentacion_8java_source_l00018}{18}} del archivo \mbox{\hyperlink{_ctrl_presentacion_8java_source}{Ctrl\+Presentacion.\+java}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_ctrl_presentacion_a05d508b5f7b43ac6387aaf6bf6246151}\label{class_ctrl_presentacion_a05d508b5f7b43ac6387aaf6bf6246151}} 
+\index{CtrlPresentacion@{CtrlPresentacion}!CtrlPresentacion@{CtrlPresentacion}}
+\index{CtrlPresentacion@{CtrlPresentacion}!CtrlPresentacion@{CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{CtrlPresentacion()}{CtrlPresentacion()}}
+{\footnotesize\ttfamily Ctrl\+Presentacion.\+Ctrl\+Presentacion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+constructora por defecto, inicializa todas las variables globales 
+
+\begin{DoxyPrecond}{Precondición}
+no hay instancia de la clase 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha creado una instancia de la clase con las variables globales inicializadas 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_presentacion_8java_source_l00042}{42}} del archivo \mbox{\hyperlink{_ctrl_presentacion_8java_source}{Ctrl\+Presentacion.\+java}}.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_ctrl_presentacion_ae2584373758f380327039bba5374e50f}\label{class_ctrl_presentacion_ae2584373758f380327039bba5374e50f}} 
+\index{CtrlPresentacion@{CtrlPresentacion}!changeFrame@{changeFrame}}
+\index{changeFrame@{changeFrame}!CtrlPresentacion@{CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{changeFrame()}{changeFrame()}}
+{\footnotesize\ttfamily Ctrl\+Presentacion.\+change\+Frame (\begin{DoxyParamCaption}\item[{String}]{view }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+cambiar el panel que mostramos al usuario 
+
+\begin{DoxyPrecond}{Precondición}
+el usuario está interactuando con la aplicación y desea cambiar de vista 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se enseña la nueva vista que desea ver el usuario 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em view} & a que vista quiere cambiar \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_presentacion_8java_source_l00079}{79}} del archivo \mbox{\hyperlink{_ctrl_presentacion_8java_source}{Ctrl\+Presentacion.\+java}}.
+
+\mbox{\Hypertarget{class_ctrl_presentacion_a444681cca5289ecb37ff910a0be729ce}\label{class_ctrl_presentacion_a444681cca5289ecb37ff910a0be729ce}} 
+\index{CtrlPresentacion@{CtrlPresentacion}!createNewValoracion@{createNewValoracion}}
+\index{createNewValoracion@{createNewValoracion}!CtrlPresentacion@{CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{createNewValoracion()}{createNewValoracion()}}
+{\footnotesize\ttfamily Ctrl\+Presentacion.\+create\+New\+Valoracion (\begin{DoxyParamCaption}\item[{int}]{item\+ID,  }\item[{Double}]{valoracion }\end{DoxyParamCaption})}
+
+
+
+añadir una valoración para el usuario activo en la sesión activa 
+
+\begin{DoxyPrecond}{Precondición}
+existe un objeto de la clase, con el usuario inicializado correctamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha añadido la valoracion al mapa de valoraicones del usuario 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em item\+ID} & id del item que el usuario desea valorar \\
+\hline
+{\em valoracion} & valoración asociada a este item \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_presentacion_8java_source_l00133}{133}} del archivo \mbox{\hyperlink{_ctrl_presentacion_8java_source}{Ctrl\+Presentacion.\+java}}.
+
+\mbox{\Hypertarget{class_ctrl_presentacion_acabfe6d7cda5b7a0ab7d37e459583460}\label{class_ctrl_presentacion_acabfe6d7cda5b7a0ab7d37e459583460}} 
+\index{CtrlPresentacion@{CtrlPresentacion}!enterNewUser@{enterNewUser}}
+\index{enterNewUser@{enterNewUser}!CtrlPresentacion@{CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{enterNewUser()}{enterNewUser()}}
+{\footnotesize\ttfamily Ctrl\+Presentacion.\+enter\+New\+User (\begin{DoxyParamCaption}\item[{String}]{file\+Type,  }\item[{int}]{user\+ID,  }\item[{boolean}]{eval }\end{DoxyParamCaption})}
+
+
+
+entra un usuario nuevo a la aplicacion de unos ficheros selecionados 
+
+\begin{DoxyPrecond}{Precondición}
+existe un objeto de la clase \mbox{\hyperlink{class_ctrl_presentacion}{Ctrl\+Presentacion}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha entrado el nuevo usuario y cargado sus datos, o lanzado un error 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em file\+Type} & path de los ficheros a los que queremos aceder \\
+\hline
+{\em user\+ID} & usuario que interactuara con la aplicación \\
+\hline
+{\em eval} & si el usuario quiere una evaluacion de las predicciones que haga el sistema \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_presentacion_8java_source_l00107}{107}} del archivo \mbox{\hyperlink{_ctrl_presentacion_8java_source}{Ctrl\+Presentacion.\+java}}.
+
+\mbox{\Hypertarget{class_ctrl_presentacion_a907209d7a1c0dd476e9d6b4a7e926cb6}\label{class_ctrl_presentacion_a907209d7a1c0dd476e9d6b4a7e926cb6}} 
+\index{CtrlPresentacion@{CtrlPresentacion}!getAllItemAtrbutes@{getAllItemAtrbutes}}
+\index{getAllItemAtrbutes@{getAllItemAtrbutes}!CtrlPresentacion@{CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{getAllItemAtrbutes()}{getAllItemAtrbutes()}}
+{\footnotesize\ttfamily Ctrl\+Presentacion.\+get\+All\+Item\+Atrbutes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+coger atributos de todos los items 
+
+\begin{DoxyPrecond}{Precondición}
+existe un objeto de la clase 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+vector con los atributos de los items de las cabeceras que queremos 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_presentacion_8java_source_l00153}{153}} del archivo \mbox{\hyperlink{_ctrl_presentacion_8java_source}{Ctrl\+Presentacion.\+java}}.
+
+\mbox{\Hypertarget{class_ctrl_presentacion_a935e0275f754ef7a5133839c0fc6c1fe}\label{class_ctrl_presentacion_a935e0275f754ef7a5133839c0fc6c1fe}} 
+\index{CtrlPresentacion@{CtrlPresentacion}!getPredicciones@{getPredicciones}}
+\index{getPredicciones@{getPredicciones}!CtrlPresentacion@{CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{getPredicciones()}{getPredicciones()}}
+{\footnotesize\ttfamily Ctrl\+Presentacion.\+get\+Predicciones (\begin{DoxyParamCaption}\item[{String}]{type }\end{DoxyParamCaption})}
+
+
+
+coger predicciones de los algoritmos de recomendación 
+
+\begin{DoxyPrecond}{Precondición}
+existe un objeto de la clase, con el usuario inicializado correctamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha ejecutado la recomendación que quiere el usuario y se ha devuelto la predicción 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+las recomendaciones para el usuario 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parámetros}
+{\em type} & tipo de algoritmo de recomendación que queremos ejecutar \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_presentacion_8java_source_l00164}{164}} del archivo \mbox{\hyperlink{_ctrl_presentacion_8java_source}{Ctrl\+Presentacion.\+java}}.
+
+\mbox{\Hypertarget{class_ctrl_presentacion_a7961755f39334811d39c124107ee9e70}\label{class_ctrl_presentacion_a7961755f39334811d39c124107ee9e70}} 
+\index{CtrlPresentacion@{CtrlPresentacion}!getValoracionesDeUsuario@{getValoracionesDeUsuario}}
+\index{getValoracionesDeUsuario@{getValoracionesDeUsuario}!CtrlPresentacion@{CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{getValoracionesDeUsuario()}{getValoracionesDeUsuario()}}
+{\footnotesize\ttfamily Ctrl\+Presentacion.\+get\+Valoraciones\+De\+Usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+coger el mapa de valoraciones del usuario 
+
+\begin{DoxyPrecond}{Precondición}
+existe un objeto de la clase, con el usuario inicializado correctamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha devuelto las valoraciones que pertenecen a este usuario 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+se devuelven las valoraciones que pertenecen a este usuario 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_presentacion_8java_source_l00122}{122}} del archivo \mbox{\hyperlink{_ctrl_presentacion_8java_source}{Ctrl\+Presentacion.\+java}}.
+
+\mbox{\Hypertarget{class_ctrl_presentacion_a6af4c358a17380e252f465fd6e677aff}\label{class_ctrl_presentacion_a6af4c358a17380e252f465fd6e677aff}} 
+\index{CtrlPresentacion@{CtrlPresentacion}!iniPresentacion@{iniPresentacion}}
+\index{iniPresentacion@{iniPresentacion}!CtrlPresentacion@{CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{iniPresentacion()}{iniPresentacion()}}
+{\footnotesize\ttfamily Ctrl\+Presentacion.\+ini\+Presentacion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+inicializar la presentacion para el usuario 
+
+\begin{DoxyPrecond}{Precondición}
+Existe una instancia de la clase Ctrl\+Persistencia con las variables globales incializadas 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se muestra la vista principal al usuario 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_presentacion_8java_source_l00068}{68}} del archivo \mbox{\hyperlink{_ctrl_presentacion_8java_source}{Ctrl\+Presentacion.\+java}}.
+
+\mbox{\Hypertarget{class_ctrl_presentacion_a7d031a0c4568c83e440497cf80a841f2}\label{class_ctrl_presentacion_a7d031a0c4568c83e440497cf80a841f2}} 
+\index{CtrlPresentacion@{CtrlPresentacion}!quitarValoracion@{quitarValoracion}}
+\index{quitarValoracion@{quitarValoracion}!CtrlPresentacion@{CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{quitarValoracion()}{quitarValoracion()}}
+{\footnotesize\ttfamily Ctrl\+Presentacion.\+quitar\+Valoracion (\begin{DoxyParamCaption}\item[{int}]{item\+ID }\end{DoxyParamCaption})}
+
+
+
+quitar una valoración del conjunto de valoraciones del usuario 
+
+\begin{DoxyPrecond}{Precondición}
+existe un objeto de la clase, con el usuario inicializado correctamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha quitado la valoración del mapa de valoraciones del usuario 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em item\+ID} & id del item del cual queremos quitar la valoración \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_presentacion_8java_source_l00143}{143}} del archivo \mbox{\hyperlink{_ctrl_presentacion_8java_source}{Ctrl\+Presentacion.\+java}}.
+
+\mbox{\Hypertarget{class_ctrl_presentacion_adb48ace1acde1b67c2d45cf364aa1f81}\label{class_ctrl_presentacion_adb48ace1acde1b67c2d45cf364aa1f81}} 
+\index{CtrlPresentacion@{CtrlPresentacion}!startFrame@{startFrame}}
+\index{startFrame@{startFrame}!CtrlPresentacion@{CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{startFrame()}{startFrame()}}
+{\footnotesize\ttfamily Ctrl\+Presentacion.\+start\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+abrir el frame para que lo pueda ver el usuario 
+
+\begin{DoxyPrecond}{Precondición}
+el frame se ha inicializado con una de las vistas que puede tener el usuario 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha inicializado el frame con el panel asociaddo 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_presentacion_8java_source_l00053}{53}} del archivo \mbox{\hyperlink{_ctrl_presentacion_8java_source}{Ctrl\+Presentacion.\+java}}.
+
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_ctrl_presentacion_a59f58af43b7607976ad315ecf1cf75c7}\label{class_ctrl_presentacion_a59f58af43b7607976ad315ecf1cf75c7}} 
+\index{CtrlPresentacion@{CtrlPresentacion}!cp@{cp}}
+\index{cp@{cp}!CtrlPresentacion@{CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{cp}{cp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ctrl_presentacion}{Ctrl\+Presentacion}} Ctrl\+Presentacion.\+cp = new \mbox{\hyperlink{class_ctrl_presentacion}{Ctrl\+Presentacion}} ()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+instancia de la clase, usada para mantener la clase estatica 
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_presentacion_8java_source_l00030}{30}} del archivo \mbox{\hyperlink{_ctrl_presentacion_8java_source}{Ctrl\+Presentacion.\+java}}.
+
+\mbox{\Hypertarget{class_ctrl_presentacion_ab1c232a22f156a32c356e02a3d2ea93b}\label{class_ctrl_presentacion_ab1c232a22f156a32c356e02a3d2ea93b}} 
+\index{CtrlPresentacion@{CtrlPresentacion}!ctrlDominio@{ctrlDominio}}
+\index{ctrlDominio@{ctrlDominio}!CtrlPresentacion@{CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{ctrlDominio}{ctrlDominio}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio}{Ctrl\+Dominio}} Ctrl\+Presentacion.\+ctrl\+Dominio\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+instancia del controlador de dominio 
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_presentacion_8java_source_l00022}{22}} del archivo \mbox{\hyperlink{_ctrl_presentacion_8java_source}{Ctrl\+Presentacion.\+java}}.
+
+\mbox{\Hypertarget{class_ctrl_presentacion_a74c9057b91b21143817f53b882592bd7}\label{class_ctrl_presentacion_a74c9057b91b21143817f53b882592bd7}} 
+\index{CtrlPresentacion@{CtrlPresentacion}!frame@{frame}}
+\index{frame@{frame}!CtrlPresentacion@{CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{frame}{frame}}
+{\footnotesize\ttfamily JFrame Ctrl\+Presentacion.\+frame\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+frame en el cual vamos a poner todas las vistas y controlar estas 
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_presentacion_8java_source_l00035}{35}} del archivo \mbox{\hyperlink{_ctrl_presentacion_8java_source}{Ctrl\+Presentacion.\+java}}.
+
+\mbox{\Hypertarget{class_ctrl_presentacion_a00d7e29af185edd8eeb3e89c4a88cc77}\label{class_ctrl_presentacion_a00d7e29af185edd8eeb3e89c4a88cc77}} 
+\index{CtrlPresentacion@{CtrlPresentacion}!vistaPrincipal@{vistaPrincipal}}
+\index{vistaPrincipal@{vistaPrincipal}!CtrlPresentacion@{CtrlPresentacion}}
+\doxysubsubsection{\texorpdfstring{vistaPrincipal}{vistaPrincipal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classvista_principal}{vista\+Principal}} Ctrl\+Presentacion.\+vista\+Principal\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+instancia de la vista principal usada para lanzar errores 
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_presentacion_8java_source_l00026}{26}} del archivo \mbox{\hyperlink{_ctrl_presentacion_8java_source}{Ctrl\+Presentacion.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_ctrl_presentacion_8java}{Ctrl\+Presentacion.\+java}}\end{DoxyCompactItemize}

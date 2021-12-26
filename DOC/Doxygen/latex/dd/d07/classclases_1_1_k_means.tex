@@ -1,0 +1,868 @@
+\hypertarget{classclases_1_1_k_means}{}\doxysection{Referencia de la Clase clases.\+KMeans}
+\label{classclases_1_1_k_means}\index{controladores.KMeans@{controladores.KMeans}}
+
+
+Implementación del algoritmo \mbox{\hyperlink{classclases_1_1_k_means}{KMeans}}, usando collaborative filtering.  
+
+
+Diagrama de herencias de clases.\+KMeans\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{dd/d07/classclases_1_1_k_means}
+\end{center}
+\end{figure}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classclases_1_1_k_means_a65c9d44f5f22a9e6485c0e509ea7221c}{KMeans}} ()
+\begin{DoxyCompactList}\small\item\em Constructora por defecto de la clase \mbox{\hyperlink{classclases_1_1_k_means}{KMeans}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclases_1_1_k_means_a5eb70078c03dacda1078c94318e23030}{KMeans}} (\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classclases_1_1_algoritmos_a2f7975f0a4de8f6f542d93614f231269}{us}}, \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classclases_1_1_algoritmos_a9308966fa7668a0eae76215d7d9b29d4}{u}}, \mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{classclases_1_1_algoritmos_a0f9329b2de1639b893c494d91ff612e6}{it}})
+\item 
+double \mbox{\hyperlink{classclases_1_1_k_means_a98afad31acf4f2b33961cc59d73518f6}{get\+Max\+Sc}} ()
+\begin{DoxyCompactList}\small\item\em getter de la variable maxsc \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classclases_1_1_k_means_a9efa67f4a344b8fcc752c5787697e8e9}{get\+Min\+Sc}} ()
+\begin{DoxyCompactList}\small\item\em getter de la variable minsc \end{DoxyCompactList}\item 
+Array\+List$<$ \mbox{\hyperlink{classclases_1_1_centroide}{Centroide}} $>$ \mbox{\hyperlink{classclases_1_1_k_means_a230f174329e48b561a0917dd78b0b3ed}{get\+Centroides}} ()
+\begin{DoxyCompactList}\small\item\em getter de la Array\+List de los k centroides creados \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classclases_1_1_k_means_a39daa2f08ece400fff0d100e42f1b36e}{getK}} ()
+\begin{DoxyCompactList}\small\item\em getter del valor k usado para el algoritmo \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classclases_1_1_k_means_ad152bf396c15a1f4ab469944a16fafcf}{get\+Cota}} ()
+\begin{DoxyCompactList}\small\item\em getter de la cota usada para el algoritmo \end{DoxyCompactList}\item 
+Map$<$ Integer, Array\+List$<$ \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} $>$ $>$ \mbox{\hyperlink{classclases_1_1_k_means_ad2cf4dd048136360a45a61bc6e6793b3}{get\+Cluster\+Map}} ()
+\begin{DoxyCompactList}\small\item\em getter del map cluster\+Map donde se almacenan los clusters \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classclases_1_1_k_means_a2945dbf275d1768b482833e45576c940}{get\+Users\+Cluster}} ()
+\begin{DoxyCompactList}\small\item\em Encuentra a qué cluster pertenece un nuevo usuario u, para el cual estamos tratando de encontrar los usuarios más parecidos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_k_means_a620407485b5fe5d4d3d4fb8c71dc7916}{set\+Centroides}} (Array\+List$<$ \mbox{\hyperlink{classclases_1_1_centroide}{Centroide}} $>$ \mbox{\hyperlink{classclases_1_1_k_means_a611bf4b148956eb20efbf59a532937bd}{centroides}})
+\begin{DoxyCompactList}\small\item\em setter del atributo centroides \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_k_means_a4a8f76ae9aaf6f80a57e025e37dc9b9a}{set\+Cluster\+Map}} (Map$<$ Integer, Array\+List$<$ \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} $>$ $>$ \mbox{\hyperlink{classclases_1_1_k_means_a953b261eadfbca87f441d559530dac76}{cluster\+Map}})
+\begin{DoxyCompactList}\small\item\em setter del atributo cluster\+Map \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_k_means_a8898d22a207b62d35adb0b66e66d6d4a}{set\+Cota}} (int \mbox{\hyperlink{classclases_1_1_k_means_a7a2a73dce8c49e7aa1b15e6c32afbd93}{cota}})
+\begin{DoxyCompactList}\small\item\em setter del atributo cota que determina el número total de iteraciones \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_k_means_a3a2cd5371b8f3e0731a2c93485537bbd}{setK}} (int \mbox{\hyperlink{classclases_1_1_k_means_a0dd01949f0a8571fe502f726c5df8148}{k}})
+\begin{DoxyCompactList}\small\item\em setter del atributo k, que determina el número de clusters \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_k_means_ac411e28aa85a15e36373112dd345af9a}{set\+Defaults}} ()
+\begin{DoxyCompactList}\small\item\em devuelve a su estado inicial todos los atributos de la clase \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_algoritmos_a51e3d4de4b144bec50d7ea70fff8962d}{calcular\+Recomendaciones}} ()
+\begin{DoxyCompactList}\small\item\em para inicializar todo lo que debe calcular para sus recomendaciones \end{DoxyCompactList}\item 
+Map$<$ Integer, Double $>$ \mbox{\hyperlink{classclases_1_1_algoritmos_ae23f28e26b154aca8bca6876722885c9}{get\+Predicciones}} ()
+\begin{DoxyCompactList}\small\item\em coger el mapa de predicciones generado por la llama a los algoritmos \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classclases_1_1_algoritmos_a2f7975f0a4de8f6f542d93614f231269}{us}}
+\begin{DoxyCompactList}\small\item\em Conjunto de usuarios que vamos a usar para inicializar nuestro algoritmo de collaborative filtering. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classclases_1_1_algoritmos_a9308966fa7668a0eae76215d7d9b29d4}{u}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} desde el cual vamos a hacer las predicciones de los items. \end{DoxyCompactList}\item 
+Map$<$ Integer, Double $>$ \mbox{\hyperlink{classclases_1_1_algoritmos_a958cfc144223019d3fea366384303554}{predictions}}
+\begin{DoxyCompactList}\small\item\em Mapa de predicciones de los algoritmos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{classclases_1_1_algoritmos_a0f9329b2de1639b893c494d91ff612e6}{it}}
+\begin{DoxyCompactList}\small\item\em Conjunto de items que se usaran para las valoraciones. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Estáticos del \textquotesingle{}package\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+static final double \mbox{\hyperlink{classclases_1_1_k_means_a783947356c17eb70c901b39589369a30}{maxsc}} = \mbox{\hyperlink{classclases_1_1_parser_a7011757774a5ed28dc07d774d24c41cb}{Parser.\+get\+Max\+Score}}()
+\begin{DoxyCompactList}\small\item\em Valor máximo permitido para cada valoración. \end{DoxyCompactList}\item 
+static final double \mbox{\hyperlink{classclases_1_1_k_means_a8dad33d8397f319a8b486b49c5ae7ddc}{minsc}} = \mbox{\hyperlink{classclases_1_1_parser_a670730b2743b36f57b64dd2a69a6297c}{Parser.\+get\+Min\+Score}}()
+\begin{DoxyCompactList}\small\item\em Valor mínimo permitido para cada valoración. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classclases_1_1_k_means_aaf0c414502ccc7dfa22284b01fbae271}{cluster\+Formation}} ()
+\begin{DoxyCompactList}\small\item\em Función principal del algoritmo k\+Means. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classclases_1_1_k_means_aab7f04d37b5f492c8dcc1ebdedd2cb58}{compute\+Euclidean\+Distance}} (Map$<$ Integer, Double $>$ vals, Integer centroid)
+\begin{DoxyCompactList}\small\item\em Calcula la distancia euclídea entre un centroide y un usuario, a partir del conjunto de valoraciones que cada uno de estos ha dado a los distintos items. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_k_means_acba452ea62d07a6639a22c1f1a07a760}{random\+Centroids}} ()
+\begin{DoxyCompactList}\small\item\em @pfn random\+Centroids \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_k_means_aabf890748085b64e786ccf5dfc51be87}{furthest\+Centroids}} ()
+\begin{DoxyCompactList}\small\item\em elimina los clusters más parecidos entre ellos, dejando sólo los k más alejados \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classclases_1_1_k_means_a94d7af5d8a41110440cb440bbef41cb7}{nearest\+Centroid}} (Map$<$ Integer, Double $>$ \mbox{\hyperlink{classclases_1_1_algoritmos_a9308966fa7668a0eae76215d7d9b29d4}{u}})
+\begin{DoxyCompactList}\small\item\em Determina cuál es el centroide más cercano a un usuario, calculando su distancia euclidea a cada centroide en centroides. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_k_means_a57d6d3620366f9f370167ccd74d17af6}{add\+To\+Cluster}} (\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} f, Integer c)
+\begin{DoxyCompactList}\small\item\em Añade el usuario f al cluster perteneciente al centroide c. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_k_means_ac079e51f61bd1e86b98c81fb7cbf2567}{centroid\+Relocation}} (Integer id, Map$<$ Integer, Double $>$ c, Array\+List$<$ \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} $>$ cluster)
+\begin{DoxyCompactList}\small\item\em Recalcula las valoraciones de cada item para el centroide c, de manera que éste quede ahora en el centro de su cluster. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classclases_1_1_k_means_a1ebaee04411a9e9ce357bce8febc6554}{should\+Terminate}} (Map$<$ Integer, Array\+List$<$ \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} $>$ $>$ b)
+\begin{DoxyCompactList}\small\item\em Determina si el algoritmo de k\+Means debería o no terminar antes de tiempo. \end{DoxyCompactList}\item 
+Double \mbox{\hyperlink{classclases_1_1_k_means_a8d1350fc9a4dd1b0bca22bae8de8447d}{compute\+Average\+WSS}} ()
+\begin{DoxyCompactList}\small\item\em Calcula el wss para todos los clusters de cluster\+Map y devuelve la media de estos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classclases_1_1_k_means_a0dd01949f0a8571fe502f726c5df8148}{k}} = 10
+\begin{DoxyCompactList}\small\item\em @val int k \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classclases_1_1_k_means_a7a2a73dce8c49e7aa1b15e6c32afbd93}{cota}} = 30
+\begin{DoxyCompactList}\small\item\em @val int cota \end{DoxyCompactList}\item 
+final Random \mbox{\hyperlink{classclases_1_1_k_means_ae325bb57bd25ec168cda8baa26fdb451}{random}} = new Random()
+\begin{DoxyCompactList}\small\item\em Objeto random para la creación de valoraciones aleatorias de items para cada centroides. \end{DoxyCompactList}\item 
+Map$<$ Integer, Array\+List$<$ \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} $>$ $>$ \mbox{\hyperlink{classclases_1_1_k_means_a953b261eadfbca87f441d559530dac76}{cluster\+Map}} = new Hash\+Map$<$$>$(\mbox{\hyperlink{classclases_1_1_k_means_a0dd01949f0a8571fe502f726c5df8148}{k}})
+\item 
+Array\+List$<$ \mbox{\hyperlink{classclases_1_1_centroide}{Centroide}} $>$ \mbox{\hyperlink{classclases_1_1_k_means_a611bf4b148956eb20efbf59a532937bd}{centroides}} = new Array\+List$<$$>$()
+\begin{DoxyCompactList}\small\item\em Array\+List donde almacenamos los k centroides creados en el algoritmo @format Array\+List$<$\+Centroide$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Implementación del algoritmo \mbox{\hyperlink{classclases_1_1_k_means}{KMeans}}, usando collaborative filtering. 
+
+Extiende la clase Algotimos.
+
+El algoritmo \mbox{\hyperlink{classclases_1_1_k_means}{KMeans}} recibe un conjunto de usuarios, y los clusteriza, en función de como de similares sean estos usuarios. Consideramos similares dos usuarios que han valorado de manera parecida una serie de items. Nos ayudamos de k centroides que hacen las funciones de un \char`\"{}usuario imaginario\char`\"{} que ha valorado todos los items. Por lo que compara cada usuario a los centroides, y los agrupa dependiendo de cuál sea el más cercano.
+
+\begin{DoxyAuthor}{Autor}
+Beatriz Gomes da Costa
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+December 2021 
+\end{DoxyDate}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00019}{19}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classclases_1_1_k_means_a65c9d44f5f22a9e6485c0e509ea7221c}\label{classclases_1_1_k_means_a65c9d44f5f22a9e6485c0e509ea7221c}} 
+\index{controladores.KMeans@{controladores.KMeans}!KMeans@{KMeans}}
+\index{KMeans@{KMeans}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{KMeans()}{KMeans()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily clases.\+KMeans.\+KMeans (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructora por defecto de la clase \mbox{\hyperlink{classclases_1_1_k_means}{KMeans}}. 
+
+\begin{DoxyPrecond}{Precondición}
+no hay objeto \mbox{\hyperlink{classclases_1_1_k_means}{KMeans}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha creado un objeto \mbox{\hyperlink{classclases_1_1_k_means}{KMeans}} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00071}{71}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_a5eb70078c03dacda1078c94318e23030}\label{classclases_1_1_k_means_a5eb70078c03dacda1078c94318e23030}} 
+\index{controladores.KMeans@{controladores.KMeans}!KMeans@{KMeans}}
+\index{KMeans@{KMeans}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{KMeans()}{KMeans()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily clases.\+KMeans.\+KMeans (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}}}]{us,  }\item[{\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}}]{u,  }\item[{\mbox{\hyperlink{classclases_1_1_items}{Items}}}]{it }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00073}{73}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classclases_1_1_k_means_a57d6d3620366f9f370167ccd74d17af6}\label{classclases_1_1_k_means_a57d6d3620366f9f370167ccd74d17af6}} 
+\index{controladores.KMeans@{controladores.KMeans}!addToCluster@{addToCluster}}
+\index{addToCluster@{addToCluster}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{addToCluster()}{addToCluster()}}
+{\footnotesize\ttfamily clases.\+KMeans.\+add\+To\+Cluster (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}}]{f,  }\item[{Integer}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Añade el usuario f al cluster perteneciente al centroide c. 
+
+\begin{DoxyPrecond}{Precondición}
+f no pertenece a ningún cluster 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+el usuario f forma parte ahora del cluster c 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em f} & usuario que deseamos añadir a un cluster \\
+\hline
+{\em c} & \mbox{\hyperlink{classclases_1_1_centroide}{Centroide}} que del cluster al que queremos añadir al usuario f. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00348}{348}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_algoritmos_a51e3d4de4b144bec50d7ea70fff8962d}\label{classclases_1_1_algoritmos_a51e3d4de4b144bec50d7ea70fff8962d}} 
+\index{controladores.KMeans@{controladores.KMeans}!calcularRecomendaciones@{calcularRecomendaciones}}
+\index{calcularRecomendaciones@{calcularRecomendaciones}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{calcularRecomendaciones()}{calcularRecomendaciones()}}
+{\footnotesize\ttfamily clases.\+Algoritmos.\+calcular\+Recomendaciones (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+para inicializar todo lo que debe calcular para sus recomendaciones 
+
+
+
+Reimplementado en \mbox{\hyperlink{classclases_1_1_nearest_neighbors_a291d54124097ad93c72089a3c224032a}{clases.\+Nearest\+Neighbors}} y \mbox{\hyperlink{classclases_1_1_slope_one_a9ad13a4da21e22a0e811de41b12bf7e0}{clases.\+Slope\+One}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00065}{65}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_ac079e51f61bd1e86b98c81fb7cbf2567}\label{classclases_1_1_k_means_ac079e51f61bd1e86b98c81fb7cbf2567}} 
+\index{controladores.KMeans@{controladores.KMeans}!centroidRelocation@{centroidRelocation}}
+\index{centroidRelocation@{centroidRelocation}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{centroidRelocation()}{centroidRelocation()}}
+{\footnotesize\ttfamily clases.\+KMeans.\+centroid\+Relocation (\begin{DoxyParamCaption}\item[{Integer}]{id,  }\item[{Map$<$ Integer, Double $>$}]{c,  }\item[{Array\+List$<$ \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} $>$}]{cluster }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Recalcula las valoraciones de cada item para el centroide c, de manera que éste quede ahora en el centro de su cluster. 
+
+\begin{DoxyPrecond}{Precondición}
+cluster es el conjunto de usuarios del \mbox{\hyperlink{classclases_1_1_centroide}{Centroide}} c, y puede ser un conjunto vacío 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+si el conjunto era vacía (centroide sin usuarios) nada ha cambiado, y si no lo era, las valoraciones del centroide han sido modificadas para posicionarlo en el centro del cluster de usuarios. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em id} & identificador del centroide al cual pertenece el cluster c \\
+\hline
+{\em c} & valoraciones del centroide a todos los items \\
+\hline
+{\em cluster} & conjunto de usuarios del \mbox{\hyperlink{classclases_1_1_centroide}{Centroide}} c. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00368}{368}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_aaf0c414502ccc7dfa22284b01fbae271}\label{classclases_1_1_k_means_aaf0c414502ccc7dfa22284b01fbae271}} 
+\index{controladores.KMeans@{controladores.KMeans}!clusterFormation@{clusterFormation}}
+\index{clusterFormation@{clusterFormation}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{clusterFormation()}{clusterFormation()}}
+{\footnotesize\ttfamily clases.\+KMeans.\+cluster\+Formation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Función principal del algoritmo k\+Means. 
+
+Después de como máximo cota iteraciones, ha separado los usuarios de entrada en k clusters \begin{DoxyPrecond}{Precondición}
+Los identificadores de cada usuario en valoraciones, así como los identificadores d elos items que han sido valorados por éstos están normalizados. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han formado k clusters formados por subconjuntos disjuntos de valoraciones.
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em valoraciones} & contiene una lista de valoraciones no vacía, con las respectivas valoraciones de cada usuario a un conjunto de items. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Ver también}
+//cluster\+Formation\+Test() 
+\end{DoxySeeAlso}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00201}{201}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_a8d1350fc9a4dd1b0bca22bae8de8447d}\label{classclases_1_1_k_means_a8d1350fc9a4dd1b0bca22bae8de8447d}} 
+\index{controladores.KMeans@{controladores.KMeans}!computeAverageWSS@{computeAverageWSS}}
+\index{computeAverageWSS@{computeAverageWSS}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{computeAverageWSS()}{computeAverageWSS()}}
+{\footnotesize\ttfamily clases.\+KMeans.\+compute\+Average\+WSS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calcula el wss para todos los clusters de cluster\+Map y devuelve la media de estos. 
+
+\begin{DoxyPrecond}{Precondición}
+cluster\+Map es el mapa de clusters, mapeados por su correspondiente centroide 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha calculado la distancia media usuario-\/centroide para cada cluster, y devuelto la media 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+media de wss (within-\/cluster sum) de los clusters en cluster\+Map 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00435}{435}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_aab7f04d37b5f492c8dcc1ebdedd2cb58}\label{classclases_1_1_k_means_aab7f04d37b5f492c8dcc1ebdedd2cb58}} 
+\index{controladores.KMeans@{controladores.KMeans}!computeEuclideanDistance@{computeEuclideanDistance}}
+\index{computeEuclideanDistance@{computeEuclideanDistance}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{computeEuclideanDistance()}{computeEuclideanDistance()}}
+{\footnotesize\ttfamily clases.\+KMeans.\+compute\+Euclidean\+Distance (\begin{DoxyParamCaption}\item[{Map$<$ Integer, Double $>$}]{vals,  }\item[{Integer}]{centroid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calcula la distancia euclídea entre un centroide y un usuario, a partir del conjunto de valoraciones que cada uno de estos ha dado a los distintos items. 
+
+\begin{DoxyPrecond}{Precondición}
+Los items valorados por el usuario son un subconjunto del total de items. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha computado la distancia entre el centroide y el usuario al cual pertenezcan dichas valoraciones.
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em vals} & contiene las valoraciones que ha dado un usuario a una serie de items. La llave contiene el identificador del item, y el valor es la valoración dada. \\
+\hline
+{\em centroid} & contiene las valoraciones arbitrarias de un centroide a cada objeto del conjunto de items. La llave contiene el identificador del item y el valor es una valoración aleatoria entre maxsc y minsc. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Distancia euclidea entre el usuario representado por vals y el centroide //
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Ver también}
+compute\+Euclidean\+Distance\+Test() 
+\end{DoxySeeAlso}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00256}{256}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_aabf890748085b64e786ccf5dfc51be87}\label{classclases_1_1_k_means_aabf890748085b64e786ccf5dfc51be87}} 
+\index{controladores.KMeans@{controladores.KMeans}!furthestCentroids@{furthestCentroids}}
+\index{furthestCentroids@{furthestCentroids}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{furthestCentroids()}{furthestCentroids()}}
+{\footnotesize\ttfamily clases.\+KMeans.\+furthest\+Centroids (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+elimina los clusters más parecidos entre ellos, dejando sólo los k más alejados 
+
+\begin{DoxyPrecond}{Precondición}
+centroides contiene 2k centroides 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+los k centroides más cercanos entre sí han sido eliminados 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00292}{292}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_a230f174329e48b561a0917dd78b0b3ed}\label{classclases_1_1_k_means_a230f174329e48b561a0917dd78b0b3ed}} 
+\index{controladores.KMeans@{controladores.KMeans}!getCentroides@{getCentroides}}
+\index{getCentroides@{getCentroides}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{getCentroides()}{getCentroides()}}
+{\footnotesize\ttfamily clases.\+KMeans.\+get\+Centroides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter de la Array\+List de los k centroides creados 
+
+\begin{DoxyPrecond}{Precondición}
+
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha devuelto el Arraylist de centroides 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+Array\+List con los k centroides creados. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00102}{102}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_ad2cf4dd048136360a45a61bc6e6793b3}\label{classclases_1_1_k_means_ad2cf4dd048136360a45a61bc6e6793b3}} 
+\index{controladores.KMeans@{controladores.KMeans}!getClusterMap@{getClusterMap}}
+\index{getClusterMap@{getClusterMap}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{getClusterMap()}{getClusterMap()}}
+{\footnotesize\ttfamily clases.\+KMeans.\+get\+Cluster\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter del map cluster\+Map donde se almacenan los clusters 
+
+\begin{DoxyPrecond}{Precondición}
+
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha devuelto el mapa con con los k clusters y sus respectivos centroides identificados por un identificador único 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+estructura cluster\+Map donde guardamos los k clusters, mapeados por su respectivo centroide 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00129}{129}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_ad152bf396c15a1f4ab469944a16fafcf}\label{classclases_1_1_k_means_ad152bf396c15a1f4ab469944a16fafcf}} 
+\index{controladores.KMeans@{controladores.KMeans}!getCota@{getCota}}
+\index{getCota@{getCota}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{getCota()}{getCota()}}
+{\footnotesize\ttfamily clases.\+KMeans.\+get\+Cota (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter de la cota usada para el algoritmo 
+
+\begin{DoxyPrecond}{Precondición}
+
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha devuelto el valor de la cota (número máximo de iteraciones) 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+valor de cota, número máximo de iteraciones. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00120}{120}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_a39daa2f08ece400fff0d100e42f1b36e}\label{classclases_1_1_k_means_a39daa2f08ece400fff0d100e42f1b36e}} 
+\index{controladores.KMeans@{controladores.KMeans}!getK@{getK}}
+\index{getK@{getK}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{getK()}{getK()}}
+{\footnotesize\ttfamily clases.\+KMeans.\+getK (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter del valor k usado para el algoritmo 
+
+\begin{DoxyPrecond}{Precondición}
+
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha devuelto el valor de la k (número de clusters) 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+valor de k, número de centroides. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00111}{111}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_a98afad31acf4f2b33961cc59d73518f6}\label{classclases_1_1_k_means_a98afad31acf4f2b33961cc59d73518f6}} 
+\index{controladores.KMeans@{controladores.KMeans}!getMaxSc@{getMaxSc}}
+\index{getMaxSc@{getMaxSc}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{getMaxSc()}{getMaxSc()}}
+{\footnotesize\ttfamily clases.\+KMeans.\+get\+Max\+Sc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter de la variable maxsc 
+
+\begin{DoxyPrecond}{Precondición}
+
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha devuelto el valor de maxsc 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+valor máximo permitido para una valoración 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00084}{84}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_a9efa67f4a344b8fcc752c5787697e8e9}\label{classclases_1_1_k_means_a9efa67f4a344b8fcc752c5787697e8e9}} 
+\index{controladores.KMeans@{controladores.KMeans}!getMinSc@{getMinSc}}
+\index{getMinSc@{getMinSc}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{getMinSc()}{getMinSc()}}
+{\footnotesize\ttfamily clases.\+KMeans.\+get\+Min\+Sc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter de la variable minsc 
+
+\begin{DoxyPrecond}{Precondición}
+
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha devuelto el valor de minsc 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+valor mínimo permitido para una valoración. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00093}{93}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_algoritmos_ae23f28e26b154aca8bca6876722885c9}\label{classclases_1_1_algoritmos_ae23f28e26b154aca8bca6876722885c9}} 
+\index{controladores.KMeans@{controladores.KMeans}!getPredicciones@{getPredicciones}}
+\index{getPredicciones@{getPredicciones}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{getPredicciones()}{getPredicciones()}}
+{\footnotesize\ttfamily clases.\+Algoritmos.\+get\+Predicciones (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+coger el mapa de predicciones generado por la llama a los algoritmos 
+
+\begin{DoxyReturn}{Devuelve}
+devuelve las predicciones hechas por el algoritmo de predicciones 
+\end{DoxyReturn}
+
+
+Reimplementado en \mbox{\hyperlink{classclases_1_1_nearest_neighbors_ae78d47d2adece19c119b3151ab599a7b}{clases.\+Nearest\+Neighbors}} y \mbox{\hyperlink{classclases_1_1_slope_one_ab3a4c9362185c94078cd57034bbeefd1}{clases.\+Slope\+One}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00071}{71}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_a2945dbf275d1768b482833e45576c940}\label{classclases_1_1_k_means_a2945dbf275d1768b482833e45576c940}} 
+\index{controladores.KMeans@{controladores.KMeans}!getUsersCluster@{getUsersCluster}}
+\index{getUsersCluster@{getUsersCluster}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{getUsersCluster()}{getUsersCluster()}}
+{\footnotesize\ttfamily clases.\+KMeans.\+get\+Users\+Cluster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Encuentra a qué cluster pertenece un nuevo usuario u, para el cual estamos tratando de encontrar los usuarios más parecidos. 
+
+\begin{DoxyPrecond}{Precondición}
+el usuario u no pertenece a ninguno de los clusters almacenados en cluster\+Map 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha encontrado cuál es el centroide más cercano al usuario u y por lo tanto a qué cluster pertenece. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em u} & nuevo usuario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+se devuelve el cluster al cual pertenece u (por encontrarse más cerca de su centroide) 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00139}{139}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_a94d7af5d8a41110440cb440bbef41cb7}\label{classclases_1_1_k_means_a94d7af5d8a41110440cb440bbef41cb7}} 
+\index{controladores.KMeans@{controladores.KMeans}!nearestCentroid@{nearestCentroid}}
+\index{nearestCentroid@{nearestCentroid}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{nearestCentroid()}{nearestCentroid()}}
+{\footnotesize\ttfamily clases.\+KMeans.\+nearest\+Centroid (\begin{DoxyParamCaption}\item[{Map$<$ Integer, Double $>$}]{u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Determina cuál es el centroide más cercano a un usuario, calculando su distancia euclidea a cada centroide en centroides. 
+
+\begin{DoxyPrecond}{Precondición}
+
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha devuelto en pos la posición en la Array\+List centroides ocupada por el centroide más cercano a u. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em u} & \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} cuyo centroide a distancia mínima queremos conocer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+pos contiene la posición del centroide que se encuentra más cercano al usuario u. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00327}{327}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_acba452ea62d07a6639a22c1f1a07a760}\label{classclases_1_1_k_means_acba452ea62d07a6639a22c1f1a07a760}} 
+\index{controladores.KMeans@{controladores.KMeans}!randomCentroids@{randomCentroids}}
+\index{randomCentroids@{randomCentroids}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{randomCentroids()}{randomCentroids()}}
+{\footnotesize\ttfamily void clases.\+KMeans.\+random\+Centroids (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+@pfn random\+Centroids 
+
+Forma 2k centroides para el algoritmo. Un centroide es el resultado de asignar, para cada uno de los items disponibles, una valoración aleatoria entre minsc y maxsc \begin{DoxyPrecond}{Precondición}
+k es un entero positivo y tenemos al menos un item que valorar 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+centroides contiene k objetos de tipo \mbox{\hyperlink{classclases_1_1_centroide}{Centroide}}, cada uno con sus respectivas valoraciones arbitrarias para todos los items. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00275}{275}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_a620407485b5fe5d4d3d4fb8c71dc7916}\label{classclases_1_1_k_means_a620407485b5fe5d4d3d4fb8c71dc7916}} 
+\index{controladores.KMeans@{controladores.KMeans}!setCentroides@{setCentroides}}
+\index{setCentroides@{setCentroides}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{setCentroides()}{setCentroides()}}
+{\footnotesize\ttfamily clases.\+KMeans.\+set\+Centroides (\begin{DoxyParamCaption}\item[{Array\+List$<$ \mbox{\hyperlink{classclases_1_1_centroide}{Centroide}} $>$}]{centroides }\end{DoxyParamCaption})}
+
+
+
+setter del atributo centroides 
+
+\begin{DoxyPrecond}{Precondición}
+el atributo centroides no está incializado o contiene una Array de Centroides 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha asignado al atributo centroides la Array\+List pasada por parámetro 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em centroides} & Array\+List de Centroides. Su identificador indica también su posición en la Array \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00152}{152}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_a4a8f76ae9aaf6f80a57e025e37dc9b9a}\label{classclases_1_1_k_means_a4a8f76ae9aaf6f80a57e025e37dc9b9a}} 
+\index{controladores.KMeans@{controladores.KMeans}!setClusterMap@{setClusterMap}}
+\index{setClusterMap@{setClusterMap}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{setClusterMap()}{setClusterMap()}}
+{\footnotesize\ttfamily clases.\+KMeans.\+set\+Cluster\+Map (\begin{DoxyParamCaption}\item[{Map$<$ Integer, Array\+List$<$ \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} $>$ $>$}]{cluster\+Map }\end{DoxyParamCaption})}
+
+
+
+setter del atributo cluster\+Map 
+
+\begin{DoxyPrecond}{Precondición}
+el atributo cluster\+Map es un mapa vacío de tamaño k o bien contiene un mapa de clusters mapeados según el identificador del centroide al cual pertenece cada cluster 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parámetros}
+{\em cluster\+Map} & mapa donde la llave es el identificador del centroide y el Array\+List de usuarios mapeados es el conjunto de usuarios que forman un cluster alrededor de dicho centtroide \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00160}{160}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_a8898d22a207b62d35adb0b66e66d6d4a}\label{classclases_1_1_k_means_a8898d22a207b62d35adb0b66e66d6d4a}} 
+\index{controladores.KMeans@{controladores.KMeans}!setCota@{setCota}}
+\index{setCota@{setCota}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{setCota()}{setCota()}}
+{\footnotesize\ttfamily clases.\+KMeans.\+set\+Cota (\begin{DoxyParamCaption}\item[{int}]{cota }\end{DoxyParamCaption})}
+
+
+
+setter del atributo cota que determina el número total de iteraciones 
+
+\begin{DoxyPrecond}{Precondición}
+el atributo cota tiene o bien su valor inicial o uno que se le haya asignado previamente, pero nunca está sin inicializar 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se le ha asignado al atributo cota el valor pasado por parámetro 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em cota} & nuevo valor que pasa a tener el atributo cota. Determinará el número máximo de iteraciones permitidas \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00169}{169}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_ac411e28aa85a15e36373112dd345af9a}\label{classclases_1_1_k_means_ac411e28aa85a15e36373112dd345af9a}} 
+\index{controladores.KMeans@{controladores.KMeans}!setDefaults@{setDefaults}}
+\index{setDefaults@{setDefaults}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{setDefaults()}{setDefaults()}}
+{\footnotesize\ttfamily clases.\+KMeans.\+set\+Defaults (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+devuelve a su estado inicial todos los atributos de la clase 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+los atributos k, centroides, cota y cluster\+Map pasan a tener sus valores iniciales. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00185}{185}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_a3a2cd5371b8f3e0731a2c93485537bbd}\label{classclases_1_1_k_means_a3a2cd5371b8f3e0731a2c93485537bbd}} 
+\index{controladores.KMeans@{controladores.KMeans}!setK@{setK}}
+\index{setK@{setK}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{setK()}{setK()}}
+{\footnotesize\ttfamily clases.\+KMeans.\+setK (\begin{DoxyParamCaption}\item[{int}]{k }\end{DoxyParamCaption})}
+
+
+
+setter del atributo k, que determina el número de clusters 
+
+\begin{DoxyPrecond}{Precondición}
+el atributo k tiene o bien su valor inicial o uno que se le haya asignado previamente, pero nunca está sin inicializar 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parámetros}
+{\em k} & nuevo valor que pasa a tener el atributo k. Determinará el número de clusters que se formen \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00177}{177}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_a1ebaee04411a9e9ce357bce8febc6554}\label{classclases_1_1_k_means_a1ebaee04411a9e9ce357bce8febc6554}} 
+\index{controladores.KMeans@{controladores.KMeans}!shouldTerminate@{shouldTerminate}}
+\index{shouldTerminate@{shouldTerminate}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{shouldTerminate()}{shouldTerminate()}}
+{\footnotesize\ttfamily clases.\+KMeans.\+should\+Terminate (\begin{DoxyParamCaption}\item[{Map$<$ Integer, Array\+List$<$ \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} $>$ $>$}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Determina si el algoritmo de k\+Means debería o no terminar antes de tiempo. 
+
+Esto se debe dar solo en el caso de que nada haya cambiado en el estado de los clusters entre una iteración y la siguiente \begin{DoxyPrecond}{Precondición}
+a o b pueden ser vacíos, pero si no lo son siempre tienen las mismas llaves que corresponden a los identificadores de los k centroides creados 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+si a o b eran vacíos o bien las valores varían para una o varias llaves determinadas, devuelve falso. Si a y b son idénticos devuelve cierto. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em b} & Mapa que represeta el estado de los clusters en la ultima iteración de K-\/\+Means \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+falso si los objetos son distintos, cierto si nada ha cambiado del estado en la última iteración al actual. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00397}{397}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classclases_1_1_k_means_a611bf4b148956eb20efbf59a532937bd}\label{classclases_1_1_k_means_a611bf4b148956eb20efbf59a532937bd}} 
+\index{controladores.KMeans@{controladores.KMeans}!centroides@{centroides}}
+\index{centroides@{centroides}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{centroides}{centroides}}
+{\footnotesize\ttfamily Array\+List$<$ \mbox{\hyperlink{classclases_1_1_centroide}{Centroide}} $>$ clases.\+KMeans.\+centroides = new Array\+List$<$$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Array\+List donde almacenamos los k centroides creados en el algoritmo @format Array\+List$<$\+Centroide$>$ 
+
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00063}{63}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_a953b261eadfbca87f441d559530dac76}\label{classclases_1_1_k_means_a953b261eadfbca87f441d559530dac76}} 
+\index{controladores.KMeans@{controladores.KMeans}!clusterMap@{clusterMap}}
+\index{clusterMap@{clusterMap}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{clusterMap}{clusterMap}}
+{\footnotesize\ttfamily Map$<$Integer, Array\+List$<$\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}$>$ $>$ clases.\+KMeans.\+cluster\+Map = new Hash\+Map$<$$>$(\mbox{\hyperlink{classclases_1_1_k_means_a0dd01949f0a8571fe502f726c5df8148}{k}})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00056}{56}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_a7a2a73dce8c49e7aa1b15e6c32afbd93}\label{classclases_1_1_k_means_a7a2a73dce8c49e7aa1b15e6c32afbd93}} 
+\index{controladores.KMeans@{controladores.KMeans}!cota@{cota}}
+\index{cota@{cota}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{cota}{cota}}
+{\footnotesize\ttfamily int clases.\+KMeans.\+cota = 30\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+@val int cota 
+
+Máximo número de iteraciones permitidas 
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00043}{43}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_algoritmos_a0f9329b2de1639b893c494d91ff612e6}\label{classclases_1_1_algoritmos_a0f9329b2de1639b893c494d91ff612e6}} 
+\index{controladores.KMeans@{controladores.KMeans}!it@{it}}
+\index{it@{it}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{it}{it}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classclases_1_1_items}{Items}} clases.\+Algoritmos.\+it\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Conjunto de items que se usaran para las valoraciones. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00035}{35}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_a0dd01949f0a8571fe502f726c5df8148}\label{classclases_1_1_k_means_a0dd01949f0a8571fe502f726c5df8148}} 
+\index{controladores.KMeans@{controladores.KMeans}!k@{k}}
+\index{k@{k}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily int clases.\+KMeans.\+k = 10\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+@val int k 
+
+Número de clusters que se forman para el algoritmo 
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00037}{37}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_a783947356c17eb70c901b39589369a30}\label{classclases_1_1_k_means_a783947356c17eb70c901b39589369a30}} 
+\index{controladores.KMeans@{controladores.KMeans}!maxsc@{maxsc}}
+\index{maxsc@{maxsc}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{maxsc}{maxsc}}
+{\footnotesize\ttfamily double clases.\+KMeans.\+maxsc = \mbox{\hyperlink{classclases_1_1_parser_a7011757774a5ed28dc07d774d24c41cb}{Parser.\+get\+Max\+Score}}()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [package]}}
+
+
+
+Valor máximo permitido para cada valoración. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00025}{25}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_a8dad33d8397f319a8b486b49c5ae7ddc}\label{classclases_1_1_k_means_a8dad33d8397f319a8b486b49c5ae7ddc}} 
+\index{controladores.KMeans@{controladores.KMeans}!minsc@{minsc}}
+\index{minsc@{minsc}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{minsc}{minsc}}
+{\footnotesize\ttfamily double clases.\+KMeans.\+minsc = \mbox{\hyperlink{classclases_1_1_parser_a670730b2743b36f57b64dd2a69a6297c}{Parser.\+get\+Min\+Score}}()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [package]}}
+
+
+
+Valor mínimo permitido para cada valoración. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00031}{31}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_algoritmos_a958cfc144223019d3fea366384303554}\label{classclases_1_1_algoritmos_a958cfc144223019d3fea366384303554}} 
+\index{controladores.KMeans@{controladores.KMeans}!predictions@{predictions}}
+\index{predictions@{predictions}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{predictions}{predictions}}
+{\footnotesize\ttfamily Map$<$ Integer, Double $>$ clases.\+Algoritmos.\+predictions\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Mapa de predicciones de los algoritmos. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00030}{30}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_k_means_ae325bb57bd25ec168cda8baa26fdb451}\label{classclases_1_1_k_means_ae325bb57bd25ec168cda8baa26fdb451}} 
+\index{controladores.KMeans@{controladores.KMeans}!random@{random}}
+\index{random@{random}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{random}{random}}
+{\footnotesize\ttfamily Random clases.\+KMeans.\+random = new Random()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Objeto random para la creación de valoraciones aleatorias de items para cada centroides. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_k_means_8java_source_l00049}{49}} del archivo \mbox{\hyperlink{_k_means_8java_source}{KMeans.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_algoritmos_a9308966fa7668a0eae76215d7d9b29d4}\label{classclases_1_1_algoritmos_a9308966fa7668a0eae76215d7d9b29d4}} 
+\index{controladores.KMeans@{controladores.KMeans}!u@{u}}
+\index{u@{u}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{u}{u}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} clases.\+Algoritmos.\+u\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} desde el cual vamos a hacer las predicciones de los items. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00025}{25}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_algoritmos_a2f7975f0a4de8f6f542d93614f231269}\label{classclases_1_1_algoritmos_a2f7975f0a4de8f6f542d93614f231269}} 
+\index{controladores.KMeans@{controladores.KMeans}!us@{us}}
+\index{us@{us}!controladores.KMeans@{controladores.KMeans}}
+\doxysubsubsection{\texorpdfstring{us}{us}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} clases.\+Algoritmos.\+us\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Conjunto de usuarios que vamos a usar para inicializar nuestro algoritmo de collaborative filtering. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00019}{19}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_k_means_8java}{KMeans.\+java}}\end{DoxyCompactItemize}

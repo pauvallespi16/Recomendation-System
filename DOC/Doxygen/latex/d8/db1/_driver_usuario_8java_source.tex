@@ -1,0 +1,144 @@
+\hypertarget{_driver_usuario_8java_source}{}\doxysection{Driver\+Usuario.\+java}
+\label{_driver_usuario_8java_source}\index{DriverUsuario.java@{DriverUsuario.java}}
+\mbox{\hyperlink{_driver_usuario_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00001}00001 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceclases}{clases}}.\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}};}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00003}00003 \textcolor{keyword}{import} java.util.HashMap;}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00004}00004 \textcolor{keyword}{import} java.util.Map;}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00012}\mbox{\hyperlink{class_driver_usuario}{00012}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_driver_usuario}{DriverUsuario}} \{}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00013}\mbox{\hyperlink{class_driver_usuario_a28177e25208e801b9a19325cdcddaa5c}{00013}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_driver_usuario_a28177e25208e801b9a19325cdcddaa5c}{main}}(String args[]) \textcolor{keywordflow}{throws} Exception \{}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00014}00014         String command = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00015}00015         \mbox{\hyperlink{classinout}{inout}} INOUT = \textcolor{keyword}{new} \mbox{\hyperlink{classinout}{inout}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00016}00016         INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Inserte un comando. Inserte help para ver todos los posibles atributos. Inserte salir para salir."{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00017}00017         command = INOUT.\mbox{\hyperlink{classinout_a81e363b8da54fe0753778d6d1b8d90d1}{readline}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00018}00018         Map <Integer, Double> valoraciones = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00019}00019         \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} usuario = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00020}00020         \textcolor{keywordtype}{int} id;}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00021}00021         \textcolor{keywordflow}{while} (!command.equals(\textcolor{stringliteral}{"{}salir"{}})) \{}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00022}00022             \textcolor{keywordflow}{switch} (command) \{}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00023}00023                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}constructora vacia"{}}:}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00024}00024                     \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} u = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00025}00025                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Usuario creado correctamente."{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00026}00026                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00028}00028                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}constructora con parametros"{}}:}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00029}00029                     INOUT.\mbox{\hyperlink{classinout_a9aa881b1538eedec4ad0ce000c4013e0}{write}}(\textcolor{stringliteral}{"{}Escribe el id: "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00030}00030                     \textcolor{keywordtype}{id} = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00031}00031                     usuario = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}(\textcolor{keywordtype}{id}, valoraciones);}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00032}00032                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Usuario creado correctamente."{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00033}00033                     INOUT.\mbox{\hyperlink{classinout_a81e363b8da54fe0753778d6d1b8d90d1}{readline}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00034}00034                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00036}00036                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}equals"{}}:}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00037}00037                     INOUT.\mbox{\hyperlink{classinout_a9aa881b1538eedec4ad0ce000c4013e0}{write}}(\textcolor{stringliteral}{"{}Escribe el id 1: "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00038}00038                     \textcolor{keywordtype}{id} = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00039}00039                     \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} a = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}(\textcolor{keywordtype}{id}, valoraciones);}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00040}00040                     INOUT.\mbox{\hyperlink{classinout_a9aa881b1538eedec4ad0ce000c4013e0}{write}}(\textcolor{stringliteral}{"{}Escribe el id 2: "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00041}00041                     \textcolor{keywordtype}{id} = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00042}00042                     \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} b = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}(\textcolor{keywordtype}{id}, valoraciones);}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00043}00043                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(a.\mbox{\hyperlink{classclases_1_1_usuario_ad97a6e7cca896e9d1db194f3e4eff778}{equals}}(b));}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00044}00044                     INOUT.\mbox{\hyperlink{classinout_a81e363b8da54fe0753778d6d1b8d90d1}{readline}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00045}00045                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00047}00047                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}setValoraciones"{}}:}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00048}00048                     INOUT.\mbox{\hyperlink{classinout_a9aa881b1538eedec4ad0ce000c4013e0}{write}}(\textcolor{stringliteral}{"{}Introduce el num. de valoraciones: "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00049}00049                     \textcolor{keywordtype}{int} sz = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00050}00050                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < sz; i++) \{}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00051}00051                         INOUT.\mbox{\hyperlink{classinout_a9aa881b1538eedec4ad0ce000c4013e0}{write}}(\textcolor{stringliteral}{"{}Escribe valoración: "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00052}00052                         \textcolor{keywordtype}{double} val = INOUT.\mbox{\hyperlink{classinout_adefcfa6095f204d540e772e74b59bd58}{readdouble}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00053}00053                         valoraciones.put(i, val);}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00054}00054                     \}}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00055}00055                     usuario.\mbox{\hyperlink{classclases_1_1_usuario_aa4a35ab7d8631d63775fb60d74d2fb1e}{setValoraciones}}(valoraciones);}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00056}00056                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Valoraciones obtenidas correctamente."{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00057}00057                     INOUT.\mbox{\hyperlink{classinout_a81e363b8da54fe0753778d6d1b8d90d1}{readline}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00058}00058                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00060}00060                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}getValoraciones"{}}:}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00061}00061                     \textcolor{keywordflow}{for} (Map.Entry<Integer, Double> e : valoraciones.entrySet())\{}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00062}00062                         INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}ID: "{}} +e.getKey() + \textcolor{stringliteral}{"{}, VAL: "{}} + e.getValue());}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00063}00063                     \}}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00064}00064                     INOUT.\mbox{\hyperlink{classinout_a81e363b8da54fe0753778d6d1b8d90d1}{readline}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00065}00065                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00067}00067                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}getUserId"{}}:}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00068}00068                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}El user id es: "{}}+usuario.\mbox{\hyperlink{classclases_1_1_usuario_afa103718afa1a7eaf9ee3dd3d6c4a324}{getUserId}}());}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00069}00069                     INOUT.\mbox{\hyperlink{classinout_a81e363b8da54fe0753778d6d1b8d90d1}{readline}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00070}00070                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00072}00072                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}setOriginalUserId"{}}:}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00073}00073                     INOUT.\mbox{\hyperlink{classinout_a9aa881b1538eedec4ad0ce000c4013e0}{write}}(\textcolor{stringliteral}{"{}Introduzca el id original del usuario: "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00074}00074                     \textcolor{keywordtype}{id} = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00075}00075                     \textcolor{keywordflow}{while} (\textcolor{keywordtype}{id} < 0) \{}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00076}00076                         INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}id incorrecto, por favor inténtelo de nuevo."{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00077}00077                         \textcolor{keywordtype}{id} = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00078}00078                     \}}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00079}00079                     INOUT.\mbox{\hyperlink{classinout_a81e363b8da54fe0753778d6d1b8d90d1}{readline}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00080}00080                     usuario.\mbox{\hyperlink{classclases_1_1_usuario_a88820499f9e2a8532a9cd6d9df6fa9ab}{setOriginalUserId}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00081}00081                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}The original user id is: "{}}+usuario.\mbox{\hyperlink{classclases_1_1_usuario_a622325f19fe565bdd228502feb853a36}{getOriginalUserId}}());}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00082}00082                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00084}00084                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}getOriginalUserId"{}}:}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00085}00085                     INOUT.\mbox{\hyperlink{classinout_a9aa881b1538eedec4ad0ce000c4013e0}{write}}(\textcolor{stringliteral}{"{}Escribe el id: "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00086}00086                     \textcolor{keywordtype}{id} = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00087}00087                     INOUT.\mbox{\hyperlink{classinout_a9aa881b1538eedec4ad0ce000c4013e0}{write}}(usuario.\mbox{\hyperlink{classclases_1_1_usuario_a622325f19fe565bdd228502feb853a36}{getOriginalUserId}}());}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00088}00088                     INOUT.\mbox{\hyperlink{classinout_a81e363b8da54fe0753778d6d1b8d90d1}{readline}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00089}00089                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00091}00091                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}addValoracion"{}}:}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00092}00092                     INOUT.\mbox{\hyperlink{classinout_a9aa881b1538eedec4ad0ce000c4013e0}{write}}(\textcolor{stringliteral}{"{}Introduzca el id del usuario que quiere obtener: "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00093}00093                     \textcolor{keywordtype}{id} = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00094}00094                     INOUT.\mbox{\hyperlink{classinout_a9aa881b1538eedec4ad0ce000c4013e0}{write}}(\textcolor{stringliteral}{"{}Introduzca la valoracion: "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00095}00095                     \textcolor{keywordtype}{double} valoracion = INOUT.\mbox{\hyperlink{classinout_adefcfa6095f204d540e772e74b59bd58}{readdouble}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00096}00096                     \textcolor{keywordflow}{while} (\textcolor{keywordtype}{id} < 0 || valoracion < 0) \{}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00097}00097                         INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}id/valoracion incorrecto, por favor inténtelo de nuevo."{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00098}00098                         \textcolor{keywordtype}{id} = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00099}00099                         valoracion = INOUT.\mbox{\hyperlink{classinout_adefcfa6095f204d540e772e74b59bd58}{readdouble}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00100}00100                     \}}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00101}00101                     INOUT.\mbox{\hyperlink{classinout_a81e363b8da54fe0753778d6d1b8d90d1}{readline}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00102}00102                     usuario.\mbox{\hyperlink{classclases_1_1_usuario_af522cc6e31a1f00b24fe619b04232cb3}{addValoracion}}(\textcolor{keywordtype}{id}, valoracion);}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00103}00103                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}La valoración se ha añadido correctamente."{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00104}00104                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00106}00106                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}tieneValoracion"{}}:}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00107}00107                     INOUT.\mbox{\hyperlink{classinout_a9aa881b1538eedec4ad0ce000c4013e0}{write}}(\textcolor{stringliteral}{"{}Escribe el id "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00108}00108                     \textcolor{keywordtype}{id} = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00109}00109                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}¿Tiene el usuario la valoracion con id "{}} +\textcolor{keywordtype}{id}+ \textcolor{stringliteral}{"{}? "{}}+usuario.\mbox{\hyperlink{classclases_1_1_usuario_ae06c17c56b3db583f44f38c3d5972932}{tieneValoracion}}(\textcolor{keywordtype}{id}));}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00110}00110                     INOUT.\mbox{\hyperlink{classinout_a81e363b8da54fe0753778d6d1b8d90d1}{readline}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00111}00111                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00113}00113                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}getValoracio"{}}:}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00114}00114                     INOUT.\mbox{\hyperlink{classinout_a9aa881b1538eedec4ad0ce000c4013e0}{write}}(\textcolor{stringliteral}{"{}Escribe el id "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00115}00115                     \textcolor{keywordtype}{id} = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00116}00116                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}La valoracion del item "{}} + \textcolor{keywordtype}{id}+ \textcolor{stringliteral}{"{} es: "{}}+usuario.\mbox{\hyperlink{classclases_1_1_usuario_aba022c735eed5fea5c32b760e482531c}{getValoracio}}(\textcolor{keywordtype}{id}));}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00117}00117                     INOUT.\mbox{\hyperlink{classinout_a81e363b8da54fe0753778d6d1b8d90d1}{readline}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00118}00118                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00119}00119 }
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00120}00120                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}help"{}}:}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00121}00121                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}constructora vacia"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00122}00122                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}constructora con parametros"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00123}00123                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}equals"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00124}00124                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}setValoraciones"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00125}00125                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}getValoraciones"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00126}00126                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}getUserId"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00127}00127                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}setOriginalUserId"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00128}00128                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}getOriginalUserId"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00129}00129                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}addValoracion"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00130}00130                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}tieneValoracion"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00131}00131                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}getValoracio"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00132}00132                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00133}00133                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00134}00134 }
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00135}00135                 \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00136}00136                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Comando incorrecto. Por favor intente de nuevo!"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00137}00137                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00138}00138             \}}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00139}00139             INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00140}00140             INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Escribe tu comando: "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00141}00141             command = INOUT.\mbox{\hyperlink{classinout_a81e363b8da54fe0753778d6d1b8d90d1}{readline}}();}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00142}00142         \}}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00143}00143     \}}
+\DoxyCodeLine{\Hypertarget{_driver_usuario_8java_source_l00144}00144 \}}
+
+\end{DoxyCode}

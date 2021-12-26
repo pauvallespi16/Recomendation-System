@@ -1,0 +1,298 @@
+\hypertarget{classclases_1_1_usuarios}{}\doxysection{Referencia de la Clase clases.\+Usuarios}
+\label{classclases_1_1_usuarios}\index{clases.Usuarios@{clases.Usuarios}}
+
+
+La clase de usuario contiene la implementación de un conjunto de usuarios.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classclases_1_1_usuarios_a147d87c34fb68155511e7d71f7626aa1}{Usuarios}} ()
+\begin{DoxyCompactList}\small\item\em Constructora por defecto, inicializa un conjunto de usuarios vacío. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclases_1_1_usuarios_a092340d4473a0557755f04fd77dd684c}{Usuarios}} (Array\+List$<$ \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} $>$ \mbox{\hyperlink{classclases_1_1_usuarios_a13eb01e5dfe2a1fa9bc9405c107876a8}{users}})
+\item 
+Array\+List$<$ \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} $>$ \mbox{\hyperlink{classclases_1_1_usuarios_a51cd118515e98557b0fe657e1cbda5cb}{get\+Users}} ()
+\begin{DoxyCompactList}\small\item\em Getter del Array\+List de usuarios. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classclases_1_1_usuarios_a85c335169bb9b2cebfe6276848d24e2c}{get\+User}} (int id)
+\begin{DoxyCompactList}\small\item\em Getter de un usuario con id \char`\"{}id\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_usuarios_aa11d5dcc36b33e53820eb39d668a2c7f}{set\+Users}} (Array\+List$<$ \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} $>$ \mbox{\hyperlink{classclases_1_1_usuarios_a13eb01e5dfe2a1fa9bc9405c107876a8}{users}})
+\begin{DoxyCompactList}\small\item\em Setter del Array\+List de usuarios. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_usuarios_aad6b0f6581bf91e9322ad956696659b7}{set\+User}} (Integer id, \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} user)
+\begin{DoxyCompactList}\small\item\em Cambiar el objeto de un usuario en el Array\+List. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_usuarios_a2b75d102bd18d9efa80137eda4e613b3}{add\+User}} (\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} user)
+\begin{DoxyCompactList}\small\item\em Añadir el objeto de usuario en el Array\+List. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classclases_1_1_usuarios_a839970c68b14c6f00581627d055d6f11}{contains\+User}} (int id)
+\begin{DoxyCompactList}\small\item\em Comprobar si el Array\+List users tiene el usuario con id users. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classclases_1_1_usuarios_a34dcd9a9a649e0fba024765e66ff8065}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em Hace override de la funcion to\+String. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+Array\+List$<$ \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} $>$ \mbox{\hyperlink{classclases_1_1_usuarios_a13eb01e5dfe2a1fa9bc9405c107876a8}{users}}
+\begin{DoxyCompactList}\small\item\em Conjunto de objetos de la clase de usuario que componen el conjunto de usuarios. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+La clase de usuario contiene la implementación de un conjunto de usuarios. 
+
+\begin{DoxyAuthor}{Autor}
+Carla Campàs Gené
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+December 2021 
+\end{DoxyDate}
+
+
+Definición en la línea \mbox{\hyperlink{_usuarios_8java_source_l00014}{14}} del archivo \mbox{\hyperlink{_usuarios_8java_source}{Usuarios.\+java}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classclases_1_1_usuarios_a147d87c34fb68155511e7d71f7626aa1}\label{classclases_1_1_usuarios_a147d87c34fb68155511e7d71f7626aa1}} 
+\index{clases.Usuarios@{clases.Usuarios}!Usuarios@{Usuarios}}
+\index{Usuarios@{Usuarios}!clases.Usuarios@{clases.Usuarios}}
+\doxysubsubsection{\texorpdfstring{Usuarios()}{Usuarios()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily clases.\+Usuarios.\+Usuarios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructora por defecto, inicializa un conjunto de usuarios vacío. 
+
+Constructora por defecto, inicializa un conjunto de usuarios con un Array\+List de usuario.
+
+\begin{DoxyPrecond}{Precondición}
+No hay objeto usuarios. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha creado un objeto de usuarios vacío.
+\end{DoxyPostcond}
+\begin{DoxyPrecond}{Precondición}
+No hay objeto usuarios. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha creado un objeto de usuarios con la variable users de la clase inicializada. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em users} & Array\+List de usuarios que componen el conjunto. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_usuarios_8java_source_l00024}{24}} del archivo \mbox{\hyperlink{_usuarios_8java_source}{Usuarios.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_usuarios_a092340d4473a0557755f04fd77dd684c}\label{classclases_1_1_usuarios_a092340d4473a0557755f04fd77dd684c}} 
+\index{clases.Usuarios@{clases.Usuarios}!Usuarios@{Usuarios}}
+\index{Usuarios@{Usuarios}!clases.Usuarios@{clases.Usuarios}}
+\doxysubsubsection{\texorpdfstring{Usuarios()}{Usuarios()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily clases.\+Usuarios.\+Usuarios (\begin{DoxyParamCaption}\item[{Array\+List$<$ \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} $>$}]{users }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_usuarios_8java_source_l00032}{32}} del archivo \mbox{\hyperlink{_usuarios_8java_source}{Usuarios.\+java}}.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classclases_1_1_usuarios_a2b75d102bd18d9efa80137eda4e613b3}\label{classclases_1_1_usuarios_a2b75d102bd18d9efa80137eda4e613b3}} 
+\index{clases.Usuarios@{clases.Usuarios}!addUser@{addUser}}
+\index{addUser@{addUser}!clases.Usuarios@{clases.Usuarios}}
+\doxysubsubsection{\texorpdfstring{addUser()}{addUser()}}
+{\footnotesize\ttfamily clases.\+Usuarios.\+add\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Añadir el objeto de usuario en el Array\+List. 
+
+\begin{DoxyPrecond}{Precondición}
+El id del usuario que pasamos como parámetro ya esta instanciado en el objeto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El Array\+List de usuarios tiene un nuevo entry del usuario user 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em user} & usuario que queremos meter en el Array\+List \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_usuarios_8java_source_l00074}{74}} del archivo \mbox{\hyperlink{_usuarios_8java_source}{Usuarios.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_usuarios_a839970c68b14c6f00581627d055d6f11}\label{classclases_1_1_usuarios_a839970c68b14c6f00581627d055d6f11}} 
+\index{clases.Usuarios@{clases.Usuarios}!containsUser@{containsUser}}
+\index{containsUser@{containsUser}!clases.Usuarios@{clases.Usuarios}}
+\doxysubsubsection{\texorpdfstring{containsUser()}{containsUser()}}
+{\footnotesize\ttfamily clases.\+Usuarios.\+contains\+User (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Comprobar si el Array\+List users tiene el usuario con id users. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Ha devuelto true si el objeto tiene un usuario con id \char`\"{}id\char`\"{}, falso si no. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em id} & id del usario del que queremos comprobar si esta en el conjunto de usuarios \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si el conjunto tiene al usuario con \char`\"{}id\char`\"{}, falso si no. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_usuarios_8java_source_l00083}{83}} del archivo \mbox{\hyperlink{_usuarios_8java_source}{Usuarios.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_usuarios_a85c335169bb9b2cebfe6276848d24e2c}\label{classclases_1_1_usuarios_a85c335169bb9b2cebfe6276848d24e2c}} 
+\index{clases.Usuarios@{clases.Usuarios}!getUser@{getUser}}
+\index{getUser@{getUser}!clases.Usuarios@{clases.Usuarios}}
+\doxysubsubsection{\texorpdfstring{getUser()}{getUser()}}
+{\footnotesize\ttfamily clases.\+Usuarios.\+get\+User (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Getter de un usuario con id \char`\"{}id\char`\"{}. 
+
+\begin{DoxyPrecond}{Precondición}
+El Array\+List de usuarios tiene el id \char`\"{}id\char`\"{} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Ha devuelto el usuario con id \char`\"{}id\char`\"{} 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em id} & id del usuario del que queremos conseguir el objeto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+devuelve el objeto de usuario con id \char`\"{}id\char`\"{} 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_usuarios_8java_source_l00049}{49}} del archivo \mbox{\hyperlink{_usuarios_8java_source}{Usuarios.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_usuarios_a51cd118515e98557b0fe657e1cbda5cb}\label{classclases_1_1_usuarios_a51cd118515e98557b0fe657e1cbda5cb}} 
+\index{clases.Usuarios@{clases.Usuarios}!getUsers@{getUsers}}
+\index{getUsers@{getUsers}!clases.Usuarios@{clases.Usuarios}}
+\doxysubsubsection{\texorpdfstring{getUsers()}{getUsers()}}
+{\footnotesize\ttfamily clases.\+Usuarios.\+get\+Users (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter del Array\+List de usuarios. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto el Array\+List de usuarios. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+Devuelve el Array\+List de usuarios. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_usuarios_8java_source_l00040}{40}} del archivo \mbox{\hyperlink{_usuarios_8java_source}{Usuarios.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_usuarios_aad6b0f6581bf91e9322ad956696659b7}\label{classclases_1_1_usuarios_aad6b0f6581bf91e9322ad956696659b7}} 
+\index{clases.Usuarios@{clases.Usuarios}!setUser@{setUser}}
+\index{setUser@{setUser}!clases.Usuarios@{clases.Usuarios}}
+\doxysubsubsection{\texorpdfstring{setUser()}{setUser()}}
+{\footnotesize\ttfamily clases.\+Usuarios.\+set\+User (\begin{DoxyParamCaption}\item[{Integer}]{id,  }\item[{\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Cambiar el objeto de un usuario en el Array\+List. 
+
+\begin{DoxyPrecond}{Precondición}
+El Array\+List de users tiene un usuario en la posición id. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El Array\+List de usuarios tiene un entry \{user id, user\} 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em id} & id de la posición del Array\+List que queremos cambiar. \\
+\hline
+{\em user} & usuario que queremos cambiar en el Array\+List \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_usuarios_8java_source_l00066}{66}} del archivo \mbox{\hyperlink{_usuarios_8java_source}{Usuarios.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_usuarios_aa11d5dcc36b33e53820eb39d668a2c7f}\label{classclases_1_1_usuarios_aa11d5dcc36b33e53820eb39d668a2c7f}} 
+\index{clases.Usuarios@{clases.Usuarios}!setUsers@{setUsers}}
+\index{setUsers@{setUsers}!clases.Usuarios@{clases.Usuarios}}
+\doxysubsubsection{\texorpdfstring{setUsers()}{setUsers()}}
+{\footnotesize\ttfamily clases.\+Usuarios.\+set\+Users (\begin{DoxyParamCaption}\item[{Array\+List$<$ \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} $>$}]{users }\end{DoxyParamCaption})}
+
+
+
+Setter del Array\+List de usuarios. 
+
+\begin{DoxyPrecond}{Precondición}
+El Array\+List de usuarios no esta inicializado o esta inicializado a un Array\+List distinto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El atributo users de la instancia de la clase es una copia del parametro users. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em users} & Array\+List de los usuarios del conjunto \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_usuarios_8java_source_l00057}{57}} del archivo \mbox{\hyperlink{_usuarios_8java_source}{Usuarios.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_usuarios_a34dcd9a9a649e0fba024765e66ff8065}\label{classclases_1_1_usuarios_a34dcd9a9a649e0fba024765e66ff8065}} 
+\index{clases.Usuarios@{clases.Usuarios}!toString@{toString}}
+\index{toString@{toString}!clases.Usuarios@{clases.Usuarios}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily clases.\+Usuarios.\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Hace override de la funcion to\+String. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Los usuarios se han traducido a String para poder imprimirse 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+Devuelve el item traducido a String 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_usuarios_8java_source_l00094}{94}} del archivo \mbox{\hyperlink{_usuarios_8java_source}{Usuarios.\+java}}.
+
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classclases_1_1_usuarios_a13eb01e5dfe2a1fa9bc9405c107876a8}\label{classclases_1_1_usuarios_a13eb01e5dfe2a1fa9bc9405c107876a8}} 
+\index{clases.Usuarios@{clases.Usuarios}!users@{users}}
+\index{users@{users}!clases.Usuarios@{clases.Usuarios}}
+\doxysubsubsection{\texorpdfstring{users}{users}}
+{\footnotesize\ttfamily Array\+List$<$ \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} $>$ clases.\+Usuarios.\+users\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Conjunto de objetos de la clase de usuario que componen el conjunto de usuarios. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_usuarios_8java_source_l00017}{17}} del archivo \mbox{\hyperlink{_usuarios_8java_source}{Usuarios.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_usuarios_8java}{Usuarios.\+java}}\end{DoxyCompactItemize}

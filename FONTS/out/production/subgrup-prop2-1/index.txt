@@ -1,0 +1,54 @@
+FONTS					
+├── dominio
+│   ├── clases
+│   │    ├── Algoritmos.java
+│   │    ├── Atributo.java
+│   │    ├── AtributoBoolean.java
+│   │    ├── AtributoCategorico.java
+│   │    ├── AtributoCategoricoMultiple.java
+│   │    ├── AtributoFecha.java
+│   │    ├── AtributoNumerico.java
+│   │    ├── Centroide.java
+│   │    ├── Item.java
+│   │    ├── Items.java
+│   │    ├── KMeans.java
+│   │    ├── NearestNeighbours.java
+│   │    ├── Parser.java
+│   │    ├── Recomendacion.java
+│   │    ├── Recomendaciones.java
+│   │    ├── SlopeOne.java
+│   │    ├── Usuario.java
+│   │    └── Usuarios.java
+│   └── controladores
+│       ├── drivers
+│       │     ├── DriverNearestNeighbours.java
+│       │     ├── DriverSlopeOne.java
+│       │     ├── DriverKMeans.java
+│       │     └── DriverRecomendaciones.java
+│       ├── tests
+│       │     ├── ParserTest.java
+│       │     ├── SlopeOneTest.java
+│       │     ├── KMeansTest.java
+│       │     └── NearestNeighborsTest.java
+│       ├── CtrlDominio
+│       ├── CtrlDominioCargarDatos
+│       ├── CtrlDominioPreprocesarDatos
+│       └── CtrlPersistencia
+├── persistencia
+│   ├── Gestion.java
+│   ├── Escritura.java
+│   └── Lectura.java
+└── presentacion
+    ├── Main.java
+    ├── MainTerminal.java
+    ├── añadirItem.java
+    ├── añadirItem.form
+    ├── usuarioMain.java
+    ├── usuarioMain.form
+    ├── vistaItems.java
+    ├── vistaItems.form
+    ├── vistaPrincipal.java
+    ├── vistaPrincipal.form
+    ├── vistaRecomendaciones.java
+    └── vistaRecomendaciones.form
+

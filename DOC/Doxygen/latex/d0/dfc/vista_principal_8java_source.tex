@@ -1,0 +1,297 @@
+\hypertarget{vista_principal_8java_source}{}\doxysection{vista\+Principal.\+java}
+\label{vista_principal_8java_source}\index{vistaPrincipal.java@{vistaPrincipal.java}}
+\mbox{\hyperlink{vista_principal_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00001}00001 \textcolor{keyword}{package }presentacion; }
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00005}00005 \textcolor{keyword}{import} com.intellij.uiDesigner.core.GridConstraints;}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00006}00006 \textcolor{keyword}{import} com.intellij.uiDesigner.core.GridLayoutManager;}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00007}00007 \textcolor{keyword}{import} com.intellij.uiDesigner.core.Spacer;}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00009}00009 \textcolor{keyword}{import} javax.swing.*;}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00010}00010 \textcolor{keyword}{import} javax.swing.border.TitledBorder;}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00011}00011 \textcolor{keyword}{import} javax.swing.filechooser.FileSystemView;}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00012}00012 \textcolor{keyword}{import} javax.swing.plaf.FontUIResource;}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00013}00013 \textcolor{keyword}{import} javax.swing.text.StyleContext;}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00014}00014 \textcolor{keyword}{import} java.awt.*;}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00015}00015 \textcolor{keyword}{import} java.awt.event.*;}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00016}00016 \textcolor{keyword}{import} java.io.File;}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00017}00017 \textcolor{keyword}{import} java.util.Locale;}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00025}\mbox{\hyperlink{classpresentacion_1_1vista_principal}{00025}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classpresentacion_1_1vista_principal}{vistaPrincipal}} \textcolor{keyword}{extends} JFrame \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00026}\mbox{\hyperlink{classpresentacion_1_1vista_principal_aa0ef1e4acb230edf24f7b47cc6ef2ed1}{00026}}     \textcolor{keyword}{private} \mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion}{CtrlPresentacion}} \mbox{\hyperlink{classpresentacion_1_1vista_principal_aa0ef1e4acb230edf24f7b47cc6ef2ed1}{iCtrlPresentacion}};}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00028}\mbox{\hyperlink{classpresentacion_1_1vista_principal_a97b79775ad3e629df31f1500dba39c09}{00028}}     \textcolor{keyword}{private} JPanel \mbox{\hyperlink{classpresentacion_1_1vista_principal_a97b79775ad3e629df31f1500dba39c09}{panel1}};}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00029}\mbox{\hyperlink{classpresentacion_1_1vista_principal_a73a6cef548b9d185ac10a55bc2f6087f}{00029}}     \textcolor{keyword}{private} JTextField \mbox{\hyperlink{classpresentacion_1_1vista_principal_a73a6cef548b9d185ac10a55bc2f6087f}{id}};}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00030}\mbox{\hyperlink{classpresentacion_1_1vista_principal_ad60f99c2d3cbd0518bef22bf986c51b6}{00030}}     \textcolor{keyword}{private} JButton \mbox{\hyperlink{classpresentacion_1_1vista_principal_ad60f99c2d3cbd0518bef22bf986c51b6}{ENTRARButton}};}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00031}\mbox{\hyperlink{classpresentacion_1_1vista_principal_ad9e0b2c59a3aff39a7b3f7b4c3065120}{00031}}     \textcolor{keyword}{private} JCheckBox \mbox{\hyperlink{classpresentacion_1_1vista_principal_ad9e0b2c59a3aff39a7b3f7b4c3065120}{evaluarRecomendacionesCheckBox}};}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00032}\mbox{\hyperlink{classpresentacion_1_1vista_principal_affb9d97ebc24d83419c9de27c10da27d}{00032}}     \textcolor{keyword}{private} JButton \mbox{\hyperlink{classpresentacion_1_1vista_principal_affb9d97ebc24d83419c9de27c10da27d}{crearCuentaButton}};}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00033}\mbox{\hyperlink{classpresentacion_1_1vista_principal_a2c7276cdfb034be659b5d9f51ca1d2b2}{00033}}     \textcolor{keyword}{private} String \mbox{\hyperlink{classpresentacion_1_1vista_principal_a2c7276cdfb034be659b5d9f51ca1d2b2}{absolutePath}};}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00034}\mbox{\hyperlink{classpresentacion_1_1vista_principal_a55603459f3f3ab28d69ec5d2120081b5}{00034}}     \textcolor{keyword}{private} JMenuBar \mbox{\hyperlink{classpresentacion_1_1vista_principal_a55603459f3f3ab28d69ec5d2120081b5}{menubar}};}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00035}\mbox{\hyperlink{classpresentacion_1_1vista_principal_af79b43b7cfe49748d5404b8fc6c2148f}{00035}}     \textcolor{keyword}{private} JMenu \mbox{\hyperlink{classpresentacion_1_1vista_principal_af79b43b7cfe49748d5404b8fc6c2148f}{actividad}};}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00036}\mbox{\hyperlink{classpresentacion_1_1vista_principal_aa7d77852b32e0f825a6aaa66275f078f}{00036}}     \textcolor{keyword}{private} JMenuItem[] \mbox{\hyperlink{classpresentacion_1_1vista_principal_aa7d77852b32e0f825a6aaa66275f078f}{itemsMenu}};}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00038}\mbox{\hyperlink{classpresentacion_1_1vista_principal_abca066a902ca306289ecbff2151b9ad9}{00038}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpresentacion_1_1vista_principal_abca066a902ca306289ecbff2151b9ad9}{goToUsrMain}}() \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00039}00039         \textcolor{keywordtype}{boolean} eval = \mbox{\hyperlink{classpresentacion_1_1vista_principal_ad9e0b2c59a3aff39a7b3f7b4c3065120}{evaluarRecomendacionesCheckBox}}.isSelected();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00040}00040         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00041}00041             \textcolor{keywordtype}{int} userID = Integer.parseInt(\textcolor{keywordtype}{id}.getText());}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00042}00042             \mbox{\hyperlink{classpresentacion_1_1vista_principal_aa0ef1e4acb230edf24f7b47cc6ef2ed1}{iCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_ae565891615026370f8dda4bd21d22b75}{enterNewUser}}(userID, eval);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00043}00043             \mbox{\hyperlink{classpresentacion_1_1vista_principal_aa0ef1e4acb230edf24f7b47cc6ef2ed1}{iCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_a31b82a15f99228fa612f3fcf6d97c405}{changeFrame}}(\textcolor{stringliteral}{"{}usuarioMain"{}});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00044}00044             setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00045}00045         \} \textcolor{keywordflow}{catch} (Exception err) \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00046}00046             \mbox{\hyperlink{classpresentacion_1_1vista_principal_a70518b58a3afbd8a049665605ef72242}{hayError}}(err.toString());}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00047}00047         \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00048}00048     \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00054}\mbox{\hyperlink{classpresentacion_1_1vista_principal_a490c2c0b853fd5b8dd24c027732ce169}{00054}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpresentacion_1_1vista_principal_a490c2c0b853fd5b8dd24c027732ce169}{initMenu}}() \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00055}00055         \mbox{\hyperlink{classpresentacion_1_1vista_principal_a55603459f3f3ab28d69ec5d2120081b5}{menubar}} = \textcolor{keyword}{new} JMenuBar();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00056}00056         \mbox{\hyperlink{classpresentacion_1_1vista_principal_af79b43b7cfe49748d5404b8fc6c2148f}{actividad}} = \textcolor{keyword}{new} JMenu(\textcolor{stringliteral}{"{}actividad"{}});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00058}00058         \mbox{\hyperlink{classpresentacion_1_1vista_principal_aa7d77852b32e0f825a6aaa66275f078f}{itemsMenu}} = \textcolor{keyword}{new} JMenuItem[4];}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00059}00059         \mbox{\hyperlink{classpresentacion_1_1vista_principal_aa7d77852b32e0f825a6aaa66275f078f}{itemsMenu}}[0] = \textcolor{keyword}{new} JMenuItem(\textcolor{stringliteral}{"{}cargar archivo nuevo"{}});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00060}00060         \mbox{\hyperlink{classpresentacion_1_1vista_principal_aa7d77852b32e0f825a6aaa66275f078f}{itemsMenu}}[0].addActionListener(\textcolor{keyword}{new} AbstractAction() \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00061}00061             @Override}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00062}00062             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00063}00063                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00064}00064                     \mbox{\hyperlink{classpresentacion_1_1vista_principal_aa0ef1e4acb230edf24f7b47cc6ef2ed1}{iCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_a31b82a15f99228fa612f3fcf6d97c405}{changeFrame}}(\textcolor{stringliteral}{"{}cargarDatos"{}});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00065}00065                 \} \textcolor{keywordflow}{catch} (Exception ex) \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00066}00066                     ex.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00067}00067                 \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00068}00068             \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00069}00069         \});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00070}00070         \mbox{\hyperlink{classpresentacion_1_1vista_principal_aa7d77852b32e0f825a6aaa66275f078f}{itemsMenu}}[1] = \textcolor{keyword}{new} JMenuItem(\textcolor{stringliteral}{"{}ver items"{}});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00071}00071         \mbox{\hyperlink{classpresentacion_1_1vista_principal_aa7d77852b32e0f825a6aaa66275f078f}{itemsMenu}}[1].addActionListener(\textcolor{keyword}{new} AbstractAction() \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00072}00072             @Override}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00073}00073             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00074}00074                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00075}00075                     \mbox{\hyperlink{classpresentacion_1_1vista_principal_aa0ef1e4acb230edf24f7b47cc6ef2ed1}{iCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_a31b82a15f99228fa612f3fcf6d97c405}{changeFrame}}(\textcolor{stringliteral}{"{}vistaItems"{}});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00076}00076                 \} \textcolor{keywordflow}{catch} (Exception ex) \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00077}00077                     ex.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00078}00078                 \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00079}00079             \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00080}00080         \});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00081}00081         \mbox{\hyperlink{classpresentacion_1_1vista_principal_aa7d77852b32e0f825a6aaa66275f078f}{itemsMenu}}[2] = \textcolor{keyword}{new} JMenuItem(\textcolor{stringliteral}{"{}añadir item"{}});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00082}00082         \mbox{\hyperlink{classpresentacion_1_1vista_principal_aa7d77852b32e0f825a6aaa66275f078f}{itemsMenu}}[2].addActionListener(\textcolor{keyword}{new} AbstractAction() \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00083}00083             @Override}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00084}00084             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00085}00085                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00086}00086                     \mbox{\hyperlink{classpresentacion_1_1vista_principal_aa0ef1e4acb230edf24f7b47cc6ef2ed1}{iCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_a31b82a15f99228fa612f3fcf6d97c405}{changeFrame}}(\textcolor{stringliteral}{"{}añadirItem"{}});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00087}00087                 \} \textcolor{keywordflow}{catch} (Exception ex) \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00088}00088                     ex.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00089}00089                 \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00090}00090             \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00091}00091         \});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00092}00092         \mbox{\hyperlink{classpresentacion_1_1vista_principal_aa7d77852b32e0f825a6aaa66275f078f}{itemsMenu}}[3] = \textcolor{keyword}{new} JMenuItem(\textcolor{stringliteral}{"{}salir"{}});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00093}00093         \mbox{\hyperlink{classpresentacion_1_1vista_principal_aa7d77852b32e0f825a6aaa66275f078f}{itemsMenu}}[3].addActionListener(\textcolor{keyword}{new} AbstractAction() \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00094}00094             @Override}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00095}00095             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00096}00096                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00097}00097                     \mbox{\hyperlink{classpresentacion_1_1vista_principal_aa0ef1e4acb230edf24f7b47cc6ef2ed1}{iCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_a3fecdecafe25d957487975b76972c5cb}{guardarSession}}();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00098}00098                 \} \textcolor{keywordflow}{catch} (Exception ex) \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00099}00099                     ex.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00100}00100                 \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00101}00101                 setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00102}00102             \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00103}00103         \});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00105}00105         \mbox{\hyperlink{classpresentacion_1_1vista_principal_a55603459f3f3ab28d69ec5d2120081b5}{menubar}}.add(\mbox{\hyperlink{classpresentacion_1_1vista_principal_af79b43b7cfe49748d5404b8fc6c2148f}{actividad}});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00106}00106         \textcolor{keywordflow}{for} (JMenuItem it : \mbox{\hyperlink{classpresentacion_1_1vista_principal_aa7d77852b32e0f825a6aaa66275f078f}{itemsMenu}}) \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00107}00107             \mbox{\hyperlink{classpresentacion_1_1vista_principal_af79b43b7cfe49748d5404b8fc6c2148f}{actividad}}.add(it);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00108}00108         \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00109}00109     \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00116}\mbox{\hyperlink{classpresentacion_1_1vista_principal_a1e5c5007685898049227fd01fb4b42cf}{00116}}     \textcolor{keyword}{public} \mbox{\hyperlink{classpresentacion_1_1vista_principal_a1e5c5007685898049227fd01fb4b42cf}{vistaPrincipal}}(\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion}{CtrlPresentacion}} pCtrlPresentacion) \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00117}00117         \mbox{\hyperlink{classpresentacion_1_1vista_principal_aa0ef1e4acb230edf24f7b47cc6ef2ed1}{iCtrlPresentacion}} = pCtrlPresentacion;}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00118}00118         setContentPane(\mbox{\hyperlink{classpresentacion_1_1vista_principal_a97b79775ad3e629df31f1500dba39c09}{panel1}});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00119}00119         \mbox{\hyperlink{classpresentacion_1_1vista_principal_a490c2c0b853fd5b8dd24c027732ce169}{initMenu}}();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00120}00120         \textcolor{comment}{//setDefaultCloseOperation(JFrame.EXIT\_ON\_CLOSE);}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00122}00122         \mbox{\hyperlink{classpresentacion_1_1vista_principal_ad60f99c2d3cbd0518bef22bf986c51b6}{ENTRARButton}}.addActionListener(\textcolor{keyword}{new} ActionListener() \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00123}00123             @Override}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00124}00124             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00125}00125                 \mbox{\hyperlink{classpresentacion_1_1vista_principal_abca066a902ca306289ecbff2151b9ad9}{goToUsrMain}}();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00126}00126             \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00127}00127         \});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00128}00128 }
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00129}00129         \textcolor{keywordtype}{id}.addKeyListener(\textcolor{keyword}{new} KeyAdapter() \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00130}00130             @Override}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00131}00131             \textcolor{keyword}{public} \textcolor{keywordtype}{void} keyPressed(KeyEvent e) \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00132}00132                 \textcolor{keywordflow}{if} (e.getKeyCode() == KeyEvent.VK\_ENTER) \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00133}00133                     \mbox{\hyperlink{classpresentacion_1_1vista_principal_abca066a902ca306289ecbff2151b9ad9}{goToUsrMain}}();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00134}00134                 \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00135}00135             \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00136}00136         \});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00138}00138         \mbox{\hyperlink{classpresentacion_1_1vista_principal_affb9d97ebc24d83419c9de27c10da27d}{crearCuentaButton}}.addActionListener(\textcolor{keyword}{new} ActionListener() \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00139}00139             @Override}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00140}00140             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00141}00141                 \textcolor{keywordtype}{int} userID = Integer.parseInt(\textcolor{keywordtype}{id}.getText());}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00142}00142                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00143}00143                     \mbox{\hyperlink{classpresentacion_1_1vista_principal_aa0ef1e4acb230edf24f7b47cc6ef2ed1}{iCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_aa477e107a57fa60336532ef763a0d220}{añadirUsuario}}(\mbox{\hyperlink{classpresentacion_1_1vista_principal_a2c7276cdfb034be659b5d9f51ca1d2b2}{absolutePath}}, userID);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00144}00144                     \mbox{\hyperlink{classpresentacion_1_1vista_principal_aa0ef1e4acb230edf24f7b47cc6ef2ed1}{iCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_a31b82a15f99228fa612f3fcf6d97c405}{changeFrame}}(\textcolor{stringliteral}{"{}usuarioMain"{}});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00145}00145                     setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00146}00146                 \} \textcolor{keywordflow}{catch} (Exception err) \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00147}00147                     \mbox{\hyperlink{classpresentacion_1_1vista_principal_a70518b58a3afbd8a049665605ef72242}{hayError}}(err.toString());}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00148}00148                 \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00149}00149             \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00150}00150         \});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00151}00151 }
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00152}00152         SwingUtilities.invokeLater(\textcolor{keyword}{new} Runnable() \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00153}00153             @Override}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00154}00154             \textcolor{keyword}{public} \textcolor{keywordtype}{void} run() \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00155}00155                 setJMenuBar(\mbox{\hyperlink{classpresentacion_1_1vista_principal_a55603459f3f3ab28d69ec5d2120081b5}{menubar}});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00156}00156                 setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00157}00157             \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00158}00158         \});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00159}00159     \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00160}00160 }
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00161}\mbox{\hyperlink{classpresentacion_1_1vista_principal_aa6abc2d0092098a82c85d90e11449699}{00161}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpresentacion_1_1vista_principal_a70518b58a3afbd8a049665605ef72242}{hayError}}(String s) \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00162}00162         JOptionPane.showMessageDialog(\textcolor{keyword}{new} JFrame(), s);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00163}00163     \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00164}00164 }
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00165}00165     \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00166}00166 \textcolor{comment}{// GUI initializer generated by IntelliJ IDEA GUI Designer}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00167}00167 \textcolor{comment}{// >>> IMPORTANT!! <<<}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00168}00168 \textcolor{comment}{// DO NOT EDIT OR ADD ANY CODE HERE!}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00169}00169         \mbox{\hyperlink{classpresentacion_1_1vista_principal_acb104970be079128366094b6271f47a9}{\$\$\$setupUI\$\$\$}}();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00170}00170     \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00171}00171 }
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00179}\mbox{\hyperlink{classpresentacion_1_1vista_principal_acb104970be079128366094b6271f47a9}{00179}}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpresentacion_1_1vista_principal_acb104970be079128366094b6271f47a9}{\$\$\$setupUI\$\$\$}}() \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00180}00180         \mbox{\hyperlink{classpresentacion_1_1vista_principal_a97b79775ad3e629df31f1500dba39c09}{panel1}} = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00181}00181         \mbox{\hyperlink{classpresentacion_1_1vista_principal_a97b79775ad3e629df31f1500dba39c09}{panel1}}.setLayout(\textcolor{keyword}{new} BorderLayout(0, 0));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00182}00182         \mbox{\hyperlink{classpresentacion_1_1vista_principal_a97b79775ad3e629df31f1500dba39c09}{panel1}}.setBackground(\textcolor{keyword}{new} Color(-\/13421238));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00183}00183         \mbox{\hyperlink{classpresentacion_1_1vista_principal_a97b79775ad3e629df31f1500dba39c09}{panel1}}.setMaximumSize(\textcolor{keyword}{new} Dimension(750, 500));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00184}00184         \mbox{\hyperlink{classpresentacion_1_1vista_principal_a97b79775ad3e629df31f1500dba39c09}{panel1}}.setMinimumSize(\textcolor{keyword}{new} Dimension(750, 500));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00185}00185         \mbox{\hyperlink{classpresentacion_1_1vista_principal_a97b79775ad3e629df31f1500dba39c09}{panel1}}.setOpaque(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00186}00186         \mbox{\hyperlink{classpresentacion_1_1vista_principal_a97b79775ad3e629df31f1500dba39c09}{panel1}}.setPreferredSize(\textcolor{keyword}{new} Dimension(750, 500));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00187}00187         \mbox{\hyperlink{classpresentacion_1_1vista_principal_a97b79775ad3e629df31f1500dba39c09}{panel1}}.setBorder(BorderFactory.createTitledBorder(\textcolor{keyword}{null}, \textcolor{stringliteral}{"{}"{}}, TitledBorder.CENTER, TitledBorder.DEFAULT\_POSITION, \textcolor{keyword}{this}.\$\$\$getFont\$\$\$(\textcolor{keyword}{null}, -\/1, -\/1, \mbox{\hyperlink{classpresentacion_1_1vista_principal_a97b79775ad3e629df31f1500dba39c09}{panel1}}.getFont()), \textcolor{keyword}{null}));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00188}00188         \textcolor{keyword}{final} JPanel panel2 = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00189}00189         panel2.setLayout(\textcolor{keyword}{new} BorderLayout(0, 0));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00190}00190         panel2.setBackground(\textcolor{keyword}{new} Color(-\/13421238));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00191}00191         panel2.setMaximumSize(\textcolor{keyword}{new} Dimension(300, 500));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00192}00192         panel2.setMinimumSize(\textcolor{keyword}{new} Dimension(300, 500));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00193}00193         panel2.setOpaque(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00194}00194         panel2.setPreferredSize(\textcolor{keyword}{new} Dimension(300, 500));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00195}00195         \mbox{\hyperlink{classpresentacion_1_1vista_principal_a97b79775ad3e629df31f1500dba39c09}{panel1}}.add(panel2, BorderLayout.WEST);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00196}00196         \textcolor{keyword}{final} JLabel label1 = \textcolor{keyword}{new} JLabel();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00197}00197         label1.setBackground(\textcolor{keyword}{new} Color(-\/13421238));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00198}00198         Font label1Font = this.\mbox{\hyperlink{classpresentacion_1_1vista_principal_aea442d86f4cb8ec9aeac60a03dff9ea5}{\$\$\$getFont\$\$\$}}(\textcolor{stringliteral}{"{}Bangla MN"{}}, Font.PLAIN, 36, label1.getFont());}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00199}00199         \textcolor{keywordflow}{if} (label1Font != \textcolor{keyword}{null}) label1.setFont(label1Font);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00200}00200         label1.setForeground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00201}00201         label1.setHorizontalAlignment(0);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00202}00202         label1.setHorizontalTextPosition(0);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00203}00203         label1.setPreferredSize(\textcolor{keyword}{new} Dimension(241, 66));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00204}00204         label1.setText(\textcolor{stringliteral}{"{}Bienvenido"{}});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00205}00205         label1.setVerticalAlignment(0);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00206}00206         panel2.add(label1, BorderLayout.WEST);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00207}00207         \textcolor{keyword}{final} JPanel panel3 = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00208}00208         panel3.setLayout(\textcolor{keyword}{new} BorderLayout(0, 0));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00209}00209         panel3.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00210}00210         panel3.setMaximumSize(\textcolor{keyword}{new} Dimension(450, 500));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00211}00211         panel3.setMinimumSize(\textcolor{keyword}{new} Dimension(450, 500));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00212}00212         panel3.setPreferredSize(\textcolor{keyword}{new} Dimension(450, 500));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00213}00213         \mbox{\hyperlink{classpresentacion_1_1vista_principal_a97b79775ad3e629df31f1500dba39c09}{panel1}}.add(panel3, BorderLayout.CENTER);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00214}00214         \textcolor{keyword}{final} JPanel panel4 = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00215}00215         panel4.setLayout(\textcolor{keyword}{new} GridLayoutManager(7, 2, \textcolor{keyword}{new} Insets(10, 10, 10, 10), -\/1, -\/1));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00216}00216         panel4.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00217}00217         panel4.setMaximumSize(\textcolor{keyword}{new} Dimension(-\/1, -\/1));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00218}00218         panel4.setMinimumSize(\textcolor{keyword}{new} Dimension(-\/1, -\/1));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00219}00219         panel4.setPreferredSize(\textcolor{keyword}{new} Dimension(-\/1, -\/1));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00220}00220         panel3.add(panel4, BorderLayout.CENTER);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00221}00221         \textcolor{keyword}{final} JLabel label2 = \textcolor{keyword}{new} JLabel();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00222}00222         Font label2Font = this.\mbox{\hyperlink{classpresentacion_1_1vista_principal_aea442d86f4cb8ec9aeac60a03dff9ea5}{\$\$\$getFont\$\$\$}}(\textcolor{stringliteral}{"{}Bangla Sangam MN"{}}, -\/1, -\/1, label2.getFont());}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00223}00223         \textcolor{keywordflow}{if} (label2Font != \textcolor{keyword}{null}) label2.setFont(label2Font);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00224}00224         label2.setHorizontalAlignment(2);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00225}00225         label2.setHorizontalTextPosition(2);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00226}00226         label2.setText(\textcolor{stringliteral}{"{}Id"{}});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00227}00227         panel4.add(label2, \textcolor{keyword}{new} GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR\_SOUTHWEST, GridConstraints.FILL\_NONE, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, \textcolor{keyword}{null}, \textcolor{keyword}{null}, \textcolor{keyword}{null}, 2, \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00228}00228         \textcolor{keyword}{final} JPanel panel5 = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00229}00229         panel5.setLayout(\textcolor{keyword}{new} GridLayoutManager(1, 1, \textcolor{keyword}{new} Insets(0, 0, 0, 0), 5, 5));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00230}00230         panel5.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00231}00231         panel4.add(panel5, \textcolor{keyword}{new} GridConstraints(0, 0, 1, 2, GridConstraints.ANCHOR\_CENTER, GridConstraints.FILL\_BOTH, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, \textcolor{keyword}{null}, \textcolor{keyword}{null}, \textcolor{keyword}{null}, 0, \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00232}00232         \textcolor{keyword}{final} JLabel label3 = \textcolor{keyword}{new} JLabel();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00233}00233         label3.setAlignmentY(0.0f);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00234}00234         label3.setAutoscrolls(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00235}00235         label3.setBackground(\textcolor{keyword}{new} Color(-\/13421238));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00236}00236         Font label3Font = this.\mbox{\hyperlink{classpresentacion_1_1vista_principal_aea442d86f4cb8ec9aeac60a03dff9ea5}{\$\$\$getFont\$\$\$}}(\textcolor{stringliteral}{"{}Bangla MN"{}}, -\/1, 14, label3.getFont());}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00237}00237         \textcolor{keywordflow}{if} (label3Font != \textcolor{keyword}{null}) label3.setFont(label3Font);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00238}00238         label3.setForeground(\textcolor{keyword}{new} Color(-\/13421238));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00239}00239         label3.setHorizontalAlignment(0);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00240}00240         label3.setHorizontalTextPosition(0);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00241}00241         label3.setMaximumSize(\textcolor{keyword}{new} Dimension(100, 100));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00242}00242         label3.setMinimumSize(\textcolor{keyword}{new} Dimension(100, 100));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00243}00243         label3.setPreferredSize(\textcolor{keyword}{new} Dimension(100, 100));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00244}00244         label3.setText(\textcolor{stringliteral}{"{}<html> Para empezar, introduce el ID del usuario para el que quieres recomendaciones:</html>"{}});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00245}00245         panel5.add(label3, \textcolor{keyword}{new} GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR\_CENTER, GridConstraints.FILL\_BOTH, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, \textcolor{keyword}{null}, \textcolor{keyword}{null}, \textcolor{keyword}{null}, 0, \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00246}00246         \textcolor{keyword}{final} JSeparator separator1 = \textcolor{keyword}{new} JSeparator();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00247}00247         panel4.add(separator1, \textcolor{keyword}{new} GridConstraints(5, 0, 1, 2, GridConstraints.ANCHOR\_CENTER, GridConstraints.FILL\_BOTH, GridConstraints.SIZEPOLICY\_WANT\_GROW, GridConstraints.SIZEPOLICY\_WANT\_GROW, \textcolor{keyword}{new} Dimension(500, 100), \textcolor{keyword}{new} Dimension(500, 100), \textcolor{keyword}{new} Dimension(500, 100), 0, \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00248}00248         \textcolor{keyword}{final} JPanel panel6 = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00249}00249         panel6.setLayout(\textcolor{keyword}{new} FlowLayout(FlowLayout.CENTER, 5, 5));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00250}00250         panel6.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00251}00251         panel4.add(panel6, \textcolor{keyword}{new} GridConstraints(6, 0, 1, 2, GridConstraints.ANCHOR\_CENTER, GridConstraints.FILL\_NONE, GridConstraints.SIZEPOLICY\_WANT\_GROW, GridConstraints.SIZEPOLICY\_WANT\_GROW, \textcolor{keyword}{null}, \textcolor{keyword}{null}, \textcolor{keyword}{null}, 0, \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00252}00252         \textcolor{keyword}{final} JLabel label4 = \textcolor{keyword}{new} JLabel();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00253}00253         Font label4Font = this.\mbox{\hyperlink{classpresentacion_1_1vista_principal_aea442d86f4cb8ec9aeac60a03dff9ea5}{\$\$\$getFont\$\$\$}}(\textcolor{stringliteral}{"{}Bangla MN"{}}, -\/1, 14, label4.getFont());}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00254}00254         \textcolor{keywordflow}{if} (label4Font != \textcolor{keyword}{null}) label4.setFont(label4Font);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00255}00255         label4.setForeground(\textcolor{keyword}{new} Color(-\/13421238));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00256}00256         label4.setHorizontalAlignment(2);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00257}00257         label4.setText(\textcolor{stringliteral}{"{}¿Eres nuevo? ¡No te proecupes!"{}});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00258}00258         panel6.add(label4);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00259}00259         \textcolor{keyword}{final} Spacer spacer1 = \textcolor{keyword}{new} Spacer();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00260}00260         panel6.add(spacer1);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00261}00261         \mbox{\hyperlink{classpresentacion_1_1vista_principal_affb9d97ebc24d83419c9de27c10da27d}{crearCuentaButton}} = \textcolor{keyword}{new} JButton();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00262}00262         \mbox{\hyperlink{classpresentacion_1_1vista_principal_affb9d97ebc24d83419c9de27c10da27d}{crearCuentaButton}}.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00263}00263         Font crearCuentaButtonFont = this.\mbox{\hyperlink{classpresentacion_1_1vista_principal_aea442d86f4cb8ec9aeac60a03dff9ea5}{\$\$\$getFont\$\$\$}}(\textcolor{stringliteral}{"{}Bangla MN"{}}, -\/1, -\/1, crearCuentaButton.getFont());}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00264}00264         \textcolor{keywordflow}{if} (crearCuentaButtonFont != \textcolor{keyword}{null}) \mbox{\hyperlink{classpresentacion_1_1vista_principal_affb9d97ebc24d83419c9de27c10da27d}{crearCuentaButton}}.setFont(crearCuentaButtonFont);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00265}00265         \mbox{\hyperlink{classpresentacion_1_1vista_principal_affb9d97ebc24d83419c9de27c10da27d}{crearCuentaButton}}.setText(\textcolor{stringliteral}{"{}Crear cuenta"{}});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00266}00266         panel6.add(\mbox{\hyperlink{classpresentacion_1_1vista_principal_affb9d97ebc24d83419c9de27c10da27d}{crearCuentaButton}});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00267}00267         \textcolor{keywordtype}{id} = \textcolor{keyword}{new} JTextField();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00268}00268         \textcolor{keywordtype}{id}.setHorizontalAlignment(0);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00269}00269         \textcolor{keywordtype}{id}.setMargin(\textcolor{keyword}{new} Insets(2, 6, 2, 6));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00270}00270         \textcolor{keywordtype}{id}.setPreferredSize(\textcolor{keyword}{new} Dimension(300, 30));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00271}00271         panel4.add(\textcolor{keywordtype}{id}, \textcolor{keyword}{new} GridConstraints(1, 1, 1, 1, GridConstraints.ANCHOR\_CENTER, GridConstraints.FILL\_HORIZONTAL, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, \textcolor{keyword}{null}, \textcolor{keyword}{null}, \textcolor{keyword}{null}, 0, \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00272}00272         \mbox{\hyperlink{classpresentacion_1_1vista_principal_ad9e0b2c59a3aff39a7b3f7b4c3065120}{evaluarRecomendacionesCheckBox}} = \textcolor{keyword}{new} JCheckBox();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00273}00273         \mbox{\hyperlink{classpresentacion_1_1vista_principal_ad9e0b2c59a3aff39a7b3f7b4c3065120}{evaluarRecomendacionesCheckBox}}.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00274}00274         Font evaluarRecomendacionesCheckBoxFont = this.\mbox{\hyperlink{classpresentacion_1_1vista_principal_aea442d86f4cb8ec9aeac60a03dff9ea5}{\$\$\$getFont\$\$\$}}(\textcolor{stringliteral}{"{}Bangla Sangam MN"{}}, -\/1, -\/1, evaluarRecomendacionesCheckBox.getFont());}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00275}00275         \textcolor{keywordflow}{if} (evaluarRecomendacionesCheckBoxFont != \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00276}00276             \mbox{\hyperlink{classpresentacion_1_1vista_principal_ad9e0b2c59a3aff39a7b3f7b4c3065120}{evaluarRecomendacionesCheckBox}}.setFont(evaluarRecomendacionesCheckBoxFont);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00277}00277         \mbox{\hyperlink{classpresentacion_1_1vista_principal_ad9e0b2c59a3aff39a7b3f7b4c3065120}{evaluarRecomendacionesCheckBox}}.setForeground(\textcolor{keyword}{new} Color(-\/13421238));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00278}00278         \mbox{\hyperlink{classpresentacion_1_1vista_principal_ad9e0b2c59a3aff39a7b3f7b4c3065120}{evaluarRecomendacionesCheckBox}}.setHorizontalAlignment(2);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00279}00279         \mbox{\hyperlink{classpresentacion_1_1vista_principal_ad9e0b2c59a3aff39a7b3f7b4c3065120}{evaluarRecomendacionesCheckBox}}.setHorizontalTextPosition(2);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00280}00280         \mbox{\hyperlink{classpresentacion_1_1vista_principal_ad9e0b2c59a3aff39a7b3f7b4c3065120}{evaluarRecomendacionesCheckBox}}.setText(\textcolor{stringliteral}{"{}Evaluar Recomendaciones"{}});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00281}00281         panel4.add(\mbox{\hyperlink{classpresentacion_1_1vista_principal_ad9e0b2c59a3aff39a7b3f7b4c3065120}{evaluarRecomendacionesCheckBox}}, \textcolor{keyword}{new} GridConstraints(2, 0, 1, 2, GridConstraints.ANCHOR\_CENTER, GridConstraints.FILL\_NONE, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, \textcolor{keyword}{null}, \textcolor{keyword}{null}, \textcolor{keyword}{null}, 0, \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00282}00282         \mbox{\hyperlink{classpresentacion_1_1vista_principal_ad60f99c2d3cbd0518bef22bf986c51b6}{ENTRARButton}} = \textcolor{keyword}{new} JButton();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00283}00283         \mbox{\hyperlink{classpresentacion_1_1vista_principal_ad60f99c2d3cbd0518bef22bf986c51b6}{ENTRARButton}}.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00284}00284         Font ENTRARButtonFont = this.\mbox{\hyperlink{classpresentacion_1_1vista_principal_aea442d86f4cb8ec9aeac60a03dff9ea5}{\$\$\$getFont\$\$\$}}(\textcolor{stringliteral}{"{}Bangla Sangam MN"{}}, -\/1, -\/1, ENTRARButton.getFont());}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00285}00285         \textcolor{keywordflow}{if} (ENTRARButtonFont != \textcolor{keyword}{null}) \mbox{\hyperlink{classpresentacion_1_1vista_principal_ad60f99c2d3cbd0518bef22bf986c51b6}{ENTRARButton}}.setFont(ENTRARButtonFont);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00286}00286         \mbox{\hyperlink{classpresentacion_1_1vista_principal_ad60f99c2d3cbd0518bef22bf986c51b6}{ENTRARButton}}.setForeground(\textcolor{keyword}{new} Color(-\/13421238));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00287}00287         \mbox{\hyperlink{classpresentacion_1_1vista_principal_ad60f99c2d3cbd0518bef22bf986c51b6}{ENTRARButton}}.setText(\textcolor{stringliteral}{"{}ENTRAR"{}});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00288}00288         panel4.add(\mbox{\hyperlink{classpresentacion_1_1vista_principal_ad60f99c2d3cbd0518bef22bf986c51b6}{ENTRARButton}}, \textcolor{keyword}{new} GridConstraints(4, 1, 1, 1, GridConstraints.ANCHOR\_CENTER, GridConstraints.FILL\_HORIZONTAL, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, \textcolor{keyword}{null}, \textcolor{keyword}{null}, \textcolor{keyword}{null}, 0, \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00289}00289         \textcolor{keyword}{final} Spacer spacer2 = \textcolor{keyword}{new} Spacer();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00290}00290         panel4.add(spacer2, \textcolor{keyword}{new} GridConstraints(3, 1, 1, 1, GridConstraints.ANCHOR\_CENTER, GridConstraints.FILL\_VERTICAL, 1, GridConstraints.SIZEPOLICY\_WANT\_GROW, \textcolor{keyword}{null}, \textcolor{keyword}{null}, \textcolor{keyword}{null}, 0, \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00291}00291     \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00292}00292 }
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00296}\mbox{\hyperlink{classpresentacion_1_1vista_principal_aea442d86f4cb8ec9aeac60a03dff9ea5}{00296}}     \textcolor{keyword}{private} Font \mbox{\hyperlink{classpresentacion_1_1vista_principal_aea442d86f4cb8ec9aeac60a03dff9ea5}{\$\$\$getFont\$\$\$}}(String fontName, \textcolor{keywordtype}{int} style, \textcolor{keywordtype}{int} size, Font currentFont) \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00297}00297         \textcolor{keywordflow}{if} (currentFont == \textcolor{keyword}{null}) \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00298}00298         String resultName;}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00299}00299         \textcolor{keywordflow}{if} (fontName == \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00300}00300             resultName = currentFont.getName();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00301}00301         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00302}00302             Font testFont = \textcolor{keyword}{new} Font(fontName, Font.PLAIN, 10);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00303}00303             \textcolor{keywordflow}{if} (testFont.canDisplay(\textcolor{charliteral}{'a'}) \&\& testFont.canDisplay(\textcolor{charliteral}{'1'})) \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00304}00304                 resultName = fontName;}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00305}00305             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00306}00306                 resultName = currentFont.getName();}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00307}00307             \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00308}00308         \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00309}00309         Font font = \textcolor{keyword}{new} Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00310}00310         \textcolor{keywordtype}{boolean} isMac = System.getProperty(\textcolor{stringliteral}{"{}os.name"{}}, \textcolor{stringliteral}{"{}"{}}).toLowerCase(Locale.ENGLISH).startsWith(\textcolor{stringliteral}{"{}mac"{}});}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00311}00311         Font fontWithFallback = isMac ? \textcolor{keyword}{new} Font(font.getFamily(), font.getStyle(), font.getSize()) : \textcolor{keyword}{new} StyleContext().getFont(font.getFamily(), font.getStyle(), font.getSize());}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00312}00312         \textcolor{keywordflow}{return} fontWithFallback instanceof FontUIResource ? fontWithFallback : \textcolor{keyword}{new} FontUIResource(fontWithFallback);}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00313}00313     \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00314}00314 }
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00318}\mbox{\hyperlink{classpresentacion_1_1vista_principal_ad7b1236741fbebfe2571c8707c0cc10f}{00318}}     \textcolor{keyword}{public} JComponent \mbox{\hyperlink{classpresentacion_1_1vista_principal_ad7b1236741fbebfe2571c8707c0cc10f}{\$\$\$getRootComponent\$\$\$}}() \{}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00319}00319         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentacion_1_1vista_principal_a97b79775ad3e629df31f1500dba39c09}{panel1}};}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00320}00320     \}}
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00321}00321 }
+\DoxyCodeLine{\Hypertarget{vista_principal_8java_source_l00322}00322 \}}
+
+\end{DoxyCode}

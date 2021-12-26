@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['validregex_0',['validRegex',['../d0/d77/classclases_1_1_parser.html#acbdc5f643616b1c7b213e8c2d9d69f93',1,'clases::Parser']]],
+  ['valoraciones_1',['valoraciones',['../df/db9/classclases_1_1_usuario.html#a3f82218a96ab364e686ce52dd384235b',1,'clases::Usuario']]],
+  ['valorarraystring_2',['valorArrayString',['../d0/d5b/classclases_1_1_atributo_categorico_multiple.html#a1f2d890d86d569098b23359c4415618e',1,'clases::AtributoCategoricoMultiple']]],
+  ['valorboolean_3',['valorBoolean',['../d4/d1c/classclases_1_1_atributo_boolean.html#a08652623aef0ccc80b46d333303c0728',1,'clases::AtributoBoolean']]],
+  ['valorfecha_4',['valorFecha',['../de/d5e/classclases_1_1_atributo_fecha.html#a9e61dfed8a77730172b64964db8f55d0',1,'clases::AtributoFecha']]],
+  ['valornormalizado_5',['valorNormalizado',['../de/d5e/classclases_1_1_atributo_fecha.html#af027f9055b5af124495028ae27b30a5b',1,'clases.AtributoFecha.valorNormalizado()'],['../d2/def/classclases_1_1_atributo_numerico.html#a247c19e697da62c376090f8f15c37451',1,'clases.AtributoNumerico.valorNormalizado()']]],
+  ['valornumerico_6',['valorNumerico',['../d2/def/classclases_1_1_atributo_numerico.html#ae91ceebf43e5ac18b233a48f486c7943',1,'clases::AtributoNumerico']]],
+  ['valorstring_7',['valorString',['../df/de0/classclases_1_1_atributo_categorico.html#a317c6300113ba18f0d9a3b01023978f9',1,'clases::AtributoCategorico']]],
+  ['valortexto_8',['valorTexto',['../dd/ded/classclases_1_1_atributo_texto.html#a4c6db2d858e87f1327e1071c099695f0',1,'clases::AtributoTexto']]],
+  ['valpanel_9',['valPanel',['../dc/d01/classpresentacion_1_1usuario_main.html#a2a024b473ea5250a012038a83b3d397f',1,'presentacion::usuarioMain']]],
+  ['value_10',['value',['../dc/d01/classpresentacion_1_1usuario_main.html#a1c28e249631f9068b486904c63faa2a0',1,'presentacion::usuarioMain']]],
+  ['vermisvaloracionesbutton_11',['verMisValoracionesButton',['../dc/d01/classpresentacion_1_1usuario_main.html#ae53e7b9e8aaf4f55800174071b2e4cd2',1,'presentacion::usuarioMain']]],
+  ['vistaitems_12',['vistaItems',['../de/d8f/classpresentacion_1_1vista_items.html',1,'presentacion.vistaItems'],['../de/d8f/classpresentacion_1_1vista_items.html#adaf384c2d691f17bb94f567117367b4e',1,'presentacion.vistaItems.vistaItems()']]],
+  ['vistaitems_2ejava_13',['vistaItems.java',['../d4/d69/vista_items_8java.html',1,'']]],
+  ['vistaprincipal_14',['vistaPrincipal',['../dd/d77/classpresentacion_1_1vista_principal.html',1,'presentacion.vistaPrincipal'],['../d1/d34/classpresentacion_1_1_ctrl_presentacion.html#a62d236ea61c3b39ab95c7c5947f1802e',1,'presentacion.CtrlPresentacion.vistaPrincipal()'],['../dd/d77/classpresentacion_1_1vista_principal.html#a1e5c5007685898049227fd01fb4b42cf',1,'presentacion.vistaPrincipal.vistaPrincipal()']]],
+  ['vistaprincipal_2ejava_15',['vistaPrincipal.java',['../d0/dfc/vista_principal_8java.html',1,'']]],
+  ['vistarecomendaciones_16',['vistaRecomendaciones',['../d1/df8/classpresentacion_1_1vista_recomendaciones.html',1,'presentacion.vistaRecomendaciones'],['../d1/df8/classpresentacion_1_1vista_recomendaciones.html#aa965d36e5197ec085763a2c2dba39808',1,'presentacion.vistaRecomendaciones.vistaRecomendaciones()']]],
+  ['vistarecomendaciones_2ejava_17',['vistaRecomendaciones.java',['../d3/de1/vista_recomendaciones_8java.html',1,'']]],
+  ['volverbutton_18',['volverButton',['../dd/dcd/classpresentacion_1_1añdir_item.html#ab8c9df777488e503b89cf3e8a9385ce8',1,'presentacion.añadirItem.volverButton()'],['../d7/db5/classpresentacion_1_1historial_recomendaciones.html#aa450a494d7347e3b18b368fc11d55c5a',1,'presentacion.historialRecomendaciones.volverButton()'],['../de/d8f/classpresentacion_1_1vista_items.html#a3614c69fff913bf972b345dec5535a75',1,'presentacion.vistaItems.volverButton()'],['../d1/df8/classpresentacion_1_1vista_recomendaciones.html#aa725cc872e1deb4735378efdbf86b31f',1,'presentacion.vistaRecomendaciones.volverButton()']]],
+  ['volverbutton2_19',['volverButton2',['../d7/db5/classpresentacion_1_1historial_recomendaciones.html#a0e3f8a782ec26837df806789076c3953',1,'presentacion::historialRecomendaciones']]]
+];

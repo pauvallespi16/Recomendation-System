@@ -1,0 +1,204 @@
+\hypertarget{classcontroladores_1_1_algoritmos}{}\doxysection{Referencia de la Clase controladores.\+Algoritmos}
+\label{classcontroladores_1_1_algoritmos}\index{controladores.Algoritmos@{controladores.Algoritmos}}
+
+
+@\+Class \mbox{\hyperlink{classcontroladores_1_1_algoritmos}{Algoritmos}}  
+
+
+Diagrama de herencias de controladores.\+Algoritmos\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.830065cm]{df/ddc/classcontroladores_1_1_algoritmos}
+\end{center}
+\end{figure}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcontroladores_1_1_algoritmos_aa76c4ec299a3d3e622e3d42275cdbb3e}{Algoritmos}} ()
+\begin{DoxyCompactList}\small\item\em Constructora por defecto, objeto vacío. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcontroladores_1_1_algoritmos_a4839bda5c82e12f7a02bc7ca72c2b797}{Algoritmos}} (\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}{us}}, \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}, \mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a12da803fac97be1ebc727d328872df83}{it}})
+\item 
+void \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a9e030b799aff56e24c6b9df3b7f7a7ff}{calcular\+Recomendaciones}} (int size)
+\begin{DoxyCompactList}\small\item\em para inicializar todo lo que debe calcular para sus recomendaciones \end{DoxyCompactList}\item 
+Map$<$ Integer, Double $>$ \mbox{\hyperlink{classcontroladores_1_1_algoritmos_adbb9d686216172569e50f0ff41960130}{get\+Predicciones}} (int k)
+\begin{DoxyCompactList}\small\item\em coger el mapa de predicciones generado por la llama a los algoritmos \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}{us}}
+\begin{DoxyCompactList}\small\item\em Conjunto de usuarios que vamos a usar para inicializar nuestro algoritmo de collaborative filtering. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}
+\begin{DoxyCompactList}\small\item\em Usuario desde el cual vamos a hacer las predicciones de los items. \end{DoxyCompactList}\item 
+Map$<$ Integer, Double $>$ \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a65c7b4dfdc13c5a8be71386e1744c647}{predictions}}
+\begin{DoxyCompactList}\small\item\em Mapa de predicciones de los algoritmos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a12da803fac97be1ebc727d328872df83}{it}}
+\begin{DoxyCompactList}\small\item\em Conjunto de items que se usaran para las valoraciones. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+@\+Class \mbox{\hyperlink{classcontroladores_1_1_algoritmos}{Algoritmos}} 
+
+Clase de control de algoritmos, usa esta clase para controlar el uso de los diferentes algoritmos del sistema de recomendaciones.
+
+\begin{DoxyAuthor}{Autor}
+Carla Campàs Gené
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+December 2021 
+\end{DoxyDate}
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00019}{19}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classcontroladores_1_1_algoritmos_aa76c4ec299a3d3e622e3d42275cdbb3e}\label{classcontroladores_1_1_algoritmos_aa76c4ec299a3d3e622e3d42275cdbb3e}} 
+\index{controladores.Algoritmos@{controladores.Algoritmos}!Algoritmos@{Algoritmos}}
+\index{Algoritmos@{Algoritmos}!controladores.Algoritmos@{controladores.Algoritmos}}
+\doxysubsubsection{\texorpdfstring{Algoritmos()}{Algoritmos()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily controladores.\+Algoritmos.\+Algoritmos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructora por defecto, objeto vacío. 
+
+Constructora por defecto, inicializa la clase con un.
+
+Constructora para inicializar un objeto de la clase, pone la variable content\+Based a true, por lo tanto se haran las predicciones mediante los algoritmos de collaborative filtering. \begin{DoxyPrecond}{Precondición}
+No hay objeto de la clase algoritmos 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Existe el objeto vacío de la clase algoritmos
+\end{DoxyPostcond}
+\begin{DoxyPrecond}{Precondición}
+No hay objeto de la clase \mbox{\hyperlink{classcontroladores_1_1_algoritmos}{Algoritmos}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Existe el objeto de la clase \mbox{\hyperlink{classcontroladores_1_1_algoritmos}{Algoritmos}} con variables globales us y u inicializadas 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em us} & Conjunto de usuarios que usaremos para los algoritmos de recomendación \\
+\hline
+{\em u} & Usuario al que le queremos recomendar items \\
+\hline
+{\em it} & Items de los que queremos obtener valoraciones \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00048}{48}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_algoritmos_a4839bda5c82e12f7a02bc7ca72c2b797}\label{classcontroladores_1_1_algoritmos_a4839bda5c82e12f7a02bc7ca72c2b797}} 
+\index{controladores.Algoritmos@{controladores.Algoritmos}!Algoritmos@{Algoritmos}}
+\index{Algoritmos@{Algoritmos}!controladores.Algoritmos@{controladores.Algoritmos}}
+\doxysubsubsection{\texorpdfstring{Algoritmos()}{Algoritmos()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily controladores.\+Algoritmos.\+Algoritmos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}}}]{us,  }\item[{\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}}]{u,  }\item[{\mbox{\hyperlink{classclases_1_1_items}{Items}}}]{it }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00060}{60}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classcontroladores_1_1_algoritmos_a9e030b799aff56e24c6b9df3b7f7a7ff}\label{classcontroladores_1_1_algoritmos_a9e030b799aff56e24c6b9df3b7f7a7ff}} 
+\index{controladores.Algoritmos@{controladores.Algoritmos}!calcularRecomendaciones@{calcularRecomendaciones}}
+\index{calcularRecomendaciones@{calcularRecomendaciones}!controladores.Algoritmos@{controladores.Algoritmos}}
+\doxysubsubsection{\texorpdfstring{calcularRecomendaciones()}{calcularRecomendaciones()}}
+{\footnotesize\ttfamily controladores.\+Algoritmos.\+calcular\+Recomendaciones (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+para inicializar todo lo que debe calcular para sus recomendaciones 
+
+
+
+Reimplementado en \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a81255daa09a672febc6284f7e5ca2faf}{controladores.\+Nearest\+Neighbors}} y \mbox{\hyperlink{classcontroladores_1_1_slope_one_a9b9c6d819375c3b5041fdaab87b6b57a}{controladores.\+Slope\+One}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00074}{74}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_algoritmos_adbb9d686216172569e50f0ff41960130}\label{classcontroladores_1_1_algoritmos_adbb9d686216172569e50f0ff41960130}} 
+\index{controladores.Algoritmos@{controladores.Algoritmos}!getPredicciones@{getPredicciones}}
+\index{getPredicciones@{getPredicciones}!controladores.Algoritmos@{controladores.Algoritmos}}
+\doxysubsubsection{\texorpdfstring{getPredicciones()}{getPredicciones()}}
+{\footnotesize\ttfamily controladores.\+Algoritmos.\+get\+Predicciones (\begin{DoxyParamCaption}\item[{int}]{k }\end{DoxyParamCaption})}
+
+
+
+coger el mapa de predicciones generado por la llama a los algoritmos 
+
+\begin{DoxyReturn}{Devuelve}
+devuelve las predicciones hechas por el algoritmo de predicciones 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00080}{80}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classcontroladores_1_1_algoritmos_a12da803fac97be1ebc727d328872df83}\label{classcontroladores_1_1_algoritmos_a12da803fac97be1ebc727d328872df83}} 
+\index{controladores.Algoritmos@{controladores.Algoritmos}!it@{it}}
+\index{it@{it}!controladores.Algoritmos@{controladores.Algoritmos}}
+\doxysubsubsection{\texorpdfstring{it}{it}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classclases_1_1_items}{Items}} controladores.\+Algoritmos.\+it\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Conjunto de items que se usaran para las valoraciones. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00040}{40}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_algoritmos_a65c7b4dfdc13c5a8be71386e1744c647}\label{classcontroladores_1_1_algoritmos_a65c7b4dfdc13c5a8be71386e1744c647}} 
+\index{controladores.Algoritmos@{controladores.Algoritmos}!predictions@{predictions}}
+\index{predictions@{predictions}!controladores.Algoritmos@{controladores.Algoritmos}}
+\doxysubsubsection{\texorpdfstring{predictions}{predictions}}
+{\footnotesize\ttfamily Map$<$ Integer, Double $>$ controladores.\+Algoritmos.\+predictions\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Mapa de predicciones de los algoritmos. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00035}{35}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}\label{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}} 
+\index{controladores.Algoritmos@{controladores.Algoritmos}!u@{u}}
+\index{u@{u}!controladores.Algoritmos@{controladores.Algoritmos}}
+\doxysubsubsection{\texorpdfstring{u}{u}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} controladores.\+Algoritmos.\+u\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Usuario desde el cual vamos a hacer las predicciones de los items. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00030}{30}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}\label{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}} 
+\index{controladores.Algoritmos@{controladores.Algoritmos}!us@{us}}
+\index{us@{us}!controladores.Algoritmos@{controladores.Algoritmos}}
+\doxysubsubsection{\texorpdfstring{us}{us}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} controladores.\+Algoritmos.\+us\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Conjunto de usuarios que vamos a usar para inicializar nuestro algoritmo de collaborative filtering. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00024}{24}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_algoritmos_8java}{Algoritmos.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,30 @@
+\hypertarget{_atributo_fecha_8java_source}{}\doxysection{Atributo\+Fecha.\+java}
+\label{_atributo_fecha_8java_source}\index{AtributoFecha.java@{AtributoFecha.java}}
+\mbox{\hyperlink{_atributo_fecha_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00001}00001 \textcolor{keyword}{package }clases; }
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00005}00005 \textcolor{keyword}{import} java.text.ParseException;}
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00006}00006 \textcolor{keyword}{import} java.text.SimpleDateFormat;}
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00019}\mbox{\hyperlink{classclases_1_1_atributo_fecha}{00019}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classclases_1_1_atributo_fecha}{AtributoFecha}} \textcolor{keyword}{extends} \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}}<Long> \{}
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00022}\mbox{\hyperlink{classclases_1_1_atributo_fecha_a9e61dfed8a77730172b64964db8f55d0}{00022}}     \textcolor{keyword}{private} \textcolor{keywordtype}{long} \mbox{\hyperlink{classclases_1_1_atributo_fecha_a9e61dfed8a77730172b64964db8f55d0}{valorFecha}};}
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00028}\mbox{\hyperlink{classclases_1_1_atributo_fecha_af027f9055b5af124495028ae27b30a5b}{00028}}     \textcolor{keywordtype}{double} \mbox{\hyperlink{classclases_1_1_atributo_fecha_af027f9055b5af124495028ae27b30a5b}{valorNormalizado}};}
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00041}\mbox{\hyperlink{classclases_1_1_atributo_fecha_a0b971c1b845c3357f1b659bde74f5b32}{00041}}     \textcolor{keyword}{public} \mbox{\hyperlink{classclases_1_1_atributo_fecha_a0b971c1b845c3357f1b659bde74f5b32}{AtributoFecha}}(String \mbox{\hyperlink{classclases_1_1_atributo_fecha_a9e61dfed8a77730172b64964db8f55d0}{valorFecha}}) \textcolor{keywordflow}{throws} ParseException \{}
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00042}00042         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classclases_1_1_atributo_fecha_a9e61dfed8a77730172b64964db8f55d0}{valorFecha}}.equals(\textcolor{stringliteral}{"{}"{}}))}
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00043}00043             this.valorFecha = \textcolor{keyword}{new} SimpleDateFormat(\textcolor{stringliteral}{"{}yyyy-\/MM-\/dd"{}}).parse(\mbox{\hyperlink{classclases_1_1_atributo_fecha_a9e61dfed8a77730172b64964db8f55d0}{valorFecha}}).getTime();}
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00044}00044     \}}
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00054}\mbox{\hyperlink{classclases_1_1_atributo_fecha_af9340f59df437916ed9722e8a7a7637b}{00054}}     \textcolor{keyword}{public} \mbox{\hyperlink{classclases_1_1_atributo_fecha_af9340f59df437916ed9722e8a7a7637b}{AtributoFecha}}(Long value) \textcolor{keywordflow}{throws} ParseException \{}
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00055}00055         this.valorFecha = value;}
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00056}00056     \}}
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00065}\mbox{\hyperlink{classclases_1_1_atributo_fecha_aa69821604d2257e94892421e59168489}{00065}}     \textcolor{keyword}{public} Long \mbox{\hyperlink{classclases_1_1_atributo_fecha_aa69821604d2257e94892421e59168489}{getValor}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classclases_1_1_atributo_fecha_a9e61dfed8a77730172b64964db8f55d0}{valorFecha}}; \}}
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00073}\mbox{\hyperlink{classclases_1_1_atributo_fecha_a896881e97e12c491c9b72a1ac8b13e67}{00073}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_atributo_fecha_a896881e97e12c491c9b72a1ac8b13e67}{setValorNormalizado}}(Double \mbox{\hyperlink{classclases_1_1_atributo_fecha_af027f9055b5af124495028ae27b30a5b}{valorNormalizado}}) \{ this.valorNormalizado = \mbox{\hyperlink{classclases_1_1_atributo_fecha_af027f9055b5af124495028ae27b30a5b}{valorNormalizado}}; \}}
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00081}\mbox{\hyperlink{classclases_1_1_atributo_fecha_aca0bee223d5da2322efb375ff2a85784}{00081}}     \textcolor{keyword}{public} Double \mbox{\hyperlink{classclases_1_1_atributo_fecha_aca0bee223d5da2322efb375ff2a85784}{getValorNormalizado}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classclases_1_1_atributo_fecha_af027f9055b5af124495028ae27b30a5b}{valorNormalizado}}; \}}
+\DoxyCodeLine{\Hypertarget{_atributo_fecha_8java_source_l00082}00082 \}}
+
+\end{DoxyCode}

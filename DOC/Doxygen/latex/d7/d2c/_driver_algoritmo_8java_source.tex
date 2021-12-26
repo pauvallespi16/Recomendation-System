@@ -1,0 +1,243 @@
+\hypertarget{_driver_algoritmo_8java_source}{}\doxysection{Driver\+Algoritmo.\+java}
+\label{_driver_algoritmo_8java_source}\index{DriverAlgoritmo.java@{DriverAlgoritmo.java}}
+\mbox{\hyperlink{_driver_algoritmo_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00001}00001 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceclases}{clases}}.*;}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00002}00002 \textcolor{keyword}{import} \mbox{\hyperlink{namespacecontroladores}{controladores}}.\mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio}{CtrlDominio}};}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00003}00003 \textcolor{keyword}{import} \mbox{\hyperlink{namespacecontroladores}{controladores}}.\mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_preprocesar_datos}{CtrlDominioPreprocesarDatos}};}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00005}00005 \textcolor{keyword}{import} java.util.*;}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00007}\mbox{\hyperlink{class_driver_algoritmo}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_driver_algoritmo}{DriverAlgoritmo}} \{}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00008}\mbox{\hyperlink{class_driver_algoritmo_a7af33dc474c52bd4bd9b7d1addf1ed2e}{00008}}     \textcolor{keyword}{private} \textcolor{keyword}{static} \mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{class_driver_algoritmo_a7af33dc474c52bd4bd9b7d1addf1ed2e}{items}} = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_items}{Items}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00010}\mbox{\hyperlink{class_driver_algoritmo_a78cc80a9da3ce0b7715d671f7cae0df4}{00010}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_driver_algoritmo_a78cc80a9da3ce0b7715d671f7cae0df4}{setItems}}() throws Exception \{}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00011}00011         \mbox{\hyperlink{classinout}{inout}} INOUT = \textcolor{keyword}{new} \mbox{\hyperlink{classinout}{inout}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00012}00012         Map<String, Atributo> ats = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00014}00014         \mbox{\hyperlink{class_driver_algoritmo_a7af33dc474c52bd4bd9b7d1addf1ed2e}{items}}.\mbox{\hyperlink{classclases_1_1_items_a8c8be69090dbbacb94e8c65a1064f7f3}{setItems}}(\textcolor{keyword}{new} ArrayList<>());}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00015}00015         INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Por favor introduzca el número de items que desea inicializar sobre los que efectuar la recomendación"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00016}00016         \textcolor{keywordtype}{int} nits = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00017}00017         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < nits; i++)\{}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00018}00018             INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}introduzca el identificador del item "{}} + i + \textcolor{stringliteral}{"{}. Recuerde que deben ser únicos."{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00019}00019             \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00020}00020             \mbox{\hyperlink{classclases_1_1_item}{Item}} it = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_item}{Item}}(\textcolor{keywordtype}{id}, ats);}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00021}00021             \mbox{\hyperlink{class_driver_algoritmo_a7af33dc474c52bd4bd9b7d1addf1ed2e}{items}}.\mbox{\hyperlink{classclases_1_1_items_a501890abdc9482468d00e3af9efdfcee}{addItem}}(it);}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00022}00022         \}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00023}00023     \}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00024}\mbox{\hyperlink{class_driver_algoritmo_aa201ffb42cb85b12ba0796de8868b129}{00024}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_driver_algoritmo_aa201ffb42cb85b12ba0796de8868b129}{main}}(String args[]) \textcolor{keywordflow}{throws} Exception \{}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00025}00025         String command = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00026}00026         \mbox{\hyperlink{classinout}{inout}} INOUT = \textcolor{keyword}{new} \mbox{\hyperlink{classinout}{inout}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00027}00027         INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Inserte un comando. Inserte help para ver todos los posibles comandos. Inserte salir para salir."{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00028}00028         command = INOUT.\mbox{\hyperlink{classinout_a81e363b8da54fe0753778d6d1b8d90d1}{readline}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00029}00029         INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00030}00030         Map<Integer, Double> vals = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00031}00031         Map<String, Atributo> ats = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00032}00032         \mbox{\hyperlink{classclases_1_1_algoritmos}{Algoritmos}} a = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_algoritmos}{Algoritmos}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00034}00034         \textcolor{keywordtype}{boolean} slopeOneExec = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00035}00035         \textcolor{keywordflow}{while} (!command.equals(\textcolor{stringliteral}{"{}salir"{}})) \{}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00036}00036             \textcolor{keywordflow}{switch} (command) \{}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00038}00038                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}constructora vacia"{}}:}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00039}00039                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Llamando a la constructora vacía de la clase Algoritmo..."{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00040}00040                     a = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_algoritmos}{Algoritmos}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00041}00041                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Hecho."{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00042}00042                     command = INOUT.\mbox{\hyperlink{classinout_a81e363b8da54fe0753778d6d1b8d90d1}{readline}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00043}00043                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00044}00044                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}constructora con parametros"{}}:}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00045}00045                     ArrayList<Usuario> us = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00047}00047                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Llamando a la constructora de la clase Algoritmo..."{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00048}00048                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Introduce el número de usuarios que desea añadir"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00049}00049                     \textcolor{keywordtype}{int} nUsers = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00050}00050                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < nUsers; i++)\{}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00051}00051                         INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Introduce el id del usuario "{}} + i + \textcolor{stringliteral}{"{}. Recuerda que los identificadores deben ser únicos."{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00052}00052                         \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00053}00053                         INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Introduzca ahora el número de valoraciones que desee añadirle al usuario "{}} + i);}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00054}00054                         \textcolor{keywordtype}{int} nr = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00055}00055                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < nr; j++)\{}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00056}00056                             INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Recomendación "{}} + (j+1) + \textcolor{stringliteral}{"{}: introduce el id del item seguido de su valoración"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00057}00057                             \textcolor{keywordtype}{int} item = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00058}00058                             \textcolor{keywordtype}{double} v = INOUT.\mbox{\hyperlink{classinout_adefcfa6095f204d540e772e74b59bd58}{readdouble}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00059}00059                             vals.put(item, v);}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00060}00060                         \}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00061}00061                         \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} u = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}(\textcolor{keywordtype}{id}, vals);}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00062}00062                         us.add(u);}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00063}00063                         vals = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00064}00064                     \}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00065}00065                     \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} usuarios = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}}(us);}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00066}00066                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Ahora introduzca el identificador del usuario para el que quiere crear una recomendación:"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00067}00067                     \textcolor{keywordtype}{int} usr = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00068}00068                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Introduzca ahora el número de valoraciones que desee añadirle al usuario"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00069}00069                     \textcolor{keywordtype}{int} nr = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00070}00070                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < nr; i++)\{}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00071}00071                         INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Recomendación "{}} + (i+1) + \textcolor{stringliteral}{"{}: introduce el id del item seguido de su valoración"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00072}00072                         \textcolor{keywordtype}{int} item = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00073}00073                         \textcolor{keywordtype}{double} v = INOUT.\mbox{\hyperlink{classinout_adefcfa6095f204d540e772e74b59bd58}{readdouble}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00074}00074                         vals.put(item, v);}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00075}00075                     \}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00076}00076                     \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} u = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}(usr, vals);}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00078}00078                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Llamando a la constructora de la clase Algoritmo..."{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00079}00079                     \textcolor{comment}{//a = new Algoritmos(usuarios, u);}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00080}00080                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Hecho. El objeto Algoritmos se ha creado correctamente"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00082}00082                     command = INOUT.\mbox{\hyperlink{classinout_a81e363b8da54fe0753778d6d1b8d90d1}{readline}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00083}00083                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00085}00085                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}CF"{}}:}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00086}00086                     \textcolor{keywordflow}{if} (a != \textcolor{keyword}{null})\{}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00087}00087                         slopeOneExec = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00088}00088                         INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}llamando a Algoritmos.collaborativeFiltering y estableciendo parámetros por defecto para este algoritmo..."{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00089}00089                         \textcolor{comment}{//a.collaborativeFiltering();}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00090}00090                         INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}los parámetros han sido establecidos correctamente"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00091}00091                     \}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00092}00092                     \textcolor{keywordflow}{else} INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Error. Debe crear un objeto de Algoritmos primero. Escriba el comando 'constructora con parametros'"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00093}00093                     command = INOUT.\mbox{\hyperlink{classinout_a81e363b8da54fe0753778d6d1b8d90d1}{readline}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00094}00094                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00096}00096                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}get prediccion"{}}:}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00097}00097                     \textcolor{keywordflow}{if} (slopeOneExec)\{}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00098}00098                         INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Por favor introduzca el número de items que desea inicializar sobre los que efectuar la recomendación"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00099}00099                         \textcolor{keywordtype}{int} nits = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00100}00100                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < nits; i++)\{}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00101}00101                             INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}introduzca el identificador del item "{}} + i + \textcolor{stringliteral}{"{}. Recuerde que deben ser únicos."{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00102}00102                             \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00103}00103                             \mbox{\hyperlink{classclases_1_1_item}{Item}} it = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_item}{Item}}(\textcolor{keywordtype}{id}, ats);}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00104}00104                             \mbox{\hyperlink{class_driver_algoritmo_a7af33dc474c52bd4bd9b7d1addf1ed2e}{items}}.\mbox{\hyperlink{classclases_1_1_items_a501890abdc9482468d00e3af9efdfcee}{addItem}}(it);}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00105}00105                         \}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00106}00106                         INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Llamando al computador de predicciones..."{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00107}00107                         INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Por favor introduzca el identificador del item para el cual desea una predicción. Debe ser uno de los items introducidos anteririormente"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00108}00108                         \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00109}00109                         \textcolor{comment}{//double pred = a.getPrediction(id);}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00110}00110                         \textcolor{comment}{//INOUT.writeln("{}predicción obtenida: "{} + pred);}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00111}00111                     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00112}00112                         INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Error. No esta inicializada la clase de Slope One."{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00113}00113                     \}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00114}00114                     command = INOUT.\mbox{\hyperlink{classinout_a81e363b8da54fe0753778d6d1b8d90d1}{readline}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00115}00115                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00117}00117                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}CB"{}}:}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00118}00118                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_driver_algoritmo_a7af33dc474c52bd4bd9b7d1addf1ed2e}{items}}.\mbox{\hyperlink{classclases_1_1_items_a91b5721dd501093975dcf67defae307f}{getSize}}() == 0) \mbox{\hyperlink{class_driver_algoritmo_a78cc80a9da3ce0b7715d671f7cae0df4}{setItems}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00119}00119                     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00120}00120                         INOUT.\mbox{\hyperlink{classinout_a9aa881b1538eedec4ad0ce000c4013e0}{write}}(\textcolor{stringliteral}{"{}Desea volver a inicializar la lista de items? (Y/n) "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00121}00121                         String b = INOUT.\mbox{\hyperlink{classinout_ad2905e4ee573767a4bec9055b97c9702}{readword}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00122}00122                         \textcolor{keywordflow}{if} (b == \textcolor{stringliteral}{"{}Y"{}}) \mbox{\hyperlink{class_driver_algoritmo_a78cc80a9da3ce0b7715d671f7cae0df4}{setItems}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00123}00123                     \}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00124}00124                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Introduzca ahora la k deseada para el algoritmo knn"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00125}00125                     \textcolor{keywordtype}{int} k = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00126}00126                     \textcolor{comment}{//a.contentBasedFiltering(k, items);}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00127}00127                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Hecho."{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00128}00128                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}recogiendo resultados..."{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00129}00129                     \textcolor{comment}{//ArrayList<Item> nn = new ArrayList<>(a.getNN());}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00130}00130 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00131}00131                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Resultados:"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00132}00132                     \textcolor{comment}{/*for (Item i : nn)\{}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00133}00133 \textcolor{comment}{                        INOUT.writeln("{}Item "{} + i.getId());}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00134}00134 \textcolor{comment}{                    \}*/}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00135}00135 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00136}00136                     command = INOUT.\mbox{\hyperlink{classinout_a81e363b8da54fe0753778d6d1b8d90d1}{readline}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00137}00137                     INOUT.\mbox{\hyperlink{classinout_a9aa881b1538eedec4ad0ce000c4013e0}{write}}(command);}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00138}00138                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00139}00139 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00140}00140                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}DCG"{}}:}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00141}00141                     \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_preprocesar_datos}{CtrlDominioPreprocesarDatos}}.\mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_preprocesar_datos_ade555bfe27aea080419b8ccb904f33e2}{preprocesarArchivos}}(\textcolor{stringliteral}{"{}DATA/csv/data.peliculas/250"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00142}00142                     \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} usuariosRatings = \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio}{CtrlDominio}}.\mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a07edf06ba0704882a55a26bc491cf3a9}{getUsuariosRatings}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00143}00143                     \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} usuariosRatingsKnown = \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio}{CtrlDominio}}.\mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a3fd2cff194e2f60714877e2cd6848712}{getUsuariosRatingsKnown}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00144}00144                     \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} usuariosRatingsUnknown = \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio}{CtrlDominio}}.\mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_aace89e998118d35a21ffb51b852cc19a}{getUsuariosRatingsUnknown}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00145}00145 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00146}00146                     Map <Integer, Double> predictionsCF = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00147}00147                     Map <Integer, Double> ratingsExpected = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00148}00148                     ArrayList<Integer> evalArr = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00149}00149                     ArrayList<Item> itemsUnknown = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00150}00150                     INOUT.\mbox{\hyperlink{classinout_a9aa881b1538eedec4ad0ce000c4013e0}{write}} (\textcolor{stringliteral}{"{}Escoge algoritmo de recomendación (cf/cb): "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00151}00151                     String recomAlg = INOUT.\mbox{\hyperlink{classinout_ad2905e4ee573767a4bec9055b97c9702}{readword}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00152}00152                     recomAlg = recomAlg.toUpperCase();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00153}00153 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00154}00154                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Introduzca el identificador del usuario para el cual vamos a efectuar una recomendación"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00155}00155                     \textcolor{keywordtype}{int} userId = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00156}00156 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00157}00157                     \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} user = usuariosRatingsKnown.\mbox{\hyperlink{classclases_1_1_usuarios_a85c335169bb9b2cebfe6276848d24e2c}{getUser}}(\mbox{\hyperlink{classclases_1_1_parser}{Parser}}.\mbox{\hyperlink{classclases_1_1_parser_a44d03043006e391e2156f0d86db95bec}{translateUser}}(userId));}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00158}00158                     \textcolor{comment}{//a = new Algoritmos(usuariosRatings, user);}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00159}00159 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00160}00160                     INOUT.\mbox{\hyperlink{classinout_a9aa881b1538eedec4ad0ce000c4013e0}{write}}(\textcolor{stringliteral}{"{}Introduce el número de ítems para recomendar: "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00161}00161                     \textcolor{keywordtype}{int} q = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00162}00162 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00163}00163                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Introduce los "{}} + q + \textcolor{stringliteral}{"{} id's de los ítems de los cuales quieres la valoración: "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00164}00164                     \textcolor{comment}{//a.collaborativeFiltering();}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00165}00165 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00166}00166                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < q; j++) \{}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00167}00167                         INOUT.\mbox{\hyperlink{classinout_a9aa881b1538eedec4ad0ce000c4013e0}{write}}(j+1 + \textcolor{stringliteral}{"{}-\/ "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00168}00168                         \textcolor{keywordtype}{int} itemId = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00169}00169                         \textcolor{keywordtype}{int} translatedId = \mbox{\hyperlink{classclases_1_1_parser}{Parser}}.\mbox{\hyperlink{classclases_1_1_parser_a2904c888fd6fbdd54acafb9c11dd35b0}{translateItem}}(itemId);}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00170}00170                         \textcolor{keywordflow}{while} (!\mbox{\hyperlink{class_driver_algoritmo_a7af33dc474c52bd4bd9b7d1addf1ed2e}{items}}.\mbox{\hyperlink{classclases_1_1_items_a24c9ec990e38a30880a06f0e438b7ece}{containsItem}}(translatedId)) \{}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00171}00171                             INOUT.\mbox{\hyperlink{classinout_a9aa881b1538eedec4ad0ce000c4013e0}{write}}(\textcolor{stringliteral}{"{}ID incorrecto, introduce un ID válido: "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00172}00172                             itemId = INOUT.\mbox{\hyperlink{classinout_a87465dab97b41c6c575589cd68b3377f}{readint}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00173}00173                             translatedId = \mbox{\hyperlink{classclases_1_1_parser}{Parser}}.\mbox{\hyperlink{classclases_1_1_parser_a2904c888fd6fbdd54acafb9c11dd35b0}{translateItem}}(itemId);}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00174}00174                         \}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00175}00175                         itemsUnknown.add(\mbox{\hyperlink{class_driver_algoritmo_a7af33dc474c52bd4bd9b7d1addf1ed2e}{items}}.\mbox{\hyperlink{classclases_1_1_items_aea1fe18eea7924c662d5ac23513538d9}{getItem}}(translatedId));}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00176}00176                         \textcolor{comment}{//predictionsCF.put(itemId, a.getPrediction(translatedId));}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00177}00177                         ratingsExpected.put(itemId, usuariosRatingsUnknown.\mbox{\hyperlink{classclases_1_1_usuarios_a85c335169bb9b2cebfe6276848d24e2c}{getUser}}(\mbox{\hyperlink{classclases_1_1_parser}{Parser}}.\mbox{\hyperlink{classclases_1_1_parser_a44d03043006e391e2156f0d86db95bec}{translateUser}}(userId)).\mbox{\hyperlink{classclases_1_1_usuario_aba022c735eed5fea5c32b760e482531c}{getValoracio}}(translatedId));}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00178}00178                     \}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00179}00179 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00180}00180                     List<Map.Entry<Integer, Double>> listAux = \textcolor{keyword}{new} ArrayList<>(ratingsExpected.entrySet());}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00181}00181                     listAux.sort(Map.Entry.comparingByValue());}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00182}00182                     Collections.reverse(listAux);}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00183}00183 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00184}00184                     \textcolor{keywordflow}{if} (recomAlg.equals(\textcolor{stringliteral}{"{}CB"{}}))\{}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00185}00185                         \textcolor{comment}{//a.contentBasedFiltering(q, new Items(itemsUnknown));}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00186}00186                        \textcolor{comment}{/* while (a.nnHasNext())\{}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00187}00187 \textcolor{comment}{                            Item it = a.nnGetNext();}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00188}00188 \textcolor{comment}{                            evalArr.add(it.getOriginalId());}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00189}00189 \textcolor{comment}{                        \}}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00190}00190 \textcolor{comment}{                        INOUT.writeln();*/}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00191}00191                     \}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00192}00192                     \textcolor{keywordflow}{if} (recomAlg.equals(\textcolor{stringliteral}{"{}CF"{}})) \{}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00193}00193                         List<Map.Entry<Integer, Double>> listAux2 = \textcolor{keyword}{new} ArrayList<>(predictionsCF.entrySet());}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00194}00194                         listAux2.sort(Map.Entry.comparingByValue());}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00195}00195                         Collections.reverse(listAux2);}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00196}00196                         \textcolor{keywordflow}{for} (Map.Entry<Integer,Double> m : listAux2) evalArr.add(m.getKey());}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00197}00197                     \}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00198}00198 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00199}00199 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00200}00200                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}evaluando la recomendación..."{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00201}00201 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00202}00202                     \textcolor{keywordtype}{double} dcg = 0.0; \textcolor{comment}{//a.evaluarRecomendacion(evalArr, listAux);}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00203}00203                     \textcolor{keywordtype}{double} idcg = 1.0; \textcolor{comment}{//a.evaluarIDCG(listAux);}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00204}00204                     \textcolor{keywordtype}{double} ndcg = dcg/idcg;}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00205}00205 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00206}00206                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00207}00207                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}EVALUACIÓN DE RECOMENDACIONES: "{}} + dcg);}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00208}00208                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}EVALUACIÓN DE RECOMENDACIONES IDEAL: "{}} + idcg);}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00209}00209                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}EVALUACIÓN DE RECOMENDACIONES NORMALIZADA: "{}} + ndcg );}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00210}00210 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00211}00211                     command = INOUT.\mbox{\hyperlink{classinout_a81e363b8da54fe0753778d6d1b8d90d1}{readline}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00212}00212                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00213}00213 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00214}00214                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}help"{}}:}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00215}00215                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}This are the commands available for this class:"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00216}00216                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}constructora vacia"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00217}00217                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}constructora con parametros"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00218}00218                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}CF"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00219}00219                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}get prediccion"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00220}00220                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}CB"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00221}00221                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}DCG"{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00222}00222                     command = INOUT.\mbox{\hyperlink{classinout_a81e363b8da54fe0753778d6d1b8d90d1}{readline}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00223}00223                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00224}00224 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00225}00225                 \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00226}00226                     INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Comando incorrecto."{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00227}00227                     command = INOUT.\mbox{\hyperlink{classinout_a81e363b8da54fe0753778d6d1b8d90d1}{readline}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00228}00228                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00229}00229 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00230}00230             \}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00231}00231             INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00232}00232             INOUT.\mbox{\hyperlink{classinout_a9e8cacbb13e08f64836ea16ab652aec7}{writeln}}(\textcolor{stringliteral}{"{}Escribe tu comando: "{}});}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00233}00233             command = INOUT.\mbox{\hyperlink{classinout_a81e363b8da54fe0753778d6d1b8d90d1}{readline}}();}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00234}00234         \}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00235}00235     \}}
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00236}00236 }
+\DoxyCodeLine{\Hypertarget{_driver_algoritmo_8java_source_l00237}00237 \}}
+
+\end{DoxyCode}

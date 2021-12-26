@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="presentacion.vistaRecomendaciones">
+  <grid id="27dc6" binding="panel1" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="1065" height="759"/>
+    </constraints>
+    <properties>
+      <background color="-13421238"/>
+      <maximumSize width="500" height="750"/>
+      <minimumSize width="500" height="750"/>
+      <preferredSize width="500" height="750"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="72d24" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints border-constraint="Center"/>
+        <properties>
+          <maximumSize width="750" height="500"/>
+          <minimumSize width="750" height="500"/>
+          <preferredSize width="750" height="500"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="b16e" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="10" left="10" bottom="10" right="10"/>
+            <constraints border-constraint="West"/>
+            <properties>
+              <background color="-13421238"/>
+              <maximumSize width="250" height="500"/>
+              <minimumSize width="250" height="500"/>
+              <preferredSize width="250" height="500"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="1138d" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-13421238"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="654a1" class="javax.swing.JLabel">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <font name="Bangla MN" size="26"/>
+                      <foreground color="-1"/>
+                      <text value="&lt;html&gt;Nueva&lt;/html&gt;"/>
+                    </properties>
+                  </component>
+                  <component id="239a6" class="javax.swing.JLabel">
+                    <constraints border-constraint="South"/>
+                    <properties>
+                      <font name="Bangla MN" size="26"/>
+                      <foreground color="-1"/>
+                      <text value="Recomendacion"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <grid id="bd7d8" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="20" left="20" bottom="20" right="20"/>
+            <constraints border-constraint="Center"/>
+            <properties>
+              <background color="-1"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="d4379" binding="cardPanel" layout-manager="CardLayout" hgap="0" vgap="0">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-1"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="5a60d" binding="mainPanel" layout-manager="GridLayoutManager" row-count="7" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="20" left="20" bottom="20" right="20"/>
+                    <constraints>
+                      <card name="Card1"/>
+                    </constraints>
+                    <properties>
+                      <background color="-1"/>
+                      <maximumSize width="500" height="500"/>
+                      <minimumSize width="500" height="500"/>
+                      <preferredSize width="500" height="500"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="b251c" class="javax.swing.JButton" binding="recomButton">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-1"/>
+                          <text value="UEUE RECOMEND"/>
+                        </properties>
+                      </component>
+                      <grid id="e02f6" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-1"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="c5973" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-1"/>
+                              <font name="Bangla MN" size="14"/>
+                              <foreground color="-13421238"/>
+                              <text value="¿Qué tipo de Recomendación desea?"/>
+                            </properties>
+                          </component>
+                          <component id="f7468" class="javax.swing.JRadioButton" binding="hybrid">
+                            <constraints>
+                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-1"/>
+                              <font name="Bangla MN" size="14"/>
+                              <foreground color="-13421238"/>
+                              <text value="Hybrid Filtering"/>
+                            </properties>
+                          </component>
+                          <component id="ca3de" class="javax.swing.JRadioButton" binding="cf">
+                            <constraints>
+                              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-1"/>
+                              <font name="Bangla MN" size="14"/>
+                              <foreground color="-13421238"/>
+                              <text value="Collaborative Filtering"/>
+                            </properties>
+                          </component>
+                          <component id="84d81" class="javax.swing.JRadioButton" binding="cb">
+                            <constraints>
+                              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-1"/>
+                              <font name="Bangla MN" size="14"/>
+                              <foreground color="-13421238"/>
+                              <text value="Content-Based Filtering"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <component id="69b63" class="javax.swing.JSeparator">
+                        <constraints>
+                          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                            <minimum-size width="500" height="10"/>
+                            <preferred-size width="500" height="10"/>
+                            <maximum-size width="500" height="10"/>
+                          </grid>
+                        </constraints>
+                        <properties/>
+                      </component>
+                      <component id="ffd47" class="javax.swing.JButton" binding="button1" default-binding="true">
+                        <constraints>
+                          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-1"/>
+                          <label value="Mis Recomendaciones"/>
+                          <text value="Mis Recomendaciones"/>
+                        </properties>
+                      </component>
+                      <grid id="1b65e" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-1"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="9b322" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-13421236"/>
+                              <font name="Bangla MN" size="12"/>
+                              <text value="&lt;html&gt;Escoja un nombre para la recomendación &lt;/html&gt;"/>
+                            </properties>
+                          </component>
+                          <component id="2204a" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+                            <constraints>
+                              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                                <preferred-size width="150" height="-1"/>
+                              </grid>
+                            </constraints>
+                            <properties>
+                              <background color="-1"/>
+                            </properties>
+                          </component>
+                          <component id="ca098" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-13421236"/>
+                              <font name="Bangla MN" size="12"/>
+                              <text value="&lt;html&gt;¿Tamaño de la recomendación?&lt;/html&gt;"/>
+                            </properties>
+                          </component>
+                          <component id="39aa8" class="javax.swing.JFormattedTextField" binding="formattedTextField1" default-binding="true">
+                            <constraints>
+                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                                <preferred-size width="150" height="-1"/>
+                              </grid>
+                            </constraints>
+                            <properties/>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="dd41b" binding="infoCardPanel" layout-manager="CardLayout" hgap="0" vgap="0">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                            <minimum-size width="400" height="100"/>
+                            <preferred-size width="400" height="100"/>
+                            <maximum-size width="400" height="100"/>
+                          </grid>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <grid id="74030" binding="cfPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                            <margin top="0" left="0" bottom="0" right="0"/>
+                            <constraints>
+                              <card name="Card3"/>
+                            </constraints>
+                            <properties>
+                              <background color="-1"/>
+                              <maximumSize width="400" height="400"/>
+                              <minimumSize width="400" height="400"/>
+                              <preferredSize width="400" height="400"/>
+                            </properties>
+                            <border type="none"/>
+                            <children>
+                              <component id="cd91d" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                                    <minimum-size width="400" height="100"/>
+                                    <preferred-size width="400" height="100"/>
+                                    <maximum-size width="400" height="100"/>
+                                  </grid>
+                                </constraints>
+                                <properties>
+                                  <background color="-1"/>
+                                  <font name="Bangla MN" size="14"/>
+                                  <foreground color="-13421238"/>
+                                  <text value="&lt;html&gt;Recomendación basada en los usuarios con valoraciones similares a las suyas&lt;/html&gt;"/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                          <grid id="3b619" binding="cbPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                            <margin top="0" left="0" bottom="0" right="0"/>
+                            <constraints>
+                              <card name="Card2"/>
+                            </constraints>
+                            <properties>
+                              <background color="-1"/>
+                              <maximumSize width="400" height="400"/>
+                              <minimumSize width="400" height="400"/>
+                              <preferredSize width="400" height="400"/>
+                            </properties>
+                            <border type="none"/>
+                            <children>
+                              <component id="3525b" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                                    <minimum-size width="400" height="100"/>
+                                    <preferred-size width="400" height="100"/>
+                                    <maximum-size width="400" height="100"/>
+                                  </grid>
+                                </constraints>
+                                <properties>
+                                  <font name="Bangla MN" size="14"/>
+                                  <foreground color="-13421238"/>
+                                  <text value="&lt;html&gt;Recomendación basada en los items que ya ha valorado&lt;/html&gt;"/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                          <grid id="9027a" binding="hybPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                            <margin top="0" left="0" bottom="0" right="0"/>
+                            <constraints>
+                              <card name="Card1"/>
+                            </constraints>
+                            <properties>
+                              <background color="-1"/>
+                            </properties>
+                            <border type="none"/>
+                            <children>
+                              <component id="135b8" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                                    <minimum-size width="400" height="100"/>
+                                    <preferred-size width="400" height="100"/>
+                                    <maximum-size width="400" height="100"/>
+                                  </grid>
+                                </constraints>
+                                <properties>
+                                  <background color="-1"/>
+                                  <font name="Bangla MN" size="14"/>
+                                  <foreground color="-13421238"/>
+                                  <text value="&lt;html&gt;Recomendación basada en la combinación de Content-based filtering y Collaborative filtering&lt;/html&gt;"/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                        </children>
+                      </grid>
+                    </children>
+                  </grid>
+                  <grid id="570dc" binding="recomPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+                    <constraints>
+                      <card name="Card2"/>
+                    </constraints>
+                    <properties>
+                      <background color="-1"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <grid id="5b970" binding="scrollPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+                        <constraints border-constraint="Center"/>
+                        <properties>
+                          <background color="-1"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <scrollpane id="fde84" binding="scrollPane">
+                            <constraints border-constraint="Center"/>
+                            <properties>
+                              <background color="-1"/>
+                            </properties>
+                            <border type="none"/>
+                            <children/>
+                          </scrollpane>
+                          <component id="e37fb" class="javax.swing.JButton" binding="volverButton" default-binding="true">
+                            <constraints border-constraint="South"/>
+                            <properties>
+                              <background color="-1"/>
+                              <text value="Volver"/>
+                            </properties>
+                          </component>
+                          <component id="93705" class="javax.swing.JLabel">
+                            <constraints border-constraint="North"/>
+                            <properties>
+                              <background color="-1"/>
+                              <font name="Bangla MN" size="14"/>
+                              <foreground color="-13421238"/>
+                              <text value="&lt;html&gt;Mis Recomendaciones&lt;/html&gt;"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+            </children>
+          </grid>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

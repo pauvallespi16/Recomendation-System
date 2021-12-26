@@ -1,0 +1,57 @@
+\hypertarget{_recomendaciones_8java_source}{}\doxysection{Recomendaciones.\+java}
+\label{_recomendaciones_8java_source}\index{Recomendaciones.java@{Recomendaciones.java}}
+\mbox{\hyperlink{_recomendaciones_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00001}00001 \textcolor{keyword}{package }clases;}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00003}00003 \textcolor{keyword}{import} java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00004}00004 \textcolor{keyword}{import} java.util.HashMap;}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00005}00005 \textcolor{keyword}{import} java.util.Map;}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00007}\mbox{\hyperlink{classclases_1_1_recomendaciones}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classclases_1_1_recomendaciones}{Recomendaciones}} \{}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00011}\mbox{\hyperlink{classclases_1_1_recomendaciones_a0fd0bdaba2fcf93dfdce470591d8d294}{00011}}     Map<String, Recomendacion> \mbox{\hyperlink{classclases_1_1_recomendaciones_a0fd0bdaba2fcf93dfdce470591d8d294}{recomendaciones}};}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00018}\mbox{\hyperlink{classclases_1_1_recomendaciones_a9872154b34d1681006ca3bd3bc1ed8c8}{00018}}     \textcolor{keyword}{public} \mbox{\hyperlink{classclases_1_1_recomendaciones_a9872154b34d1681006ca3bd3bc1ed8c8}{Recomendaciones}}() \{}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00019}00019         \mbox{\hyperlink{classclases_1_1_recomendaciones_a0fd0bdaba2fcf93dfdce470591d8d294}{recomendaciones}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00020}00020     \}}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00028}\mbox{\hyperlink{classclases_1_1_recomendaciones_a12352786ea8588eba4b9c7d09cf50271}{00028}}     \textcolor{keyword}{public} \mbox{\hyperlink{classclases_1_1_recomendaciones_a12352786ea8588eba4b9c7d09cf50271}{Recomendaciones}}(ArrayList<Recomendacion> \mbox{\hyperlink{classclases_1_1_recomendaciones_a0fd0bdaba2fcf93dfdce470591d8d294}{recomendaciones}}) \{}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00029}00029         this.recomendaciones = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00030}00030         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classclases_1_1_recomendacion}{Recomendacion}} r : \mbox{\hyperlink{classclases_1_1_recomendaciones_a0fd0bdaba2fcf93dfdce470591d8d294}{recomendaciones}})\{}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00031}00031             this.recomendaciones.put(r.getName(), r);}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00032}00032         \}}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00033}00033     \}}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00041}\mbox{\hyperlink{classclases_1_1_recomendaciones_aa4a1ad578718849e24608c0ae6b3e936}{00041}}     \textcolor{keyword}{public} ArrayList <Recomendacion> \mbox{\hyperlink{classclases_1_1_recomendaciones_aa4a1ad578718849e24608c0ae6b3e936}{getRecomendaciones}} () \{}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00042}00042         \textcolor{keywordflow}{return} \textcolor{keyword}{new} ArrayList<>(this.recomendaciones.values());}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00043}00043     \}}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00052}\mbox{\hyperlink{classclases_1_1_recomendaciones_ace8a72b18ae30c15ca0c7839b8d852b3}{00052}}     \textcolor{keyword}{public} \mbox{\hyperlink{classclases_1_1_recomendacion}{Recomendacion}} \mbox{\hyperlink{classclases_1_1_recomendaciones_ace8a72b18ae30c15ca0c7839b8d852b3}{getRecomendacion}} (String name) \{}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00053}00053         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classclases_1_1_recomendaciones_a0fd0bdaba2fcf93dfdce470591d8d294}{recomendaciones}}.containsKey(name)) \textcolor{keywordflow}{return} \mbox{\hyperlink{classclases_1_1_recomendaciones_a0fd0bdaba2fcf93dfdce470591d8d294}{recomendaciones}}.get(name);}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00054}00054         \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00055}00055     \}}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00063}\mbox{\hyperlink{classclases_1_1_recomendaciones_afba8fd9a3e995c09d747376901040461}{00063}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_recomendaciones_afba8fd9a3e995c09d747376901040461}{setRecomendacion}} (\mbox{\hyperlink{classclases_1_1_recomendacion}{Recomendacion}} r) \{}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00064}00064         this.recomendaciones.put(r.\mbox{\hyperlink{classclases_1_1_recomendacion_ac67fde97e6f25ab55bd3381e6d86731a}{getName}}(), r);}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00065}00065     \}}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00073}\mbox{\hyperlink{classclases_1_1_recomendaciones_a950a28e4ef5fbc034957bc7d8adc1c2c}{00073}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_recomendaciones_a950a28e4ef5fbc034957bc7d8adc1c2c}{addRecomendacion}} (\mbox{\hyperlink{classclases_1_1_recomendacion}{Recomendacion}} r) \{}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00074}00074         \mbox{\hyperlink{classclases_1_1_recomendaciones_a0fd0bdaba2fcf93dfdce470591d8d294}{recomendaciones}}.put(r.\mbox{\hyperlink{classclases_1_1_recomendacion_ac67fde97e6f25ab55bd3381e6d86731a}{getName}}(), r);}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00075}00075     \}}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00077}\mbox{\hyperlink{classclases_1_1_recomendaciones_a044702ab5b363899cd8526a90d270d95}{00077}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_recomendaciones_a044702ab5b363899cd8526a90d270d95}{removeRecomendacino}} (String name) \{ \mbox{\hyperlink{classclases_1_1_recomendaciones_a0fd0bdaba2fcf93dfdce470591d8d294}{recomendaciones}}.remove(name); \}}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00085}\mbox{\hyperlink{classclases_1_1_recomendaciones_af5842bbda6e5c4df85d7854250f5d844}{00085}}     \textcolor{keyword}{public} ArrayList <String> \mbox{\hyperlink{classclases_1_1_recomendaciones_af5842bbda6e5c4df85d7854250f5d844}{getHistorial}} () \{}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00086}00086         \textcolor{keywordflow}{return} \textcolor{keyword}{new} ArrayList<>(\mbox{\hyperlink{classclases_1_1_recomendaciones_a0fd0bdaba2fcf93dfdce470591d8d294}{recomendaciones}}.keySet());}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00087}00087     \}}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00095}00095     @Override}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00096}\mbox{\hyperlink{classclases_1_1_recomendaciones_aa55eb9545a89a0026dcc5031877eec73}{00096}}     \textcolor{keyword}{public} String \mbox{\hyperlink{classclases_1_1_recomendaciones_aa55eb9545a89a0026dcc5031877eec73}{toString}}() \{}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00097}00097         String valor = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00098}00098         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classclases_1_1_recomendacion}{Recomendacion}} recom : \mbox{\hyperlink{classclases_1_1_recomendaciones_a0fd0bdaba2fcf93dfdce470591d8d294}{recomendaciones}}.values())}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00099}00099             valor += recom.getName() + \textcolor{stringliteral}{"{},"{}} + recom.getType() + \textcolor{stringliteral}{"{},"{}} + recom.getDate();}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00100}00100         \textcolor{keywordflow}{return} valor;}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00101}00101     \}}
+\DoxyCodeLine{\Hypertarget{_recomendaciones_8java_source_l00102}00102 \}}
+
+\end{DoxyCode}

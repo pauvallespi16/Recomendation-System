@@ -1,0 +1,382 @@
+\hypertarget{classclases_1_1_item}{}\doxysection{Referencia de la Clase clases.\+Item}
+\label{classclases_1_1_item}\index{clases.Item@{clases.Item}}
+
+
+Implementación de los \mbox{\hyperlink{classclases_1_1_items}{Items}} que leemos de los data sets.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classclases_1_1_item_a1c35cce55f846835f9f9a1e04bc161f2}{Item}} ()
+\begin{DoxyCompactList}\small\item\em Constructora por defecto, inicializa un item vacío. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclases_1_1_item_a43f56adbbba8305703906878c20a828f}{Item}} (int \mbox{\hyperlink{classclases_1_1_item_a2b45aedaf46446db773a27750d2dc11f}{id}}, Map$<$ String, \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} $>$ \mbox{\hyperlink{classclases_1_1_item_ac91bb06f321968f486bcb907fab48f87}{atributos}})
+\item 
+boolean \mbox{\hyperlink{classclases_1_1_item_a9f6481e5247f08ee0d7736cb6c82d5de}{equals}} (Object o)
+\begin{DoxyCompactList}\small\item\em Comprueba la igualdad entre los dos objetos de la clase \mbox{\hyperlink{classclases_1_1_item}{Item}}. \end{DoxyCompactList}\item 
+Integer \mbox{\hyperlink{classclases_1_1_item_abb998d6f938daefaf94539d731ec349a}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Getter del id del item. \end{DoxyCompactList}\item 
+Integer \mbox{\hyperlink{classclases_1_1_item_a7921c40d719e9784719c9b11c9f307a8}{get\+Original\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Getter del id original del item. \end{DoxyCompactList}\item 
+Map$<$ String, \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} $>$ \mbox{\hyperlink{classclases_1_1_item_adccef6881276e5158e19e4cacabe986a}{get\+Atributos}} ()
+\begin{DoxyCompactList}\small\item\em Getter del mapa de atributos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} \mbox{\hyperlink{classclases_1_1_item_a42235144cdb58eb1ee76c62f25e76d98}{get\+Atributo}} (String atr)
+\begin{DoxyCompactList}\small\item\em Coger el atributo del item con header \char`\"{}atr\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_item_a4d5710463358fd66f8664e634f95f9b6}{set\+Original\+Id}} (int \mbox{\hyperlink{classclases_1_1_item_acda428243d0329ebdbf9d3cd65ca2a73}{original\+Id}})
+\begin{DoxyCompactList}\small\item\em Setter del original\+Id. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_item_a7a03284acdd68a0fdaeac5327b19395e}{set\+Atributos}} (Map$<$ String, \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} $>$ \mbox{\hyperlink{classclases_1_1_item_ac91bb06f321968f486bcb907fab48f87}{atributos}})
+\begin{DoxyCompactList}\small\item\em Setter del mapa de atributos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_item_a669090b4081803f7bcbb829f52f8ec80}{set\+Atributo}} (String str, \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} atr)
+\begin{DoxyCompactList}\small\item\em Añadir un atributo al mapa de atributos del usuario. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classclases_1_1_item_a98be384aa8e41c4d377d6bb2e62c2585}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em Hace override de la funcion to\+String. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classclases_1_1_item_a2b45aedaf46446db773a27750d2dc11f}{id}}
+\begin{DoxyCompactList}\small\item\em El id del item instanciado en la clase. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classclases_1_1_item_acda428243d0329ebdbf9d3cd65ca2a73}{original\+Id}}
+\begin{DoxyCompactList}\small\item\em El id del item instanciado en los archivos. \end{DoxyCompactList}\item 
+Map$<$ String, \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} $>$ \mbox{\hyperlink{classclases_1_1_item_ac91bb06f321968f486bcb907fab48f87}{atributos}}
+\begin{DoxyCompactList}\small\item\em Variable atributos contiene todos los atributos de un item @format Map \texorpdfstring{$<$}{<}header, inforamción\texorpdfstring{$>$}{>} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Implementación de los \mbox{\hyperlink{classclases_1_1_items}{Items}} que leemos de los data sets. 
+
+\begin{DoxyAuthor}{Autor}
+Pau Vallespí Monclús
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+December 2021 
+\end{DoxyDate}
+
+
+Definición en la línea \mbox{\hyperlink{_item_8java_source_l00014}{14}} del archivo \mbox{\hyperlink{_item_8java_source}{Item.\+java}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classclases_1_1_item_a1c35cce55f846835f9f9a1e04bc161f2}\label{classclases_1_1_item_a1c35cce55f846835f9f9a1e04bc161f2}} 
+\index{clases.Item@{clases.Item}!Item@{Item}}
+\index{Item@{Item}!clases.Item@{clases.Item}}
+\doxysubsubsection{\texorpdfstring{Item()}{Item()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily clases.\+Item.\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructora por defecto, inicializa un item vacío. 
+
+Constructora por defecto, inicializa un item con id y atributos.
+
+\begin{DoxyPrecond}{Precondición}
+No hay objeto item. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha creado un objeto de item vacío.
+\end{DoxyPostcond}
+\begin{DoxyPrecond}{Precondición}
+No hay objeto item. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha creado un objeto de item con id y atributos instanciados. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em id} & id del item generado por preproceso \\
+\hline
+{\em atributos} & atributos del item que han sido leidas sobre el item durante el preproceso. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_item_8java_source_l00034}{34}} del archivo \mbox{\hyperlink{_item_8java_source}{Item.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_item_a43f56adbbba8305703906878c20a828f}\label{classclases_1_1_item_a43f56adbbba8305703906878c20a828f}} 
+\index{clases.Item@{clases.Item}!Item@{Item}}
+\index{Item@{Item}!clases.Item@{clases.Item}}
+\doxysubsubsection{\texorpdfstring{Item()}{Item()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily clases.\+Item.\+Item (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{Map$<$ String, \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} $>$}]{atributos }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_item_8java_source_l00043}{43}} del archivo \mbox{\hyperlink{_item_8java_source}{Item.\+java}}.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classclases_1_1_item_a9f6481e5247f08ee0d7736cb6c82d5de}\label{classclases_1_1_item_a9f6481e5247f08ee0d7736cb6c82d5de}} 
+\index{clases.Item@{clases.Item}!equals@{equals}}
+\index{equals@{equals}!clases.Item@{clases.Item}}
+\doxysubsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily clases.\+Item.\+equals (\begin{DoxyParamCaption}\item[{Object}]{o }\end{DoxyParamCaption})}
+
+
+
+Comprueba la igualdad entre los dos objetos de la clase \mbox{\hyperlink{classclases_1_1_item}{Item}}. 
+
+\begin{DoxyPrecond}{Precondición}
+Se ha instanciado la clase item tanto el item que lo llama y el item que pasa como parámetro. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto true si los dos items tienen el mismo id y si no false. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em o} & Otra instancia de la clase items que queremos comprobar que sea igual que el ítem que llama la función. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si los dos objetos de item tienen el mismo id, false de otra manera. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_item_8java_source_l00056}{56}} del archivo \mbox{\hyperlink{_item_8java_source}{Item.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_item_a42235144cdb58eb1ee76c62f25e76d98}\label{classclases_1_1_item_a42235144cdb58eb1ee76c62f25e76d98}} 
+\index{clases.Item@{clases.Item}!getAtributo@{getAtributo}}
+\index{getAtributo@{getAtributo}!clases.Item@{clases.Item}}
+\doxysubsubsection{\texorpdfstring{getAtributo()}{getAtributo()}}
+{\footnotesize\ttfamily clases.\+Item.\+get\+Atributo (\begin{DoxyParamCaption}\item[{String}]{atr }\end{DoxyParamCaption})}
+
+
+
+Coger el atributo del item con header \char`\"{}atr\char`\"{}. 
+
+\begin{DoxyPrecond}{Precondición}
+El mapa de atributo tiene una atributo con el header \char`\"{}atr\char`\"{} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Ha devuelto el valor del atributo del item para el atributo con header \char`\"{}atr\char`\"{} 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em atr} & nombre del header del atributo al que queremos acceder \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+devuelve el valor del atributo del item para el atributo con header \char`\"{}atr\char`\"{} 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_item_8java_source_l00092}{92}} del archivo \mbox{\hyperlink{_item_8java_source}{Item.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_item_adccef6881276e5158e19e4cacabe986a}\label{classclases_1_1_item_adccef6881276e5158e19e4cacabe986a}} 
+\index{clases.Item@{clases.Item}!getAtributos@{getAtributos}}
+\index{getAtributos@{getAtributos}!clases.Item@{clases.Item}}
+\doxysubsubsection{\texorpdfstring{getAtributos()}{getAtributos()}}
+{\footnotesize\ttfamily clases.\+Item.\+get\+Atributos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter del mapa de atributos. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto el mapa de atributos. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+Devuelve el mapa de atributos. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_item_8java_source_l00083}{83}} del archivo \mbox{\hyperlink{_item_8java_source}{Item.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_item_abb998d6f938daefaf94539d731ec349a}\label{classclases_1_1_item_abb998d6f938daefaf94539d731ec349a}} 
+\index{clases.Item@{clases.Item}!getId@{getId}}
+\index{getId@{getId}!clases.Item@{clases.Item}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily clases.\+Item.\+get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter del id del item. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto el id del objeto de item. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+Devuelve el id del objeto del item. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_item_8java_source_l00067}{67}} del archivo \mbox{\hyperlink{_item_8java_source}{Item.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_item_a7921c40d719e9784719c9b11c9f307a8}\label{classclases_1_1_item_a7921c40d719e9784719c9b11c9f307a8}} 
+\index{clases.Item@{clases.Item}!getOriginalId@{getOriginalId}}
+\index{getOriginalId@{getOriginalId}!clases.Item@{clases.Item}}
+\doxysubsubsection{\texorpdfstring{getOriginalId()}{getOriginalId()}}
+{\footnotesize\ttfamily clases.\+Item.\+get\+Original\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter del id original del item. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto el id original del objeto de item. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+Devuelve el id original del objeto del item. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_item_8java_source_l00075}{75}} del archivo \mbox{\hyperlink{_item_8java_source}{Item.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_item_a669090b4081803f7bcbb829f52f8ec80}\label{classclases_1_1_item_a669090b4081803f7bcbb829f52f8ec80}} 
+\index{clases.Item@{clases.Item}!setAtributo@{setAtributo}}
+\index{setAtributo@{setAtributo}!clases.Item@{clases.Item}}
+\doxysubsubsection{\texorpdfstring{setAtributo()}{setAtributo()}}
+{\footnotesize\ttfamily clases.\+Item.\+set\+Atributo (\begin{DoxyParamCaption}\item[{String}]{str,  }\item[{\mbox{\hyperlink{classclases_1_1_atributo}{Atributo}}}]{atr }\end{DoxyParamCaption})}
+
+
+
+Añadir un atributo al mapa de atributos del usuario. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El mapa de atributos pasa a tener el entry \{str, atr\} 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em str} & el header del atributo que queremos añadir \\
+\hline
+{\em atr} & valor de ese atributo para añadir al mapa de atributos \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_item_8java_source_l00117}{117}} del archivo \mbox{\hyperlink{_item_8java_source}{Item.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_item_a7a03284acdd68a0fdaeac5327b19395e}\label{classclases_1_1_item_a7a03284acdd68a0fdaeac5327b19395e}} 
+\index{clases.Item@{clases.Item}!setAtributos@{setAtributos}}
+\index{setAtributos@{setAtributos}!clases.Item@{clases.Item}}
+\doxysubsubsection{\texorpdfstring{setAtributos()}{setAtributos()}}
+{\footnotesize\ttfamily clases.\+Item.\+set\+Atributos (\begin{DoxyParamCaption}\item[{Map$<$ String, \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} $>$}]{atributos }\end{DoxyParamCaption})}
+
+
+
+Setter del mapa de atributos. 
+
+\begin{DoxyPrecond}{Precondición}
+El mapa de atributos no esta inicializado o esta inicializado a un mapa distinto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La variable global atributos que contiene el conjunto de atributos que ha hecho el usuario es el conjunto de atributos \char`\"{}atributos\char`\"{}. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em atributos} & mapa de atributos del item \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_item_8java_source_l00108}{108}} del archivo \mbox{\hyperlink{_item_8java_source}{Item.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_item_a4d5710463358fd66f8664e634f95f9b6}\label{classclases_1_1_item_a4d5710463358fd66f8664e634f95f9b6}} 
+\index{clases.Item@{clases.Item}!setOriginalId@{setOriginalId}}
+\index{setOriginalId@{setOriginalId}!clases.Item@{clases.Item}}
+\doxysubsubsection{\texorpdfstring{setOriginalId()}{setOriginalId()}}
+{\footnotesize\ttfamily clases.\+Item.\+set\+Original\+Id (\begin{DoxyParamCaption}\item[{int}]{original\+Id }\end{DoxyParamCaption})}
+
+
+
+Setter del original\+Id. 
+
+\begin{DoxyPrecond}{Precondición}
+Original\+Id no vacío 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El original\+Id de ítem pasa a ser igual al parámetro que le pasamos al método. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em original\+Id} & id del ítem original \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_item_8java_source_l00100}{100}} del archivo \mbox{\hyperlink{_item_8java_source}{Item.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_item_a98be384aa8e41c4d377d6bb2e62c2585}\label{classclases_1_1_item_a98be384aa8e41c4d377d6bb2e62c2585}} 
+\index{clases.Item@{clases.Item}!toString@{toString}}
+\index{toString@{toString}!clases.Item@{clases.Item}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily clases.\+Item.\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Hace override de la funcion to\+String. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El item se ha traducido a String para poder imprimirse 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+Devuelve el item traducido a String 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_item_8java_source_l00126}{126}} del archivo \mbox{\hyperlink{_item_8java_source}{Item.\+java}}.
+
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classclases_1_1_item_ac91bb06f321968f486bcb907fab48f87}\label{classclases_1_1_item_ac91bb06f321968f486bcb907fab48f87}} 
+\index{clases.Item@{clases.Item}!atributos@{atributos}}
+\index{atributos@{atributos}!clases.Item@{clases.Item}}
+\doxysubsubsection{\texorpdfstring{atributos}{atributos}}
+{\footnotesize\ttfamily Map$<$ String, \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} $>$ clases.\+Item.\+atributos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Variable atributos contiene todos los atributos de un item @format Map \texorpdfstring{$<$}{<}header, inforamción\texorpdfstring{$>$}{>} 
+
+
+
+Definición en la línea \mbox{\hyperlink{_item_8java_source_l00027}{27}} del archivo \mbox{\hyperlink{_item_8java_source}{Item.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_item_a2b45aedaf46446db773a27750d2dc11f}\label{classclases_1_1_item_a2b45aedaf46446db773a27750d2dc11f}} 
+\index{clases.Item@{clases.Item}!id@{id}}
+\index{id@{id}!clases.Item@{clases.Item}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int clases.\+Item.\+id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+El id del item instanciado en la clase. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_item_8java_source_l00017}{17}} del archivo \mbox{\hyperlink{_item_8java_source}{Item.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_item_acda428243d0329ebdbf9d3cd65ca2a73}\label{classclases_1_1_item_acda428243d0329ebdbf9d3cd65ca2a73}} 
+\index{clases.Item@{clases.Item}!originalId@{originalId}}
+\index{originalId@{originalId}!clases.Item@{clases.Item}}
+\doxysubsubsection{\texorpdfstring{originalId}{originalId}}
+{\footnotesize\ttfamily int clases.\+Item.\+original\+Id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+El id del item instanciado en los archivos. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_item_8java_source_l00021}{21}} del archivo \mbox{\hyperlink{_item_8java_source}{Item.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_item_8java}{Item.\+java}}\end{DoxyCompactItemize}

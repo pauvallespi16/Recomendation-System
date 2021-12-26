@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="presentacion.usuarioMain">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="963" height="686"/>
+    </constraints>
+    <properties>
+      <background color="-1"/>
+      <maximumSize width="750" height="500"/>
+      <minimumSize width="750" height="500"/>
+      <opaque value="true"/>
+      <preferredSize width="750" height="500"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="66183" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints border-constraint="West"/>
+        <properties>
+          <background color="-13421238"/>
+          <maximumSize width="250" height="500"/>
+          <minimumSize width="250" height="500"/>
+          <preferredSize width="250" height="500"/>
+        </properties>
+        <border type="none"/>
+        <children/>
+      </grid>
+      <grid id="ef722" binding="panelpanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints border-constraint="Center"/>
+        <properties>
+          <background color="-1"/>
+          <maximumSize width="500" height="250"/>
+          <minimumSize width="500" height="250"/>
+          <preferredSize width="500" height="250"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="3d25d" binding="cardPanel" layout-manager="CardLayout" hgap="0" vgap="0">
+            <constraints border-constraint="Center"/>
+            <properties>
+              <background color="-1"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="8655f" binding="actionPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="10" left="10" bottom="10" right="10"/>
+                <constraints>
+                  <card name="Card1"/>
+                </constraints>
+                <properties>
+                  <background color="-1"/>
+                  <maximumSize width="500" height="500"/>
+                  <minimumSize width="500" height="500"/>
+                  <opaque value="true"/>
+                  <preferredSize width="500" height="500"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="ca514" binding="contentsPanel" layout-manager="GridLayoutManager" row-count="7" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-1"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <grid id="d4a5f" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-1"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <grid id="8ead5" binding="idPanel" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                            <margin top="0" left="0" bottom="0" right="0"/>
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-1"/>
+                            </properties>
+                            <border type="none"/>
+                            <children>
+                              <component id="62585" class="javax.swing.JTextField" binding="item">
+                                <constraints>
+                                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <preferredSize width="150" height="30"/>
+                                </properties>
+                              </component>
+                              <component id="35081" class="javax.swing.JLabel" binding="labID">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <background color="-1"/>
+                                  <font name="Bangla Sangam MN"/>
+                                  <foreground color="-13421238"/>
+                                  <text value="ITEM ID: "/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                          <grid id="665e9" binding="valPanel" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                            <margin top="0" left="0" bottom="0" right="0"/>
+                            <constraints>
+                              <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-1"/>
+                            </properties>
+                            <border type="none"/>
+                            <children>
+                              <component id="ebd13" class="javax.swing.JLabel" binding="labVal">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <font name="Bangla Sangam MN"/>
+                                  <foreground color="-13421238"/>
+                                  <text value="VALORACIÓN:"/>
+                                </properties>
+                              </component>
+                              <component id="384f4" class="javax.swing.JTextField" binding="value">
+                                <constraints>
+                                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <preferredSize width="150" height="30"/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                        </children>
+                      </grid>
+                      <component id="c39c8" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Bangla MN" size="14"/>
+                          <foreground color="-13421238"/>
+                          <text value="&lt;html&gt; Por favor, introduzca la información requerida &lt;/html&gt;"/>
+                        </properties>
+                      </component>
+                      <component id="4b7e1" class="javax.swing.JButton" binding="updButton">
+                        <constraints>
+                          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-1"/>
+                          <label value="Actualizar"/>
+                          <text value="Actualizar"/>
+                        </properties>
+                      </component>
+                      <component id="922c4" class="javax.swing.JButton" binding="verMisValoracionesButton" default-binding="true">
+                        <constraints>
+                          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-1"/>
+                          <font name="Bangla Sangam MN"/>
+                          <foreground color="-13421238"/>
+                          <text value="Ver mis valoraciones"/>
+                        </properties>
+                      </component>
+                      <component id="230d0" class="javax.swing.JSeparator">
+                        <constraints>
+                          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="2" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                      </component>
+                      <grid id="319be" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-1"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="781d7" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="1" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-1"/>
+                              <font name="Bangla MN" size="18"/>
+                              <foreground color="-13421238"/>
+                              <text value="&lt;html&gt; ¿Qué desea hacer?&lt;/html&gt;"/>
+                            </properties>
+                          </component>
+                          <grid id="bf88e" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                            <margin top="0" left="0" bottom="0" right="0"/>
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-1"/>
+                            </properties>
+                            <border type="none"/>
+                            <children>
+                              <component id="91dc1" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <background color="-1"/>
+                                  <font name="Bangla MN" size="14"/>
+                                  <foreground color="-13421238"/>
+                                  <text value="&lt;html&gt;Has iniciado sesión como: &lt;/html&gt;"/>
+                                </properties>
+                              </component>
+                              <grid id="db02" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                                <constraints>
+                                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <background color="-1"/>
+                                </properties>
+                                <border type="none"/>
+                                <children>
+                                  <component id="2f74e" class="javax.swing.JLabel">
+                                    <constraints/>
+                                    <properties>
+                                      <font name="Bangla MN" size="14"/>
+                                      <foreground color="-13421238"/>
+                                      <text value="Usuario"/>
+                                    </properties>
+                                  </component>
+                                  <component id="869f6" class="javax.swing.JLabel" binding="userId">
+                                    <constraints/>
+                                    <properties>
+                                      <background color="-1"/>
+                                      <font name="Bangla MN" size="14"/>
+                                      <foreground color="-13421238"/>
+                                      <text value="idUs"/>
+                                    </properties>
+                                  </component>
+                                </children>
+                              </grid>
+                              <component id="b3d8c" class="javax.swing.JSeparator">
+                                <constraints>
+                                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties/>
+                              </component>
+                            </children>
+                          </grid>
+                        </children>
+                      </grid>
+                      <grid id="d7c98" layout-manager="FlowLayout" hgap="-1" vgap="-1" flow-align="1">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="1" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-1"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="64aaf" class="javax.swing.JRadioButton" binding="añadirValoraciónRadioButton" default-binding="true">
+                            <constraints/>
+                            <properties>
+                              <background color="-1"/>
+                              <font name="Bangla Sangam MN"/>
+                              <foreground color="-13421238"/>
+                              <text value="Añadir valoración"/>
+                            </properties>
+                          </component>
+                          <hspacer id="6f759">
+                            <constraints/>
+                          </hspacer>
+                          <component id="c9908" class="javax.swing.JRadioButton" binding="borrarValoraciónRadioButton" default-binding="true">
+                            <constraints/>
+                            <properties>
+                              <background color="-1"/>
+                              <font name="Bangla Sangam MN"/>
+                              <foreground color="-13421238"/>
+                              <text value="Borrar valoración"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="2ad31" binding="tablePanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <card name="Card2"/>
+                </constraints>
+                <properties>
+                  <background color="-1"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="cb61f" class="javax.swing.JButton" binding="regresaButton" default-binding="true">
+                    <constraints border-constraint="South"/>
+                    <properties>
+                      <background color="-1"/>
+                      <text value="Regresar"/>
+                    </properties>
+                  </component>
+                  <scrollpane id="74823" binding="scrolly">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <background color="-1"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </scrollpane>
+                </children>
+              </grid>
+            </children>
+          </grid>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

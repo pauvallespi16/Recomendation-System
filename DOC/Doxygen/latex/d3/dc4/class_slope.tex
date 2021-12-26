@@ -1,0 +1,31 @@
+\hypertarget{class_slope}{}\doxysection{Referencia de la Clase Slope}
+\label{class_slope}\index{Slope@{Slope}}
+
+
+Implementación del algoritmo slope one, usado en Collaborative Filtering después de KMeans.  
+
+
+
+
+\doxysubsection{Descripción detallada}
+Implementación del algoritmo slope one, usado en Collaborative Filtering después de KMeans. 
+
+\mbox{\hyperlink{class_slope}{Slope}} One tiene en cuenta la información de otros usuarios que han valorado el mismo item y los diferentes items que han valorado los distintos usuarios para crear una predicción de la valoración que le dara nuestro usuario.
+
+Usaremos la siguiente versión de la fórmula de predicción para el \mbox{\hyperlink{class_slope}{Slope}} One\+: P(u) = (1/$\vert$\+Rj$\vert$)$\ast$∑dev\+\_\+(i,j)
+
+Donde dev\+\_\+(i,j) sigue la siguiente fórmula\+: dev\+\_\+(i,j) = ∑((uj -\/ ui)/card(S\+\_\+(i,j)(x))
+
+Para más información\+: \href{https://www.cs.upc.edu/prop/data/uploads/info-recomanadors.pdf}{\texttt{ https\+://www.\+cs.\+upc.\+edu/prop/data/uploads/info-\/recomanadors.\+pdf}}
+
+\begin{DoxyAuthor}{Autor}
+Carla Campàs Gené 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+December 2021 
+\end{DoxyDate}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_slope_one_8java}{Slope\+One.\+java}}\end{DoxyCompactItemize}

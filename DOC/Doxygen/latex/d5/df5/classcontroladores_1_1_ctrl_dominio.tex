@@ -1,0 +1,1258 @@
+\hypertarget{classcontroladores_1_1_ctrl_dominio}{}\doxysection{Referencia de la Clase controladores.\+Ctrl\+Dominio}
+\label{classcontroladores_1_1_ctrl_dominio}\index{controladores.CtrlDominio@{controladores.CtrlDominio}}
+
+
+La clase de controlador de dominio que interactua con presentacion y las clases de dominio.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_ae5ea47b736353d2946d4f70b451f127d}{Ctrl\+Dominio}} ()
+\begin{DoxyCompactList}\small\item\em constructora por defecto \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a7e1ceebbb9acf9e6db06bc6cf8bb4409}{get\+Path\+Needed}} ()
+\begin{DoxyCompactList}\small\item\em getter de path\+Needed \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a48314bfce1ce648d15d202f88dcf5b68}{add\+New\+Item}} (String og, Map$<$ String, \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} $>$ attributes)
+\begin{DoxyCompactList}\small\item\em Añade un nuevo item. \end{DoxyCompactList}\item 
+Vector \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a4bc47c2b61b955a5208ce3493cfa1f6d}{get\+Recoms\+Vector}} (String raux)
+\begin{DoxyCompactList}\small\item\em Obtiene el vector de recomendaciones. \end{DoxyCompactList}\item 
+Integer \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_af537e479c68711f553388bba8ea63f1d}{getu\+Id}} ()
+\begin{DoxyCompactList}\small\item\em getter del id original del usuario. \end{DoxyCompactList}\item 
+String\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_ac9798ca3b6a7b037f51a81f5e659c052}{get\+Headers}} ()
+\begin{DoxyCompactList}\small\item\em getter de los headers. \end{DoxyCompactList}\item 
+String\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_aabe57dd46d660b9dce5542c82b2850f5}{get\+Types}} ()
+\begin{DoxyCompactList}\small\item\em getter de los tipos de los atributos de los items. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a84831b1c31f360932f2ca57c6cb095c7}{get\+Items}} ()
+\begin{DoxyCompactList}\small\item\em getter de los items. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_ab0b7060737be6c9de0f41b0549b5ee3b}{añadir\+Usuario}} (String \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a21f1b7fdd3aa253cf85ec069c57e8c06}{path}}, int user\+ID)  throws Exception 
+\begin{DoxyCompactList}\small\item\em Añade un usuario. \end{DoxyCompactList}\item 
+Integer \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a191e045e3a35d6199c3720790ba08b31}{contains\+Item\+Id}} (Integer id)
+\begin{DoxyCompactList}\small\item\em Traduce el id original al asignado por el programa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a2e0fce8fb7f9ee387d2a40d12e22a55e}{modify\+Item}} (String id, Map$<$ String, \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} $>$ new\+Attributes)
+\begin{DoxyCompactList}\small\item\em Modifica un item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_ad084bb5214aa5d417b3a062681760a28}{eliminar\+Recom\+Item}} (String recom, Integer item\+Id)  throws Exception 
+\begin{DoxyCompactList}\small\item\em elimina items de recomendaciones. \end{DoxyCompactList}\item 
+Array\+List$<$ String $>$ \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a32ba010232b298ca1920e0ee22bd2f03}{get\+Historial\+Recomendaciones}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el historial de las recomendaciones. \end{DoxyCompactList}\item 
+Array\+List$<$ Integer $>$ \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_ad652e4b863703256be88a9dc71ca8ff0}{get\+Items\+Recomendacion}} (String recom)
+\begin{DoxyCompactList}\small\item\em Obtiene las recomendaciones . \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a96b6cb249047c5be9a8ff8a7e76a9566}{guardar\+Session}} ()  throws Exception 
+\begin{DoxyCompactList}\small\item\em Guarda los archivos procesados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio}{Ctrl\+Dominio}} \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_acb055e4ce3a56f60ed56c62e06120cfb}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em retorna la instancia del controlador de dominio \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a5699120dbaaabaebc29a206d56c3473a}{preprocesar\+Archivos}} (String \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a21f1b7fdd3aa253cf85ec069c57e8c06}{path}})  throws Exception 
+\begin{DoxyCompactList}\small\item\em Función utilizada para preprocesar los archivos llamando al controlador de la capa de persistencia. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a4c4a4d36b82293317ce0b5434c509c66}{guardar\+Archivos}} (Object obj, String \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a21f1b7fdd3aa253cf85ec069c57e8c06}{path}})  throws Exception 
+\begin{DoxyCompactList}\small\item\em Función utilizada para guardar los archivos llamando al controlador de la capa de persistencia. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classclases_1_1_recomendacion}{Recomendacion}} \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a90b19ea0c62561c0005e5eacd0ebc296}{cargar\+Recomendacion}} (String recom\+Name)  throws Exception 
+\begin{DoxyCompactList}\small\item\em Función utilizada para cargar una recomendacion. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a9ff4f2f22d768f8437b1e8c87ae7a7ee}{guardar\+Recomendacion}} (\mbox{\hyperlink{classclases_1_1_recomendacion}{Recomendacion}} recom, String \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a21f1b7fdd3aa253cf85ec069c57e8c06}{path}})  throws Exception 
+\begin{DoxyCompactList}\small\item\em Función utilizada para guardar los archivos llamando al controlador de la capa de persistencia. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classclases_1_1_recomendaciones}{Recomendaciones}} \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a0049715ed84f78882efab1b0b9169463}{cargar\+Historial}} ()  throws Exception 
+\begin{DoxyCompactList}\small\item\em Función utilizada para cargar un conjunto de recomendaciones. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a33b2be1d7468a81319a43454ce4a1374}{guardar\+Historial}} (String \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a21f1b7fdd3aa253cf85ec069c57e8c06}{path}})  throws Exception 
+\begin{DoxyCompactList}\small\item\em Función utilizada para guardar los archivos llamando al controlador de la capa de persistencia. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_ac66814ff10d366c155c0eb98d427ccea}{set\+Usuarios\+Ratings}} (\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} us)
+\begin{DoxyCompactList}\small\item\em Función utilizada para establecer los usuarios del archivo ratings. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_ad3e963b1732aa50ff1e5e0cf274b9238}{set\+Usuarios\+Ratings\+Known}} (\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} us)
+\begin{DoxyCompactList}\small\item\em Función utilizada para establecer los usuarios del archivo ratings known. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a12ee48f705e2821331010e1c8dc85248}{set\+Usuarios\+Ratings\+Unknown}} (\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} us)
+\begin{DoxyCompactList}\small\item\em Función utilizada para establecer los usuarios del archivo ratings unknown. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a07edf06ba0704882a55a26bc491cf3a9}{get\+Usuarios\+Ratings}} ()
+\item 
+static \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a3fd2cff194e2f60714877e2cd6848712}{get\+Usuarios\+Ratings\+Known}} ()
+\item 
+static \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_aace89e998118d35a21ffb51b852cc19a}{get\+Usuarios\+Ratings\+Unknown}} ()
+\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a4e046e73bfa928c69bb0858588d68543}{mostrar\+Items}} ()
+\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_aba528aac475b6f3239f289386368977b}{mostrar\+Valoraciones}} ()
+\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_ac4da45df53cca5fae45f5cbb514fa4b4}{mostrar\+Historial}} ()
+\begin{DoxyCompactList}\small\item\em Muestra el historial en la aplicacion. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a3886afc4bdb9c12c181250d3025bad0d}{cargar\+Datos}} (String \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a21f1b7fdd3aa253cf85ec069c57e8c06}{path}})  throws Exception 
+\begin{DoxyCompactList}\small\item\em Carga los datos de los archivos dados. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_aac2822f1b1e12d3a34c2da6227ad7fbe}{enter\+New\+User}} (int user\+ID, boolean eval)  throws Exception 
+\begin{DoxyCompactList}\small\item\em entra un usuario nuevo a la aplicacion de unos ficheros selecionados \end{DoxyCompactList}\item 
+static Map$<$ Integer, Double $>$ \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_af1cf7d0d9b642f63232380559e48df45}{get\+Valoraciones\+De\+Usuario}} ()
+\begin{DoxyCompactList}\small\item\em coger el mapa de valoraciones del usuario \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a399ef1b1fb98e336004c4af191ef121d}{create\+New\+Valoracion}} (int item\+ID, Double valoracion)
+\begin{DoxyCompactList}\small\item\em añadir una valoración para el usuario activo en la sesión activa \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a34d326b42af505f6c4e1905dd66083da}{quitar\+Valoracion}} (int item\+ID)
+\begin{DoxyCompactList}\small\item\em quitar una valoración del conjunto de valoraciones del usuario \end{DoxyCompactList}\item 
+static Vector \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_ac08a6ad823b551e443366b43ad29686f}{get\+All\+Item\+Atrbutes}} ()
+\begin{DoxyCompactList}\small\item\em coger atributos de todos los items \end{DoxyCompactList}\item 
+static Vector \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a2eb394a6ef40977f54ac31fa794f9ab7}{get\+Predicciones}} (String type, String name, int size)  throws Exception 
+\begin{DoxyCompactList}\small\item\em coger predicciones de los algoritmos de recomendación \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a1efd9a4a17352872e2dbab2ad14fe86c}{delete\+Item}} (int id)
+\begin{DoxyCompactList}\small\item\em Borra un item del conjunto de items. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a3e4f4839b3a5ed0326b3b94478ab45c2}{cargar\+Datos\+Procesados}} (String \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a21f1b7fdd3aa253cf85ec069c57e8c06}{path}}, boolean eval)  throws Exception 
+\begin{DoxyCompactList}\small\item\em Carga los datos preprocesados. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a80b1d785cfa5dc45ecba41338948476a}{send\+Error}} (String err)
+\begin{DoxyCompactList}\small\item\em envia un error. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a318a282c3ea73cf3dc2cbc04f5579d13}{evaluar\+Recomendaciones}} (String name)
+\begin{DoxyCompactList}\small\item\em Evalua la calidad de las recomendaciones. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_afa6cf82756aa7ecfe8111f1a3fe7f787}{borrar\+Recomendacion\+Historial}} (String name)
+\begin{DoxyCompactList}\small\item\em borrar\+Recomendacion\+Historial \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Estáticos del \textquotesingle{}package\textquotesingle{}}
+\begin{DoxyCompactItemize}
+\item 
+static boolean \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a64f6c7d0253cff73ec17e300218869dd}{want\+Eval}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio}{Ctrl\+Dominio}} \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_ac2c062dd41700aa18e7c575ca343c24e}{cd}} = new \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio}{Ctrl\+Dominio}}()
+\item 
+static \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a72ba8165c56ea0f1864fc7d883784c00}{u}}
+\begin{DoxyCompactList}\small\item\em usuario desde el cual vamos a ejecutar las clases del dominio \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a5dad4b02cc0e0ea89ce8eeb349bb24d1}{usuarios\+Ratings\+Unknown}}
+\begin{DoxyCompactList}\small\item\em informacion sobre los ratings que aún no sabemos (test) \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a314c7e4bfd4fe534fd3fd4b26cc0b5d9}{usuarios\+Ratings\+Known}}
+\begin{DoxyCompactList}\small\item\em informacion sobre los ratings que ya sabemos (test) \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a812d5a395909bd55764d6fedcc3be212}{usuarios\+Ratings}}
+\begin{DoxyCompactList}\small\item\em informacion sobre los usuarios generales (training) \end{DoxyCompactList}\item 
+static String \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a21f1b7fdd3aa253cf85ec069c57e8c06}{path}}
+\item 
+static \mbox{\hyperlink{classclases_1_1_recomendaciones}{Recomendaciones}} \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_a88e6c7621d19c91f6932f3c79863c416}{r}}
+\item 
+static String \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio_ad97ecef54759972e15053fbf4b4a2004}{path\+Needed}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+La clase de controlador de dominio que interactua con presentacion y las clases de dominio. 
+
+\begin{DoxyAuthor}{Autor}
+Carla Campàs Gené
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+December 2021 
+\end{DoxyDate}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00021}{21}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_ae5ea47b736353d2946d4f70b451f127d}\label{classcontroladores_1_1_ctrl_dominio_ae5ea47b736353d2946d4f70b451f127d}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!CtrlDominio@{CtrlDominio}}
+\index{CtrlDominio@{CtrlDominio}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{CtrlDominio()}{CtrlDominio()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+Ctrl\+Dominio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+constructora por defecto 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha creado una instancia vacia de la clase \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio}{Ctrl\+Dominio}} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00063}{63}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a48314bfce1ce648d15d202f88dcf5b68}\label{classcontroladores_1_1_ctrl_dominio_a48314bfce1ce648d15d202f88dcf5b68}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!addNewItem@{addNewItem}}
+\index{addNewItem@{addNewItem}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{addNewItem()}{addNewItem()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+add\+New\+Item (\begin{DoxyParamCaption}\item[{String}]{og,  }\item[{Map$<$ String, \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} $>$}]{attributes }\end{DoxyParamCaption})}
+
+
+
+Añade un nuevo item. 
+
+\begin{DoxyPrecond}{Precondición}
+los paramtros op y atributos estan inicializados. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha añadido el item. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em og} & id original del item. \\
+\hline
+{\em attributes} & atributos del item que se quiere. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00312}{312}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_ab0b7060737be6c9de0f41b0549b5ee3b}\label{classcontroladores_1_1_ctrl_dominio_ab0b7060737be6c9de0f41b0549b5ee3b}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!añadirUsuario@{añadirUsuario}}
+\index{añadirUsuario@{añadirUsuario}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{añadirUsuario()}{añadirUsuario()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+añadir\+Usuario (\begin{DoxyParamCaption}\item[{String}]{path,  }\item[{int}]{user\+ID }\end{DoxyParamCaption}) throws Exception}
+
+
+
+Añade un usuario. 
+
+\begin{DoxyPrecond}{Precondición}
+el path es correcto y el usuario con id user\+ID no existe. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha añadido un nuevo usuario con id user\+ID 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em path} & path donde añadir el usuario. \\
+\hline
+{\em user\+ID} & id del usuario que crearemos. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00470}{470}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_afa6cf82756aa7ecfe8111f1a3fe7f787}\label{classcontroladores_1_1_ctrl_dominio_afa6cf82756aa7ecfe8111f1a3fe7f787}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!borrarRecomendacionHistorial@{borrarRecomendacionHistorial}}
+\index{borrarRecomendacionHistorial@{borrarRecomendacionHistorial}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{borrarRecomendacionHistorial()}{borrarRecomendacionHistorial()}}
+{\footnotesize\ttfamily static void controladores.\+Ctrl\+Dominio.\+borrar\+Recomendacion\+Historial (\begin{DoxyParamCaption}\item[{String}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+borrar\+Recomendacion\+Historial 
+
+borrar una recomendacion del historial \begin{DoxyPrecond}{Precondición}
+existe objeto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha borrado si existia la recomendacion con nombre name 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em name} & nombre de la recomendacion \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00638}{638}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a3886afc4bdb9c12c181250d3025bad0d}\label{classcontroladores_1_1_ctrl_dominio_a3886afc4bdb9c12c181250d3025bad0d}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!cargarDatos@{cargarDatos}}
+\index{cargarDatos@{cargarDatos}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{cargarDatos()}{cargarDatos()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+cargar\+Datos (\begin{DoxyParamCaption}\item[{String}]{path }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Carga los datos de los archivos dados. 
+
+\begin{DoxyPrecond}{Precondición}
+El string path esta inicializado y pertenece a un path correcto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han cargado los datos 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00244}{244}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a3e4f4839b3a5ed0326b3b94478ab45c2}\label{classcontroladores_1_1_ctrl_dominio_a3e4f4839b3a5ed0326b3b94478ab45c2}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!cargarDatosProcesados@{cargarDatosProcesados}}
+\index{cargarDatosProcesados@{cargarDatosProcesados}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{cargarDatosProcesados()}{cargarDatosProcesados()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+cargar\+Datos\+Procesados (\begin{DoxyParamCaption}\item[{String}]{path,  }\item[{boolean}]{eval }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Carga los datos preprocesados. 
+
+\begin{DoxyPrecond}{Precondición}
+El path es correcto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han cargado los datos preprocesados. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em path} & path de los datos procesados. \\
+\hline
+{\em eval} & indica si se quiere evaluar. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00576}{576}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a0049715ed84f78882efab1b0b9169463}\label{classcontroladores_1_1_ctrl_dominio_a0049715ed84f78882efab1b0b9169463}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!cargarHistorial@{cargarHistorial}}
+\index{cargarHistorial@{cargarHistorial}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{cargarHistorial()}{cargarHistorial()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+cargar\+Historial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para cargar un conjunto de recomendaciones. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha cargado el conjunto de recomendaciones 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+Conjunto de recomendaciones que se ha pedido 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00145}{145}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a90b19ea0c62561c0005e5eacd0ebc296}\label{classcontroladores_1_1_ctrl_dominio_a90b19ea0c62561c0005e5eacd0ebc296}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!cargarRecomendacion@{cargarRecomendacion}}
+\index{cargarRecomendacion@{cargarRecomendacion}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{cargarRecomendacion()}{cargarRecomendacion()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+cargar\+Recomendacion (\begin{DoxyParamCaption}\item[{String}]{recom\+Name }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para cargar una recomendacion. 
+
+\begin{DoxyPrecond}{Precondición}
+Nombre válido 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha cargado la recomendacion 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em recom\+Name} & representa el nombre de la recomendacion se quiere leer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Recomendacion que se ha pedido 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00123}{123}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a191e045e3a35d6199c3720790ba08b31}\label{classcontroladores_1_1_ctrl_dominio_a191e045e3a35d6199c3720790ba08b31}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!containsItemId@{containsItemId}}
+\index{containsItemId@{containsItemId}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{containsItemId()}{containsItemId()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+contains\+Item\+Id (\begin{DoxyParamCaption}\item[{Integer}]{id }\end{DoxyParamCaption})}
+
+
+
+Traduce el id original al asignado por el programa. 
+
+\begin{DoxyPrecond}{Precondición}
+El item con el id pasado por parametro existe. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto el id asignado por el programa para ese item. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em id} & id original del item. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00486}{486}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a399ef1b1fb98e336004c4af191ef121d}\label{classcontroladores_1_1_ctrl_dominio_a399ef1b1fb98e336004c4af191ef121d}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!createNewValoracion@{createNewValoracion}}
+\index{createNewValoracion@{createNewValoracion}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{createNewValoracion()}{createNewValoracion()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+create\+New\+Valoracion (\begin{DoxyParamCaption}\item[{int}]{item\+ID,  }\item[{Double}]{valoracion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+añadir una valoración para el usuario activo en la sesión activa 
+
+\begin{DoxyPrecond}{Precondición}
+existe un objeto de la clase, con el usuario inicializado correctamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha añadido la valoracion al mapa de valoraicones del usuario 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em item\+ID} & id del item que el usuario desea valorar \\
+\hline
+{\em valoracion} & valoración asociada a este item \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00288}{288}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a1efd9a4a17352872e2dbab2ad14fe86c}\label{classcontroladores_1_1_ctrl_dominio_a1efd9a4a17352872e2dbab2ad14fe86c}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!deleteItem@{deleteItem}}
+\index{deleteItem@{deleteItem}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{deleteItem()}{deleteItem()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+delete\+Item (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Borra un item del conjunto de items. 
+
+\begin{DoxyPrecond}{Precondición}
+Tiene que existir un item con id original igual al parametro id 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha eliminado el item del conjunto de items 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em id} & id original del item que se desea eliminar \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00408}{408}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_ad084bb5214aa5d417b3a062681760a28}\label{classcontroladores_1_1_ctrl_dominio_ad084bb5214aa5d417b3a062681760a28}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!eliminarRecomItem@{eliminarRecomItem}}
+\index{eliminarRecomItem@{eliminarRecomItem}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{eliminarRecomItem()}{eliminarRecomItem()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+eliminar\+Recom\+Item (\begin{DoxyParamCaption}\item[{String}]{recom,  }\item[{Integer}]{item\+Id }\end{DoxyParamCaption}) throws Exception}
+
+
+
+elimina items de recomendaciones. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe el item con id item\+Id en la recomendacion llamada recom. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha eliminado el item de la recomendacion. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em recom} & nombre de la recomendacion. \\
+\hline
+{\em item\+Id} & id del item. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00515}{515}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_aac2822f1b1e12d3a34c2da6227ad7fbe}\label{classcontroladores_1_1_ctrl_dominio_aac2822f1b1e12d3a34c2da6227ad7fbe}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!enterNewUser@{enterNewUser}}
+\index{enterNewUser@{enterNewUser}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{enterNewUser()}{enterNewUser()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+enter\+New\+User (\begin{DoxyParamCaption}\item[{int}]{user\+ID,  }\item[{boolean}]{eval }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+entra un usuario nuevo a la aplicacion de unos ficheros selecionados 
+
+\begin{DoxyPrecond}{Precondición}
+existe un objeto de la clase Ctrl\+Presentacion 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha entrado el nuevo usuario y cargado sus datos, o lanzado un error 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em user\+ID} & usuario que interactuara con la aplicación \\
+\hline
+{\em eval} & si el usuario quiere una evaluacion de las predicciones que haga el sistema \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00263}{263}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a318a282c3ea73cf3dc2cbc04f5579d13}\label{classcontroladores_1_1_ctrl_dominio_a318a282c3ea73cf3dc2cbc04f5579d13}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!evaluarRecomendaciones@{evaluarRecomendaciones}}
+\index{evaluarRecomendaciones@{evaluarRecomendaciones}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{evaluarRecomendaciones()}{evaluarRecomendaciones()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+evaluar\+Recomendaciones (\begin{DoxyParamCaption}\item[{String}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Evalua la calidad de las recomendaciones. 
+
+\begin{DoxyPrecond}{Precondición}
+name esta inicializado. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto un double con la calidad de la solucion. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+Devuelve un double con la calidad de la solucion. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parámetros}
+{\em name} & nombre de la recomendacion. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00617}{617}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_ac08a6ad823b551e443366b43ad29686f}\label{classcontroladores_1_1_ctrl_dominio_ac08a6ad823b551e443366b43ad29686f}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!getAllItemAtrbutes@{getAllItemAtrbutes}}
+\index{getAllItemAtrbutes@{getAllItemAtrbutes}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{getAllItemAtrbutes()}{getAllItemAtrbutes()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+get\+All\+Item\+Atrbutes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+coger atributos de todos los items 
+
+\begin{DoxyPrecond}{Precondición}
+existe un objeto de la clase 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+vector con los atributos de los items de las cabeceras que queremos 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00325}{325}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_ac9798ca3b6a7b037f51a81f5e659c052}\label{classcontroladores_1_1_ctrl_dominio_ac9798ca3b6a7b037f51a81f5e659c052}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!getHeaders@{getHeaders}}
+\index{getHeaders@{getHeaders}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{getHeaders()}{getHeaders()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+get\+Headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter de los headers. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han obtenido los headers de los atributos de los items. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00441}{441}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a32ba010232b298ca1920e0ee22bd2f03}\label{classcontroladores_1_1_ctrl_dominio_a32ba010232b298ca1920e0ee22bd2f03}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!getHistorialRecomendaciones@{getHistorialRecomendaciones}}
+\index{getHistorialRecomendaciones@{getHistorialRecomendaciones}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{getHistorialRecomendaciones()}{getHistorialRecomendaciones()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+get\+Historial\+Recomendaciones (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtiene el historial de las recomendaciones. 
+
+\begin{DoxyPrecond}{Precondición}
+la variable r esta inicializada. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto el historial de recomendaciones. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+Retorna un Array\+List de strings que contiene el historial de recomendaciones 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00529}{529}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_acb055e4ce3a56f60ed56c62e06120cfb}\label{classcontroladores_1_1_ctrl_dominio_acb055e4ce3a56f60ed56c62e06120cfb}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+retorna la instancia del controlador de dominio 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha devuelto la instancia de esta clase 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+se devuelve la instancia de la clase, una instancia nueva si aun no se ha inicializado 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00074}{74}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a84831b1c31f360932f2ca57c6cb095c7}\label{classcontroladores_1_1_ctrl_dominio_a84831b1c31f360932f2ca57c6cb095c7}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!getItems@{getItems}}
+\index{getItems@{getItems}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{getItems()}{getItems()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+get\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter de los items. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han obtenido los items. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00459}{459}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_ad652e4b863703256be88a9dc71ca8ff0}\label{classcontroladores_1_1_ctrl_dominio_ad652e4b863703256be88a9dc71ca8ff0}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!getItemsRecomendacion@{getItemsRecomendacion}}
+\index{getItemsRecomendacion@{getItemsRecomendacion}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{getItemsRecomendacion()}{getItemsRecomendacion()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+get\+Items\+Recomendacion (\begin{DoxyParamCaption}\item[{String}]{recom }\end{DoxyParamCaption})}
+
+
+
+Obtiene las recomendaciones . 
+
+\begin{DoxyPrecond}{Precondición}
+la variable r esta inicializada. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto el historial de recomendaciones. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+Retorna un Array\+List de strings que contiene el historial de recomendaciones 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00539}{539}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a7e1ceebbb9acf9e6db06bc6cf8bb4409}\label{classcontroladores_1_1_ctrl_dominio_a7e1ceebbb9acf9e6db06bc6cf8bb4409}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!getPathNeeded@{getPathNeeded}}
+\index{getPathNeeded@{getPathNeeded}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{getPathNeeded()}{getPathNeeded()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+get\+Path\+Needed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter de path\+Needed 
+
+\begin{DoxyPrecond}{Precondición}
+se ha inicializado path\+Needed 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha devuelto el valor de path\+Needed 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+se devuelve el valor de path\+Needed 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00085}{85}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a2eb394a6ef40977f54ac31fa794f9ab7}\label{classcontroladores_1_1_ctrl_dominio_a2eb394a6ef40977f54ac31fa794f9ab7}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!getPredicciones@{getPredicciones}}
+\index{getPredicciones@{getPredicciones}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{getPredicciones()}{getPredicciones()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+get\+Predicciones (\begin{DoxyParamCaption}\item[{String}]{type,  }\item[{String}]{name,  }\item[{int}]{size }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+coger predicciones de los algoritmos de recomendación 
+
+\begin{DoxyPrecond}{Precondición}
+existe un objeto de la clase, con el usuario inicializado correctamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha ejecutado la recomendación que quiere el usuario y se ha devuelto la predicción 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+las recomendaciones para el usuario 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parámetros}
+{\em type} & tipo de algoritmo de recomendación que queremos ejecutar \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00361}{361}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a4bc47c2b61b955a5208ce3493cfa1f6d}\label{classcontroladores_1_1_ctrl_dominio_a4bc47c2b61b955a5208ce3493cfa1f6d}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!getRecomsVector@{getRecomsVector}}
+\index{getRecomsVector@{getRecomsVector}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{getRecomsVector()}{getRecomsVector()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+get\+Recoms\+Vector (\begin{DoxyParamCaption}\item[{String}]{raux }\end{DoxyParamCaption})}
+
+
+
+Obtiene el vector de recomendaciones. 
+
+\begin{DoxyPrecond}{Precondición}
+La recomendacion raux tiene que existir. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha obtenido el vector de recomendaciones con nombre raux. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em raux} & nombre de la recomendacion. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00418}{418}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_aabe57dd46d660b9dce5542c82b2850f5}\label{classcontroladores_1_1_ctrl_dominio_aabe57dd46d660b9dce5542c82b2850f5}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!getTypes@{getTypes}}
+\index{getTypes@{getTypes}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{getTypes()}{getTypes()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+get\+Types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter de los tipos de los atributos de los items. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han obtenido los tipos de los atributos de los items. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00450}{450}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_af537e479c68711f553388bba8ea63f1d}\label{classcontroladores_1_1_ctrl_dominio_af537e479c68711f553388bba8ea63f1d}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!getuId@{getuId}}
+\index{getuId@{getuId}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{getuId()}{getuId()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+getu\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter del id original del usuario. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha obtenido el id original del usuario 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00434}{434}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a07edf06ba0704882a55a26bc491cf3a9}\label{classcontroladores_1_1_ctrl_dominio_a07edf06ba0704882a55a26bc491cf3a9}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!getUsuariosRatings@{getUsuariosRatings}}
+\index{getUsuariosRatings@{getUsuariosRatings}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{getUsuariosRatings()}{getUsuariosRatings()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+get\+Usuarios\+Ratings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyPrecond}{Precondición}
+La clase tiene instancia de usuarios\+Ratings 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto usuarios\+Ratings 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+Devuelve la estructura de datos que contiene los usuarios 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00193}{193}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a3fd2cff194e2f60714877e2cd6848712}\label{classcontroladores_1_1_ctrl_dominio_a3fd2cff194e2f60714877e2cd6848712}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!getUsuariosRatingsKnown@{getUsuariosRatingsKnown}}
+\index{getUsuariosRatingsKnown@{getUsuariosRatingsKnown}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{getUsuariosRatingsKnown()}{getUsuariosRatingsKnown()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+get\+Usuarios\+Ratings\+Known (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyPrecond}{Precondición}
+La clase tiene instancia de usuarios\+Ratings\+Known 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto usuarios\+Ratings\+Known 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+Devuelve la estructura de datos que contiene los usuarios 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00201}{201}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_aace89e998118d35a21ffb51b852cc19a}\label{classcontroladores_1_1_ctrl_dominio_aace89e998118d35a21ffb51b852cc19a}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!getUsuariosRatingsUnknown@{getUsuariosRatingsUnknown}}
+\index{getUsuariosRatingsUnknown@{getUsuariosRatingsUnknown}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{getUsuariosRatingsUnknown()}{getUsuariosRatingsUnknown()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+get\+Usuarios\+Ratings\+Unknown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyPrecond}{Precondición}
+La clase tiene instancia de usuarios\+Ratings\+Unknown 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto usuarios\+Ratings\+Unknown 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+Devuelve la estructura de datos que contiene los usuarios 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00209}{209}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_af1cf7d0d9b642f63232380559e48df45}\label{classcontroladores_1_1_ctrl_dominio_af1cf7d0d9b642f63232380559e48df45}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!getValoracionesDeUsuario@{getValoracionesDeUsuario}}
+\index{getValoracionesDeUsuario@{getValoracionesDeUsuario}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{getValoracionesDeUsuario()}{getValoracionesDeUsuario()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+get\+Valoraciones\+De\+Usuario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+coger el mapa de valoraciones del usuario 
+
+\begin{DoxyPrecond}{Precondición}
+existe un objeto de la clase, con el usuario inicializado correctamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha devuelto las valoraciones que pertenecen a este usuario 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+se devuelven las valoraciones que pertenecen a este usuario 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00277}{277}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a4c4a4d36b82293317ce0b5434c509c66}\label{classcontroladores_1_1_ctrl_dominio_a4c4a4d36b82293317ce0b5434c509c66}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!guardarArchivos@{guardarArchivos}}
+\index{guardarArchivos@{guardarArchivos}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{guardarArchivos()}{guardarArchivos()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+guardar\+Archivos (\begin{DoxyParamCaption}\item[{Object}]{obj,  }\item[{String}]{path }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para guardar los archivos llamando al controlador de la capa de persistencia. 
+
+\begin{DoxyPrecond}{Precondición}
+Objeto válido (items o usuarios) y path válido 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han guardado los archivos 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em obj} & Objetos que queremos guardar \\
+\hline
+{\em path} & Representa el path del cuál se quiere leer \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00104}{104}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a33b2be1d7468a81319a43454ce4a1374}\label{classcontroladores_1_1_ctrl_dominio_a33b2be1d7468a81319a43454ce4a1374}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!guardarHistorial@{guardarHistorial}}
+\index{guardarHistorial@{guardarHistorial}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{guardarHistorial()}{guardarHistorial()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+guardar\+Historial (\begin{DoxyParamCaption}\item[{String}]{path }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para guardar los archivos llamando al controlador de la capa de persistencia. 
+
+\begin{DoxyPrecond}{Precondición}
+Objeto válido 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han guardado el historial 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em path} & Representa el path del cuál se quiere leer \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00156}{156}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a9ff4f2f22d768f8437b1e8c87ae7a7ee}\label{classcontroladores_1_1_ctrl_dominio_a9ff4f2f22d768f8437b1e8c87ae7a7ee}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!guardarRecomendacion@{guardarRecomendacion}}
+\index{guardarRecomendacion@{guardarRecomendacion}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{guardarRecomendacion()}{guardarRecomendacion()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+guardar\+Recomendacion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classclases_1_1_recomendacion}{Recomendacion}}}]{recom,  }\item[{String}]{path }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para guardar los archivos llamando al controlador de la capa de persistencia. 
+
+\begin{DoxyPrecond}{Precondición}
+Objeto válido 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han guardado los archivos 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em recom} & Recomendacion a guardar \\
+\hline
+{\em path} & Representa el path del cuál se quiere leer \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00135}{135}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a96b6cb249047c5be9a8ff8a7e76a9566}\label{classcontroladores_1_1_ctrl_dominio_a96b6cb249047c5be9a8ff8a7e76a9566}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!guardarSession@{guardarSession}}
+\index{guardarSession@{guardarSession}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{guardarSession()}{guardarSession()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+guardar\+Session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Exception}
+
+
+
+Guarda los archivos procesados. 
+
+\begin{DoxyPrecond}{Precondición}
+Existen sesiones. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han guardados los archivos procesados. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00548}{548}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a2e0fce8fb7f9ee387d2a40d12e22a55e}\label{classcontroladores_1_1_ctrl_dominio_a2e0fce8fb7f9ee387d2a40d12e22a55e}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!modifyItem@{modifyItem}}
+\index{modifyItem@{modifyItem}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{modifyItem()}{modifyItem()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+modify\+Item (\begin{DoxyParamCaption}\item[{String}]{id,  }\item[{Map$<$ String, \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}} $>$}]{new\+Attributes }\end{DoxyParamCaption})}
+
+
+
+Modifica un item. 
+
+\begin{DoxyPrecond}{Precondición}
+Existe un item con el id pasado por parametro y new\+Attributos esta inicializado correctamente. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha modificado el item con el id pasado. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em id} & id del item. \\
+\hline
+{\em new\+Attributes} & atributos con los que se creara el item nuevo. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00497}{497}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_ac4da45df53cca5fae45f5cbb514fa4b4}\label{classcontroladores_1_1_ctrl_dominio_ac4da45df53cca5fae45f5cbb514fa4b4}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!mostrarHistorial@{mostrarHistorial}}
+\index{mostrarHistorial@{mostrarHistorial}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{mostrarHistorial()}{mostrarHistorial()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+mostrar\+Historial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Muestra el historial en la aplicacion. 
+
+\begin{DoxyPrecond}{Precondición}
+El parametro r esta inicializado. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha mostrado el historial en la aplicacion 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00234}{234}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a4e046e73bfa928c69bb0858588d68543}\label{classcontroladores_1_1_ctrl_dominio_a4e046e73bfa928c69bb0858588d68543}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!mostrarItems@{mostrarItems}}
+\index{mostrarItems@{mostrarItems}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{mostrarItems()}{mostrarItems()}}
+{\footnotesize\ttfamily static void controladores.\+Ctrl\+Dominio.\+mostrar\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00211}{211}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_aba528aac475b6f3239f289386368977b}\label{classcontroladores_1_1_ctrl_dominio_aba528aac475b6f3239f289386368977b}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!mostrarValoraciones@{mostrarValoraciones}}
+\index{mostrarValoraciones@{mostrarValoraciones}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{mostrarValoraciones()}{mostrarValoraciones()}}
+{\footnotesize\ttfamily static void controladores.\+Ctrl\+Dominio.\+mostrar\+Valoraciones (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00222}{222}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a5699120dbaaabaebc29a206d56c3473a}\label{classcontroladores_1_1_ctrl_dominio_a5699120dbaaabaebc29a206d56c3473a}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!preprocesarArchivos@{preprocesarArchivos}}
+\index{preprocesarArchivos@{preprocesarArchivos}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{preprocesarArchivos()}{preprocesarArchivos()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+preprocesar\+Archivos (\begin{DoxyParamCaption}\item[{String}]{path }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para preprocesar los archivos llamando al controlador de la capa de persistencia. 
+
+\begin{DoxyPrecond}{Precondición}
+path válido 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han cargado los archivos 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em path} & representa el path del cuál se quiere leer \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00095}{95}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a34d326b42af505f6c4e1905dd66083da}\label{classcontroladores_1_1_ctrl_dominio_a34d326b42af505f6c4e1905dd66083da}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!quitarValoracion@{quitarValoracion}}
+\index{quitarValoracion@{quitarValoracion}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{quitarValoracion()}{quitarValoracion()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+quitar\+Valoracion (\begin{DoxyParamCaption}\item[{int}]{item\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+quitar una valoración del conjunto de valoraciones del usuario 
+
+\begin{DoxyPrecond}{Precondición}
+existe un objeto de la clase, con el usuario inicializado correctamente 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha quitado la valoración del mapa de valoraciones del usuario 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em item\+ID} & id del item del cual queremos quitar la valoración \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00299}{299}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a80b1d785cfa5dc45ecba41338948476a}\label{classcontroladores_1_1_ctrl_dominio_a80b1d785cfa5dc45ecba41338948476a}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!sendError@{sendError}}
+\index{sendError@{sendError}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{sendError()}{sendError()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+send\+Error (\begin{DoxyParamCaption}\item[{String}]{err }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+envia un error. 
+
+\begin{DoxyPrecond}{Precondición}
+la variable err esta inicializada. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha enviado el error err. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em err} & variable que contiene el error. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00606}{606}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_ac66814ff10d366c155c0eb98d427ccea}\label{classcontroladores_1_1_ctrl_dominio_ac66814ff10d366c155c0eb98d427ccea}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!setUsuariosRatings@{setUsuariosRatings}}
+\index{setUsuariosRatings@{setUsuariosRatings}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{setUsuariosRatings()}{setUsuariosRatings()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+set\+Usuarios\+Ratings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}}}]{us }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para establecer los usuarios del archivo ratings. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Los usuarios de ratings se han establecido 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em us} & Usuarios que se van a establecer como los de la clase \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00169}{169}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_ad3e963b1732aa50ff1e5e0cf274b9238}\label{classcontroladores_1_1_ctrl_dominio_ad3e963b1732aa50ff1e5e0cf274b9238}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!setUsuariosRatingsKnown@{setUsuariosRatingsKnown}}
+\index{setUsuariosRatingsKnown@{setUsuariosRatingsKnown}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{setUsuariosRatingsKnown()}{setUsuariosRatingsKnown()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+set\+Usuarios\+Ratings\+Known (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}}}]{us }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para establecer los usuarios del archivo ratings known. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Los usuarios de ratings se han establecido 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em us} & Usuarios que se van a establecer como los de la clase \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00177}{177}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a12ee48f705e2821331010e1c8dc85248}\label{classcontroladores_1_1_ctrl_dominio_a12ee48f705e2821331010e1c8dc85248}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!setUsuariosRatingsUnknown@{setUsuariosRatingsUnknown}}
+\index{setUsuariosRatingsUnknown@{setUsuariosRatingsUnknown}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{setUsuariosRatingsUnknown()}{setUsuariosRatingsUnknown()}}
+{\footnotesize\ttfamily controladores.\+Ctrl\+Dominio.\+set\+Usuarios\+Ratings\+Unknown (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}}}]{us }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función utilizada para establecer los usuarios del archivo ratings unknown. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Los usuarios de ratings se han establecido 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em us} & Usuarios que se van a establecer como los de la clase \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00185}{185}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_ac2c062dd41700aa18e7c575ca343c24e}\label{classcontroladores_1_1_ctrl_dominio_ac2c062dd41700aa18e7c575ca343c24e}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!cd@{cd}}
+\index{cd@{cd}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{cd}{cd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio}{Ctrl\+Dominio}} controladores.\+Ctrl\+Dominio.\+cd = new \mbox{\hyperlink{classcontroladores_1_1_ctrl_dominio}{Ctrl\+Dominio}}()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00024}{24}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a21f1b7fdd3aa253cf85ec069c57e8c06}\label{classcontroladores_1_1_ctrl_dominio_a21f1b7fdd3aa253cf85ec069c57e8c06}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!path@{path}}
+\index{path@{path}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily String controladores.\+Ctrl\+Dominio.\+path\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00048}{48}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_ad97ecef54759972e15053fbf4b4a2004}\label{classcontroladores_1_1_ctrl_dominio_ad97ecef54759972e15053fbf4b4a2004}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!pathNeeded@{pathNeeded}}
+\index{pathNeeded@{pathNeeded}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{pathNeeded}{pathNeeded}}
+{\footnotesize\ttfamily String controladores.\+Ctrl\+Dominio.\+path\+Needed\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00056}{56}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a88e6c7621d19c91f6932f3c79863c416}\label{classcontroladores_1_1_ctrl_dominio_a88e6c7621d19c91f6932f3c79863c416}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!r@{r}}
+\index{r@{r}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{r}{r}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classclases_1_1_recomendaciones}{Recomendaciones}} controladores.\+Ctrl\+Dominio.\+r\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00052}{52}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a72ba8165c56ea0f1864fc7d883784c00}\label{classcontroladores_1_1_ctrl_dominio_a72ba8165c56ea0f1864fc7d883784c00}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!u@{u}}
+\index{u@{u}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{u}{u}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} controladores.\+Ctrl\+Dominio.\+u\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+usuario desde el cual vamos a ejecutar las clases del dominio 
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00028}{28}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a812d5a395909bd55764d6fedcc3be212}\label{classcontroladores_1_1_ctrl_dominio_a812d5a395909bd55764d6fedcc3be212}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!usuariosRatings@{usuariosRatings}}
+\index{usuariosRatings@{usuariosRatings}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{usuariosRatings}{usuariosRatings}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} controladores.\+Ctrl\+Dominio.\+usuarios\+Ratings\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+informacion sobre los usuarios generales (training) 
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00040}{40}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a314c7e4bfd4fe534fd3fd4b26cc0b5d9}\label{classcontroladores_1_1_ctrl_dominio_a314c7e4bfd4fe534fd3fd4b26cc0b5d9}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!usuariosRatingsKnown@{usuariosRatingsKnown}}
+\index{usuariosRatingsKnown@{usuariosRatingsKnown}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{usuariosRatingsKnown}{usuariosRatingsKnown}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} controladores.\+Ctrl\+Dominio.\+usuarios\+Ratings\+Known\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+informacion sobre los ratings que ya sabemos (test) 
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00036}{36}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a5dad4b02cc0e0ea89ce8eeb349bb24d1}\label{classcontroladores_1_1_ctrl_dominio_a5dad4b02cc0e0ea89ce8eeb349bb24d1}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!usuariosRatingsUnknown@{usuariosRatingsUnknown}}
+\index{usuariosRatingsUnknown@{usuariosRatingsUnknown}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{usuariosRatingsUnknown}{usuariosRatingsUnknown}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} controladores.\+Ctrl\+Dominio.\+usuarios\+Ratings\+Unknown\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+informacion sobre los ratings que aún no sabemos (test) 
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00032}{32}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+\mbox{\Hypertarget{classcontroladores_1_1_ctrl_dominio_a64f6c7d0253cff73ec17e300218869dd}\label{classcontroladores_1_1_ctrl_dominio_a64f6c7d0253cff73ec17e300218869dd}} 
+\index{controladores.CtrlDominio@{controladores.CtrlDominio}!wantEval@{wantEval}}
+\index{wantEval@{wantEval}!controladores.CtrlDominio@{controladores.CtrlDominio}}
+\doxysubsubsection{\texorpdfstring{wantEval}{wantEval}}
+{\footnotesize\ttfamily boolean controladores.\+Ctrl\+Dominio.\+want\+Eval\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [package]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{_ctrl_dominio_8java_source_l00044}{44}} del archivo \mbox{\hyperlink{_ctrl_dominio_8java_source}{Ctrl\+Dominio.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_ctrl_dominio_8java}{Ctrl\+Dominio.\+java}}\end{DoxyCompactItemize}

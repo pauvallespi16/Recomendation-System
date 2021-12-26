@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['r_0',['r',['../d5/df5/classcontroladores_1_1_ctrl_dominio.html#a88e6c7621d19c91f6932f3c79863c416',1,'controladores::CtrlDominio']]],
+  ['radios_1',['radios',['../d7/db5/classpresentacion_1_1historial_recomendaciones.html#a4ee16d0f8625db380e2e10a7db437a30',1,'presentacion::historialRecomendaciones']]],
+  ['random_2',['random',['../d6/de9/classcontroladores_1_1_k_means.html#af1337d8a1f1068765ad77e07f2ef2668',1,'controladores::KMeans']]],
+  ['ratings_3',['ratings',['../d1/d14/enumclases_1_1_parser_1_1_path.html#a86e9394f48694a0d0dad7406edf93343',1,'clases::Parser::Path']]],
+  ['ratingsknown_4',['ratingsKnown',['../d1/d14/enumclases_1_1_parser_1_1_path.html#aba005170dacf792978f6728f99249207',1,'clases::Parser::Path']]],
+  ['ratingsunknown_5',['ratingsUnknown',['../d1/d14/enumclases_1_1_parser_1_1_path.html#a50c652ee719a0f6c78f650cf285a82d6',1,'clases::Parser::Path']]],
+  ['recombutton_6',['recomButton',['../d1/df8/classpresentacion_1_1vista_recomendaciones.html#a524f6e6f3bd0dcfd7c5b0cfae650d94f',1,'presentacion::vistaRecomendaciones']]],
+  ['recomendaciones_7',['recomendaciones',['../d8/d3c/classclases_1_1_recomendaciones.html#a0fd0bdaba2fcf93dfdce470591d8d294',1,'clases::Recomendaciones']]],
+  ['recomitems_8',['recomItems',['../da/d84/classclases_1_1_recomendacion.html#a0c4e2dfceab553f31c495ab9289c2911',1,'clases::Recomendacion']]],
+  ['recompanel_9',['recomPanel',['../d1/df8/classpresentacion_1_1vista_recomendaciones.html#a0a63251680094bca4354570fe04f69d1',1,'presentacion::vistaRecomendaciones']]],
+  ['recomscrolly_10',['recomScrolly',['../d7/db5/classpresentacion_1_1historial_recomendaciones.html#ade2eeefc949127d6ef43e3b23ce8d455',1,'presentacion::historialRecomendaciones']]],
+  ['recomspanel_11',['recomsPanel',['../d7/db5/classpresentacion_1_1historial_recomendaciones.html#a0dd329c0d43f1daeac068c162e4d8226',1,'presentacion::historialRecomendaciones']]],
+  ['regresabutton_12',['regresaButton',['../dc/d01/classpresentacion_1_1usuario_main.html#a400c3ce3f791ac6861fd7e36e9f8b6d1',1,'presentacion::usuarioMain']]],
+  ['remitbutton_13',['remItButton',['../de/d8f/classpresentacion_1_1vista_items.html#a8f6973c43ff30e5f45dc8c6f81ebaa16',1,'presentacion::vistaItems']]],
+  ['remitpanel_14',['remItPanel',['../de/d8f/classpresentacion_1_1vista_items.html#a1a2d23e23740730ad089c1767efc4dbc',1,'presentacion::vistaItems']]],
+  ['removepanel_15',['removePanel',['../d7/db5/classpresentacion_1_1historial_recomendaciones.html#a19fd0ec97c9769dd3b7ac0cf077e0af2',1,'presentacion::historialRecomendaciones']]],
+  ['remrecomitem_16',['remRecomItem',['../d7/db5/classpresentacion_1_1historial_recomendaciones.html#a1d09f7c57c35335dd83ac548fe308543',1,'presentacion::historialRecomendaciones']]],
+  ['rs_17',['rs',['../d7/db5/classpresentacion_1_1historial_recomendaciones.html#ad024964c5a4411a6aeb48ba97a20f364',1,'presentacion::historialRecomendaciones']]]
+];

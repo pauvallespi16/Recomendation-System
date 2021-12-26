@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROP subgrup-prop2-1: Fichero Fuente CtrlDominioCargarDatos.java</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PROP subgrup-prop2-1<span id="projectnumber">&#160;Entrega 3</span>
+   </div>
+   <div id="projectbrief">Sistema de recomendaciones</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_d2a81fcb9e0344d06f49c2bd6fcf908f.html">FONTS</a></li><li class="navelem"><a class="el" href="../../dir_7342359a9f41e5e9b1850f624169c539.html">dominio</a></li><li class="navelem"><a class="el" href="../../dir_318782879a2ceac5c6208bfc9539c3f6.html">controladores</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">CtrlDominioCargarDatos.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dc/d20/_ctrl_dominio_cargar_datos_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">package </span>controladores;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> <a class="code hl_package" href="../../d8/ddb/namespaceclases.html">clases</a>.<a class="code hl_class" href="../../d0/d77/classclases_1_1_parser.html">Parser</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> java.io.FileNotFoundException;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html">   20</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html">CtrlDominioCargarDatos</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html#af8fe73e931171028345329e26f2bc681">   27</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html#af8fe73e931171028345329e26f2bc681">cargarArchivos</a> (String path) <span class="keywordflow">throws</span> Exception {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <a class="code hl_class" href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html">CtrlDominioCargarDatos</a>.<a class="code hl_function" href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html#a05ff23924a29959ba3c092f2c2687cc4">cargarItems</a>(path + <span class="stringliteral">&quot;items.txt&quot;</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_class" href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html">CtrlDominioCargarDatos</a>.<a class="code hl_function" href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html#a0b6e3105cfd82363dc8026d59dbd7528">cargarRatings</a>(path + <span class="stringliteral">&quot;ratings.txt&quot;</span>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_class" href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html">CtrlDominioCargarDatos</a>.<a class="code hl_function" href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html#aa756cfb48830ca2e4caadd1aa39070e9">cargarRatingsKnown</a>(path + <span class="stringliteral">&quot;ratingKnown.txt&quot;</span>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="comment">//if (eval) CtrlDominioCargarDatos.cargarRatingsUnknown(path + &quot;ratingsUnknown.txt&quot;);</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html#a05ff23924a29959ba3c092f2c2687cc4">   41</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html#a05ff23924a29959ba3c092f2c2687cc4">cargarItems</a> (String path) <span class="keywordflow">throws</span> Exception {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        ArrayList&lt;String&gt; datos = <a class="code hl_class" href="../../d5/d41/classcontroladores_1_1_ctrl_persistencia.html">CtrlPersistencia</a>.<a class="code hl_function" href="../../d5/d41/classcontroladores_1_1_ctrl_persistencia.html#a6f12d7e9e38c00c8bd8fd2425500e949">leerFichero</a>(path);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_class" href="../../d0/d77/classclases_1_1_parser.html">Parser</a>.<a class="code hl_function" href="../../d0/d77/classclases_1_1_parser.html#ab1911b83409593ba16415057c553d974">loadItems</a>(datos);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html#a0b6e3105cfd82363dc8026d59dbd7528">   52</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html#a0b6e3105cfd82363dc8026d59dbd7528">cargarRatings</a> (String path) <span class="keywordflow">throws</span> Exception {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        ArrayList&lt;String&gt; datos = <a class="code hl_class" href="../../d5/d41/classcontroladores_1_1_ctrl_persistencia.html">CtrlPersistencia</a>.<a class="code hl_function" href="../../d5/d41/classcontroladores_1_1_ctrl_persistencia.html#a6f12d7e9e38c00c8bd8fd2425500e949">leerFichero</a>(path);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_class" href="../../d5/df5/classcontroladores_1_1_ctrl_dominio.html">CtrlDominio</a>.<a class="code hl_function" href="../../d5/df5/classcontroladores_1_1_ctrl_dominio.html#ac66814ff10d366c155c0eb98d427ccea">setUsuariosRatings</a>(<a class="code hl_class" href="../../d0/d77/classclases_1_1_parser.html">Parser</a>.<a class="code hl_function" href="../../d0/d77/classclases_1_1_parser.html#ac246168127022c8396db0192c739738f">loadUsers</a>(datos, <a class="code hl_class" href="../../d0/d77/classclases_1_1_parser.html">Parser</a>.<a class="code hl_class" href="../../d1/d14/enumclases_1_1_parser_1_1_path.html">Path</a>.<a class="code hl_variable" href="../../d1/d14/enumclases_1_1_parser_1_1_path.html#a86e9394f48694a0d0dad7406edf93343">ratings</a>));</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html#aa756cfb48830ca2e4caadd1aa39070e9">   63</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html#aa756cfb48830ca2e4caadd1aa39070e9">cargarRatingsKnown</a> (String path) <span class="keywordflow">throws</span> Exception {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        ArrayList&lt;String&gt; datos = <a class="code hl_class" href="../../d5/d41/classcontroladores_1_1_ctrl_persistencia.html">CtrlPersistencia</a>.<a class="code hl_function" href="../../d5/d41/classcontroladores_1_1_ctrl_persistencia.html#a6f12d7e9e38c00c8bd8fd2425500e949">leerFichero</a>(path);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <a class="code hl_class" href="../../d5/df5/classcontroladores_1_1_ctrl_dominio.html">CtrlDominio</a>.<a class="code hl_function" href="../../d5/df5/classcontroladores_1_1_ctrl_dominio.html#ad3e963b1732aa50ff1e5e0cf274b9238">setUsuariosRatingsKnown</a>(<a class="code hl_class" href="../../d0/d77/classclases_1_1_parser.html">Parser</a>.<a class="code hl_function" href="../../d0/d77/classclases_1_1_parser.html#ac246168127022c8396db0192c739738f">loadUsers</a>(datos, <a class="code hl_class" href="../../d0/d77/classclases_1_1_parser.html">Parser</a>.<a class="code hl_class" href="../../d1/d14/enumclases_1_1_parser_1_1_path.html">Path</a>.<a class="code hl_variable" href="../../d1/d14/enumclases_1_1_parser_1_1_path.html#aba005170dacf792978f6728f99249207">ratingsKnown</a>));</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html#a5e5a1a5ee28b3a15311f60d6cf8778f0">   74</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html#a5e5a1a5ee28b3a15311f60d6cf8778f0">cargarRatingsUnknown</a> (String path) <span class="keywordflow">throws</span> Exception {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        ArrayList&lt;String&gt; datos = <a class="code hl_class" href="../../d5/d41/classcontroladores_1_1_ctrl_persistencia.html">CtrlPersistencia</a>.<a class="code hl_function" href="../../d5/d41/classcontroladores_1_1_ctrl_persistencia.html#a6f12d7e9e38c00c8bd8fd2425500e949">leerFichero</a>(path);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <a class="code hl_class" href="../../d5/df5/classcontroladores_1_1_ctrl_dominio.html">CtrlDominio</a>.<a class="code hl_function" href="../../d5/df5/classcontroladores_1_1_ctrl_dominio.html#a12ee48f705e2821331010e1c8dc85248">setUsuariosRatingsUnknown</a>(<a class="code hl_class" href="../../d0/d77/classclases_1_1_parser.html">Parser</a>.<a class="code hl_function" href="../../d0/d77/classclases_1_1_parser.html#ac246168127022c8396db0192c739738f">loadUsers</a>(datos, <a class="code hl_class" href="../../d0/d77/classclases_1_1_parser.html">Parser</a>.<a class="code hl_class" href="../../d1/d14/enumclases_1_1_parser_1_1_path.html">Path</a>.<a class="code hl_variable" href="../../d1/d14/enumclases_1_1_parser_1_1_path.html#a50c652ee719a0f6c78f650cf285a82d6">ratingsUnknown</a>));</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
+<div class="ttc" id="aclassclases_1_1_parser_html"><div class="ttname"><a href="../../d0/d77/classclases_1_1_parser.html">clases.Parser</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de6/_parser_8java_source.html#l00025">Parser.java:25</a></div></div>
+<div class="ttc" id="aclassclases_1_1_parser_html_ab1911b83409593ba16415057c553d974"><div class="ttname"><a href="../../d0/d77/classclases_1_1_parser.html#ab1911b83409593ba16415057c553d974">clases.Parser.loadItems</a></div><div class="ttdeci">static void loadItems(ArrayList&lt; String &gt; data)</div><div class="ttdoc">Función utilizada para cargar los ítems.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de6/_parser_8java_source.html#l00637">Parser.java:637</a></div></div>
+<div class="ttc" id="aclassclases_1_1_parser_html_ac246168127022c8396db0192c739738f"><div class="ttname"><a href="../../d0/d77/classclases_1_1_parser.html#ac246168127022c8396db0192c739738f">clases.Parser.loadUsers</a></div><div class="ttdeci">static Usuarios loadUsers(ArrayList&lt; String &gt; data, Path op)</div><div class="ttdoc">Función utilizada para cargar los usuarios y sus valoraciones.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de6/_parser_8java_source.html#l00793">Parser.java:793</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_ctrl_dominio_cargar_datos_html"><div class="ttname"><a href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html">controladores.CtrlDominioCargarDatos</a></div><div class="ttdoc">Clase utilizada como soporte para el controlador de la capa de dominio.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d20/_ctrl_dominio_cargar_datos_8java_source.html#l00020">CtrlDominioCargarDatos.java:20</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_ctrl_dominio_cargar_datos_html_a05ff23924a29959ba3c092f2c2687cc4"><div class="ttname"><a href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html#a05ff23924a29959ba3c092f2c2687cc4">controladores.CtrlDominioCargarDatos.cargarItems</a></div><div class="ttdeci">static void cargarItems(String path)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d20/_ctrl_dominio_cargar_datos_8java_source.html#l00041">CtrlDominioCargarDatos.java:41</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_ctrl_dominio_cargar_datos_html_a0b6e3105cfd82363dc8026d59dbd7528"><div class="ttname"><a href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html#a0b6e3105cfd82363dc8026d59dbd7528">controladores.CtrlDominioCargarDatos.cargarRatings</a></div><div class="ttdeci">static void cargarRatings(String path)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d20/_ctrl_dominio_cargar_datos_8java_source.html#l00052">CtrlDominioCargarDatos.java:52</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_ctrl_dominio_cargar_datos_html_a5e5a1a5ee28b3a15311f60d6cf8778f0"><div class="ttname"><a href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html#a5e5a1a5ee28b3a15311f60d6cf8778f0">controladores.CtrlDominioCargarDatos.cargarRatingsUnknown</a></div><div class="ttdeci">static void cargarRatingsUnknown(String path)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d20/_ctrl_dominio_cargar_datos_8java_source.html#l00074">CtrlDominioCargarDatos.java:74</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_ctrl_dominio_cargar_datos_html_aa756cfb48830ca2e4caadd1aa39070e9"><div class="ttname"><a href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html#aa756cfb48830ca2e4caadd1aa39070e9">controladores.CtrlDominioCargarDatos.cargarRatingsKnown</a></div><div class="ttdeci">static void cargarRatingsKnown(String path)</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d20/_ctrl_dominio_cargar_datos_8java_source.html#l00063">CtrlDominioCargarDatos.java:63</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_ctrl_dominio_cargar_datos_html_af8fe73e931171028345329e26f2bc681"><div class="ttname"><a href="../../d6/d10/classcontroladores_1_1_ctrl_dominio_cargar_datos.html#af8fe73e931171028345329e26f2bc681">controladores.CtrlDominioCargarDatos.cargarArchivos</a></div><div class="ttdeci">static void cargarArchivos(String path)</div><div class="ttdoc">Función utilizada para preprocesar los archivos llamando al controlador de la capa de persistencia.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d20/_ctrl_dominio_cargar_datos_8java_source.html#l00027">CtrlDominioCargarDatos.java:27</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_ctrl_dominio_html"><div class="ttname"><a href="../../d5/df5/classcontroladores_1_1_ctrl_dominio.html">controladores.CtrlDominio</a></div><div class="ttdoc">La clase de controlador de dominio que interactua con presentacion y las clases de dominio.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db1/_ctrl_dominio_8java_source.html#l00021">CtrlDominio.java:21</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_ctrl_dominio_html_a12ee48f705e2821331010e1c8dc85248"><div class="ttname"><a href="../../d5/df5/classcontroladores_1_1_ctrl_dominio.html#a12ee48f705e2821331010e1c8dc85248">controladores.CtrlDominio.setUsuariosRatingsUnknown</a></div><div class="ttdeci">static void setUsuariosRatingsUnknown(Usuarios us)</div><div class="ttdoc">Función utilizada para establecer los usuarios del archivo ratings unknown.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db1/_ctrl_dominio_8java_source.html#l00185">CtrlDominio.java:185</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_ctrl_dominio_html_ac66814ff10d366c155c0eb98d427ccea"><div class="ttname"><a href="../../d5/df5/classcontroladores_1_1_ctrl_dominio.html#ac66814ff10d366c155c0eb98d427ccea">controladores.CtrlDominio.setUsuariosRatings</a></div><div class="ttdeci">static void setUsuariosRatings(Usuarios us)</div><div class="ttdoc">Función utilizada para establecer los usuarios del archivo ratings.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db1/_ctrl_dominio_8java_source.html#l00169">CtrlDominio.java:169</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_ctrl_dominio_html_ad3e963b1732aa50ff1e5e0cf274b9238"><div class="ttname"><a href="../../d5/df5/classcontroladores_1_1_ctrl_dominio.html#ad3e963b1732aa50ff1e5e0cf274b9238">controladores.CtrlDominio.setUsuariosRatingsKnown</a></div><div class="ttdeci">static void setUsuariosRatingsKnown(Usuarios us)</div><div class="ttdoc">Función utilizada para establecer los usuarios del archivo ratings known.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db1/_ctrl_dominio_8java_source.html#l00177">CtrlDominio.java:177</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_ctrl_persistencia_html"><div class="ttname"><a href="../../d5/d41/classcontroladores_1_1_ctrl_persistencia.html">controladores.CtrlPersistencia</a></div><div class="ttdoc">Clase utilizada como controlador de la capa de persistencia.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d42/_ctrl_persistencia_8java_source.html#l00023">CtrlPersistencia.java:23</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_ctrl_persistencia_html_a6f12d7e9e38c00c8bd8fd2425500e949"><div class="ttname"><a href="../../d5/d41/classcontroladores_1_1_ctrl_persistencia.html#a6f12d7e9e38c00c8bd8fd2425500e949">controladores.CtrlPersistencia.leerFichero</a></div><div class="ttdeci">static ArrayList&lt; String &gt; leerFichero(String path)</div><div class="ttdoc">Función utilitzada para leer un fichero.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d42/_ctrl_persistencia_8java_source.html#l00031">CtrlPersistencia.java:31</a></div></div>
+<div class="ttc" id="aenumclases_1_1_parser_1_1_path_html"><div class="ttname"><a href="../../d1/d14/enumclases_1_1_parser_1_1_path.html">clases.Parser.Path</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de6/_parser_8java_source.html#l00030">Parser.java:30</a></div></div>
+<div class="ttc" id="aenumclases_1_1_parser_1_1_path_html_a50c652ee719a0f6c78f650cf285a82d6"><div class="ttname"><a href="../../d1/d14/enumclases_1_1_parser_1_1_path.html#a50c652ee719a0f6c78f650cf285a82d6">clases.Parser.Path.ratingsUnknown</a></div><div class="ttdeci">ratingsUnknown</div><div class="ttdoc">&lt; Enum valor: ratingsKnown</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de6/_parser_8java_source.html#l00040">Parser.java:39</a></div></div>
+<div class="ttc" id="aenumclases_1_1_parser_1_1_path_html_a86e9394f48694a0d0dad7406edf93343"><div class="ttname"><a href="../../d1/d14/enumclases_1_1_parser_1_1_path.html#a86e9394f48694a0d0dad7406edf93343">clases.Parser.Path.ratings</a></div><div class="ttdeci">ratings</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de6/_parser_8java_source.html#l00031">Parser.java:31</a></div></div>
+<div class="ttc" id="aenumclases_1_1_parser_1_1_path_html_aba005170dacf792978f6728f99249207"><div class="ttname"><a href="../../d1/d14/enumclases_1_1_parser_1_1_path.html#aba005170dacf792978f6728f99249207">clases.Parser.Path.ratingsKnown</a></div><div class="ttdeci">ratingsKnown</div><div class="ttdoc">&lt; Enum valor: ratings</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de6/_parser_8java_source.html#l00035">Parser.java:35</a></div></div>
+<div class="ttc" id="anamespaceclases_html"><div class="ttname"><a href="../../d8/ddb/namespaceclases.html">clases</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d67/_atributo_8java_source.html#l00001">Atributo.java:1</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

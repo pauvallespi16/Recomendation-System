@@ -1,0 +1,363 @@
+\hypertarget{_slope_one_test_8java_source}{}\doxysection{Slope\+One\+Test.\+java}
+\label{_slope_one_test_8java_source}\index{SlopeOneTest.java@{SlopeOneTest.java}}
+\mbox{\hyperlink{_slope_one_test_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00005}00005 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceclases}{clases}}.*;}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00006}00006 \textcolor{keyword}{import} \mbox{\hyperlink{namespacecontroladores}{controladores}}.\mbox{\hyperlink{classcontroladores_1_1_slope_one}{SlopeOne}};}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00007}00007 \textcolor{keyword}{import} org.junit.jupiter.api.BeforeAll;}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00008}00008 \textcolor{keyword}{import} org.junit.jupiter.api.DisplayName;}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00009}00009 \textcolor{keyword}{import} org.junit.jupiter.api.Test;}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00011}00011 \textcolor{keyword}{import} java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00012}00012 \textcolor{keyword}{import} java.util.HashMap;}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00013}00013 \textcolor{keyword}{import} java.util.Map;}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00015}00015 \textcolor{keyword}{import} \textcolor{keyword}{static} org.junit.jupiter.api.Assertions.assertEquals;}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00024}\mbox{\hyperlink{class_slope_one_test}{00024}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_slope_one_test}{SlopeOneTest}} \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00028}\mbox{\hyperlink{class_slope_one_test_acfa13e967f604cbb153fc78ab0eaece6}{00028}}     \textcolor{keyword}{private} \textcolor{keyword}{static} \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{class_slope_one_test_acfa13e967f604cbb153fc78ab0eaece6}{u}};}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00033}\mbox{\hyperlink{class_slope_one_test_ac458f236f1adddd8b8859c75b382ab98}{00033}}     \textcolor{keyword}{private} \textcolor{keyword}{static} \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{class_slope_one_test_ac458f236f1adddd8b8859c75b382ab98}{us}};}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00035}\mbox{\hyperlink{class_slope_one_test_ab3ad66a11e50e3e0c1559282ede8d6b2}{00035}}     \textcolor{keyword}{private} \textcolor{keyword}{static} \mbox{\hyperlink{classcontroladores_1_1_slope_one}{SlopeOne}} \mbox{\hyperlink{class_slope_one_test_ab3ad66a11e50e3e0c1559282ede8d6b2}{slopeOne}} = \textcolor{keyword}{new} \mbox{\hyperlink{classcontroladores_1_1_slope_one}{SlopeOne}}();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00040}00040     @BeforeAll}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00041}\mbox{\hyperlink{class_slope_one_test_a42905c4dfe6bc34a5e55ba78f5cf8431}{00041}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_slope_one_test_a42905c4dfe6bc34a5e55ba78f5cf8431}{setUp}}() \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00042}00042         ArrayList<Item> items = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00043}00043         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<=10; i++)\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00044}00044             items.add(\textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_item}{Item}}(i, \textcolor{keyword}{new} HashMap<>()));}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00045}00045         \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00046}00046         \mbox{\hyperlink{classclases_1_1_parser}{Parser}}.\mbox{\hyperlink{classclases_1_1_parser_a01c3a8605626849ebf3374cdb2da8522}{setAllItems}}(\textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_items}{Items}}(items));}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00048}00048         ArrayList <Usuario> aU = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00049}00049         Map <Integer, Double> valoraciones = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00051}00051         valoraciones.put(0, 9.2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00052}00052         valoraciones.put(1, 10.5);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00053}00053         valoraciones.put(4, 5.5);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00054}00054         valoraciones.put(6, 1.1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00055}00055         valoraciones.put(8, 3.9);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00056}00056         \mbox{\hyperlink{class_slope_one_test_acfa13e967f604cbb153fc78ab0eaece6}{u}} = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}(0, valoraciones);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00058}00058         valoraciones = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00059}00059         valoraciones.put(0, 5.1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00060}00060         valoraciones.put(1, 2.6);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00061}00061         valoraciones.put(2, 9.3);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00062}00062         valoraciones.put(8, 3.6);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00063}00063         valoraciones.put(3, 8.3);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00064}00064         valoraciones.put(10, 6.2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00065}00065         aU.add(\textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} (1, valoraciones));}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00067}00067         valoraciones = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00068}00068         valoraciones.put(2, 7.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00069}00069         aU.add(\textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} (2, valoraciones));}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00071}00071         valoraciones = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00072}00072         valoraciones.put(1, 6.5);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00073}00073         valoraciones.put(3, 5.72);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00074}00074         valoraciones.put(8, 1.23);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00075}00075         valoraciones.put(7, 6.3);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00076}00076         valoraciones.put(2, 3.4);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00077}00077         aU.add(\textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} (3, valoraciones));}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00079}00079         valoraciones = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00080}00080         valoraciones.put(10, 3.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00081}00081         valoraciones.put(4, 5.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00082}00082         valoraciones.put(2, 5.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00083}00083         valoraciones.put(9, 7.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00084}00084         valoraciones.put(1, 1.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00085}00085         aU.add(\textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} (4, valoraciones));}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00087}00087         valoraciones.put(6, 3.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00088}00088         valoraciones.put(2, 5.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00089}00089         valoraciones.put(9, 5.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00090}00090         valoraciones.put(1, 7.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00091}00091         valoraciones.put(3, 1.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00092}00092         aU.add(\textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} (5, valoraciones));}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00094}00094         \mbox{\hyperlink{class_slope_one_test_ac458f236f1adddd8b8859c75b382ab98}{us}} = \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}}();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00095}00095         \mbox{\hyperlink{class_slope_one_test_ac458f236f1adddd8b8859c75b382ab98}{us}}.\mbox{\hyperlink{classclases_1_1_usuarios_aa11d5dcc36b33e53820eb39d668a2c7f}{setUsers}}(aU);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00097}00097         \mbox{\hyperlink{classclases_1_1_parser}{Parser}}.\mbox{\hyperlink{classclases_1_1_parser_a485076dfaad35b1c9cd36d3903ed208b}{setScoreLimits}}(0.0, 10.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00098}00098         \mbox{\hyperlink{class_slope_one_test_ab3ad66a11e50e3e0c1559282ede8d6b2}{slopeOne}}.\mbox{\hyperlink{classcontroladores_1_1_slope_one_a32b294504fe7d2a4f1a501e59456b38f}{setUser}}(\mbox{\hyperlink{class_slope_one_test_acfa13e967f604cbb153fc78ab0eaece6}{u}});}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00099}00099         \mbox{\hyperlink{class_slope_one_test_ab3ad66a11e50e3e0c1559282ede8d6b2}{slopeOne}}.\mbox{\hyperlink{classcontroladores_1_1_slope_one_a3fbd457bae9bd6abe7a5adb87b26a656}{setUsuarios}}(\mbox{\hyperlink{class_slope_one_test_ac458f236f1adddd8b8859c75b382ab98}{us}});}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00100}00100         \textcolor{comment}{//slopeOne.computarDesviacion();}}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00101}00101         \textcolor{comment}{//slopeOne.computarPredicciones();}}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00102}00102     \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00107}00107     @Test}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00108}00108     @DisplayName(\textcolor{stringliteral}{"{}Calcular mediana"{}})}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00109}\mbox{\hyperlink{class_slope_one_test_ad99215c7631b294a3fe207ec6c58221c}{00109}}     void \mbox{\hyperlink{class_slope_one_test_ad99215c7631b294a3fe207ec6c58221c}{testCalcularMediana}}() \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00110}00110         assertEquals(\mbox{\hyperlink{class_slope_one_test_ab3ad66a11e50e3e0c1559282ede8d6b2}{slopeOne}}.\mbox{\hyperlink{classcontroladores_1_1_slope_one_a12b230f0df9cef20072c435d061f60a7}{getMediana}}(), 6.040000000000001);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00111}00111     \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00113}00113     @Test}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00114}00114     @DisplayName(\textcolor{stringliteral}{"{}Computar desviación"{}})}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00115}\mbox{\hyperlink{class_slope_one_test_a66c1307194c964befe2f553173bc3c09}{00115}}     void \mbox{\hyperlink{class_slope_one_test_a66c1307194c964befe2f553173bc3c09}{testComputarDesviacion}}() \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00116}00116         Map <Integer, Map <Integer, Double>> expectedDiff = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00131}00131         Map <Integer, Double> auxD = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00132}00132         auxD.put(0,0.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00133}00133         auxD.put(1,2.4999999999999996);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00134}00134         auxD.put(2,-\/4.200000000000001);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00135}00135         auxD.put(3,-\/3.200000000000001);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00136}00136         auxD.put(8,1.4999999999999996);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00137}00137         auxD.put(10,-\/1.1000000000000005);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00138}00138         expectedDiff.put(0, auxD);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00139}00139 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00140}00140         auxD = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00141}00141         auxD.put(0,-\/2.4999999999999996);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00142}00142         auxD.put(1,0.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00143}00143         auxD.put(2,-\/1.4000000000000004);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00144}00144         auxD.put(3,0.3599999999999997);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00145}00145         auxD.put(4,-\/1.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00146}00146         auxD.put(6,4.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00147}00147         auxD.put(7,0.20000000000000018);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00148}00148         auxD.put(8,2.135);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00149}00149         auxD.put(9,-\/2.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00150}00150         auxD.put(10,-\/0.5333333333333332);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00151}00151         expectedDiff.put(1, auxD);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00152}00152 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00153}00153         auxD = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00154}00154         auxD.put(0,4.200000000000001);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00155}00155         auxD.put(1,1.4000000000000004);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00156}00156         auxD.put(2,0.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00157}00157         auxD.put(3,0.8933333333333334);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00158}00158         auxD.put(4,0.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00159}00159         auxD.put(6,2.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00160}00160         auxD.put(7,-\/2.9);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00161}00161         auxD.put(8,3.9350000000000005);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00162}00162         auxD.put(9,-\/1.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00163}00163         auxD.put(10,2.3666666666666667);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00164}00164         expectedDiff.put(2, auxD);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00165}00165 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00166}00166         auxD = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00167}00167         auxD.put(0,3.200000000000001);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00168}00168         auxD.put(1,-\/0.3599999999999997);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00169}00169         auxD.put(2,-\/0.8933333333333334);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00170}00170         auxD.put(3,0.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00171}00171         auxD.put(4,-\/4.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00172}00172         auxD.put(6,-\/2.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00173}00173         auxD.put(7,-\/0.5800000000000001);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00174}00174         auxD.put(8,4.595000000000001);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00175}00175         auxD.put(9,-\/4.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00176}00176         auxD.put(10,0.050000000000000266);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00177}00177         expectedDiff.put(3, auxD);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00178}00178 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00179}00179         auxD = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00180}00180         auxD.put(1,1.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00181}00181         auxD.put(2,0.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00182}00182         auxD.put(3,4.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00183}00183         auxD.put(4,0.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00184}00184         auxD.put(6,2.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00185}00185         auxD.put(9,-\/1.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00186}00186         auxD.put(10,2.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00187}00187         expectedDiff.put(4, auxD);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00188}00188 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00189}00189         auxD = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00190}00190         auxD.put(1,-\/4.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00191}00191         auxD.put(2,-\/2.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00192}00192         auxD.put(3,2.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00193}00193         auxD.put(4,-\/2.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00194}00194         auxD.put(6,0.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00195}00195         auxD.put(9,-\/2.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00196}00196         auxD.put(10,0.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00197}00197         expectedDiff.put(6, auxD);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00198}00198 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00199}00199         auxD = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00200}00200         auxD.put(1,-\/0.20000000000000018);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00201}00201         auxD.put(2,2.9);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00202}00202         auxD.put(3,0.5800000000000001);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00203}00203         auxD.put(7,0.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00204}00204         auxD.put(8,5.07);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00205}00205         expectedDiff.put(7, auxD);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00206}00206 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00207}00207         auxD = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00208}00208         auxD.put (0,-\/1.4999999999999996);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00209}00209         auxD.put(1,-\/2.135);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00210}00210         auxD.put(2,-\/3.9350000000000005);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00211}00211         auxD.put(3,-\/4.595000000000001);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00212}00212         auxD.put(7,-\/5.07);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00213}00213         auxD.put(8,0.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00214}00214         auxD.put(10,-\/2.6);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00215}00215         expectedDiff.put(8, auxD);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00216}00216 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00217}00217         auxD = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00218}00218         auxD.put(1,2.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00219}00219         auxD.put(2,1.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00220}00220         auxD.put(3,4.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00221}00221         auxD.put(4,1.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00222}00222         auxD.put(6,2.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00223}00223         auxD.put(9,0.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00224}00224         auxD.put(10,3.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00225}00225         expectedDiff.put(9, auxD);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00226}00226 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00227}00227         auxD = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00228}00228         auxD.put(0,1.1000000000000005);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00229}00229         auxD.put(1,0.5333333333333332);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00230}00230         auxD.put(2,-\/2.3666666666666667);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00231}00231         auxD.put(3,-\/0.050000000000000266);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00232}00232         auxD.put(4,-\/2.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00233}00233         auxD.put(6,0.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00234}00234         auxD.put(8,2.6);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00235}00235         auxD.put(9,-\/3.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00236}00236         auxD.put(10,0.0);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00237}00237         expectedDiff.put(10, auxD);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00238}00238 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00239}00239         Map <Integer, Map <Integer, Double>> diff = \mbox{\hyperlink{class_slope_one_test_ab3ad66a11e50e3e0c1559282ede8d6b2}{slopeOne}}.\mbox{\hyperlink{classcontroladores_1_1_slope_one_a8f185d5f24cbde6f4aeec8b2ebcf91e8}{getDiff}}();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00240}00240         \textcolor{keywordflow}{for} (Map.Entry<Integer, Map <Integer, Double>> d : diff.entrySet())\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00241}00241             assert(expectedDiff.containsKey(d.getKey()));}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00242}00242             \textcolor{keywordflow}{for} (Map.Entry<Integer, Double> d1 : d.getValue().entrySet())\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00243}00243                 assert(expectedDiff.get(d.getKey()).containsKey(d1.getKey()));}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00244}00244                 assertEquals(expectedDiff.get(d.getKey()).get(d1.getKey()), d1.getValue());}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00245}00245             \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00246}00246         \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00247}00247 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00248}00248         Map <Integer, Map <Integer, Integer>> expectedFreq = \textcolor{keyword}{new} HashMap<>();;}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00249}00249 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00262}00262         Map <Integer, Integer> auxF = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00263}00263         auxF.put(0,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00264}00264         auxF.put(1,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00265}00265         auxF.put(2,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00266}00266         auxF.put(3,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00267}00267         auxF.put(8,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00268}00268         auxF.put(10,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00269}00269         expectedFreq.put(0, auxF);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00270}00270 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00271}00271         auxF = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00272}00272         auxF.put(0,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00273}00273         auxF.put(1,4);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00274}00274         auxF.put(2,4);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00275}00275         auxF.put(3,3);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00276}00276         auxF.put(4,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00277}00277         auxF.put(6,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00278}00278         auxF.put(7,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00279}00279         auxF.put(8,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00280}00280         auxF.put(9,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00281}00281         auxF.put(10,3);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00282}00282         expectedFreq.put(1, auxF);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00283}00283 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00284}00284         auxF = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00285}00285         auxF.put(0,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00286}00286         auxF.put(1,4);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00287}00287         auxF.put(2,5);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00288}00288         auxF.put(3,3);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00289}00289         auxF.put(4,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00290}00290         auxF.put(6,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00291}00291         auxF.put(7,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00292}00292         auxF.put(8,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00293}00293         auxF.put(9,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00294}00294         auxF.put(10,3);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00295}00295         expectedFreq.put(2, auxF);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00296}00296 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00297}00297         auxF = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00298}00298         auxF.put(0,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00299}00299         auxF.put(1,3);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00300}00300         auxF.put(2,3);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00301}00301         auxF.put(3,3);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00302}00302         auxF.put(4,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00303}00303         auxF.put(6,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00304}00304         auxF.put(7,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00305}00305         auxF.put(8,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00306}00306         auxF.put(9,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00307}00307         auxF.put(10,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00308}00308         expectedFreq.put(3, auxF);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00309}00309 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00310}00310         auxF = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00311}00311         auxF.put(1,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00312}00312         auxF.put(2,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00313}00313         auxF.put(3,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00314}00314         auxF.put(4,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00315}00315         auxF.put(6,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00316}00316         auxF.put(9,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00317}00317         auxF.put(10,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00318}00318         expectedFreq.put(4, auxF);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00319}00319 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00320}00320         auxF = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00321}00321         auxF.put(1,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00322}00322         auxF.put(2,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00323}00323         auxF.put(3,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00324}00324         auxF.put(4,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00325}00325         auxF.put(6,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00326}00326         auxF.put(9,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00327}00327         auxF.put(10,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00328}00328         expectedFreq.put(6, auxF);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00329}00329 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00330}00330         auxF = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00331}00331         auxF.put(1,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00332}00332         auxF.put(2,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00333}00333         auxF.put(3,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00334}00334         auxF.put(7,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00335}00335         auxF.put(8,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00336}00336         expectedFreq.put(7, auxF);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00337}00337 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00338}00338         auxF = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00339}00339         auxF.put(0,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00340}00340         auxF.put(1,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00341}00341         auxF.put(2,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00342}00342         auxF.put(3,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00343}00343         auxF.put(7,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00344}00344         auxF.put(8,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00345}00345         auxF.put(10,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00346}00346         expectedFreq.put(8, auxF);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00347}00347 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00348}00348         auxF = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00349}00349         auxF.put(1,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00350}00350         auxF.put(2,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00351}00351         auxF.put(3,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00352}00352         auxF.put(4,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00353}00353         auxF.put(6,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00354}00354         auxF.put(9,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00355}00355         auxF.put(10,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00356}00356         expectedFreq.put(9, auxF);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00357}00357 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00358}00358         auxF = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00359}00359         auxF.put(0,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00360}00360         auxF.put(1,3);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00361}00361         auxF.put(2,3);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00362}00362         auxF.put(3,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00363}00363         auxF.put(4,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00364}00364         auxF.put(6,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00365}00365         auxF.put(8,1);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00366}00366         auxF.put(9,2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00367}00367         auxF.put(10,3);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00368}00368         expectedFreq.put(10, auxF);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00369}00369 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00370}00370         Map <Integer, Map <Integer, Integer>> freq = \mbox{\hyperlink{class_slope_one_test_ab3ad66a11e50e3e0c1559282ede8d6b2}{slopeOne}}.\mbox{\hyperlink{classcontroladores_1_1_slope_one_afb9989c2efbb1138d1c905f4c2b307d6}{getFreq}}();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00371}00371         \textcolor{keywordflow}{for} (Map.Entry<Integer, Map <Integer, Integer>> f : freq.entrySet())\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00372}00372             assert(expectedDiff.containsKey(f.getKey()));}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00373}00373             \textcolor{keywordflow}{for} (Map.Entry<Integer, Integer> f1 : f.getValue().entrySet())\{}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00374}00374                 assert(expectedDiff.get(f.getKey()).containsKey(f1.getKey()));}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00375}00375                 assertEquals(expectedFreq.get(f.getKey()).get(f1.getKey()), f1.getValue());}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00376}00376             \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00377}00377         \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00378}00378     \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00379}00379 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00383}00383     @Test}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00384}00384     @DisplayName(\textcolor{stringliteral}{"{}Test computar predicciones"{}})}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00385}\mbox{\hyperlink{class_slope_one_test_a7ca15190c6397e358fbbd23873fba020}{00385}}     void \mbox{\hyperlink{class_slope_one_test_a7ca15190c6397e358fbbd23873fba020}{testComputarPredicciones}} () \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00386}00386 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00398}00398         \textcolor{comment}{//Testeado previamente en computar desviaciones con el mismo set de datos}}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00399}00399 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00400}00400         Map<Integer, Double> sol = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00401}00401         sol.put(0, 9.2);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00402}00402         sol.put(1, 7.486999999999999);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00403}00403         sol.put(2, 9.077);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00404}00404         sol.put(3, 7.5512500000000005);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00405}00405         sol.put(4, 7.42);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00406}00406         sol.put(6, 3.6999999999999997);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00407}00407         sol.put(7, 9.635000000000002);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00408}00408         sol.put(8, 6.446000000000001);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00409}00409         sol.put(9, 8.22);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00410}00410         sol.put(10, 7.250000000000001);}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00411}00411 }
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00412}00412         Map<Integer, Double> pred = \mbox{\hyperlink{class_slope_one_test_ab3ad66a11e50e3e0c1559282ede8d6b2}{slopeOne}}.\mbox{\hyperlink{classcontroladores_1_1_slope_one_a9fbd0108a7c4b17983e1b1b10719692f}{getPred}}();}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00413}00413         \textcolor{keywordflow}{for} (Map.Entry<Integer, Double> p : pred.entrySet()) \{}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00414}00414             assert (sol.containsKey(p.getKey()));}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00415}00415             assertEquals (sol.get(p.getKey()), p.getValue());}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00416}00416         \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00417}00417     \}}
+\DoxyCodeLine{\Hypertarget{_slope_one_test_8java_source_l00418}00418 \}}
+
+\end{DoxyCode}

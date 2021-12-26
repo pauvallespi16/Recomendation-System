@@ -1,0 +1,31 @@
+\hypertarget{_escritura_8java_source}{}\doxysection{Escritura.\+java}
+\label{_escritura_8java_source}\index{Escritura.java@{Escritura.java}}
+\mbox{\hyperlink{_escritura_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00005}\mbox{\hyperlink{namespacepersistencia}{00005}} \textcolor{keyword}{package }persistencia;}
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00006}00006 \textcolor{keyword}{import} java.io.File;}
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00015}\mbox{\hyperlink{classpersistencia_1_1_escritura}{00015}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classpersistencia_1_1_escritura}{Escritura}} \{}
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00021}\mbox{\hyperlink{classpersistencia_1_1_escritura_a97989647275a4547acc3b535f7189c5a}{00021}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpersistencia_1_1_escritura_a97989647275a4547acc3b535f7189c5a}{escribirDirectorios}}() throws Exception \{}
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00022}00022         File directoryPath = \textcolor{keyword}{new} File(\textcolor{stringliteral}{"{}DATA/csv"{}});}
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00023}00023         String[] contents = directoryPath.list();}
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00024}00024         assert contents != \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00025}00025         \textcolor{keywordflow}{for} (String word : contents) \{}
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00026}00026             \textcolor{keywordflow}{if} (!(word.charAt(0) == \textcolor{charliteral}{'.'})) \{}
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00027}00027                 System.out.println(\textcolor{stringliteral}{"{} -\/ "{}} + word);}
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00028}00028                 File file = \textcolor{keyword}{new} File(\textcolor{stringliteral}{"{}DATA/csv/"{}} + word);}
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00029}00029                 String[] directories = file.list((current, name) -\/> \textcolor{keyword}{new} File(current, name).isDirectory());}
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00030}00030                 assert directories != \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00031}00031                 \textcolor{keywordflow}{if} (directories.length != 0) \{}
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00032}00032                     \textcolor{keywordflow}{for} (String s : directories)}
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00033}00033                         System.out.println(\textcolor{stringliteral}{"{}   -\/ "{}} + s);}
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00034}00034                 \}}
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00035}00035             \}}
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00036}00036         \}}
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00037}00037     \}}
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00045}\mbox{\hyperlink{classpersistencia_1_1_escritura_ab12fd22c0b4494193c2fbb2d44e638d4}{00045}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpersistencia_1_1_escritura_ab12fd22c0b4494193c2fbb2d44e638d4}{escribirPantalla}}(String valor) \{ System.out.println(valor); \}}
+\DoxyCodeLine{\Hypertarget{_escritura_8java_source_l00046}00046 \}}
+
+\end{DoxyCode}

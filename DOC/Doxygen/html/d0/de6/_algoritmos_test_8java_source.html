@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROP subgrup-prop2-1: Fichero Fuente AlgoritmosTest.java</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PROP subgrup-prop2-1<span id="projectnumber">&#160;Entrega 3</span>
+   </div>
+   <div id="projectbrief">Sistema de recomendaciones</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_d2a81fcb9e0344d06f49c2bd6fcf908f.html">FONTS</a></li><li class="navelem"><a class="el" href="../../dir_7342359a9f41e5e9b1850f624169c539.html">dominio</a></li><li class="navelem"><a class="el" href="../../dir_318782879a2ceac5c6208bfc9539c3f6.html">controladores</a></li><li class="navelem"><a class="el" href="../../dir_99e284aa24014cd08987d271b558fe61.html">Tests</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">AlgoritmosTest.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d0/de6/_algoritmos_test_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> <a class="code hl_package" href="../../d8/ddb/namespaceclases.html">clases</a>.*;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> <a class="code hl_package" href="../../db/d23/namespacecontroladores.html">controladores</a>.<a class="code hl_class" href="../../d5/df5/classcontroladores_1_1_ctrl_dominio.html">CtrlDominio</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> <a class="code hl_package" href="../../db/d23/namespacecontroladores.html">controladores</a>.<a class="code hl_class" href="../../de/d05/classcontroladores_1_1_ctrl_dominio_preprocesar_datos.html">CtrlDominioPreprocesarDatos</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> org.junit.jupiter.api.DisplayName;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> org.junit.jupiter.api.Test;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> java.util.*;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> <span class="keyword">static</span> org.junit.jupiter.api.Assertions.assertEquals;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d8/d0c/class_algoritmos_test.html">   22</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d8/d0c/class_algoritmos_test.html">AlgoritmosTest</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    @Test</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    @DisplayName(<span class="stringliteral">&quot;Evaluar recomendación (DCG)&quot;</span>)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d8/d0c/class_algoritmos_test.html#a715bdb1059e1d60583e3dd88306ddd91">   25</a></span>    void <a class="code hl_function" href="../../d8/d0c/class_algoritmos_test.html#a715bdb1059e1d60583e3dd88306ddd91">evaluarRecomendacionTest</a>() throws Exception {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        ArrayList&lt;Integer&gt; lr = <span class="keyword">new</span> ArrayList&lt;&gt;(</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                Arrays.asList(236, 163, 2692, 1358, 2699, 2640, 4886, 1639, 172, 592));</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        Map&lt;Integer, Double&gt; lti = <span class="keyword">new</span> HashMap&lt;&gt;();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        lti.put(2699, 5.0);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        lti.put(172, 5.0);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        lti.put(4886, 4.5);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        lti.put(592, 4.5);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        lti.put(163, 3.0);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        lti.put(1358, 2.5);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        lti.put(2640, 1.0);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        lti.put(236, 0.5);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        lti.put(1639, 0.5);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        lti.put(2692, 0.5);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        List&lt;Map.Entry&lt;Integer, Double&gt;&gt; lt = <span class="keyword">new</span> ArrayList&lt;&gt;(lti.entrySet());</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_class" href="../../de/d05/classcontroladores_1_1_ctrl_dominio_preprocesar_datos.html">CtrlDominioPreprocesarDatos</a>.<a class="code hl_function" href="../../de/d05/classcontroladores_1_1_ctrl_dominio_preprocesar_datos.html#ade555bfe27aea080419b8ccb904f33e2">preprocesarArchivos</a>(<span class="stringliteral">&quot;DATA/csv/data.peliculas/250/&quot;</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_class" href="../../d4/db9/classclases_1_1_usuarios.html">Usuarios</a> usuariosRatingsUnknown = <a class="code hl_class" href="../../d5/df5/classcontroladores_1_1_ctrl_dominio.html">CtrlDominio</a>.<a class="code hl_function" href="../../d5/df5/classcontroladores_1_1_ctrl_dominio.html#a3fd2cff194e2f60714877e2cd6848712">getUsuariosRatingsKnown</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_class" href="../../df/db9/classclases_1_1_usuario.html">Usuario</a> u = usuariosRatingsUnknown.<a class="code hl_function" href="../../d4/db9/classclases_1_1_usuarios.html#a85c335169bb9b2cebfe6276848d24e2c">getUser</a>(<a class="code hl_class" href="../../d0/d77/classclases_1_1_parser.html">Parser</a>.<a class="code hl_function" href="../../d0/d77/classclases_1_1_parser.html#a44d03043006e391e2156f0d86db95bec">translateUser</a>(2378));</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="comment">//Algoritmos a = new Algoritmos(usuariosRatingsUnknown, u);</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="comment">//assertEquals(42.31553502310568, a.evaluarRecomendacion(lr, lt));</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
+<div class="ttc" id="aclass_algoritmos_test_html"><div class="ttname"><a href="../../d8/d0c/class_algoritmos_test.html">AlgoritmosTest</a></div><div class="ttdoc">Tiene las pruebas implementadas para comprobar que funcionan los métodos de la clase Algoritmos.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/de6/_algoritmos_test_8java_source.html#l00022">AlgoritmosTest.java:22</a></div></div>
+<div class="ttc" id="aclass_algoritmos_test_html_a715bdb1059e1d60583e3dd88306ddd91"><div class="ttname"><a href="../../d8/d0c/class_algoritmos_test.html#a715bdb1059e1d60583e3dd88306ddd91">AlgoritmosTest.evaluarRecomendacionTest</a></div><div class="ttdeci">void evaluarRecomendacionTest()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/de6/_algoritmos_test_8java_source.html#l00025">AlgoritmosTest.java:25</a></div></div>
+<div class="ttc" id="aclassclases_1_1_parser_html"><div class="ttname"><a href="../../d0/d77/classclases_1_1_parser.html">clases.Parser</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de6/_parser_8java_source.html#l00022">Parser.java:22</a></div></div>
+<div class="ttc" id="aclassclases_1_1_parser_html_a44d03043006e391e2156f0d86db95bec"><div class="ttname"><a href="../../d0/d77/classclases_1_1_parser.html#a44d03043006e391e2156f0d86db95bec">clases.Parser.translateUser</a></div><div class="ttdeci">static int translateUser(int originalId)</div><div class="ttdoc">Función utilizada para obtener el identificador original del usuario.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/de6/_parser_8java_source.html#l00338">Parser.java:338</a></div></div>
+<div class="ttc" id="aclassclases_1_1_usuario_html"><div class="ttname"><a href="../../df/db9/classclases_1_1_usuario.html">clases.Usuario</a></div><div class="ttdoc">@Class Usuario</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/_usuario_8java_source.html#l00015">Usuario.java:15</a></div></div>
+<div class="ttc" id="aclassclases_1_1_usuarios_html"><div class="ttname"><a href="../../d4/db9/classclases_1_1_usuarios.html">clases.Usuarios</a></div><div class="ttdoc">La clase de usuario contiene la implementación de un conjunto de usuarios.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/db7/_usuarios_8java_source.html#l00014">Usuarios.java:14</a></div></div>
+<div class="ttc" id="aclassclases_1_1_usuarios_html_a85c335169bb9b2cebfe6276848d24e2c"><div class="ttname"><a href="../../d4/db9/classclases_1_1_usuarios.html#a85c335169bb9b2cebfe6276848d24e2c">clases.Usuarios.getUser</a></div><div class="ttdeci">Usuario getUser(int id)</div><div class="ttdoc">Getter de un usuario con id &quot;id&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/db7/_usuarios_8java_source.html#l00049">Usuarios.java:49</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_ctrl_dominio_html"><div class="ttname"><a href="../../d5/df5/classcontroladores_1_1_ctrl_dominio.html">controladores.CtrlDominio</a></div><div class="ttdoc">La clase de controlador de dominio que interactua con presentacion y las clases de dominio.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db1/_ctrl_dominio_8java_source.html#l00019">CtrlDominio.java:19</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_ctrl_dominio_html_a3fd2cff194e2f60714877e2cd6848712"><div class="ttname"><a href="../../d5/df5/classcontroladores_1_1_ctrl_dominio.html#a3fd2cff194e2f60714877e2cd6848712">controladores.CtrlDominio.getUsuariosRatingsKnown</a></div><div class="ttdeci">static Usuarios getUsuariosRatingsKnown()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db1/_ctrl_dominio_8java_source.html#l00119">CtrlDominio.java:119</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_ctrl_dominio_preprocesar_datos_html"><div class="ttname"><a href="../../de/d05/classcontroladores_1_1_ctrl_dominio_preprocesar_datos.html">controladores.CtrlDominioPreprocesarDatos</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d00/_ctrl_dominio_preprocesar_datos_8java_source.html#l00020">CtrlDominioPreprocesarDatos.java:20</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_ctrl_dominio_preprocesar_datos_html_ade555bfe27aea080419b8ccb904f33e2"><div class="ttname"><a href="../../de/d05/classcontroladores_1_1_ctrl_dominio_preprocesar_datos.html#ade555bfe27aea080419b8ccb904f33e2">controladores.CtrlDominioPreprocesarDatos.preprocesarArchivos</a></div><div class="ttdeci">static void preprocesarArchivos(String path)</div><div class="ttdoc">Función utilizada para preprocesar los archivos llamando al controlador de la capa de persistencia.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d00/_ctrl_dominio_preprocesar_datos_8java_source.html#l00027">CtrlDominioPreprocesarDatos.java:27</a></div></div>
+<div class="ttc" id="anamespaceclases_html"><div class="ttname"><a href="../../d8/ddb/namespaceclases.html">clases</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d33/_algoritmos_8java_source.html#l00001">Algoritmos.java:1</a></div></div>
+<div class="ttc" id="anamespacecontroladores_html"><div class="ttname"><a href="../../db/d23/namespacecontroladores.html">controladores</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/db1/_ctrl_dominio_8java_source.html#l00004">CtrlDominio.java:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

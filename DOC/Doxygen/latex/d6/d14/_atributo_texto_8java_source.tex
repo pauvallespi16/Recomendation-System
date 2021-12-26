@@ -1,0 +1,38 @@
+\hypertarget{_atributo_texto_8java_source}{}\doxysection{Atributo\+Texto.\+java}
+\label{_atributo_texto_8java_source}\index{AtributoTexto.java@{AtributoTexto.java}}
+\mbox{\hyperlink{_atributo_texto_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00001}00001 \textcolor{keyword}{package }clases; }
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00005}00005 \textcolor{keyword}{import} java.util.HashMap;}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00006}00006 \textcolor{keyword}{import} java.util.Map;}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00015}\mbox{\hyperlink{classclases_1_1_atributo_texto}{00015}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classclases_1_1_atributo_texto}{AtributoTexto}} \textcolor{keyword}{extends} \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}}<Map<String, Integer>>\{}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00018}\mbox{\hyperlink{classclases_1_1_atributo_texto_a4c6db2d858e87f1327e1071c099695f0}{00018}}     \textcolor{keyword}{private} Map<String, Integer> \mbox{\hyperlink{classclases_1_1_atributo_texto_a4c6db2d858e87f1327e1071c099695f0}{valorTexto}};}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00023}\mbox{\hyperlink{classclases_1_1_atributo_texto_a95baaf219fc01beadb14b50fdd98bed6}{00023}}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \mbox{\hyperlink{classclases_1_1_atributo_texto_a95baaf219fc01beadb14b50fdd98bed6}{nPalabras}};}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00032}\mbox{\hyperlink{classclases_1_1_atributo_texto_ab07e61f69380a4b3020c56d8f7d49699}{00032}}     \textcolor{keyword}{public} \mbox{\hyperlink{classclases_1_1_atributo_texto_ab07e61f69380a4b3020c56d8f7d49699}{AtributoTexto}}(String \mbox{\hyperlink{classclases_1_1_atributo_texto_a4c6db2d858e87f1327e1071c099695f0}{valorTexto}}) \{}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00033}00033         String [] valores = \mbox{\hyperlink{classclases_1_1_atributo_texto_a4c6db2d858e87f1327e1071c099695f0}{valorTexto}}.split(\textcolor{stringliteral}{"{}[\string^a-\/zA-\/Z0-\/9']+|'"{}});}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00034}00034         this.valorTexto = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00035}00035         \textcolor{keywordflow}{for} (String s : valores) \{}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00036}00036             String aux = s.toLowerCase();}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00037}00037             \mbox{\hyperlink{classclases_1_1_atributo_texto_a95baaf219fc01beadb14b50fdd98bed6}{nPalabras}}++;}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00038}00038             \textcolor{keywordflow}{if} (this.valorTexto.containsKey(aux)) \{}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00039}00039                 \textcolor{keywordtype}{int} n = this.valorTexto.get(aux);}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00040}00040                 this.valorTexto.put(aux, n+1);}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00041}00041             \}}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00042}00042             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!aux.equals(\textcolor{stringliteral}{"{}"{}})) \{ this.valorTexto.put(aux, 1); \}}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00043}00043         \}}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00044}00044     \}}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00054}\mbox{\hyperlink{classclases_1_1_atributo_texto_a84b30b62dedcbe5c210ed8c61db49bf2}{00054}}     \textcolor{keyword}{public} \mbox{\hyperlink{classclases_1_1_atributo_texto_a84b30b62dedcbe5c210ed8c61db49bf2}{AtributoTexto}}(Map<String, Integer> valor, \textcolor{keywordtype}{int} \mbox{\hyperlink{classclases_1_1_atributo_texto_a95baaf219fc01beadb14b50fdd98bed6}{nPalabras}}) \{}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00055}00055         this.valorTexto = \textcolor{keyword}{new} HashMap<>(valor);}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00056}00056         this.nPalabras = \mbox{\hyperlink{classclases_1_1_atributo_texto_a95baaf219fc01beadb14b50fdd98bed6}{nPalabras}};}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00057}00057     \}}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00066}\mbox{\hyperlink{classclases_1_1_atributo_texto_a9197dd3e348fafc0cbee5e712d097d30}{00066}}     \textcolor{keyword}{public} Map<String, Integer> \mbox{\hyperlink{classclases_1_1_atributo_texto_a9197dd3e348fafc0cbee5e712d097d30}{getValor}}() \{ \textcolor{keywordflow}{return} this.\mbox{\hyperlink{classclases_1_1_atributo_texto_a4c6db2d858e87f1327e1071c099695f0}{valorTexto}}; \}}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00074}\mbox{\hyperlink{classclases_1_1_atributo_texto_a23a6334c6b0967ea42d6a3d70d1385d9}{00074}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{classclases_1_1_atributo_texto_a23a6334c6b0967ea42d6a3d70d1385d9}{getnPalabras}}() \{ \textcolor{keywordflow}{return} this.\mbox{\hyperlink{classclases_1_1_atributo_texto_a95baaf219fc01beadb14b50fdd98bed6}{nPalabras}}; \}}
+\DoxyCodeLine{\Hypertarget{_atributo_texto_8java_source_l00075}00075 \}}
+
+\end{DoxyCode}

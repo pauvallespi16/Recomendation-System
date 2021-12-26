@@ -1,0 +1,29 @@
+\hypertarget{_atributo_categorico_multiple_8java_source}{}\doxysection{Atributo\+Categorico\+Multiple.\+java}
+\label{_atributo_categorico_multiple_8java_source}\index{AtributoCategoricoMultiple.java@{AtributoCategoricoMultiple.java}}
+\mbox{\hyperlink{_atributo_categorico_multiple_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00001}00001 \textcolor{keyword}{package }clases; }
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00006}00006 \textcolor{keyword}{import} java.util.Set;}
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00007}00007 \textcolor{keyword}{import} java.util.TreeSet;}
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00008}00008 \textcolor{keyword}{import} java.util.BitSet;}
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00019}\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple}{00019}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple}{AtributoCategoricoMultiple}} \textcolor{keyword}{extends} \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}}<Set<String>> \{}
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00022}\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple_a1f2d890d86d569098b23359c4415618e}{00022}}     \textcolor{keyword}{private} Set<String> \mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple_a1f2d890d86d569098b23359c4415618e}{valorArrayString}};}
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00026}\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple_a244202d044160e4128745cbca99c29d9}{00026}}     \textcolor{keyword}{private} BitSet \mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple_a244202d044160e4128745cbca99c29d9}{bitSet}};}
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00037}\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple_a880e700a42f814180f55117c130d3624}{00037}}     \textcolor{keyword}{public} \mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple_a880e700a42f814180f55117c130d3624}{AtributoCategoricoMultiple}}(String \mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple_a1f2d890d86d569098b23359c4415618e}{valorArrayString}}) \{}
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00038}00038         this.valorArrayString = \textcolor{keyword}{new} TreeSet<>(Set.of(\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple_a1f2d890d86d569098b23359c4415618e}{valorArrayString}}.split(\textcolor{stringliteral}{"{};"{}})));}
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00039}00039         this.bitSet = \textcolor{keyword}{new} BitSet();}
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00040}00040     \}}
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00049}\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple_ad8d7e4a1c979a239694582d3f3b9d9b8}{00049}}     \textcolor{keyword}{public} Set<String> \mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple_ad8d7e4a1c979a239694582d3f3b9d9b8}{getValor}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple_a1f2d890d86d569098b23359c4415618e}{valorArrayString}}; \}}
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00057}\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple_aebe8fb6fcebce610242202a24b00f49f}{00057}}     \textcolor{keyword}{public} BitSet \mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple_aebe8fb6fcebce610242202a24b00f49f}{getBitSet}}() \{ \textcolor{keywordflow}{return} this.\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple_a244202d044160e4128745cbca99c29d9}{bitSet}}; \}}
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00065}\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple_a4c27054b8d8780c3e3d20b7072f5c140}{00065}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple_a4c27054b8d8780c3e3d20b7072f5c140}{setBitSetValue}}(\textcolor{keywordtype}{int} bitIndex) \{ this.bitSet.set(bitIndex); \}}
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00073}\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple_a0dcc22d8b5fe72f4ee97fbf2cfebc3d7}{00073}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple_a0dcc22d8b5fe72f4ee97fbf2cfebc3d7}{setBitSetSize}}(\textcolor{keywordtype}{int} size) \{ this.bitSet = \textcolor{keyword}{new} BitSet(size); \}}
+\DoxyCodeLine{\Hypertarget{_atributo_categorico_multiple_8java_source_l00074}00074 \}}
+
+\end{DoxyCode}

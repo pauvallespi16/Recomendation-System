@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROP subgrup-prop2-1: Fichero Fuente Centroide.java</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PROP subgrup-prop2-1<span id="projectnumber">&#160;Entrega 3</span>
+   </div>
+   <div id="projectbrief">Sistema de recomendaciones</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_d2a81fcb9e0344d06f49c2bd6fcf908f.html">FONTS</a></li><li class="navelem"><a class="el" href="../../dir_7342359a9f41e5e9b1850f624169c539.html">dominio</a></li><li class="navelem"><a class="el" href="../../dir_906deb1fc8c8a8e69c46817070623746.html">clases</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Centroide.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d8/dcf/_centroide_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>clases; </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.util.*;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../d4/dd8/classclases_1_1_centroide.html">   17</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d4/dd8/classclases_1_1_centroide.html">Centroide</a> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d4/dd8/classclases_1_1_centroide.html#a776ee24ae9ba59aaaeaaa6f2fbd1ca88">   22</a></span>    <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d4/dd8/classclases_1_1_centroide.html#a776ee24ae9ba59aaaeaaa6f2fbd1ca88">centroID</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d4/dd8/classclases_1_1_centroide.html#abe98fcf35677cc73c7aca6acd8c2ab97">   29</a></span>    <span class="keyword">private</span> Map&lt;Integer, Double&gt; <a class="code hl_variable" href="../../d4/dd8/classclases_1_1_centroide.html#abe98fcf35677cc73c7aca6acd8c2ab97">imaginaryUsers</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">//centroide (usuario imaginario respecto al cual determinamos los usuarios reales más cercanos a este (KMeans))</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../d4/dd8/classclases_1_1_centroide.html#a4bcba98c20cd01c05d56d6184ae645cf">   38</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d4/dd8/classclases_1_1_centroide.html#a4bcba98c20cd01c05d56d6184ae645cf">Centroide</a>(){}</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../d4/dd8/classclases_1_1_centroide.html#ae4d45a30261d34b3a09dd32d3a0ff436">   48</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="../../d4/dd8/classclases_1_1_centroide.html#ae4d45a30261d34b3a09dd32d3a0ff436">Centroide</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="../../d4/dd8/classclases_1_1_centroide.html#a776ee24ae9ba59aaaeaaa6f2fbd1ca88">centroID</a>, Map&lt;Integer, Double&gt; <a class="code hl_variable" href="../../d4/dd8/classclases_1_1_centroide.html#abe98fcf35677cc73c7aca6acd8c2ab97">imaginaryUsers</a>){</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        this.centroID = <a class="code hl_variable" href="../../d4/dd8/classclases_1_1_centroide.html#a776ee24ae9ba59aaaeaaa6f2fbd1ca88">centroID</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        this.imaginaryUsers = <a class="code hl_variable" href="../../d4/dd8/classclases_1_1_centroide.html#abe98fcf35677cc73c7aca6acd8c2ab97">imaginaryUsers</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="../../d4/dd8/classclases_1_1_centroide.html#a9717fd6145e8ec15589701879daeb4fb">   60</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_function" href="../../d4/dd8/classclases_1_1_centroide.html#a9717fd6145e8ec15589701879daeb4fb">getCentroID</a>() {<span class="keywordflow">return</span> <a class="code hl_variable" href="../../d4/dd8/classclases_1_1_centroide.html#a776ee24ae9ba59aaaeaaa6f2fbd1ca88">centroID</a>;}</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="../../d4/dd8/classclases_1_1_centroide.html#a06f2ea422d02682643115cc6ac144a47">   69</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d4/dd8/classclases_1_1_centroide.html#a06f2ea422d02682643115cc6ac144a47">setCentroID</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="../../d4/dd8/classclases_1_1_centroide.html#a776ee24ae9ba59aaaeaaa6f2fbd1ca88">centroID</a>){ this.centroID = <a class="code hl_variable" href="../../d4/dd8/classclases_1_1_centroide.html#a776ee24ae9ba59aaaeaaa6f2fbd1ca88">centroID</a>;}</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="../../d4/dd8/classclases_1_1_centroide.html#aab5e22653f6c576d7dc7f86daf7fed71">   77</a></span>    <span class="keyword">public</span> Map&lt;Integer, Double&gt; <a class="code hl_function" href="../../d4/dd8/classclases_1_1_centroide.html#aab5e22653f6c576d7dc7f86daf7fed71">getImaginaryUsers</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d4/dd8/classclases_1_1_centroide.html#abe98fcf35677cc73c7aca6acd8c2ab97">imaginaryUsers</a>; }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
+<div class="ttc" id="aclassclases_1_1_centroide_html"><div class="ttname"><a href="../../d4/dd8/classclases_1_1_centroide.html">clases.Centroide</a></div><div class="ttdoc">@Class Centroide</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dcf/_centroide_8java_source.html#l00017">Centroide.java:17</a></div></div>
+<div class="ttc" id="aclassclases_1_1_centroide_html_a06f2ea422d02682643115cc6ac144a47"><div class="ttname"><a href="../../d4/dd8/classclases_1_1_centroide.html#a06f2ea422d02682643115cc6ac144a47">clases.Centroide.setCentroID</a></div><div class="ttdeci">void setCentroID(int centroID)</div><div class="ttdoc">setter del atributo centroID de la clase Centroide</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dcf/_centroide_8java_source.html#l00069">Centroide.java:69</a></div></div>
+<div class="ttc" id="aclassclases_1_1_centroide_html_a4bcba98c20cd01c05d56d6184ae645cf"><div class="ttname"><a href="../../d4/dd8/classclases_1_1_centroide.html#a4bcba98c20cd01c05d56d6184ae645cf">clases.Centroide.Centroide</a></div><div class="ttdeci">Centroide()</div><div class="ttdoc">Entero positivo identificador del centroide.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dcf/_centroide_8java_source.html#l00038">Centroide.java:38</a></div></div>
+<div class="ttc" id="aclassclases_1_1_centroide_html_a776ee24ae9ba59aaaeaaa6f2fbd1ca88"><div class="ttname"><a href="../../d4/dd8/classclases_1_1_centroide.html#a776ee24ae9ba59aaaeaaa6f2fbd1ca88">clases.Centroide.centroID</a></div><div class="ttdeci">int centroID</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dcf/_centroide_8java_source.html#l00022">Centroide.java:22</a></div></div>
+<div class="ttc" id="aclassclases_1_1_centroide_html_a9717fd6145e8ec15589701879daeb4fb"><div class="ttname"><a href="../../d4/dd8/classclases_1_1_centroide.html#a9717fd6145e8ec15589701879daeb4fb">clases.Centroide.getCentroID</a></div><div class="ttdeci">int getCentroID()</div><div class="ttdoc">getter del identificador del centroide</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dcf/_centroide_8java_source.html#l00060">Centroide.java:60</a></div></div>
+<div class="ttc" id="aclassclases_1_1_centroide_html_aab5e22653f6c576d7dc7f86daf7fed71"><div class="ttname"><a href="../../d4/dd8/classclases_1_1_centroide.html#aab5e22653f6c576d7dc7f86daf7fed71">clases.Centroide.getImaginaryUsers</a></div><div class="ttdeci">Map&lt; Integer, Double &gt; getImaginaryUsers()</div><div class="ttdoc">getter del mapa de valoraciones del centroide</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dcf/_centroide_8java_source.html#l00077">Centroide.java:77</a></div></div>
+<div class="ttc" id="aclassclases_1_1_centroide_html_abe98fcf35677cc73c7aca6acd8c2ab97"><div class="ttname"><a href="../../d4/dd8/classclases_1_1_centroide.html#abe98fcf35677cc73c7aca6acd8c2ab97">clases.Centroide.imaginaryUsers</a></div><div class="ttdeci">Map&lt; Integer, Double &gt; imaginaryUsers</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dcf/_centroide_8java_source.html#l00029">Centroide.java:29</a></div></div>
+<div class="ttc" id="aclassclases_1_1_centroide_html_ae4d45a30261d34b3a09dd32d3a0ff436"><div class="ttname"><a href="../../d4/dd8/classclases_1_1_centroide.html#ae4d45a30261d34b3a09dd32d3a0ff436">clases.Centroide.Centroide</a></div><div class="ttdeci">Centroide(int centroID, Map&lt; Integer, Double &gt; imaginaryUsers)</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dcf/_centroide_8java_source.html#l00048">Centroide.java:48</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

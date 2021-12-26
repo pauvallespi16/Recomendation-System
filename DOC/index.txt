@@ -1,0 +1,19 @@
+DOC				      Carpeta con documentación
+├── Documentacion.pdf                   Pdf con documentación
+├── Manual_de_uso.pdf                   Pdf con el manual de uso (usuario + drivers)
+├── Juegos_de_prueba.pdf                Pdf con la documentación de los juegos de prueba
+├── UML
+    └── Dominio.png	               Diagrama de dominio (formato png)
+    └── Persistencia.png	               Diagrama de persistencia (formato png)
+    └── ControladoresDominio.png	      Diagrama de los controladores de dominio (formato png)
+    └── ModeloConceptualDeDatos.png.    Diagrama del modelo conceptual de datos (formato png)
+    └── Presentacion.png	               Diagrama de presentacion (formato png)
+    └── DiagramaClasesTresCapas.png     Diagrama Clases con arquitectura de tres capas(formato png)
+    └── Dominio.png	               Diagrama de dominio (formato png)
+├── CasosUso
+│   └── CasosUso.png                    Casos de uso (formato png)
+└── Doxygen
+    ├── html
+    ├── latex
+    └── Doxyfile
+

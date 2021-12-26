@@ -1,0 +1,331 @@
+\hypertarget{_k_means_8java_source}{}\doxysection{KMeans.\+java}
+\label{_k_means_8java_source}\index{KMeans.java@{KMeans.java}}
+\mbox{\hyperlink{_k_means_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00001}00001 \textcolor{keyword}{package }controladores; }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00005}00005 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceclases}{clases}}.*;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00007}00007 \textcolor{keyword}{import} java.util.*;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00021}\mbox{\hyperlink{classcontroladores_1_1_k_means}{00021}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classcontroladores_1_1_k_means}{KMeans}} \textcolor{keyword}{extends} \mbox{\hyperlink{classcontroladores_1_1_algoritmos}{Algoritmos}} \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00027}\mbox{\hyperlink{classcontroladores_1_1_k_means_afc901f4bec46b1dd10c9e2d7fe3a2768}{00027}}     \textcolor{keyword}{static} \textcolor{keywordtype}{double} \mbox{\hyperlink{classcontroladores_1_1_k_means_afc901f4bec46b1dd10c9e2d7fe3a2768}{maxsc}} = \mbox{\hyperlink{classclases_1_1_parser}{Parser}}.\mbox{\hyperlink{classclases_1_1_parser_a7011757774a5ed28dc07d774d24c41cb}{getMaxScore}}();}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00033}\mbox{\hyperlink{classcontroladores_1_1_k_means_a450bd6bacca166ea840d62e1bb7ccd18}{00033}}     \textcolor{keyword}{static} \textcolor{keywordtype}{double} \mbox{\hyperlink{classcontroladores_1_1_k_means_a450bd6bacca166ea840d62e1bb7ccd18}{minsc}} =  \mbox{\hyperlink{classclases_1_1_parser}{Parser}}.\mbox{\hyperlink{classclases_1_1_parser_a670730b2743b36f57b64dd2a69a6297c}{getMinScore}}();}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00039}\mbox{\hyperlink{classcontroladores_1_1_k_means_a4b43ad99a2d85fe3b95a27f7348a1884}{00039}}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \mbox{\hyperlink{classcontroladores_1_1_k_means_a4b43ad99a2d85fe3b95a27f7348a1884}{k}} = 10;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00045}\mbox{\hyperlink{classcontroladores_1_1_k_means_a70c8c2f8c20b197380b90e11ea192768}{00045}}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \mbox{\hyperlink{classcontroladores_1_1_k_means_a70c8c2f8c20b197380b90e11ea192768}{cota}} = 30;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00051}\mbox{\hyperlink{classcontroladores_1_1_k_means_af1337d8a1f1068765ad77e07f2ef2668}{00051}}     \textcolor{keyword}{private} \textcolor{keyword}{final} Random \mbox{\hyperlink{classcontroladores_1_1_k_means_af1337d8a1f1068765ad77e07f2ef2668}{random}} = \textcolor{keyword}{new} Random();}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00058}\mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{00058}}     \textcolor{keyword}{private} Map<Integer, ArrayList<Usuario>> \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}} = \textcolor{keyword}{new} HashMap<>(\mbox{\hyperlink{classcontroladores_1_1_k_means_a4b43ad99a2d85fe3b95a27f7348a1884}{k}});}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00065}\mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{00065}}     \textcolor{keyword}{private} ArrayList<Centroide> \mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{centroides}} = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00073}\mbox{\hyperlink{classcontroladores_1_1_k_means_acb941956c29315299c429313149a0ed1}{00073}}     \textcolor{keyword}{public} \mbox{\hyperlink{classcontroladores_1_1_k_means_acb941956c29315299c429313149a0ed1}{KMeans}}() \{\}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00075}\mbox{\hyperlink{classcontroladores_1_1_k_means_ab34f634d69a0292accebc2e30dca413e}{00075}}     \textcolor{keyword}{public} \mbox{\hyperlink{classcontroladores_1_1_k_means_ab34f634d69a0292accebc2e30dca413e}{KMeans}}(\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}{us}}, \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}, \mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a12da803fac97be1ebc727d328872df83}{it}}) \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00076}00076         super (\mbox{\hyperlink{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}{us}}, \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}, \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a12da803fac97be1ebc727d328872df83}{it}});}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00077}00077     \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00086}\mbox{\hyperlink{classcontroladores_1_1_k_means_afe23c932f9af7d8b52706daa02ef0bd6}{00086}}     \textcolor{keyword}{public} \textcolor{keywordtype}{double} \mbox{\hyperlink{classcontroladores_1_1_k_means_afe23c932f9af7d8b52706daa02ef0bd6}{getMaxSc}}()\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classcontroladores_1_1_k_means_afc901f4bec46b1dd10c9e2d7fe3a2768}{maxsc}}; \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00095}\mbox{\hyperlink{classcontroladores_1_1_k_means_aa9d513071c6bde38cdda918ba0b637d5}{00095}}     \textcolor{keyword}{public} \textcolor{keywordtype}{double} \mbox{\hyperlink{classcontroladores_1_1_k_means_aa9d513071c6bde38cdda918ba0b637d5}{getMinSc}}()\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classcontroladores_1_1_k_means_a450bd6bacca166ea840d62e1bb7ccd18}{minsc}}; \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00104}\mbox{\hyperlink{classcontroladores_1_1_k_means_a4be3b1f2c6ff5f5a930f925961c2920a}{00104}}     \textcolor{keyword}{public} ArrayList<Centroide> \mbox{\hyperlink{classcontroladores_1_1_k_means_a4be3b1f2c6ff5f5a930f925961c2920a}{getCentroides}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{centroides}}; \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00113}\mbox{\hyperlink{classcontroladores_1_1_k_means_a4b3c3291ea17064f6cbf69f2852a015b}{00113}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{classcontroladores_1_1_k_means_a4b3c3291ea17064f6cbf69f2852a015b}{getK}}()\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classcontroladores_1_1_k_means_a4b43ad99a2d85fe3b95a27f7348a1884}{k}}; \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00122}\mbox{\hyperlink{classcontroladores_1_1_k_means_a4ddf36ddbb94eb72cfef85b7a38d0d70}{00122}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{classcontroladores_1_1_k_means_a4ddf36ddbb94eb72cfef85b7a38d0d70}{getCota}}()\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classcontroladores_1_1_k_means_a70c8c2f8c20b197380b90e11ea192768}{cota}}; \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00131}\mbox{\hyperlink{classcontroladores_1_1_k_means_a2edfee7cb6ba365b1f54fcbbe348c184}{00131}}     \textcolor{keyword}{public} Map<Integer, ArrayList<Usuario>> \mbox{\hyperlink{classcontroladores_1_1_k_means_a2edfee7cb6ba365b1f54fcbbe348c184}{getClusterMap}}()\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}; \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00140}\mbox{\hyperlink{classcontroladores_1_1_k_means_a5b5b8482e30957f96d523eed5af59d64}{00140}}     \textcolor{keyword}{public} \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classcontroladores_1_1_k_means_a5b5b8482e30957f96d523eed5af59d64}{getUsersCluster}} () \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00141}00141         \mbox{\hyperlink{classcontroladores_1_1_k_means_ad8e922dceb2b2241ed5bb08c5f0506d6}{clusterFormation}}(this.\mbox{\hyperlink{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}{us}});}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00142}00142         \textcolor{keywordtype}{int} cluster = \mbox{\hyperlink{classcontroladores_1_1_k_means_af721483fa0386c552130fac20bc616ce}{nearestCentroid}}(super.u.getValoraciones());}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00143}00143         \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}}(\mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}.get(cluster));}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00144}00144     \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00145}00145 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00146}\mbox{\hyperlink{classcontroladores_1_1_k_means_a065bdc7f760a414772498078c2e8fae1}{00146}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_k_means_a065bdc7f760a414772498078c2e8fae1}{setMaxsc}}(\textcolor{keywordtype}{double} \mbox{\hyperlink{classcontroladores_1_1_k_means_afc901f4bec46b1dd10c9e2d7fe3a2768}{maxsc}})\{ this.maxsc = \mbox{\hyperlink{classcontroladores_1_1_k_means_afc901f4bec46b1dd10c9e2d7fe3a2768}{maxsc}}; \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00147}00147 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00148}\mbox{\hyperlink{classcontroladores_1_1_k_means_a8edf9893e906e53b3560595bd5d9c073}{00148}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_k_means_a8edf9893e906e53b3560595bd5d9c073}{setMinsc}}(\textcolor{keywordtype}{double} \mbox{\hyperlink{classcontroladores_1_1_k_means_a450bd6bacca166ea840d62e1bb7ccd18}{minsc}}) \{ this.minsc = \mbox{\hyperlink{classcontroladores_1_1_k_means_a450bd6bacca166ea840d62e1bb7ccd18}{minsc}}; \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00156}\mbox{\hyperlink{classcontroladores_1_1_k_means_adeddf85ff928b6219caafbcee7eabcdf}{00156}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_k_means_adeddf85ff928b6219caafbcee7eabcdf}{setCentroides}}(ArrayList<Centroide> \mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{centroides}}) \{ this.centroides = \mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{centroides}}; \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00157}00157 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00164}\mbox{\hyperlink{classcontroladores_1_1_k_means_a3c160c65e98d6542f55e2b5a7a832901}{00164}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_k_means_a3c160c65e98d6542f55e2b5a7a832901}{setClusterMap}}(Map<Integer, ArrayList<Usuario>> \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}) \{ this.clusterMap = \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}; \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00165}00165 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00173}\mbox{\hyperlink{classcontroladores_1_1_k_means_a46fc026af8e9f5861ff1522aa76c0e77}{00173}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_k_means_a46fc026af8e9f5861ff1522aa76c0e77}{setCota}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{classcontroladores_1_1_k_means_a70c8c2f8c20b197380b90e11ea192768}{cota}}) \{ this.cota = \mbox{\hyperlink{classcontroladores_1_1_k_means_a70c8c2f8c20b197380b90e11ea192768}{cota}}; \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00174}00174 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00181}\mbox{\hyperlink{classcontroladores_1_1_k_means_a659acb3b0d653b7387ff46c0cb89abd0}{00181}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_k_means_a659acb3b0d653b7387ff46c0cb89abd0}{setK}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{classcontroladores_1_1_k_means_a4b43ad99a2d85fe3b95a27f7348a1884}{k}}) \{ this.k = \mbox{\hyperlink{classcontroladores_1_1_k_means_a4b43ad99a2d85fe3b95a27f7348a1884}{k}}; \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00182}00182 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00189}\mbox{\hyperlink{classcontroladores_1_1_k_means_af0fe086d0edf646f61112cb1d7b0a743}{00189}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_k_means_af0fe086d0edf646f61112cb1d7b0a743}{setDefaults}}()\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00190}00190         this.k = 10;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00191}00191         this.centroides = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00192}00192         this.cota = 30;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00193}00193         this.clusterMap = \textcolor{keyword}{new} HashMap<>(\mbox{\hyperlink{classcontroladores_1_1_k_means_a4b43ad99a2d85fe3b95a27f7348a1884}{k}});}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00194}00194     \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00195}00195 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00204}\mbox{\hyperlink{classcontroladores_1_1_k_means_ad8e922dceb2b2241ed5bb08c5f0506d6}{00204}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_k_means_ad8e922dceb2b2241ed5bb08c5f0506d6}{clusterFormation}}(\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} usrs) \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00205}00205         \textcolor{comment}{//setOptimalK();}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00206}00206 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00207}00207         \textcolor{keywordtype}{double} t1 = System.currentTimeMillis();}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00208}00208         Map<Integer, ArrayList<Usuario>> lastState = \textcolor{keyword}{new} HashMap<>();           \textcolor{comment}{//Estructura para guardar el ultimo estado de los clusters}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00209}00209         \textcolor{keywordtype}{int} actualCota = 0;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00210}00210         \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classcontroladores_1_1_k_means_acfa3227e427057c41ecafc1172e1bf9b}{shouldTerminate}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00211}00211 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00212}00212         \mbox{\hyperlink{classcontroladores_1_1_k_means_a7fc9e3f1cbdaebb0e44428bd2ced9868}{randomCentroids}}();                                                     \textcolor{comment}{//Creamos k centroides arbitrarios}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00213}00213         \mbox{\hyperlink{classcontroladores_1_1_k_means_aac4d42374091b0e99d356080457eb0e4}{furthestCentroids}}();}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00214}00214         \textcolor{comment}{// iterate for a pre-\/defined number of times}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00215}00215         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classcontroladores_1_1_k_means_a70c8c2f8c20b197380b90e11ea192768}{cota}} \&\& !\mbox{\hyperlink{classcontroladores_1_1_k_means_acfa3227e427057c41ecafc1172e1bf9b}{shouldTerminate}}; i++) \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00216}00216             \textcolor{keywordtype}{boolean} isLastIteration = i == \mbox{\hyperlink{classcontroladores_1_1_k_means_a70c8c2f8c20b197380b90e11ea192768}{cota}} -\/ 1;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00217}00217 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00218}00218             \textcolor{comment}{// in each iteration we should find the nearest centroid for each user}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00219}00219             \textcolor{keywordflow}{for} (\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} f : usrs.\mbox{\hyperlink{classclases_1_1_usuarios_a51cd118515e98557b0fe657e1cbda5cb}{getUsers}}()) \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00220}00220                 \textcolor{keywordtype}{int} p = \mbox{\hyperlink{classcontroladores_1_1_k_means_af721483fa0386c552130fac20bc616ce}{nearestCentroid}}(f.getValoraciones());}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00221}00221                 \mbox{\hyperlink{classcontroladores_1_1_k_means_a87740543ccb9fab1ecbb450227bca51e}{addToCluster}}(f, p);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00222}00222             \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00223}00223 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00224}00224             \textcolor{comment}{// if the assignments do not change, then the algorithm terminates}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00225}00225             \mbox{\hyperlink{classcontroladores_1_1_k_means_acfa3227e427057c41ecafc1172e1bf9b}{shouldTerminate}} = isLastIteration || \mbox{\hyperlink{classcontroladores_1_1_k_means_acfa3227e427057c41ecafc1172e1bf9b}{shouldTerminate}}(lastState);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00226}00226 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00227}00227             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classcontroladores_1_1_k_means_acfa3227e427057c41ecafc1172e1bf9b}{shouldTerminate}}) \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00228}00228                 \textcolor{comment}{// at the end of each iteration we relocate the centroids}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00229}00229                 lastState.clear();}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00230}00230                 \textcolor{keywordflow}{for} (Integer c : \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}.keySet()) \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00231}00231                     ArrayList<Usuario> aux = \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}.get(c);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00232}00232                     \mbox{\hyperlink{classcontroladores_1_1_k_means_a333416ebfa951b39989ae86c8d1fd6e7}{centroidRelocation}}(c, \mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{centroides}}.get(c).getImaginaryUsers(), aux);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00233}00233                     lastState.put(\mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{centroides}}.get(c).getCentroID(), \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}.get(c));}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00234}00234                 \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00235}00235 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00236}00236                 \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00237}00237             \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00238}00238 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00239}00239             \textcolor{keywordflow}{else} actualCota = i+1;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00240}00240         \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00241}00241         \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}} = \textcolor{keyword}{new} HashMap<>(lastState);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00242}00242 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00243}00243         \textcolor{comment}{//This part is for applying the elbow method and determining the best number of clusters}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00244}00244 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00245}00245         t1 = System.currentTimeMillis() -\/ t1;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00246}00246         \textcolor{comment}{//double wss = computeAverageWSS();}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00247}00247     \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00248}00248 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00261}\mbox{\hyperlink{classcontroladores_1_1_k_means_a99248cbb1548615199653bad38196dfc}{00261}}     \textcolor{keyword}{public} \textcolor{keywordtype}{double} \mbox{\hyperlink{classcontroladores_1_1_k_means_a99248cbb1548615199653bad38196dfc}{computeEuclideanDistance}}(Map<Integer, Double> vals, Map<Integer, Double> valsP, Integer centroid) \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00262}00262         \textcolor{keywordtype}{double} sum = 0.0;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00263}00263         \textcolor{keywordflow}{if} (valsP == \textcolor{keyword}{null})\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00264}00264             \textcolor{keywordflow}{for} (Integer key : \mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{centroides}}.get(centroid).getImaginaryUsers().keySet())\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00265}00265                 \textcolor{keywordtype}{double} c = \mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{centroides}}.get(centroid).getImaginaryUsers().get(key);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00266}00266                 \textcolor{keywordflow}{if} (vals.containsKey(key))\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00267}00267                     \textcolor{keywordtype}{double} v = vals.get(key);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00268}00268                     sum += Math.pow((v -\/ c), 2);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00269}00269                 \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00270}00270             \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00271}00271         \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00272}00272 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00273}00273         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00274}00274             \textcolor{keywordflow}{for} (Integer key : \mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{centroides}}.get(centroid).getImaginaryUsers().keySet())\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00275}00275                 \textcolor{keywordflow}{if} (vals.containsKey(key) \&\& valsP.containsKey(key)) \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00276}00276                     \textcolor{keywordtype}{double} v1 = vals.get(key);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00277}00277                     \textcolor{keywordtype}{double} v2 = valsP.get(key);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00278}00278                     sum += Math.pow((v1 -\/ v2), 2);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00279}00279                 \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00280}00280                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (vals.containsKey(key)) sum += Math.pow(vals.get(key), 2);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00281}00281                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (valsP.containsKey(key)) sum += Math.pow(valsP.get(key), 2);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00282}00282             \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00283}00283         \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00284}00284         \textcolor{keywordflow}{return} Math.sqrt(sum);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00285}00285     \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00286}00286 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00287}00287 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00294}\mbox{\hyperlink{classcontroladores_1_1_k_means_a7fc9e3f1cbdaebb0e44428bd2ced9868}{00294}}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_k_means_a7fc9e3f1cbdaebb0e44428bd2ced9868}{randomCentroids}}() \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00295}00295         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 2*\mbox{\hyperlink{classcontroladores_1_1_k_means_a4b43ad99a2d85fe3b95a27f7348a1884}{k}}; ++i) \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00296}00296             Map<Integer, Double> coords = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00297}00297 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00298}00298             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ids = 0; ids < \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a12da803fac97be1ebc727d328872df83}{it}}.\mbox{\hyperlink{classclases_1_1_items_a91b5721dd501093975dcf67defae307f}{getSize}}(); ++ids) \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00299}00299                 coords.put(ids, \mbox{\hyperlink{classcontroladores_1_1_k_means_af1337d8a1f1068765ad77e07f2ef2668}{random}}.nextDouble() * (\mbox{\hyperlink{classcontroladores_1_1_k_means_afc901f4bec46b1dd10c9e2d7fe3a2768}{maxsc}} -\/ \mbox{\hyperlink{classcontroladores_1_1_k_means_a450bd6bacca166ea840d62e1bb7ccd18}{minsc}}) + \mbox{\hyperlink{classcontroladores_1_1_k_means_a450bd6bacca166ea840d62e1bb7ccd18}{minsc}});}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00300}00300             \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00301}00301             \mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{centroides}}.add(i, \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_centroide}{Centroide}}(i, coords));}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00302}00302         \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00303}00303     \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00304}00304 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00311}\mbox{\hyperlink{classcontroladores_1_1_k_means_aac4d42374091b0e99d356080457eb0e4}{00311}}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_k_means_aac4d42374091b0e99d356080457eb0e4}{furthestCentroids}}()\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00312}00312         ArrayList<Centroide> copy = \textcolor{keyword}{new} ArrayList<>(\mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{centroides}});}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00313}00313         \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = 0;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00314}00314 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00315}00315         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classclases_1_1_centroide}{Centroide}} c : copy)\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00316}00316             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{centroides}}.size() > \mbox{\hyperlink{classcontroladores_1_1_k_means_a4b43ad99a2d85fe3b95a27f7348a1884}{k}} \&\& \mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{centroides}}.contains(c))\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00317}00317                 \textcolor{keywordtype}{double} min = Double.MAX\_VALUE;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00318}00318                 \mbox{\hyperlink{classclases_1_1_centroide}{Centroide}} p = \mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{centroides}}.get(0);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00319}00319                 \textcolor{keywordflow}{for} (\mbox{\hyperlink{classclases_1_1_centroide}{Centroide}} c1 : \mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{centroides}})\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00320}00320                     \textcolor{keywordflow}{if} (c1.getCentroID() != c.getCentroID())\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00321}00321                         \textcolor{keywordtype}{double} dist = \mbox{\hyperlink{classcontroladores_1_1_k_means_a99248cbb1548615199653bad38196dfc}{computeEuclideanDistance}}(c.getImaginaryUsers(), \textcolor{keyword}{null}, \mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{centroides}}.indexOf(c1));}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00322}00322                         \textcolor{keywordflow}{if} (dist < min)\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00323}00323                             min = dist;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00324}00324                             p = c1;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00325}00325                         \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00326}00326                     \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00327}00327                 \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00328}00328 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00329}00329                 \mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{centroides}}.remove(p);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00330}00330             \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00331}00331         \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00332}00332         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classclases_1_1_centroide}{Centroide}} c : \mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{centroides}})\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00333}00333             c.setCentroID(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00334}00334             \textcolor{keywordtype}{id}++;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00335}00335         \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00336}00336     \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00337}00337 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00346}\mbox{\hyperlink{classcontroladores_1_1_k_means_af721483fa0386c552130fac20bc616ce}{00346}}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \mbox{\hyperlink{classcontroladores_1_1_k_means_af721483fa0386c552130fac20bc616ce}{nearestCentroid}}(Map<Integer, Double> \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}) \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00347}00347         \textcolor{keywordtype}{double} minDist = Double.MAX\_VALUE;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00348}00348         \textcolor{keywordtype}{int} pos = 0;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00349}00349         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classclases_1_1_centroide}{Centroide}} i : \mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{centroides}})\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00350}00350             \textcolor{keywordtype}{double} currentDistance = \mbox{\hyperlink{classcontroladores_1_1_k_means_a99248cbb1548615199653bad38196dfc}{computeEuclideanDistance}}(\mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}, \textcolor{keyword}{null}, \mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{centroides}}.indexOf(i));}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00351}00351             \textcolor{keywordflow}{if} (currentDistance < minDist) \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00352}00352                 minDist = currentDistance;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00353}00353                 pos = i.getCentroID();}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00354}00354             \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00355}00355         \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00356}00356         \textcolor{keywordflow}{return} pos;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00357}00357     \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00358}00358 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00367}\mbox{\hyperlink{classcontroladores_1_1_k_means_a87740543ccb9fab1ecbb450227bca51e}{00367}}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_k_means_a87740543ccb9fab1ecbb450227bca51e}{addToCluster}}( \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} f, Integer c) \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00368}00368         \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}.compute(c, (\mbox{\hyperlink{classcontroladores_1_1_k_means_a4b43ad99a2d85fe3b95a27f7348a1884}{k}}, al) -\/> \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00369}00369             \textcolor{keywordflow}{if} (al == \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00370}00370                 al = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00371}00371             \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00372}00372             al.add(f);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00373}00373             \textcolor{keywordflow}{return} al;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00374}00374         \});}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00375}00375     \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00376}00376 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00387}\mbox{\hyperlink{classcontroladores_1_1_k_means_a333416ebfa951b39989ae86c8d1fd6e7}{00387}}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_k_means_a333416ebfa951b39989ae86c8d1fd6e7}{centroidRelocation}}(Integer \textcolor{keywordtype}{id}, Map<Integer, Double> c, ArrayList<Usuario> cluster) \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00388}00388         \textcolor{keywordflow}{if} (!cluster.isEmpty()) \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00389}00389             c.forEach((\mbox{\hyperlink{classcontroladores_1_1_k_means_a4b43ad99a2d85fe3b95a27f7348a1884}{k}}, v) -\/> c.put(\mbox{\hyperlink{classcontroladores_1_1_k_means_a4b43ad99a2d85fe3b95a27f7348a1884}{k}}, 0.0));}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00390}00390 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00391}00391             \textcolor{keywordflow}{for} (Integer itemID : c.keySet())\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00392}00392                 \textcolor{keywordtype}{int} count = 0;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00393}00393                 \textcolor{keywordflow}{for} (\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}} : cluster)\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00394}00394                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}.\mbox{\hyperlink{classclases_1_1_usuario_aea18bbbfd60937a39ca6ffaf41c00f2d}{getValoraciones}}().containsKey(itemID))\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00395}00395                         ++count;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00396}00396                         \textcolor{keywordtype}{double} val = c.get(itemID);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00397}00397                         c.put(itemID, val + \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}.\mbox{\hyperlink{classclases_1_1_usuario_aea18bbbfd60937a39ca6ffaf41c00f2d}{getValoraciones}}().get(itemID));}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00398}00398                     \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00399}00399                 \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00400}00400                 \textcolor{keywordtype}{double} v = c.get(itemID);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00401}00401                 c.put(itemID, v/count);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00402}00402             \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00403}00403 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00404}00404             \mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{centroides}}.set(\textcolor{keywordtype}{id}, \textcolor{keyword}{new} \mbox{\hyperlink{classclases_1_1_centroide}{Centroide}}(\textcolor{keywordtype}{id}, c));}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00405}00405         \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00406}00406     \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00407}00407 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00416}\mbox{\hyperlink{classcontroladores_1_1_k_means_acfa3227e427057c41ecafc1172e1bf9b}{00416}}     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classcontroladores_1_1_k_means_acfa3227e427057c41ecafc1172e1bf9b}{shouldTerminate}}(Map<Integer, ArrayList<Usuario>> b)\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00417}00417         \textcolor{keywordflow}{if} (b.isEmpty()) \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00418}00418             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00419}00419         \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00420}00420 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00421}00421         \textcolor{keywordflow}{for} (Integer c : \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}.keySet())\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00422}00422             \textcolor{keywordtype}{boolean} f = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00423}00423             \textcolor{keywordflow}{for} (Integer d: b.keySet()) \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00424}00424                 \textcolor{keywordflow}{if} (!f \&\& c.equals(d))\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00425}00425                     f = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00426}00426                     Integer szA = \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}.get(c).size(), szB = b.get(d).size();}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00427}00427                     \textcolor{keywordflow}{if} (!szA.equals(szB))\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00428}00428                         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00429}00429 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00430}00430                     \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00431}00431                     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00432}00432                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}.get(c).size(); i++) \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00433}00433                             Integer aID = \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}.get(c).get(i).getUserId();}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00434}00434                             Integer bID = b.get(d).get(i).getUserId();}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00435}00435 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00436}00436                             \textcolor{keywordflow}{if} (!aID.equals(bID)) \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00437}00437                                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00438}00438                             \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00439}00439                         \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00440}00440                     \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00441}00441                 \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00442}00442             \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00443}00443         \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00444}00444         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00445}00445     \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00446}00446 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00454}\mbox{\hyperlink{classcontroladores_1_1_k_means_ac0c66198785c6a9ab04ecd303817d011}{00454}}     \textcolor{keyword}{private} Double \mbox{\hyperlink{classcontroladores_1_1_k_means_ac0c66198785c6a9ab04ecd303817d011}{computeAverageWSS}}()\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00455}00455         \textcolor{keywordtype}{double} wss = 0;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00456}00456         \textcolor{keywordflow}{for} (Integer centroID : \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}.keySet()) \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00457}00457             \textcolor{keywordtype}{double} d = 0;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00458}00458             \textcolor{keywordflow}{for} (\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}} : \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}.get(centroID)) \{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00459}00459                 d += Math.pow(\mbox{\hyperlink{classcontroladores_1_1_k_means_a99248cbb1548615199653bad38196dfc}{computeEuclideanDistance}}(\mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}.\mbox{\hyperlink{classclases_1_1_usuario_aea18bbbfd60937a39ca6ffaf41c00f2d}{getValoraciones}}(), \textcolor{keyword}{null}, centroID), 2);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00460}00460             \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00461}00461             d /= \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}.get(centroID).size();}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00462}00462             wss += d;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00463}00463         \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00464}00464         wss /= \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}.size();}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00465}00465         \textcolor{keywordflow}{return} wss;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00466}00466     \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00467}00467 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00477}\mbox{\hyperlink{classcontroladores_1_1_k_means_ab1db07b12f71a000327079836dc62746}{00477}}     \textcolor{keyword}{private} Double \mbox{\hyperlink{classcontroladores_1_1_k_means_ab1db07b12f71a000327079836dc62746}{similarity}}(\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}, Integer cluster)\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00478}00478         \textcolor{keywordtype}{double} sum = 0.0;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00479}00479         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}{us}} : \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}.get(cluster))\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00480}00480             \textcolor{keywordflow}{if} (!Objects.equals(\mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}.\mbox{\hyperlink{classclases_1_1_usuario_afa103718afa1a7eaf9ee3dd3d6c4a324}{getUserId}}(), \mbox{\hyperlink{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}{us}}.getUserId()))\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00481}00481                 sum += \mbox{\hyperlink{classcontroladores_1_1_k_means_a99248cbb1548615199653bad38196dfc}{computeEuclideanDistance}}(\mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}.\mbox{\hyperlink{classclases_1_1_usuario_aea18bbbfd60937a39ca6ffaf41c00f2d}{getValoraciones}}(), \mbox{\hyperlink{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}{us}}.getValoraciones(), cluster);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00482}00482             \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00483}00483         \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00484}00484         \textcolor{keywordflow}{return} sum/(\mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}.get(cluster).size()-\/1);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00485}00485     \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00486}00486 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00496}\mbox{\hyperlink{classcontroladores_1_1_k_means_ac0221860c26666764feea21ff08dc85b}{00496}}     \textcolor{keyword}{private} Double \mbox{\hyperlink{classcontroladores_1_1_k_means_ac0221860c26666764feea21ff08dc85b}{dissimilarity}}(\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}, Integer uC)\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00497}00497 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00498}00498         \textcolor{keywordtype}{double} sum = 0.0, minAvg = -\/1.0;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00499}00499 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00500}00500         \textcolor{keywordflow}{for} (Integer \mbox{\hyperlink{classcontroladores_1_1_k_means_a4b43ad99a2d85fe3b95a27f7348a1884}{k}} : \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}.keySet())\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00501}00501             \textcolor{keywordflow}{if} (!Objects.equals(uC, \mbox{\hyperlink{classcontroladores_1_1_k_means_a4b43ad99a2d85fe3b95a27f7348a1884}{k}}))\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00502}00502                 \textcolor{keywordflow}{for} (\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} usr : \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}.get(\mbox{\hyperlink{classcontroladores_1_1_k_means_a4b43ad99a2d85fe3b95a27f7348a1884}{k}}))\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00503}00503                     sum += \mbox{\hyperlink{classcontroladores_1_1_k_means_a99248cbb1548615199653bad38196dfc}{computeEuclideanDistance}}(\mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}.\mbox{\hyperlink{classclases_1_1_usuario_aea18bbbfd60937a39ca6ffaf41c00f2d}{getValoraciones}}(), usr.getValoraciones(), \mbox{\hyperlink{classcontroladores_1_1_k_means_a4b43ad99a2d85fe3b95a27f7348a1884}{k}});}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00504}00504                 \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00505}00505                 sum /= \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}.get(\mbox{\hyperlink{classcontroladores_1_1_k_means_a4b43ad99a2d85fe3b95a27f7348a1884}{k}}).size();}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00506}00506                 \textcolor{keywordflow}{if} (minAvg == -\/1.0 || sum < minAvg)\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00507}00507                     minAvg = sum;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00508}00508                 \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00509}00509             \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00510}00510         \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00511}00511 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00512}00512         \textcolor{keywordflow}{return} minAvg;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00513}00513     \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00514}00514 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00524}\mbox{\hyperlink{classcontroladores_1_1_k_means_ace0fb5382740abe19092b5438f244ac8}{00524}}     \textcolor{keyword}{private} Double \mbox{\hyperlink{classcontroladores_1_1_k_means_ace0fb5382740abe19092b5438f244ac8}{sillhouetteCoef}}(\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}, Integer cluster)\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00525}00525         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}.get(cluster).size() == 1) \textcolor{keywordflow}{return} 0.0;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00526}00526 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00527}00527         \textcolor{keywordtype}{double} sim = \mbox{\hyperlink{classcontroladores_1_1_k_means_ab1db07b12f71a000327079836dc62746}{similarity}}(\mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}, cluster);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00528}00528         \textcolor{keywordtype}{double} dis = \mbox{\hyperlink{classcontroladores_1_1_k_means_ac0221860c26666764feea21ff08dc85b}{dissimilarity}}(\mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}, cluster);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00529}00529         \textcolor{keywordflow}{return} (dis -\/ sim / Math.max(dis, sim));}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00530}00530     \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00531}00531 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00539}\mbox{\hyperlink{classcontroladores_1_1_k_means_a6d6f377179f42d06b2e62694724d09d8}{00539}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_k_means_a6d6f377179f42d06b2e62694724d09d8}{setOptimalK}}(\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} usuarios)\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00540}00540         \textcolor{keywordtype}{double} maxAvg = -\/1.0;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00541}00541         \textcolor{keywordtype}{int} optimalK = -\/1;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00542}00542         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 2; i <= 10; i++)\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00543}00543             \mbox{\hyperlink{classcontroladores_1_1_k_means_ae1e7a033a1777387be8f670ae4aa7c19}{centroides}} = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00544}00544             \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}} = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00545}00545 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00546}00546             \textcolor{keywordtype}{double} silAvg = 0.0;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00547}00547             this.k = i;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00548}00548             \mbox{\hyperlink{classcontroladores_1_1_k_means_ad8e922dceb2b2241ed5bb08c5f0506d6}{clusterFormation}}(usuarios);}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00549}00549 }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00550}00550             \textcolor{keywordflow}{for} (Integer \mbox{\hyperlink{classcontroladores_1_1_k_means_a4b43ad99a2d85fe3b95a27f7348a1884}{k}} : \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}.keySet())\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00551}00551                 \textcolor{keywordflow}{for} (\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}} : \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}.get(\mbox{\hyperlink{classcontroladores_1_1_k_means_a4b43ad99a2d85fe3b95a27f7348a1884}{k}}))\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00552}00552                     silAvg += \mbox{\hyperlink{classcontroladores_1_1_k_means_ace0fb5382740abe19092b5438f244ac8}{sillhouetteCoef}}(\mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}, \mbox{\hyperlink{classcontroladores_1_1_k_means_a4b43ad99a2d85fe3b95a27f7348a1884}{k}});}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00553}00553                 \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00554}00554                 silAvg /= \mbox{\hyperlink{classcontroladores_1_1_k_means_abc1b38d35470e406093ff13a9caeeb40}{clusterMap}}.get(\mbox{\hyperlink{classcontroladores_1_1_k_means_a4b43ad99a2d85fe3b95a27f7348a1884}{k}}).size();}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00555}00555             \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00556}00556             }
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00557}00557             \textcolor{keywordflow}{if} (maxAvg == -\/1.0 || silAvg > maxAvg)\{}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00558}00558                 maxAvg = silAvg;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00559}00559                 optimalK = i;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00560}00560             \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00561}00561         \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00562}00562         this.k = optimalK;}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00563}00563     \}}
+\DoxyCodeLine{\Hypertarget{_k_means_8java_source_l00564}00564 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROP subgrup-prop2-1: Fichero Fuente KMeansTest.java</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PROP subgrup-prop2-1<span id="projectnumber">&#160;Entrega 3</span>
+   </div>
+   <div id="projectbrief">Sistema de recomendaciones</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_d2a81fcb9e0344d06f49c2bd6fcf908f.html">FONTS</a></li><li class="navelem"><a class="el" href="../../dir_7342359a9f41e5e9b1850f624169c539.html">dominio</a></li><li class="navelem"><a class="el" href="../../dir_318782879a2ceac5c6208bfc9539c3f6.html">controladores</a></li><li class="navelem"><a class="el" href="../../dir_99e284aa24014cd08987d271b558fe61.html">Tests</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">KMeansTest.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dc/dec/_k_means_test_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> <a class="code hl_package" href="../../d8/ddb/namespaceclases.html">clases</a>.*;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> <a class="code hl_package" href="../../db/d23/namespacecontroladores.html">controladores</a>.<a class="code hl_class" href="../../de/d05/classcontroladores_1_1_ctrl_dominio_preprocesar_datos.html">CtrlDominioPreprocesarDatos</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> <a class="code hl_package" href="../../db/d23/namespacecontroladores.html">controladores</a>.<a class="code hl_class" href="../../d6/de9/classcontroladores_1_1_k_means.html">KMeans</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> org.junit.jupiter.api.AfterEach;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> org.junit.jupiter.api.Test;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> java.util.HashMap;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> java.util.Map;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> java.util.Random;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../df/d68/class_k_means_test.html">   24</a></span><span class="keyword">class </span><a class="code hl_class" href="../../df/d68/class_k_means_test.html">KMeansTest</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../df/d68/class_k_means_test.html#a151efad2550ccbaf0a207bd77fb3bb7a">   25</a></span>    <a class="code hl_class" href="../../d6/de9/classcontroladores_1_1_k_means.html">KMeans</a> <a class="code hl_variable" href="../../df/d68/class_k_means_test.html#a151efad2550ccbaf0a207bd77fb3bb7a">kmeans</a> = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/de9/classcontroladores_1_1_k_means.html">KMeans</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    @AfterEach</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../df/d68/class_k_means_test.html#a936b99c4c45a326a1567e57918fc7901">   27</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d68/class_k_means_test.html#a936b99c4c45a326a1567e57918fc7901">defaultSettings</a>(){ <a class="code hl_variable" href="../../df/d68/class_k_means_test.html#a151efad2550ccbaf0a207bd77fb3bb7a">kmeans</a>.<a class="code hl_function" href="../../d6/de9/classcontroladores_1_1_k_means.html#af0fe086d0edf646f61112cb1d7b0a743">setDefaults</a>(); }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> <span class="comment">/* missing data  */</span></div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>        <span class="comment">/* uData4.put(1, 2.0); uData5.put(1, 2.5); /* missing data  */</span></div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>        <span class="comment">/* uData4.put(2, 1.5); /* missing data  */</span> <span class="comment">/* uData6.put(2, 2.0);</span></div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span><span class="comment">        /* missing data  */</span> <span class="comment">/* uData5.put(3, 1.0); /* missing data</span></div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span><span class="comment"></span> </div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span><span class="comment">        Usuario f1 = new Usuario(1, uData1); cluster1.add(f1);</span></div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span><span class="comment">        Usuario f2 = new Usuario(2, uData2); cluster1.add(f2);</span></div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span><span class="comment">        Usuario f3 = new Usuario(3, uData3); cluster1.add(f3);</span></div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span><span class="comment">        Usuario f4 = new Usuario(4, uData4); cluster2.add(f4);</span></div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span><span class="comment">        Usuario f5 = new Usuario(5, uData5); cluster2.add(f5);</span></div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span><span class="comment">        Usuario f6 = new Usuario(6, uData6); cluster2.add(f6);</span></div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span><span class="comment"></span> </div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span><span class="comment">        Map&lt;Integer, ArrayList&lt;Usuario&gt;&gt; cM = new HashMap&lt;&gt;();</span></div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span><span class="comment">        cM.put(0, cluster1);</span></div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span><span class="comment">        cM.put(1, cluster2);</span></div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span><span class="comment"></span> </div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span><span class="comment">        kmeans.setClusterMap(cM);</span></div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span><span class="comment"></span> </div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span><span class="comment">        double expected = 0.5416666666666667;</span></div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span><span class="comment"></span> </div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span><span class="comment">        assertEquals(expected, kmeans.computeAverageWSS());</span></div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span><span class="comment"></span> </div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span><span class="comment">    }*/</span></div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span> </div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>    @Test</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno"><a class="line" href="../../df/d68/class_k_means_test.html#a238f7d2d3d81197f5e4a9c8fe90dc8f8">  415</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../df/d68/class_k_means_test.html#a238f7d2d3d81197f5e4a9c8fe90dc8f8">testOptimalK</a>() throws Exception {</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>        <span class="keywordtype">int</span> n = 250, us = 400;</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span> </div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>        <span class="keywordtype">double</span> minsc = 0, maxsc = 5;</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>        <a class="code hl_class" href="../../d4/db9/classclases_1_1_usuarios.html">Usuarios</a> v = <span class="keyword">new</span> <a class="code hl_class" href="../../d4/db9/classclases_1_1_usuarios.html">Usuarios</a>();</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>        <a class="code hl_class" href="../../df/db9/classclases_1_1_usuario.html">Usuario</a> u = <span class="keyword">new</span> <a class="code hl_class" href="../../df/db9/classclases_1_1_usuario.html">Usuario</a>();</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span> </div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>        Random r = <span class="keyword">new</span> Random();</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span> </div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>        System.out.println(<span class="stringliteral">&quot;generating numbers beween &quot;</span> + minsc + <span class="stringliteral">&quot; and &quot;</span> + maxsc);</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span> </div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> userId = 0; userId &lt;= us; userId++){</div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>            Map&lt;Integer, Double&gt; uData = <span class="keyword">new</span> HashMap&lt;&gt;();</div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> itemId = 0; itemId &lt; n; itemId++){</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>               uData.put(itemId, r.nextDouble() * (maxsc - minsc) + minsc);</div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>            }</div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>            <span class="keywordflow">if</span> (userId &lt; us) v.<a class="code hl_function" href="../../d4/db9/classclases_1_1_usuarios.html#a2b75d102bd18d9efa80137eda4e613b3">addUser</a>(<span class="keyword">new</span> <a class="code hl_class" href="../../df/db9/classclases_1_1_usuario.html">Usuario</a>(userId, uData));</div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>            <span class="keywordflow">else</span> u = <span class="keyword">new</span> <a class="code hl_class" href="../../df/db9/classclases_1_1_usuario.html">Usuario</a>(userId, uData);</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>        }</div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span> </div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>        <a class="code hl_class" href="../../d2/d44/classclases_1_1_items.html">Items</a> its = <span class="keyword">new</span> <a class="code hl_class" href="../../d2/d44/classclases_1_1_items.html">Items</a>();</div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>        Map&lt;String, Atributo&gt; ats = <span class="keyword">new</span> HashMap&lt;&gt;();</div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span> </div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; i++){</div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>           <a class="code hl_class" href="../../d8/d01/classclases_1_1_item.html">Item</a> it = <span class="keyword">new</span> <a class="code hl_class" href="../../d8/d01/classclases_1_1_item.html">Item</a>(i, ats);</div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>           its.<a class="code hl_function" href="../../d2/d44/classclases_1_1_items.html#a094c01938cc06eff0c8a4276eeff4ab3">addItem</a>(it);</div>
+<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>        }</div>
+<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span> </div>
+<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>        <a class="code hl_class" href="../../d6/de9/classcontroladores_1_1_k_means.html">KMeans</a> <a class="code hl_variable" href="../../df/d68/class_k_means_test.html#a151efad2550ccbaf0a207bd77fb3bb7a">kmeans</a> = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/de9/classcontroladores_1_1_k_means.html">KMeans</a>(v, u, its);</div>
+<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span>        <a class="code hl_variable" href="../../df/d68/class_k_means_test.html#a151efad2550ccbaf0a207bd77fb3bb7a">kmeans</a>.<a class="code hl_function" href="../../d6/de9/classcontroladores_1_1_k_means.html#a46fc026af8e9f5861ff1522aa76c0e77">setCota</a>(100);</div>
+<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>        <a class="code hl_variable" href="../../df/d68/class_k_means_test.html#a151efad2550ccbaf0a207bd77fb3bb7a">kmeans</a>.<a class="code hl_function" href="../../d6/de9/classcontroladores_1_1_k_means.html#a065bdc7f760a414772498078c2e8fae1">setMaxsc</a>(5.0);</div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>        <a class="code hl_variable" href="../../df/d68/class_k_means_test.html#a151efad2550ccbaf0a207bd77fb3bb7a">kmeans</a>.<a class="code hl_function" href="../../d6/de9/classcontroladores_1_1_k_means.html#a8edf9893e906e53b3560595bd5d9c073">setMinsc</a>(0.0);</div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>        <a class="code hl_variable" href="../../df/d68/class_k_means_test.html#a151efad2550ccbaf0a207bd77fb3bb7a">kmeans</a>.<a class="code hl_function" href="../../d6/de9/classcontroladores_1_1_k_means.html#a659acb3b0d653b7387ff46c0cb89abd0">setK</a>(3);</div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span> </div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>        System.out.println(<span class="stringliteral">&quot;k before setting optimal: &quot;</span> + <a class="code hl_variable" href="../../df/d68/class_k_means_test.html#a151efad2550ccbaf0a207bd77fb3bb7a">kmeans</a>.<a class="code hl_function" href="../../d6/de9/classcontroladores_1_1_k_means.html#a4b3c3291ea17064f6cbf69f2852a015b">getK</a>() );</div>
+<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>        <a class="code hl_variable" href="../../df/d68/class_k_means_test.html#a151efad2550ccbaf0a207bd77fb3bb7a">kmeans</a>.<a class="code hl_function" href="../../d6/de9/classcontroladores_1_1_k_means.html#a6d6f377179f42d06b2e62694724d09d8">setOptimalK</a>(v);</div>
+<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>        System.out.println(<span class="stringliteral">&quot;optimal k: &quot;</span> + <a class="code hl_variable" href="../../df/d68/class_k_means_test.html#a151efad2550ccbaf0a207bd77fb3bb7a">kmeans</a>.<a class="code hl_function" href="../../d6/de9/classcontroladores_1_1_k_means.html#a4b3c3291ea17064f6cbf69f2852a015b">getK</a>() );</div>
+<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span>        <a class="code hl_variable" href="../../df/d68/class_k_means_test.html#a151efad2550ccbaf0a207bd77fb3bb7a">kmeans</a>.<a class="code hl_function" href="../../d6/de9/classcontroladores_1_1_k_means.html#ad8e922dceb2b2241ed5bb08c5f0506d6">clusterFormation</a>(v);</div>
+<div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>    }</div>
+<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>}</div>
+<div class="ttc" id="aclass_k_means_test_html"><div class="ttname"><a href="../../df/d68/class_k_means_test.html">KMeansTest</a></div><div class="ttdoc">Tiene las pruebas implementadas para comprobar que funcionan los métodos de la clase KMeans.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dec/_k_means_test_8java_source.html#l00024">KMeansTest.java:24</a></div></div>
+<div class="ttc" id="aclass_k_means_test_html_a151efad2550ccbaf0a207bd77fb3bb7a"><div class="ttname"><a href="../../df/d68/class_k_means_test.html#a151efad2550ccbaf0a207bd77fb3bb7a">KMeansTest.kmeans</a></div><div class="ttdeci">KMeans kmeans</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dec/_k_means_test_8java_source.html#l00025">KMeansTest.java:25</a></div></div>
+<div class="ttc" id="aclass_k_means_test_html_a238f7d2d3d81197f5e4a9c8fe90dc8f8"><div class="ttname"><a href="../../df/d68/class_k_means_test.html#a238f7d2d3d81197f5e4a9c8fe90dc8f8">KMeansTest.testOptimalK</a></div><div class="ttdeci">void testOptimalK()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dec/_k_means_test_8java_source.html#l00415">KMeansTest.java:415</a></div></div>
+<div class="ttc" id="aclass_k_means_test_html_a936b99c4c45a326a1567e57918fc7901"><div class="ttname"><a href="../../df/d68/class_k_means_test.html#a936b99c4c45a326a1567e57918fc7901">KMeansTest.defaultSettings</a></div><div class="ttdeci">void defaultSettings()</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dec/_k_means_test_8java_source.html#l00027">KMeansTest.java:27</a></div></div>
+<div class="ttc" id="aclassclases_1_1_item_html"><div class="ttname"><a href="../../d8/d01/classclases_1_1_item.html">clases.Item</a></div><div class="ttdoc">Implementación de los Items que leemos de los data sets.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dba/_item_8java_source.html#l00014">Item.java:14</a></div></div>
+<div class="ttc" id="aclassclases_1_1_items_html"><div class="ttname"><a href="../../d2/d44/classclases_1_1_items.html">clases.Items</a></div><div class="ttdoc">La clase de items contiene la implementación de un conjunto de items.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d61/_items_8java_source.html#l00014">Items.java:14</a></div></div>
+<div class="ttc" id="aclassclases_1_1_items_html_a094c01938cc06eff0c8a4276eeff4ab3"><div class="ttname"><a href="../../d2/d44/classclases_1_1_items.html#a094c01938cc06eff0c8a4276eeff4ab3">clases.Items.addItem</a></div><div class="ttdeci">void addItem(Item item)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d61/_items_8java_source.html#l00122">Items.java:122</a></div></div>
+<div class="ttc" id="aclassclases_1_1_usuario_html"><div class="ttname"><a href="../../df/db9/classclases_1_1_usuario.html">clases.Usuario</a></div><div class="ttdoc">@Class Usuario</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/de6/_usuario_8java_source.html#l00015">Usuario.java:15</a></div></div>
+<div class="ttc" id="aclassclases_1_1_usuarios_html"><div class="ttname"><a href="../../d4/db9/classclases_1_1_usuarios.html">clases.Usuarios</a></div><div class="ttdoc">La clase de usuario contiene la implementación de un conjunto de usuarios.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/db7/_usuarios_8java_source.html#l00014">Usuarios.java:14</a></div></div>
+<div class="ttc" id="aclassclases_1_1_usuarios_html_a2b75d102bd18d9efa80137eda4e613b3"><div class="ttname"><a href="../../d4/db9/classclases_1_1_usuarios.html#a2b75d102bd18d9efa80137eda4e613b3">clases.Usuarios.addUser</a></div><div class="ttdeci">void addUser(Usuario user)</div><div class="ttdoc">Añadir el objeto de usuario en el ArrayList.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/db7/_usuarios_8java_source.html#l00074">Usuarios.java:74</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_ctrl_dominio_preprocesar_datos_html"><div class="ttname"><a href="../../de/d05/classcontroladores_1_1_ctrl_dominio_preprocesar_datos.html">controladores.CtrlDominioPreprocesarDatos</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d00/_ctrl_dominio_preprocesar_datos_8java_source.html#l00020">CtrlDominioPreprocesarDatos.java:20</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_k_means_html"><div class="ttname"><a href="../../d6/de9/classcontroladores_1_1_k_means.html">controladores.KMeans</a></div><div class="ttdoc">Implementación del algoritmo KMeans, usando collaborative filtering.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8f/_k_means_8java_source.html#l00021">KMeans.java:21</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_k_means_html_a065bdc7f760a414772498078c2e8fae1"><div class="ttname"><a href="../../d6/de9/classcontroladores_1_1_k_means.html#a065bdc7f760a414772498078c2e8fae1">controladores.KMeans.setMaxsc</a></div><div class="ttdeci">void setMaxsc(double maxsc)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8f/_k_means_8java_source.html#l00146">KMeans.java:146</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_k_means_html_a46fc026af8e9f5861ff1522aa76c0e77"><div class="ttname"><a href="../../d6/de9/classcontroladores_1_1_k_means.html#a46fc026af8e9f5861ff1522aa76c0e77">controladores.KMeans.setCota</a></div><div class="ttdeci">void setCota(int cota)</div><div class="ttdoc">setter del atributo cota que determina el número total de iteraciones</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8f/_k_means_8java_source.html#l00173">KMeans.java:173</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_k_means_html_a4b3c3291ea17064f6cbf69f2852a015b"><div class="ttname"><a href="../../d6/de9/classcontroladores_1_1_k_means.html#a4b3c3291ea17064f6cbf69f2852a015b">controladores.KMeans.getK</a></div><div class="ttdeci">int getK()</div><div class="ttdoc">getter del valor k usado para el algoritmo</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8f/_k_means_8java_source.html#l00113">KMeans.java:113</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_k_means_html_a659acb3b0d653b7387ff46c0cb89abd0"><div class="ttname"><a href="../../d6/de9/classcontroladores_1_1_k_means.html#a659acb3b0d653b7387ff46c0cb89abd0">controladores.KMeans.setK</a></div><div class="ttdeci">void setK(int k)</div><div class="ttdoc">setter del atributo k, que determina el número de clusters</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8f/_k_means_8java_source.html#l00181">KMeans.java:181</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_k_means_html_a6d6f377179f42d06b2e62694724d09d8"><div class="ttname"><a href="../../d6/de9/classcontroladores_1_1_k_means.html#a6d6f377179f42d06b2e62694724d09d8">controladores.KMeans.setOptimalK</a></div><div class="ttdeci">void setOptimalK(Usuarios usuarios)</div><div class="ttdoc">Encuentra la k optimal para ejecutar el algoritmo de kMeans.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8f/_k_means_8java_source.html#l00539">KMeans.java:539</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_k_means_html_a8edf9893e906e53b3560595bd5d9c073"><div class="ttname"><a href="../../d6/de9/classcontroladores_1_1_k_means.html#a8edf9893e906e53b3560595bd5d9c073">controladores.KMeans.setMinsc</a></div><div class="ttdeci">void setMinsc(double minsc)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8f/_k_means_8java_source.html#l00148">KMeans.java:148</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_k_means_html_ad8e922dceb2b2241ed5bb08c5f0506d6"><div class="ttname"><a href="../../d6/de9/classcontroladores_1_1_k_means.html#ad8e922dceb2b2241ed5bb08c5f0506d6">controladores.KMeans.clusterFormation</a></div><div class="ttdeci">void clusterFormation(Usuarios usrs)</div><div class="ttdoc">Función principal del algoritmo kMeans.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8f/_k_means_8java_source.html#l00204">KMeans.java:204</a></div></div>
+<div class="ttc" id="aclasscontroladores_1_1_k_means_html_af0fe086d0edf646f61112cb1d7b0a743"><div class="ttname"><a href="../../d6/de9/classcontroladores_1_1_k_means.html#af0fe086d0edf646f61112cb1d7b0a743">controladores.KMeans.setDefaults</a></div><div class="ttdeci">void setDefaults()</div><div class="ttdoc">devuelve a su estado inicial todos los atributos de la clase</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8f/_k_means_8java_source.html#l00189">KMeans.java:189</a></div></div>
+<div class="ttc" id="anamespaceclases_html"><div class="ttname"><a href="../../d8/ddb/namespaceclases.html">clases</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d67/_atributo_8java_source.html#l00001">Atributo.java:1</a></div></div>
+<div class="ttc" id="anamespacecontroladores_html"><div class="ttname"><a href="../../db/d23/namespacecontroladores.html">controladores</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d33/_algoritmos_8java_source.html#l00001">Algoritmos.java:1</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

@@ -1,0 +1,306 @@
+\hypertarget{vista_items_8java_source}{}\doxysection{vista\+Items.\+java}
+\label{vista_items_8java_source}\index{vistaItems.java@{vistaItems.java}}
+\mbox{\hyperlink{vista_items_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00001}00001 \textcolor{keyword}{package }presentacion; }
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00004}00004 \textcolor{keyword}{import} com.intellij.uiDesigner.core.GridConstraints;}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00005}00005 \textcolor{keyword}{import} com.intellij.uiDesigner.core.GridLayoutManager;}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00007}00007 \textcolor{keyword}{import} javax.swing.*;}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00008}00008 \textcolor{keyword}{import} javax.swing.plaf.FontUIResource;}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00009}00009 \textcolor{keyword}{import} javax.swing.text.StyleContext;}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00010}00010 \textcolor{keyword}{import} java.awt.*;}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00011}00011 \textcolor{keyword}{import} java.awt.event.ActionEvent;}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00012}00012 \textcolor{keyword}{import} java.awt.event.ActionListener;}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00013}00013 \textcolor{keyword}{import} java.awt.event.MouseAdapter;}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00014}00014 \textcolor{keyword}{import} java.awt.event.MouseEvent;}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00015}00015 \textcolor{keyword}{import} java.util.Locale;}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00016}00016 \textcolor{keyword}{import} java.util.Vector;}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00023}\mbox{\hyperlink{classpresentacion_1_1vista_items}{00023}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classpresentacion_1_1vista_items}{vistaItems}} \textcolor{keyword}{extends} JFrame \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00024}\mbox{\hyperlink{classpresentacion_1_1vista_items_a9887d9f4b9d7b2d0b24d6a90c5e20b80}{00024}}     \textcolor{keyword}{private} \mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion}{CtrlPresentacion}} \mbox{\hyperlink{classpresentacion_1_1vista_items_a9887d9f4b9d7b2d0b24d6a90c5e20b80}{iCtrlPresentacion}};}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00026}\mbox{\hyperlink{classpresentacion_1_1vista_items_a36894acf53be13525a22e9d1c06b1db2}{00026}}     \textcolor{keyword}{private} JPanel \mbox{\hyperlink{classpresentacion_1_1vista_items_a36894acf53be13525a22e9d1c06b1db2}{panel1}};}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00027}\mbox{\hyperlink{classpresentacion_1_1vista_items_ad7ef6ba68729e856059600f0b8bdf487}{00027}}     \textcolor{keyword}{private} JTextField \mbox{\hyperlink{classpresentacion_1_1vista_items_ad7ef6ba68729e856059600f0b8bdf487}{item}};}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00028}\mbox{\hyperlink{classpresentacion_1_1vista_items_a65617e6e735845a0abcc911015b9ca58}{00028}}     \textcolor{keyword}{private} JButton \mbox{\hyperlink{classpresentacion_1_1vista_items_a65617e6e735845a0abcc911015b9ca58}{button}};}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00029}\mbox{\hyperlink{classpresentacion_1_1vista_items_a94b7dc6211ae644fc1fb71fe330e8f50}{00029}}     \textcolor{keyword}{private} JScrollPane \mbox{\hyperlink{classpresentacion_1_1vista_items_a94b7dc6211ae644fc1fb71fe330e8f50}{scrolly}};}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00030}\mbox{\hyperlink{classpresentacion_1_1vista_items_a8f6973c43ff30e5f45dc8c6f81ebaa16}{00030}}     \textcolor{keyword}{private} JButton \mbox{\hyperlink{classpresentacion_1_1vista_items_a8f6973c43ff30e5f45dc8c6f81ebaa16}{remItButton}};}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00031}\mbox{\hyperlink{classpresentacion_1_1vista_items_a3614c69fff913bf972b345dec5535a75}{00031}}     \textcolor{keyword}{private} JButton \mbox{\hyperlink{classpresentacion_1_1vista_items_a3614c69fff913bf972b345dec5535a75}{volverButton}};}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00032}\mbox{\hyperlink{classpresentacion_1_1vista_items_a38cc4657373194df2e622a5db43fd280}{00032}}     \textcolor{keyword}{private} JPanel \mbox{\hyperlink{classpresentacion_1_1vista_items_a38cc4657373194df2e622a5db43fd280}{cardPanel}};}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00033}\mbox{\hyperlink{classpresentacion_1_1vista_items_a1a2d23e23740730ad089c1767efc4dbc}{00033}}     \textcolor{keyword}{private} JPanel \mbox{\hyperlink{classpresentacion_1_1vista_items_a1a2d23e23740730ad089c1767efc4dbc}{remItPanel}};}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00034}\mbox{\hyperlink{classpresentacion_1_1vista_items_a11b3cfa3fe4004441e6d5183e87af5af}{00034}}     \textcolor{keyword}{private} JPanel \mbox{\hyperlink{classpresentacion_1_1vista_items_a11b3cfa3fe4004441e6d5183e87af5af}{listPanel}};}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00035}\mbox{\hyperlink{classpresentacion_1_1vista_items_a317aa99a3f278c87694ba86599e970d7}{00035}}     \textcolor{keyword}{private} JButton \mbox{\hyperlink{classpresentacion_1_1vista_items_a317aa99a3f278c87694ba86599e970d7}{addModButton}};}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00036}\mbox{\hyperlink{classpresentacion_1_1vista_items_a704fc8699ceb34b42a8353295cb762eb}{00036}}     \textcolor{keyword}{private} JMenuBar \mbox{\hyperlink{classpresentacion_1_1vista_items_a704fc8699ceb34b42a8353295cb762eb}{menubar}};}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00037}\mbox{\hyperlink{classpresentacion_1_1vista_items_af69a9bc4bc31f4c74f6b1480cd0e37eb}{00037}}     \textcolor{keyword}{private} JMenu \mbox{\hyperlink{classpresentacion_1_1vista_items_af69a9bc4bc31f4c74f6b1480cd0e37eb}{actividad}};}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00038}\mbox{\hyperlink{classpresentacion_1_1vista_items_ae61f8b6426a90ac8a7ad884c4ea8e3ba}{00038}}     \textcolor{keyword}{private} JMenuItem \mbox{\hyperlink{classpresentacion_1_1vista_items_ae61f8b6426a90ac8a7ad884c4ea8e3ba}{itemsMenu}}[];}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00041}\mbox{\hyperlink{classpresentacion_1_1vista_items_a79b02d767d4380f5098028a8b6d89a2d}{00041}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpresentacion_1_1vista_items_a79b02d767d4380f5098028a8b6d89a2d}{initComponents}}() \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00042}00042         Vector headers = \textcolor{keyword}{new} Vector();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00043}00043         headers.add(\textcolor{stringliteral}{"{}items id"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00044}00044         headers.add(\textcolor{stringliteral}{"{}title"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00045}00045         headers.add(\textcolor{stringliteral}{"{}genre"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00046}00046         headers.add(\textcolor{stringliteral}{"{}popularity"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00047}00047         Vector data = \mbox{\hyperlink{classpresentacion_1_1vista_items_a9887d9f4b9d7b2d0b24d6a90c5e20b80}{iCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_a9d87a84977807a82953bdaeeac86bcd7}{getAllItemAtrbutes}}();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00049}00049         JTable itTable = \textcolor{keyword}{new} JTable(data, headers);}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00050}00050         \mbox{\hyperlink{classpresentacion_1_1vista_items_a94b7dc6211ae644fc1fb71fe330e8f50}{scrolly}}.setViewportView(itTable);}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00051}00051     \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00057}\mbox{\hyperlink{classpresentacion_1_1vista_items_ad9171e9c3967b516de3272a812082a4f}{00057}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpresentacion_1_1vista_items_ad9171e9c3967b516de3272a812082a4f}{initMenu}}() \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00058}00058         \mbox{\hyperlink{classpresentacion_1_1vista_items_a704fc8699ceb34b42a8353295cb762eb}{menubar}} = \textcolor{keyword}{new} JMenuBar();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00059}00059         \mbox{\hyperlink{classpresentacion_1_1vista_items_af69a9bc4bc31f4c74f6b1480cd0e37eb}{actividad}} = \textcolor{keyword}{new} JMenu(\textcolor{stringliteral}{"{}actividad"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00061}00061         \mbox{\hyperlink{classpresentacion_1_1vista_items_ae61f8b6426a90ac8a7ad884c4ea8e3ba}{itemsMenu}} = \textcolor{keyword}{new} JMenuItem[7];}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00062}00062         \mbox{\hyperlink{classpresentacion_1_1vista_items_ae61f8b6426a90ac8a7ad884c4ea8e3ba}{itemsMenu}}[0] = \textcolor{keyword}{new} JMenuItem(\textcolor{stringliteral}{"{}cargar archivo nuevo"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00063}00063         \mbox{\hyperlink{classpresentacion_1_1vista_items_ae61f8b6426a90ac8a7ad884c4ea8e3ba}{itemsMenu}}[0].addActionListener(\textcolor{keyword}{new} AbstractAction() \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00064}00064             @Override}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00065}00065             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00066}00066                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00067}00067                     \mbox{\hyperlink{classpresentacion_1_1vista_items_a9887d9f4b9d7b2d0b24d6a90c5e20b80}{iCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_a31b82a15f99228fa612f3fcf6d97c405}{changeFrame}}(\textcolor{stringliteral}{"{}cargarDatos"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00068}00068                 \} \textcolor{keywordflow}{catch} (Exception ex) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00069}00069                     ex.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00070}00070                 \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00071}00071             \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00072}00072         \});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00073}00073         \mbox{\hyperlink{classpresentacion_1_1vista_items_ae61f8b6426a90ac8a7ad884c4ea8e3ba}{itemsMenu}}[1] = \textcolor{keyword}{new} JMenuItem(\textcolor{stringliteral}{"{}ver recomendaciones"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00074}00074         \mbox{\hyperlink{classpresentacion_1_1vista_items_ae61f8b6426a90ac8a7ad884c4ea8e3ba}{itemsMenu}}[1].addActionListener(\textcolor{keyword}{new} AbstractAction() \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00075}00075             @Override}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00076}00076             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00077}00077               \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00078}00078                   \mbox{\hyperlink{classpresentacion_1_1vista_items_a9887d9f4b9d7b2d0b24d6a90c5e20b80}{iCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_a31b82a15f99228fa612f3fcf6d97c405}{changeFrame}}(\textcolor{stringliteral}{"{}vistaRecomendaciones"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00079}00079               \} \textcolor{keywordflow}{catch} (Exception ex) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00080}00080                   ex.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00081}00081               \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00082}00082             \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00083}00083         \});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00084}00084         \mbox{\hyperlink{classpresentacion_1_1vista_items_ae61f8b6426a90ac8a7ad884c4ea8e3ba}{itemsMenu}}[2] = \textcolor{keyword}{new} JMenuItem(\textcolor{stringliteral}{"{}elegir usuario/cambiar datos"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00085}00085         \mbox{\hyperlink{classpresentacion_1_1vista_items_ae61f8b6426a90ac8a7ad884c4ea8e3ba}{itemsMenu}}[2].addActionListener(\textcolor{keyword}{new} AbstractAction() \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00086}00086             @Override}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00087}00087             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00088}00088                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00089}00089                     \mbox{\hyperlink{classpresentacion_1_1vista_items_a9887d9f4b9d7b2d0b24d6a90c5e20b80}{iCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_a31b82a15f99228fa612f3fcf6d97c405}{changeFrame}}(\textcolor{stringliteral}{"{}vistaItems"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00090}00090                 \} \textcolor{keywordflow}{catch} (Exception ex) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00091}00091                     ex.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00092}00092                 \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00093}00093             \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00094}00094         \});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00095}00095         \mbox{\hyperlink{classpresentacion_1_1vista_items_ae61f8b6426a90ac8a7ad884c4ea8e3ba}{itemsMenu}}[3] = \textcolor{keyword}{new} JMenuItem(\textcolor{stringliteral}{"{}ver/añadir valoraciones"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00096}00096         \mbox{\hyperlink{classpresentacion_1_1vista_items_ae61f8b6426a90ac8a7ad884c4ea8e3ba}{itemsMenu}}[3].addActionListener(\textcolor{keyword}{new} AbstractAction() \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00097}00097             @Override}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00098}00098             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00099}00099                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00100}00100                     \mbox{\hyperlink{classpresentacion_1_1vista_items_a9887d9f4b9d7b2d0b24d6a90c5e20b80}{iCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_a31b82a15f99228fa612f3fcf6d97c405}{changeFrame}}(\textcolor{stringliteral}{"{}usuarioMain"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00101}00101                 \} \textcolor{keywordflow}{catch} (Exception ex) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00102}00102                     ex.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00103}00103                 \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00104}00104             \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00105}00105         \});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00106}00106         \mbox{\hyperlink{classpresentacion_1_1vista_items_ae61f8b6426a90ac8a7ad884c4ea8e3ba}{itemsMenu}}[4] = \textcolor{keyword}{new} JMenuItem(\textcolor{stringliteral}{"{}añadir item"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00107}00107         \mbox{\hyperlink{classpresentacion_1_1vista_items_ae61f8b6426a90ac8a7ad884c4ea8e3ba}{itemsMenu}}[4].addActionListener(\textcolor{keyword}{new} AbstractAction() \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00108}00108             @Override}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00109}00109             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00110}00110                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00111}00111                     \mbox{\hyperlink{classpresentacion_1_1vista_items_a9887d9f4b9d7b2d0b24d6a90c5e20b80}{iCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_a31b82a15f99228fa612f3fcf6d97c405}{changeFrame}}(\textcolor{stringliteral}{"{}añadirItem"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00112}00112                 \} \textcolor{keywordflow}{catch} (Exception ex) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00113}00113                     ex.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00114}00114                 \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00115}00115             \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00116}00116         \});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00117}00117         \mbox{\hyperlink{classpresentacion_1_1vista_items_ae61f8b6426a90ac8a7ad884c4ea8e3ba}{itemsMenu}}[5] = \textcolor{keyword}{new} JMenuItem(\textcolor{stringliteral}{"{}historial recomendaciones"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00118}00118         \mbox{\hyperlink{classpresentacion_1_1vista_items_ae61f8b6426a90ac8a7ad884c4ea8e3ba}{itemsMenu}}[5].addActionListener(\textcolor{keyword}{new} AbstractAction() \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00119}00119             @Override}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00120}00120             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00121}00121                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00122}00122                     \mbox{\hyperlink{classpresentacion_1_1vista_items_a9887d9f4b9d7b2d0b24d6a90c5e20b80}{iCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_a31b82a15f99228fa612f3fcf6d97c405}{changeFrame}}(\textcolor{stringliteral}{"{}historialRecomendaciones"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00123}00123                 \} \textcolor{keywordflow}{catch} (Exception ex) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00124}00124                     ex.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00125}00125                 \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00126}00126             \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00127}00127         \});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00128}00128         \mbox{\hyperlink{classpresentacion_1_1vista_items_ae61f8b6426a90ac8a7ad884c4ea8e3ba}{itemsMenu}}[6] = \textcolor{keyword}{new} JMenuItem(\textcolor{stringliteral}{"{}salir"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00129}00129         \mbox{\hyperlink{classpresentacion_1_1vista_items_ae61f8b6426a90ac8a7ad884c4ea8e3ba}{itemsMenu}}[6].addActionListener(\textcolor{keyword}{new} AbstractAction() \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00130}00130             @Override}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00131}00131             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00132}00132                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00133}00133                     \mbox{\hyperlink{classpresentacion_1_1vista_items_a9887d9f4b9d7b2d0b24d6a90c5e20b80}{iCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_a3fecdecafe25d957487975b76972c5cb}{guardarSession}}();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00134}00134                 \} \textcolor{keywordflow}{catch} (Exception ex) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00135}00135                     ex.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00136}00136                 \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00137}00137                 setVisible(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00138}00138             \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00139}00139         \});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00140}00140 }
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00141}00141         \mbox{\hyperlink{classpresentacion_1_1vista_items_a704fc8699ceb34b42a8353295cb762eb}{menubar}}.add(\mbox{\hyperlink{classpresentacion_1_1vista_items_af69a9bc4bc31f4c74f6b1480cd0e37eb}{actividad}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00142}00142         \textcolor{keywordflow}{for} (JMenuItem it : \mbox{\hyperlink{classpresentacion_1_1vista_items_ae61f8b6426a90ac8a7ad884c4ea8e3ba}{itemsMenu}}) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00143}00143             \mbox{\hyperlink{classpresentacion_1_1vista_items_af69a9bc4bc31f4c74f6b1480cd0e37eb}{actividad}}.add(it);}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00144}00144         \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00145}00145     \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00146}00146 }
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00147}\mbox{\hyperlink{classpresentacion_1_1vista_items_aea265b4b02b726ba86d64a475fed36c7}{00147}}     \textcolor{keyword}{public} \mbox{\hyperlink{classpresentacion_1_1vista_items_adaf384c2d691f17bb94f567117367b4e}{vistaItems}}(\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion}{CtrlPresentacion}} pCtrlPresentacion) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00148}00148         \mbox{\hyperlink{classpresentacion_1_1vista_items_a9887d9f4b9d7b2d0b24d6a90c5e20b80}{iCtrlPresentacion}} = pCtrlPresentacion;}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00149}00149         \mbox{\hyperlink{classpresentacion_1_1vista_items_a79b02d767d4380f5098028a8b6d89a2d}{initComponents}}();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00150}00150         \mbox{\hyperlink{classpresentacion_1_1vista_items_ad9171e9c3967b516de3272a812082a4f}{initMenu}}();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00151}00151         SwingUtilities.invokeLater(\textcolor{keyword}{new} Runnable() \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00152}00152             @Override}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00153}00153             \textcolor{keyword}{public} \textcolor{keywordtype}{void} run() \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00154}00154                 setJMenuBar(\mbox{\hyperlink{classpresentacion_1_1vista_items_a704fc8699ceb34b42a8353295cb762eb}{menubar}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00155}00155                 add(\mbox{\hyperlink{classpresentacion_1_1vista_items_a36894acf53be13525a22e9d1c06b1db2}{panel1}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00156}00156                 setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00157}00157             \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00158}00158         \});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00159}00159         \mbox{\hyperlink{classpresentacion_1_1vista_items_a65617e6e735845a0abcc911015b9ca58}{button}}.addMouseListener(\textcolor{keyword}{new} MouseAdapter() \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00160}00160             @Override}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00161}00161             \textcolor{keyword}{public} \textcolor{keywordtype}{void} mouseClicked(MouseEvent e) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00162}00162                 super.mouseClicked(e);}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00163}00163             \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00164}00164         \});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00165}00165         \mbox{\hyperlink{classpresentacion_1_1vista_items_a3614c69fff913bf972b345dec5535a75}{volverButton}}.addActionListener(\textcolor{keyword}{new} ActionListener() \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00166}00166             @Override}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00167}00167             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00168}00168                 \mbox{\hyperlink{classpresentacion_1_1vista_items_a38cc4657373194df2e622a5db43fd280}{cardPanel}}.removeAll();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00169}00169                 \mbox{\hyperlink{classpresentacion_1_1vista_items_a38cc4657373194df2e622a5db43fd280}{cardPanel}}.add(\mbox{\hyperlink{classpresentacion_1_1vista_items_a11b3cfa3fe4004441e6d5183e87af5af}{listPanel}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00170}00170                 \mbox{\hyperlink{classpresentacion_1_1vista_items_a38cc4657373194df2e622a5db43fd280}{cardPanel}}.repaint();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00171}00171                 \mbox{\hyperlink{classpresentacion_1_1vista_items_a38cc4657373194df2e622a5db43fd280}{cardPanel}}.revalidate();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00172}00172             \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00173}00173         \});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00174}00174         \mbox{\hyperlink{classpresentacion_1_1vista_items_a8f6973c43ff30e5f45dc8c6f81ebaa16}{remItButton}}.addActionListener(\textcolor{keyword}{new} ActionListener() \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00175}00175             @Override}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00176}00176             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00177}00177                 \mbox{\hyperlink{classpresentacion_1_1vista_items_a38cc4657373194df2e622a5db43fd280}{cardPanel}}.removeAll();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00178}00178                 \mbox{\hyperlink{classpresentacion_1_1vista_items_a38cc4657373194df2e622a5db43fd280}{cardPanel}}.add(\mbox{\hyperlink{classpresentacion_1_1vista_items_a1a2d23e23740730ad089c1767efc4dbc}{remItPanel}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00179}00179                 \mbox{\hyperlink{classpresentacion_1_1vista_items_a38cc4657373194df2e622a5db43fd280}{cardPanel}}.repaint();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00180}00180                 \mbox{\hyperlink{classpresentacion_1_1vista_items_a38cc4657373194df2e622a5db43fd280}{cardPanel}}.revalidate();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00181}00181             \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00182}00182         \});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00183}00183         \mbox{\hyperlink{classpresentacion_1_1vista_items_a317aa99a3f278c87694ba86599e970d7}{addModButton}}.addActionListener(\textcolor{keyword}{new} ActionListener() \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00184}00184             @Override}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00185}00185             \textcolor{keyword}{public} \textcolor{keywordtype}{void} actionPerformed(ActionEvent e) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00186}00186                 \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00187}00187                     \mbox{\hyperlink{classpresentacion_1_1vista_items_a9887d9f4b9d7b2d0b24d6a90c5e20b80}{iCtrlPresentacion}}.\mbox{\hyperlink{classpresentacion_1_1_ctrl_presentacion_a31b82a15f99228fa612f3fcf6d97c405}{changeFrame}}(\textcolor{stringliteral}{"{}añadirItem"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00188}00188                 \} \textcolor{keywordflow}{catch} (Exception ex) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00189}00189                     ex.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00190}00190                 \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00191}00191             \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00192}00192         \});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00193}00193     \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00194}00194 }
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00195}00195     \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00196}00196 \textcolor{comment}{// GUI initializer generated by IntelliJ IDEA GUI Designer}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00197}00197 \textcolor{comment}{// >>> IMPORTANT!! <<<}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00198}00198 \textcolor{comment}{// DO NOT EDIT OR ADD ANY CODE HERE!}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00199}00199         \mbox{\hyperlink{classpresentacion_1_1vista_items_a2ad1c869c870f6f97c731fc7bb933522}{\$\$\$setupUI\$\$\$}}();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00200}00200     \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00201}00201 }
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00209}\mbox{\hyperlink{classpresentacion_1_1vista_items_a2ad1c869c870f6f97c731fc7bb933522}{00209}}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \mbox{\hyperlink{classpresentacion_1_1vista_items_a2ad1c869c870f6f97c731fc7bb933522}{\$\$\$setupUI\$\$\$}}() \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00210}00210         \textcolor{keyword}{final} JPanel panel2 = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00211}00211         panel2.setLayout(\textcolor{keyword}{new} BorderLayout(0, 0));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00212}00212         panel2.setMaximumSize(\textcolor{keyword}{new} Dimension(750, 500));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00213}00213         panel2.setMinimumSize(\textcolor{keyword}{new} Dimension(750, 500));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00214}00214         panel2.setPreferredSize(\textcolor{keyword}{new} Dimension(750, 500));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00215}00215         \mbox{\hyperlink{classpresentacion_1_1vista_items_a36894acf53be13525a22e9d1c06b1db2}{panel1}} = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00216}00216         \mbox{\hyperlink{classpresentacion_1_1vista_items_a36894acf53be13525a22e9d1c06b1db2}{panel1}}.setLayout(\textcolor{keyword}{new} BorderLayout(0, 0));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00217}00217         \mbox{\hyperlink{classpresentacion_1_1vista_items_a36894acf53be13525a22e9d1c06b1db2}{panel1}}.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00218}00218         \mbox{\hyperlink{classpresentacion_1_1vista_items_a36894acf53be13525a22e9d1c06b1db2}{panel1}}.setMaximumSize(\textcolor{keyword}{new} Dimension(750, 500));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00219}00219         \mbox{\hyperlink{classpresentacion_1_1vista_items_a36894acf53be13525a22e9d1c06b1db2}{panel1}}.setMinimumSize(\textcolor{keyword}{new} Dimension(750, 500));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00220}00220         \mbox{\hyperlink{classpresentacion_1_1vista_items_a36894acf53be13525a22e9d1c06b1db2}{panel1}}.setPreferredSize(\textcolor{keyword}{new} Dimension(750, 500));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00221}00221         panel2.add(\mbox{\hyperlink{classpresentacion_1_1vista_items_a36894acf53be13525a22e9d1c06b1db2}{panel1}}, BorderLayout.CENTER);}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00222}00222         \textcolor{keyword}{final} JPanel panel3 = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00223}00223         panel3.setLayout(\textcolor{keyword}{new} BorderLayout(0, 0));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00224}00224         panel3.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00225}00225         panel3.setMaximumSize(\textcolor{keyword}{new} Dimension(500, 250));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00226}00226         panel3.setMinimumSize(\textcolor{keyword}{new} Dimension(500, 250));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00227}00227         panel3.setPreferredSize(\textcolor{keyword}{new} Dimension(500, 250));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00228}00228         \mbox{\hyperlink{classpresentacion_1_1vista_items_a36894acf53be13525a22e9d1c06b1db2}{panel1}}.add(panel3, BorderLayout.CENTER);}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00229}00229         \mbox{\hyperlink{classpresentacion_1_1vista_items_a38cc4657373194df2e622a5db43fd280}{cardPanel}} = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00230}00230         \mbox{\hyperlink{classpresentacion_1_1vista_items_a38cc4657373194df2e622a5db43fd280}{cardPanel}}.setLayout(\textcolor{keyword}{new} CardLayout(0, 0));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00231}00231         \mbox{\hyperlink{classpresentacion_1_1vista_items_a38cc4657373194df2e622a5db43fd280}{cardPanel}}.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00232}00232         panel3.add(\mbox{\hyperlink{classpresentacion_1_1vista_items_a38cc4657373194df2e622a5db43fd280}{cardPanel}}, BorderLayout.CENTER);}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00233}00233         \mbox{\hyperlink{classpresentacion_1_1vista_items_a11b3cfa3fe4004441e6d5183e87af5af}{listPanel}} = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00234}00234         \mbox{\hyperlink{classpresentacion_1_1vista_items_a11b3cfa3fe4004441e6d5183e87af5af}{listPanel}}.setLayout(\textcolor{keyword}{new} BorderLayout(0, 0));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00235}00235         \mbox{\hyperlink{classpresentacion_1_1vista_items_a11b3cfa3fe4004441e6d5183e87af5af}{listPanel}}.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00236}00236         \mbox{\hyperlink{classpresentacion_1_1vista_items_a38cc4657373194df2e622a5db43fd280}{cardPanel}}.add(\mbox{\hyperlink{classpresentacion_1_1vista_items_a11b3cfa3fe4004441e6d5183e87af5af}{listPanel}}, \textcolor{stringliteral}{"{}Card2"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00237}00237         \mbox{\hyperlink{classpresentacion_1_1vista_items_a94b7dc6211ae644fc1fb71fe330e8f50}{scrolly}} = \textcolor{keyword}{new} JScrollPane();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00238}00238         \mbox{\hyperlink{classpresentacion_1_1vista_items_a94b7dc6211ae644fc1fb71fe330e8f50}{scrolly}}.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00239}00239         \mbox{\hyperlink{classpresentacion_1_1vista_items_a11b3cfa3fe4004441e6d5183e87af5af}{listPanel}}.add(\mbox{\hyperlink{classpresentacion_1_1vista_items_a94b7dc6211ae644fc1fb71fe330e8f50}{scrolly}}, BorderLayout.CENTER);}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00240}00240         \textcolor{keyword}{final} JPanel panel4 = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00241}00241         panel4.setLayout(\textcolor{keyword}{new} GridLayoutManager(1, 2, \textcolor{keyword}{new} Insets(0, 0, 0, 0), -\/1, -\/1));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00242}00242         panel4.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00243}00243         \mbox{\hyperlink{classpresentacion_1_1vista_items_a11b3cfa3fe4004441e6d5183e87af5af}{listPanel}}.add(panel4, BorderLayout.SOUTH);}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00244}00244         \mbox{\hyperlink{classpresentacion_1_1vista_items_a8f6973c43ff30e5f45dc8c6f81ebaa16}{remItButton}} = \textcolor{keyword}{new} JButton();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00245}00245         \mbox{\hyperlink{classpresentacion_1_1vista_items_a8f6973c43ff30e5f45dc8c6f81ebaa16}{remItButton}}.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00246}00246         \mbox{\hyperlink{classpresentacion_1_1vista_items_a8f6973c43ff30e5f45dc8c6f81ebaa16}{remItButton}}.setLabel(\textcolor{stringliteral}{"{}Eliminar Item(s)"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00247}00247         \mbox{\hyperlink{classpresentacion_1_1vista_items_a8f6973c43ff30e5f45dc8c6f81ebaa16}{remItButton}}.setText(\textcolor{stringliteral}{"{}Eliminar Item(s)"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00248}00248         panel4.add(\mbox{\hyperlink{classpresentacion_1_1vista_items_a8f6973c43ff30e5f45dc8c6f81ebaa16}{remItButton}}, \textcolor{keyword}{new} GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR\_CENTER, GridConstraints.FILL\_HORIZONTAL, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, \textcolor{keyword}{null}, \textcolor{keyword}{null}, \textcolor{keyword}{null}, 0, \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00249}00249         \mbox{\hyperlink{classpresentacion_1_1vista_items_a317aa99a3f278c87694ba86599e970d7}{addModButton}} = \textcolor{keyword}{new} JButton();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00250}00250         \mbox{\hyperlink{classpresentacion_1_1vista_items_a317aa99a3f278c87694ba86599e970d7}{addModButton}}.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00251}00251         \mbox{\hyperlink{classpresentacion_1_1vista_items_a317aa99a3f278c87694ba86599e970d7}{addModButton}}.setText(\textcolor{stringliteral}{"{}Añadir/Modificar Item(s)"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00252}00252         panel4.add(\mbox{\hyperlink{classpresentacion_1_1vista_items_a317aa99a3f278c87694ba86599e970d7}{addModButton}}, \textcolor{keyword}{new} GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR\_CENTER, GridConstraints.FILL\_HORIZONTAL, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, GridConstraints.SIZEPOLICY\_FIXED, \textcolor{keyword}{null}, \textcolor{keyword}{null}, \textcolor{keyword}{null}, 0, \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00253}00253         \mbox{\hyperlink{classpresentacion_1_1vista_items_a1a2d23e23740730ad089c1767efc4dbc}{remItPanel}} = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00254}00254         \mbox{\hyperlink{classpresentacion_1_1vista_items_a1a2d23e23740730ad089c1767efc4dbc}{remItPanel}}.setLayout(\textcolor{keyword}{new} GridLayoutManager(3, 1, \textcolor{keyword}{new} Insets(20, 20, 20, 20), -\/1, -\/1));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00255}00255         \mbox{\hyperlink{classpresentacion_1_1vista_items_a1a2d23e23740730ad089c1767efc4dbc}{remItPanel}}.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00256}00256         \mbox{\hyperlink{classpresentacion_1_1vista_items_a38cc4657373194df2e622a5db43fd280}{cardPanel}}.add(\mbox{\hyperlink{classpresentacion_1_1vista_items_a1a2d23e23740730ad089c1767efc4dbc}{remItPanel}}, \textcolor{stringliteral}{"{}Card1"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00257}00257         \textcolor{keyword}{final} JPanel panel5 = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00258}00258         panel5.setLayout(\textcolor{keyword}{new} FlowLayout(FlowLayout.CENTER, 5, 5));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00259}00259         panel5.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00260}00260         \mbox{\hyperlink{classpresentacion_1_1vista_items_a1a2d23e23740730ad089c1767efc4dbc}{remItPanel}}.add(panel5, \textcolor{keyword}{new} GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR\_CENTER, GridConstraints.FILL\_HORIZONTAL, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, \textcolor{keyword}{null}, \textcolor{keyword}{null}, \textcolor{keyword}{null}, 0, \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00261}00261         \textcolor{keyword}{final} JLabel label1 = \textcolor{keyword}{new} JLabel();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00262}00262         label1.setText(\textcolor{stringliteral}{"{}    ITEM ID: "{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00263}00263         panel5.add(label1);}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00264}00264         \mbox{\hyperlink{classpresentacion_1_1vista_items_ad7ef6ba68729e856059600f0b8bdf487}{item}} = \textcolor{keyword}{new} JTextField();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00265}00265         \mbox{\hyperlink{classpresentacion_1_1vista_items_ad7ef6ba68729e856059600f0b8bdf487}{item}}.setPreferredSize(\textcolor{keyword}{new} Dimension(150, 30));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00266}00266         \mbox{\hyperlink{classpresentacion_1_1vista_items_ad7ef6ba68729e856059600f0b8bdf487}{item}}.setText(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00267}00267         panel5.add(\mbox{\hyperlink{classpresentacion_1_1vista_items_ad7ef6ba68729e856059600f0b8bdf487}{item}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00268}00268         \mbox{\hyperlink{classpresentacion_1_1vista_items_a65617e6e735845a0abcc911015b9ca58}{button}} = \textcolor{keyword}{new} JButton();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00269}00269         \mbox{\hyperlink{classpresentacion_1_1vista_items_a65617e6e735845a0abcc911015b9ca58}{button}}.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00270}00270         \mbox{\hyperlink{classpresentacion_1_1vista_items_a65617e6e735845a0abcc911015b9ca58}{button}}.setText(\textcolor{stringliteral}{"{}BORARR ITEM"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00271}00271         panel5.add(\mbox{\hyperlink{classpresentacion_1_1vista_items_a65617e6e735845a0abcc911015b9ca58}{button}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00272}00272         \mbox{\hyperlink{classpresentacion_1_1vista_items_a3614c69fff913bf972b345dec5535a75}{volverButton}} = \textcolor{keyword}{new} JButton();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00273}00273         \mbox{\hyperlink{classpresentacion_1_1vista_items_a3614c69fff913bf972b345dec5535a75}{volverButton}}.setBackground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00274}00274         \mbox{\hyperlink{classpresentacion_1_1vista_items_a3614c69fff913bf972b345dec5535a75}{volverButton}}.setText(\textcolor{stringliteral}{"{}Volver"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00275}00275         \mbox{\hyperlink{classpresentacion_1_1vista_items_a1a2d23e23740730ad089c1767efc4dbc}{remItPanel}}.add(\mbox{\hyperlink{classpresentacion_1_1vista_items_a3614c69fff913bf972b345dec5535a75}{volverButton}}, \textcolor{keyword}{new} GridConstraints(2, 0, 1, 1, GridConstraints.ANCHOR\_CENTER, GridConstraints.FILL\_HORIZONTAL, GridConstraints.SIZEPOLICY\_CAN\_SHRINK | GridConstraints.SIZEPOLICY\_CAN\_GROW, GridConstraints.SIZEPOLICY\_FIXED, \textcolor{keyword}{null}, \textcolor{keyword}{null}, \textcolor{keyword}{null}, 0, \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00276}00276         \textcolor{keyword}{final} JLabel label2 = \textcolor{keyword}{new} JLabel();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00277}00277         Font label2Font = this.\mbox{\hyperlink{classpresentacion_1_1vista_items_aa3c11ad5c74bbbaa6c1e534bc6cc066b}{\$\$\$getFont\$\$\$}}(\textcolor{stringliteral}{"{}Bangla MN"{}}, -\/1, 14, label2.getFont());}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00278}00278         \textcolor{keywordflow}{if} (label2Font != \textcolor{keyword}{null}) label2.setFont(label2Font);}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00279}00279         label2.setForeground(\textcolor{keyword}{new} Color(-\/13421238));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00280}00280         label2.setText(\textcolor{stringliteral}{"{}<html> Por favor, introduzca el identificador de los ítems que desee eliminar </html>"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00281}00281         \mbox{\hyperlink{classpresentacion_1_1vista_items_a1a2d23e23740730ad089c1767efc4dbc}{remItPanel}}.add(label2, \textcolor{keyword}{new} GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR\_WEST, GridConstraints.FILL\_NONE, GridConstraints.SIZEPOLICY\_FIXED, GridConstraints.SIZEPOLICY\_FIXED, \textcolor{keyword}{null}, \textcolor{keyword}{null}, \textcolor{keyword}{null}, 0, \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00282}00282         \textcolor{keyword}{final} JPanel panel6 = \textcolor{keyword}{new} JPanel();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00283}00283         panel6.setLayout(\textcolor{keyword}{new} GridLayoutManager(1, 1, \textcolor{keyword}{new} Insets(0, 0, 0, 0), -\/1, -\/1));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00284}00284         panel6.setBackground(\textcolor{keyword}{new} Color(-\/13421238));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00285}00285         panel6.setMaximumSize(\textcolor{keyword}{new} Dimension(250, 500));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00286}00286         panel6.setMinimumSize(\textcolor{keyword}{new} Dimension(250, 500));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00287}00287         panel6.setPreferredSize(\textcolor{keyword}{new} Dimension(250, 500));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00288}00288         \mbox{\hyperlink{classpresentacion_1_1vista_items_a36894acf53be13525a22e9d1c06b1db2}{panel1}}.add(panel6, BorderLayout.WEST);}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00289}00289         \textcolor{keyword}{final} JLabel label3 = \textcolor{keyword}{new} JLabel();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00290}00290         Font label3Font = this.\mbox{\hyperlink{classpresentacion_1_1vista_items_aa3c11ad5c74bbbaa6c1e534bc6cc066b}{\$\$\$getFont\$\$\$}}(\textcolor{stringliteral}{"{}Bangla MN"{}}, Font.PLAIN, 36, label3.getFont());}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00291}00291         \textcolor{keywordflow}{if} (label3Font != \textcolor{keyword}{null}) label3.setFont(label3Font);}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00292}00292         label3.setForeground(\textcolor{keyword}{new} Color(-\/1));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00293}00293         label3.setHorizontalAlignment(0);}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00294}00294         label3.setHorizontalTextPosition(0);}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00295}00295         label3.setText(\textcolor{stringliteral}{"{}Items"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00296}00296         panel6.add(label3, \textcolor{keyword}{new} GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR\_CENTER, GridConstraints.FILL\_NONE, GridConstraints.SIZEPOLICY\_FIXED, GridConstraints.SIZEPOLICY\_FIXED, \textcolor{keyword}{null}, \textcolor{keyword}{null}, \textcolor{keyword}{null}, 0, \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00297}00297     \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00298}00298 }
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00302}\mbox{\hyperlink{classpresentacion_1_1vista_items_aa3c11ad5c74bbbaa6c1e534bc6cc066b}{00302}}     \textcolor{keyword}{private} Font \mbox{\hyperlink{classpresentacion_1_1vista_items_aa3c11ad5c74bbbaa6c1e534bc6cc066b}{\$\$\$getFont\$\$\$}}(String fontName, \textcolor{keywordtype}{int} style, \textcolor{keywordtype}{int} size, Font currentFont) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00303}00303         \textcolor{keywordflow}{if} (currentFont == \textcolor{keyword}{null}) \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00304}00304         String resultName;}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00305}00305         \textcolor{keywordflow}{if} (fontName == \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00306}00306             resultName = currentFont.getName();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00307}00307         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00308}00308             Font testFont = \textcolor{keyword}{new} Font(fontName, Font.PLAIN, 10);}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00309}00309             \textcolor{keywordflow}{if} (testFont.canDisplay(\textcolor{charliteral}{'a'}) \&\& testFont.canDisplay(\textcolor{charliteral}{'1'})) \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00310}00310                 resultName = fontName;}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00311}00311             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00312}00312                 resultName = currentFont.getName();}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00313}00313             \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00314}00314         \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00315}00315         Font font = \textcolor{keyword}{new} Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00316}00316         \textcolor{keywordtype}{boolean} isMac = System.getProperty(\textcolor{stringliteral}{"{}os.name"{}}, \textcolor{stringliteral}{"{}"{}}).toLowerCase(Locale.ENGLISH).startsWith(\textcolor{stringliteral}{"{}mac"{}});}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00317}00317         Font fontWithFallback = isMac ? \textcolor{keyword}{new} Font(font.getFamily(), font.getStyle(), font.getSize()) : \textcolor{keyword}{new} StyleContext().getFont(font.getFamily(), font.getStyle(), font.getSize());}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00318}00318         \textcolor{keywordflow}{return} fontWithFallback instanceof FontUIResource ? fontWithFallback : \textcolor{keyword}{new} FontUIResource(fontWithFallback);}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00319}00319     \}}
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00320}00320 }
+\DoxyCodeLine{\Hypertarget{vista_items_8java_source_l00321}00321 \}}
+
+\end{DoxyCode}

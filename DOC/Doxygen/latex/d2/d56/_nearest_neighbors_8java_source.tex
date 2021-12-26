@@ -1,0 +1,180 @@
+\hypertarget{_nearest_neighbors_8java_source}{}\doxysection{Nearest\+Neighbors.\+java}
+\label{_nearest_neighbors_8java_source}\index{NearestNeighbors.java@{NearestNeighbors.java}}
+\mbox{\hyperlink{_nearest_neighbors_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00001}00001 \textcolor{keyword}{package }controladores; }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00005}00005 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceclases}{clases}}.*;}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00007}00007 \textcolor{keyword}{import} java.util.*;}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00019}\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors}{00019}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors}{NearestNeighbors}} \textcolor{keyword}{extends} \mbox{\hyperlink{classcontroladores_1_1_algoritmos}{Algoritmos}} \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00023}\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a9238b0f9c62dffd981d157d1265eba4d}{00023}}     \textcolor{keyword}{private} \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a9238b0f9c62dffd981d157d1265eba4d}{k}} = 0;}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00031}\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_ab2af7d30afcf14e56c49123fced3eee6}{00031}}     \textcolor{keyword}{public} \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_ab2af7d30afcf14e56c49123fced3eee6}{NearestNeighbors}}() \{\}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00040}\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_aeebe0e5a875b5e404f97a480607cab57}{00040}}     \textcolor{keyword}{public} \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_aeebe0e5a875b5e404f97a480607cab57}{NearestNeighbors}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a9238b0f9c62dffd981d157d1265eba4d}{k}}) \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00041}00041         \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors}{NearestNeighbors}}.\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a9238b0f9c62dffd981d157d1265eba4d}{k}} = \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a9238b0f9c62dffd981d157d1265eba4d}{k}};}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00042}00042     \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00053}\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a5bde56c23533f2311b41b21c7f2d7f18}{00053}}     \textcolor{keyword}{public} \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a5bde56c23533f2311b41b21c7f2d7f18}{NearestNeighbors}} (\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}{us}}, \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}, \mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a12da803fac97be1ebc727d328872df83}{it}})\{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00054}00054         super(\mbox{\hyperlink{classcontroladores_1_1_algoritmos_acd7a69a838d0bf0b5c696aeac5b61276}{us}}, \mbox{\hyperlink{classcontroladores_1_1_algoritmos_ac0df63a57a03bc30f35cfe97034ae786}{u}}, \mbox{\hyperlink{classcontroladores_1_1_algoritmos_a12da803fac97be1ebc727d328872df83}{it}});}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00055}00055     \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00064}\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a0733d034fbc55464e51a4108fd573b3e}{00064}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a0733d034fbc55464e51a4108fd573b3e}{setNeighbors}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a9238b0f9c62dffd981d157d1265eba4d}{k}}) \{ \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors}{NearestNeighbors}}.\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a9238b0f9c62dffd981d157d1265eba4d}{k}} = \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a9238b0f9c62dffd981d157d1265eba4d}{k}}; \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00074}\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a2cc0af27e488df6c1fe43c39c4c8cc1a}{00074}}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a2cc0af27e488df6c1fe43c39c4c8cc1a}{getMaxWordInAtributoTexto}}(\mbox{\hyperlink{classclases_1_1_atributo_texto}{AtributoTexto}} a) \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00075}00075         \textcolor{keywordtype}{int} max = 0;}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00076}00076         \textcolor{keywordflow}{for} (Map.Entry<String, Integer> word : a.\mbox{\hyperlink{classclases_1_1_atributo_texto_a9197dd3e348fafc0cbee5e712d097d30}{getValor}}().entrySet()) \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00077}00077             \textcolor{keywordflow}{if} (word.getValue() > max) max = word.getValue();}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00078}00078         \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00079}00079         \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00080}00080     \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00092}\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a22cbd347987fa78a2b1bb0493106d63e}{00092}}     \textcolor{keyword}{public} \textcolor{keywordtype}{double} \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a22cbd347987fa78a2b1bb0493106d63e}{cosineSimilarityBitSet}}(BitSet bsA, BitSet bsB) \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00093}00093         BitSet combination = (BitSet) bsA.clone();}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00094}00094         combination.and(bsB);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00096}00096         \textcolor{keywordtype}{double} dotProduct = combination.cardinality();}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00097}00097         \textcolor{keywordtype}{double} normA = bsA.cardinality();}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00098}00098         \textcolor{keywordtype}{double} normB = bsB.cardinality();}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00100}00100         \textcolor{keywordflow}{if} (normA == 0 || normB == 0) \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00101}00101         \textcolor{keywordflow}{return}  1 -\/ dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00102}00102     \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00113}\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_ac5c5001e32c21ca567d1443f9899c904}{00113}}     \textcolor{keyword}{public} \textcolor{keywordtype}{double} \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_ac5c5001e32c21ca567d1443f9899c904}{cosineSimilarity}}(Map<String, Double> mapA, Map<String, Double> mapB) \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00114}00114         \textcolor{keywordtype}{double} numerador = 0;}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00115}00115         \textcolor{keywordtype}{double} denominadorA = 0;}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00116}00116         \textcolor{keywordtype}{double} denominadorB = 0;}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00117}00117         \textcolor{keywordflow}{for} (Map.Entry<String, Double> words : mapA.entrySet()) \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00118}00118             \textcolor{keywordflow}{if} (mapB.containsKey(words.getKey())) \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00119}00119                 numerador += words.getValue() * mapB.get(words.getKey()).doubleValue();}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00120}00120             \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00121}00121             denominadorA += Math.pow(words.getValue(), 2);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00122}00122         \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00123}00123         \textcolor{keywordflow}{for} (Map.Entry<String, Double> words : mapB.entrySet()) \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00124}00124             denominadorB += Math.pow(words.getValue(), 2);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00125}00125         \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00126}00126         \textcolor{keywordflow}{if} (denominadorA == 0 || denominadorB == 0) \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00127}00127         \textcolor{keywordflow}{return} 1 -\/ numerador / (Math.sqrt(denominadorA)*Math.sqrt(denominadorB));}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00128}00128     \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00129}00129 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00139}\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_ab8c13ef123711e47edc2788f5dccbce2}{00139}}     \textcolor{keyword}{public} \textcolor{keywordtype}{double} \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_ab8c13ef123711e47edc2788f5dccbce2}{distanceNums}}(String att, \mbox{\hyperlink{classclases_1_1_item}{Item}} a, \mbox{\hyperlink{classclases_1_1_item}{Item}} b) \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00140}00140         \mbox{\hyperlink{classclases_1_1_atributo_numerico}{AtributoNumerico}} a1 = (\mbox{\hyperlink{classclases_1_1_atributo_numerico}{AtributoNumerico}}) a.\mbox{\hyperlink{classclases_1_1_item_a42235144cdb58eb1ee76c62f25e76d98}{getAtributo}}(att);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00141}00141         \mbox{\hyperlink{classclases_1_1_atributo_numerico}{AtributoNumerico}} b1 = (\mbox{\hyperlink{classclases_1_1_atributo_numerico}{AtributoNumerico}}) b.\mbox{\hyperlink{classclases_1_1_item_a42235144cdb58eb1ee76c62f25e76d98}{getAtributo}}(att);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00142}00142         \textcolor{keywordflow}{if} (a1.\mbox{\hyperlink{classclases_1_1_atributo_numerico_ae5bfc61a429833d9a379e10626c33df4}{getValorNormalizado}}() < 0 || b1.\mbox{\hyperlink{classclases_1_1_atributo_numerico_ae5bfc61a429833d9a379e10626c33df4}{getValorNormalizado}}() < 0) \textcolor{keywordflow}{return} 1.0;}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00143}00143         \textcolor{keywordflow}{return} Math.abs(a1.\mbox{\hyperlink{classclases_1_1_atributo_numerico_ae5bfc61a429833d9a379e10626c33df4}{getValorNormalizado}}() -\/ b1.\mbox{\hyperlink{classclases_1_1_atributo_numerico_ae5bfc61a429833d9a379e10626c33df4}{getValorNormalizado}}());}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00144}00144     \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00145}00145 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00155}\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a8a5bfad501f5ca010560bd73dd1590a8}{00155}}     \textcolor{keyword}{public} \textcolor{keywordtype}{double} \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a8a5bfad501f5ca010560bd73dd1590a8}{distanceFechas}}(String att, \mbox{\hyperlink{classclases_1_1_item}{Item}} a, \mbox{\hyperlink{classclases_1_1_item}{Item}} b) \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00156}00156         \mbox{\hyperlink{classclases_1_1_atributo_fecha}{AtributoFecha}} a1 = (\mbox{\hyperlink{classclases_1_1_atributo_fecha}{AtributoFecha}}) a.\mbox{\hyperlink{classclases_1_1_item_a42235144cdb58eb1ee76c62f25e76d98}{getAtributo}}(att);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00157}00157         \mbox{\hyperlink{classclases_1_1_atributo_fecha}{AtributoFecha}} b1 = (\mbox{\hyperlink{classclases_1_1_atributo_fecha}{AtributoFecha}}) b.\mbox{\hyperlink{classclases_1_1_item_a42235144cdb58eb1ee76c62f25e76d98}{getAtributo}}(att);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00158}00158         \textcolor{keywordflow}{if} (a1.\mbox{\hyperlink{classclases_1_1_atributo_fecha_aca0bee223d5da2322efb375ff2a85784}{getValorNormalizado}}() < 0 || b1.\mbox{\hyperlink{classclases_1_1_atributo_fecha_aca0bee223d5da2322efb375ff2a85784}{getValorNormalizado}}() < 0) \textcolor{keywordflow}{return} 1.0;}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00159}00159         \textcolor{keywordflow}{return} Math.abs(a1.\mbox{\hyperlink{classclases_1_1_atributo_fecha_aca0bee223d5da2322efb375ff2a85784}{getValorNormalizado}}() -\/ b1.\mbox{\hyperlink{classclases_1_1_atributo_fecha_aca0bee223d5da2322efb375ff2a85784}{getValorNormalizado}}());}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00160}00160     \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00161}00161 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00171}\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a71334a19401c8800cfed9eca3c95d58d}{00171}}     \textcolor{keyword}{public} \textcolor{keywordtype}{double} \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a71334a19401c8800cfed9eca3c95d58d}{distanceBooleans}}(String att, \mbox{\hyperlink{classclases_1_1_item}{Item}} a, \mbox{\hyperlink{classclases_1_1_item}{Item}} b) \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00172}00172         \mbox{\hyperlink{classclases_1_1_atributo_boolean}{AtributoBoolean}} a1 = (\mbox{\hyperlink{classclases_1_1_atributo_boolean}{AtributoBoolean}}) a.\mbox{\hyperlink{classclases_1_1_item_a42235144cdb58eb1ee76c62f25e76d98}{getAtributo}}(att);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00173}00173         \mbox{\hyperlink{classclases_1_1_atributo_boolean}{AtributoBoolean}} b1 = (\mbox{\hyperlink{classclases_1_1_atributo_boolean}{AtributoBoolean}}) b.\mbox{\hyperlink{classclases_1_1_item_a42235144cdb58eb1ee76c62f25e76d98}{getAtributo}}(att);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00174}00174         \textcolor{keywordflow}{if} (a1.\mbox{\hyperlink{classclases_1_1_atributo_boolean_afdbe33b9c0fc0955115de57a52562767}{getValor}}() == b1.\mbox{\hyperlink{classclases_1_1_atributo_boolean_afdbe33b9c0fc0955115de57a52562767}{getValor}}()) \textcolor{keywordflow}{return} 0.0;}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00175}00175         \textcolor{keywordflow}{return} 1.0;}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00176}00176     \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00177}00177 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00187}\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a8eda035cca42d0cb535d2123f3f35dff}{00187}}     \textcolor{keyword}{public} \textcolor{keywordtype}{double} \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a8eda035cca42d0cb535d2123f3f35dff}{distanceCategorico}}(String att, \mbox{\hyperlink{classclases_1_1_item}{Item}} a, \mbox{\hyperlink{classclases_1_1_item}{Item}} b) \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00188}00188         \mbox{\hyperlink{classclases_1_1_atributo_categorico}{AtributoCategorico}} a1 = (\mbox{\hyperlink{classclases_1_1_atributo_categorico}{AtributoCategorico}}) a.\mbox{\hyperlink{classclases_1_1_item_a42235144cdb58eb1ee76c62f25e76d98}{getAtributo}}(att);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00189}00189         \mbox{\hyperlink{classclases_1_1_atributo_categorico}{AtributoCategorico}} b1 = (\mbox{\hyperlink{classclases_1_1_atributo_categorico}{AtributoCategorico}}) b.\mbox{\hyperlink{classclases_1_1_item_a42235144cdb58eb1ee76c62f25e76d98}{getAtributo}}(att);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00190}00190         \textcolor{keywordflow}{if} ((a1.\mbox{\hyperlink{classclases_1_1_atributo_categorico_a997f59900224edf78fc1e831687543df}{getValor}}()).equals(b1.\mbox{\hyperlink{classclases_1_1_atributo_categorico_a997f59900224edf78fc1e831687543df}{getValor}}())) \textcolor{keywordflow}{return} 0.0;}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00191}00191         \textcolor{keywordflow}{return} 1.0;}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00192}00192     \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00193}00193 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00203}\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a1b9b39c88c182df6a83b10e2222b8b62}{00203}}     \textcolor{keyword}{public} \textcolor{keywordtype}{double} \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a1b9b39c88c182df6a83b10e2222b8b62}{distanceCategoricoMultiple}}(String att, \mbox{\hyperlink{classclases_1_1_item}{Item}} a, \mbox{\hyperlink{classclases_1_1_item}{Item}} b) \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00204}00204         \mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple}{AtributoCategoricoMultiple}} a1 = (\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple}{AtributoCategoricoMultiple}})a.\mbox{\hyperlink{classclases_1_1_item_a42235144cdb58eb1ee76c62f25e76d98}{getAtributo}}(att);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00205}00205         \mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple}{AtributoCategoricoMultiple}} b1 = (\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple}{AtributoCategoricoMultiple}})b.\mbox{\hyperlink{classclases_1_1_item_a42235144cdb58eb1ee76c62f25e76d98}{getAtributo}}(att);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00206}00206 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00207}00207         BitSet bs1 = a1.\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple_aebe8fb6fcebce610242202a24b00f49f}{getBitSet}}();}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00208}00208         BitSet bs2 = b1.\mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple_aebe8fb6fcebce610242202a24b00f49f}{getBitSet}}();}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00209}00209 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00210}00210         \textcolor{keywordflow}{return} \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a22cbd347987fa78a2b1bb0493106d63e}{cosineSimilarityBitSet}}(bs1, bs2);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00211}00211     \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00212}00212 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00221}\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a0613f3b0af9dc1fd6b844fe0f8a3961d}{00221}}     \textcolor{keyword}{public} \textcolor{keywordtype}{double} \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a0613f3b0af9dc1fd6b844fe0f8a3961d}{distanceTexto}}(String att, \mbox{\hyperlink{classclases_1_1_item}{Item}} a, \mbox{\hyperlink{classclases_1_1_item}{Item}} b) \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00222}00222         \mbox{\hyperlink{classclases_1_1_atributo_texto}{AtributoTexto}} a1 = (\mbox{\hyperlink{classclases_1_1_atributo_texto}{AtributoTexto}}) a.\mbox{\hyperlink{classclases_1_1_item_a42235144cdb58eb1ee76c62f25e76d98}{getAtributo}}(att);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00223}00223         \mbox{\hyperlink{classclases_1_1_atributo_texto}{AtributoTexto}} b1 = (\mbox{\hyperlink{classclases_1_1_atributo_texto}{AtributoTexto}}) b.\mbox{\hyperlink{classclases_1_1_item_a42235144cdb58eb1ee76c62f25e76d98}{getAtributo}}(att);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00224}00224 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00225}00225         Map<String, Integer> tfA = a1.\mbox{\hyperlink{classclases_1_1_atributo_texto_a9197dd3e348fafc0cbee5e712d097d30}{getValor}}();}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00226}00226         Map<String, Integer> tfB = b1.\mbox{\hyperlink{classclases_1_1_atributo_texto_a9197dd3e348fafc0cbee5e712d097d30}{getValor}}();}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00227}00227 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00228}00228         Map<String, Integer> IDF = \mbox{\hyperlink{classclases_1_1_parser}{Parser}}.\mbox{\hyperlink{classclases_1_1_parser_a49751e85dde70ffc687ec7a646ad7124}{getIDF}}().get(att);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00229}00229 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00230}00230         Map<String, Double> mapA = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00231}00231         Map<String, Double> mapB = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00232}00232 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00233}00233         \textcolor{keywordtype}{int} nDocuments = \mbox{\hyperlink{classclases_1_1_parser}{Parser}}.\mbox{\hyperlink{classclases_1_1_parser_a7c84ef1abefc019ba9f72209625cc9d3}{getAllItems}}().\mbox{\hyperlink{classclases_1_1_items_a91b5721dd501093975dcf67defae307f}{getSize}}();}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00234}00234 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00235}00235         \textcolor{keywordtype}{double} maxRepetitions = \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a2cc0af27e488df6c1fe43c39c4c8cc1a}{getMaxWordInAtributoTexto}}(a1);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00236}00236         \textcolor{keywordflow}{for} (Map.Entry<String, Integer> word : tfA.entrySet()) \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00237}00237             mapA.put(word.getKey(), (word.getValue()/maxRepetitions) * Math.log(1 + (nDocuments / IDF.get(word.getKey()).doubleValue())));}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00238}00238         \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00239}00239 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00240}00240         maxRepetitions = \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a2cc0af27e488df6c1fe43c39c4c8cc1a}{getMaxWordInAtributoTexto}}(b1);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00241}00241         \textcolor{keywordflow}{for} (Map.Entry<String, Integer> word : tfB.entrySet()) \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00242}00242             mapB.put(word.getKey(), (word.getValue()/maxRepetitions) * Math.log(1 + (nDocuments / IDF.get(word.getKey()).doubleValue())));}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00243}00243         \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00244}00244 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00245}00245         \textcolor{keywordflow}{return} \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_ac5c5001e32c21ca567d1443f9899c904}{cosineSimilarity}}(mapA, mapB);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00246}00246     \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00247}00247 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00261}\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a384d771784705ebb8511026a5e58e56a}{00261}}     \textcolor{keyword}{public} Double \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a384d771784705ebb8511026a5e58e56a}{prediccionValoracionItem}}(\mbox{\hyperlink{classclases_1_1_item}{Item}} item) \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00262}00262         \textcolor{keywordtype}{double} predValoracion = 0;}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00263}00263         Map <Integer, Double> valoraciones = super.u.getValoraciones();}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00264}00264         \textcolor{keywordflow}{for} (Map.Entry<Integer, Double> valoracionUsuario : valoraciones.entrySet()) \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00265}00265             \mbox{\hyperlink{classclases_1_1_item}{Item}} knownItem = \mbox{\hyperlink{classclases_1_1_parser}{Parser}}.\mbox{\hyperlink{classclases_1_1_parser_a7c84ef1abefc019ba9f72209625cc9d3}{getAllItems}}().\mbox{\hyperlink{classclases_1_1_items_aea1fe18eea7924c662d5ac23513538d9}{getItem}}(valoracionUsuario.getKey());}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00266}00266             Map<String, Atributo> attributes = knownItem.\mbox{\hyperlink{classclases_1_1_item_adccef6881276e5158e19e4cacabe986a}{getAtributos}}();}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00267}00267             \textcolor{keywordtype}{double} distance = 0;}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00268}00268             \textcolor{keywordflow}{for} (Map.Entry<String, \mbox{\hyperlink{classclases_1_1_atributo}{Atributo}}> att : attributes.entrySet()) \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00269}00269                 \textcolor{keywordflow}{if} (att.getValue() instanceof \mbox{\hyperlink{classclases_1_1_atributo_boolean}{AtributoBoolean}}) distance += \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a71334a19401c8800cfed9eca3c95d58d}{distanceBooleans}}(att.getKey(), knownItem, item);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00270}00270                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (att.getValue() instanceof \mbox{\hyperlink{classclases_1_1_atributo_numerico}{AtributoNumerico}}) distance += \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_ab8c13ef123711e47edc2788f5dccbce2}{distanceNums}}(att.getKey(), knownItem, item);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00271}00271                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (att.getValue() instanceof \mbox{\hyperlink{classclases_1_1_atributo_categorico}{AtributoCategorico}}) distance += \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a8eda035cca42d0cb535d2123f3f35dff}{distanceCategorico}}(att.getKey(), knownItem, item);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00272}00272                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (att.getValue() instanceof \mbox{\hyperlink{classclases_1_1_atributo_categorico_multiple}{AtributoCategoricoMultiple}}) distance += \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a1b9b39c88c182df6a83b10e2222b8b62}{distanceCategoricoMultiple}}(att.getKey(), knownItem, item);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00273}00273                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (att.getValue() instanceof \mbox{\hyperlink{classclases_1_1_atributo_texto}{AtributoTexto}}) distance += \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a0613f3b0af9dc1fd6b844fe0f8a3961d}{distanceTexto}}(att.getKey(), knownItem, item);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00274}00274                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (att.getValue() instanceof \mbox{\hyperlink{classclases_1_1_atributo_fecha}{AtributoFecha}}) distance += \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a8a5bfad501f5ca010560bd73dd1590a8}{distanceFechas}}(att.getKey(), knownItem, item);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00275}00275             \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00276}00276             distance /= attributes.size();}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00277}00277             predValoracion += ((1-\/distance) * valoracionUsuario.getValue());}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00278}00278         \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00279}00279         \textcolor{keywordflow}{return} predValoracion;}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00280}00280     \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00281}00281 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00293}\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a31847d9351a0af6d61958a4dd47ba67a}{00293}}     \textcolor{keyword}{public} Map<Integer, Double> \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a31847d9351a0af6d61958a4dd47ba67a}{computeAllPredicciones}}() \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00294}00294         \textcolor{comment}{//Key = idItem, value = distance}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00295}00295         Map<Integer, Double> similarities = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00296}00296         Map <Integer, Double> valoraciones = super.u.getValoraciones();}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00297}00297         Map<Integer, Double> predicciones = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00298}00298         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < super.it.getSize(); i++) similarities.put(i, 0.0);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00299}00299 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00300}00300         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < super.it.getSize(); i++) \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00301}00301             \textcolor{keywordflow}{if} (!valoraciones.containsKey(i)) \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00302}00302                 predicciones.put(i, \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a384d771784705ebb8511026a5e58e56a}{prediccionValoracionItem}}(super.it.getItem(i)));}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00303}00303             \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00304}00304             \textcolor{keywordflow}{else} predicciones.put(i, -\/1.0);}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00305}00305         \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00306}00306         \textcolor{comment}{//LinkedHashMap preserve the ordering of elements in which they are inserted}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00307}00307         Map <Integer, Double> orderedItems = \textcolor{keyword}{new} HashMap<>();}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00308}00308 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00309}00309         \textcolor{comment}{//Use Comparator.reverseOrder() for reverse ordering}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00310}00310         predicciones.entrySet()}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00311}00311                 .stream()}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00312}00312                 .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00313}00313                 .forEachOrdered(x -\/> orderedItems.put(x.getKey(), x.getValue()));}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00314}00314 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00315}00315         \textcolor{comment}{//ArrayList<Item> knn = new ArrayList<Item>( orderedItems.subList(0, k) );}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00316}00316 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00317}00317         \textcolor{keywordflow}{return} orderedItems;}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00318}00318     \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00319}00319 }
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00325}\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a81255daa09a672febc6284f7e5ca2faf}{00325}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a81255daa09a672febc6284f7e5ca2faf}{calcularRecomendaciones}} (\textcolor{keywordtype}{int} \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a9238b0f9c62dffd981d157d1265eba4d}{k}}) \{}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00326}00326         \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a0733d034fbc55464e51a4108fd573b3e}{setNeighbors}}(\mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a9238b0f9c62dffd981d157d1265eba4d}{k}});}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00327}00327         super.predictions = \mbox{\hyperlink{classcontroladores_1_1_nearest_neighbors_a31847d9351a0af6d61958a4dd47ba67a}{computeAllPredicciones}}();}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00328}00328     \}}
+\DoxyCodeLine{\Hypertarget{_nearest_neighbors_8java_source_l00329}00329 \}}
+
+\end{DoxyCode}

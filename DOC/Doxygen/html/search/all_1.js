@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['_5binstance_20initializer_5d_0',['[instance initializer]',['../dd/dcd/classpresentacion_1_1añdir_item.html#a4dbab36ddc219fdd477cfad05d281e95',1,'presentacion.añadirItem.[instance initializer]()'],['../d4/da2/classpresentacion_1_1cargar_datos.html#a1423e2c771635c41bf73e82c9d87f1a8',1,'presentacion.cargarDatos.[instance initializer]()'],['../d7/db5/classpresentacion_1_1historial_recomendaciones.html#af5fa528b8dbbba5475f2392ceda59b4e',1,'presentacion.historialRecomendaciones.[instance initializer]()'],['../de/d8f/classpresentacion_1_1vista_items.html#aea265b4b02b726ba86d64a475fed36c7',1,'presentacion.vistaItems.[instance initializer]()'],['../dd/d77/classpresentacion_1_1vista_principal.html#aa6abc2d0092098a82c85d90e11449699',1,'presentacion.vistaPrincipal.[instance initializer]()'],['../d1/df8/classpresentacion_1_1vista_recomendaciones.html#a8c8972c1088a9efd2178a4078685fd20',1,'presentacion.vistaRecomendaciones.[instance initializer]()']]]
+];

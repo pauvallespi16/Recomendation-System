@@ -1,0 +1,588 @@
+\hypertarget{classclases_1_1_slope_one}{}\doxysection{Referencia de la Clase clases.\+Slope\+One}
+\label{classclases_1_1_slope_one}\index{controladores.SlopeOne@{controladores.SlopeOne}}
+Diagrama de herencias de clases.\+Slope\+One\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{db/d5e/classclases_1_1_slope_one}
+\end{center}
+\end{figure}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classclases_1_1_slope_one_ad0eaa09f8a2ed05bf6b8c1dfd64b04f3}{Slope\+One}} ()
+\begin{DoxyCompactList}\small\item\em Constructora por defecto Constructora para inicializar un objeto de la clase, como los atributos son static no sera necesario. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclases_1_1_slope_one_abc01fdf8974e7c92209e8c9a109aa063}{Slope\+One}} (\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classclases_1_1_algoritmos_a2f7975f0a4de8f6f542d93614f231269}{us}}, \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classclases_1_1_algoritmos_a9308966fa7668a0eae76215d7d9b29d4}{u}}, \mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{classclases_1_1_algoritmos_a0f9329b2de1639b893c494d91ff612e6}{it}})
+\item 
+void \mbox{\hyperlink{classclases_1_1_slope_one_a73a5ed87831b5f6bcf0af44d840c6f05}{set\+Usuarios}} (\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} users)
+\begin{DoxyCompactList}\small\item\em Setter de cluster de usuarios. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_slope_one_ada07f1274629d006509e1cfd293ec082}{set\+User}} (\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} user)
+\begin{DoxyCompactList}\small\item\em Setter del usuario desde el cual ejecutaremos el \mbox{\hyperlink{class_slope}{Slope}} One También inicializa la mediana. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classclases_1_1_slope_one_a4488749e8637d25775d8047f52d6b7f1}{get\+Mediana}} ()
+\item 
+double \mbox{\hyperlink{classclases_1_1_slope_one_a0f13f7855f0d660aded93805864f160a}{get\+Prediction\+On\+Item}} (Integer item)
+\begin{DoxyCompactList}\small\item\em Coger la predicción de un \mbox{\hyperlink{classclases_1_1_item}{Item}} a partir de su id. \end{DoxyCompactList}\item 
+Map$<$ Integer, Double $>$ \mbox{\hyperlink{classclases_1_1_slope_one_a76a66598d01159bfb4534b54fc925320}{get\+All\+Predictions}} ()
+\begin{DoxyCompactList}\small\item\em Coger la predicción de todos los items. \end{DoxyCompactList}\item 
+Map$<$ Integer, Map$<$ Integer, Double $>$ $>$ \mbox{\hyperlink{classclases_1_1_slope_one_a602ef9aa09eb549917e57940971c373e}{get\+Diff}} ()
+\begin{DoxyCompactList}\small\item\em Getter de el mapa de desviaciones. \end{DoxyCompactList}\item 
+Map$<$ Integer, Map$<$ Integer, Integer $>$ $>$ \mbox{\hyperlink{classclases_1_1_slope_one_ae67a982a76c5239d4d4aac6a826d50f4}{get\+Freq}} ()
+\begin{DoxyCompactList}\small\item\em Getter de el mapa de frecuencias. \end{DoxyCompactList}\item 
+Map$<$ Integer, Double $>$ \mbox{\hyperlink{classclases_1_1_slope_one_ad2786e115133ebc593b593b6b652a7e1}{get\+Pred}} ()
+\begin{DoxyCompactList}\small\item\em Getter del mapa de predicciones. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_slope_one_a399d2ad60c7e86e16af7a1219f874971}{print\+Diff}} ()
+\begin{DoxyCompactList}\small\item\em Imprimir mapa de desviaciones. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_slope_one_a3fd3105ee7c163ac9394c231627815e7}{print\+Freq}} ()
+\begin{DoxyCompactList}\small\item\em Imprimir mapa de frecuencias. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_slope_one_afc1fb162b7f2edaa23eecd0a0deefc6b}{print\+Pred}} ()
+\begin{DoxyCompactList}\small\item\em Imprimir mapa de predicciones. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_slope_one_a9ad13a4da21e22a0e811de41b12bf7e0}{calcular\+Recomendaciones}} ()
+\begin{DoxyCompactList}\small\item\em para inicializar todo lo que debe calcular para sus recomendaciones \end{DoxyCompactList}\item 
+Map$<$ Integer, Double $>$ \mbox{\hyperlink{classclases_1_1_slope_one_ab3a4c9362185c94078cd57034bbeefd1}{get\+Predicciones}} ()
+\begin{DoxyCompactList}\small\item\em coger el mapa de predicciones generado por la llama a los algoritmos \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} \mbox{\hyperlink{classclases_1_1_algoritmos_a2f7975f0a4de8f6f542d93614f231269}{us}}
+\begin{DoxyCompactList}\small\item\em Conjunto de usuarios que vamos a usar para inicializar nuestro algoritmo de collaborative filtering. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} \mbox{\hyperlink{classclases_1_1_algoritmos_a9308966fa7668a0eae76215d7d9b29d4}{u}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} desde el cual vamos a hacer las predicciones de los items. \end{DoxyCompactList}\item 
+Map$<$ Integer, Double $>$ \mbox{\hyperlink{classclases_1_1_algoritmos_a958cfc144223019d3fea366384303554}{predictions}}
+\begin{DoxyCompactList}\small\item\em Mapa de predicciones de los algoritmos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classclases_1_1_items}{Items}} \mbox{\hyperlink{classclases_1_1_algoritmos_a0f9329b2de1639b893c494d91ff612e6}{it}}
+\begin{DoxyCompactList}\small\item\em Conjunto de items que se usaran para las valoraciones. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classclases_1_1_slope_one_a25c4b4a698a1b7137ef105d6450b0494}{calcular\+Mediana}} ()
+\begin{DoxyCompactList}\small\item\em Calcular mediana del usuario, se calcula automáticamente cuando se introduce un usuario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_slope_one_ae07ff3a44d464ab7f003b5ca7b5b2676}{computar\+Desviacion}} ()
+\begin{DoxyCompactList}\small\item\em Crear el mapa de desviaciones. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classclases_1_1_slope_one_a9ab2643fdc721d43941d9ce94f0ebad1}{computar\+Predicciones}} ()
+\begin{DoxyCompactList}\small\item\em Calcular las predicciones para el usuario u. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+Map$<$ Integer, Map$<$ Integer, Double $>$ $>$ \mbox{\hyperlink{classclases_1_1_slope_one_a81c8afb601c1513e3fb9a183a0072b58}{diff}} = new Hash\+Map$<$$>$()
+\begin{DoxyCompactList}\small\item\em Mapa de desviaciones para todos los usuarios formato @format Map \texorpdfstring{$<$}{<}Item\+Id, Map \texorpdfstring{$<$}{<}Item\+Id, Score\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} \end{DoxyCompactList}\item 
+Map$<$ Integer, Map$<$ Integer, Integer $>$ $>$ \mbox{\hyperlink{classclases_1_1_slope_one_a4862a62ccecaccab5793d5233379675d}{freq}} = new Hash\+Map$<$$>$()
+\begin{DoxyCompactList}\small\item\em cuantos usuarios han valorado los items \end{DoxyCompactList}\item 
+Map$<$ Integer, Double $>$ \mbox{\hyperlink{classclases_1_1_slope_one_a09e5b3ba184acb685468376638e97ff5}{pred}} = new Hash\+Map$<$$>$()
+\begin{DoxyCompactList}\small\item\em Predicciones de la puntuación que le daria un usuario a un item. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classclases_1_1_slope_one_a4c35b985d60de24e1287c67bda9beda9}{mediana}} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Mediana de predicción de las valoraciones del usuario u. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00027}{27}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classclases_1_1_slope_one_ad0eaa09f8a2ed05bf6b8c1dfd64b04f3}\label{classclases_1_1_slope_one_ad0eaa09f8a2ed05bf6b8c1dfd64b04f3}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!SlopeOne@{SlopeOne}}
+\index{SlopeOne@{SlopeOne}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{SlopeOne()}{SlopeOne()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily clases.\+Slope\+One.\+Slope\+One (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructora por defecto Constructora para inicializar un objeto de la clase, como los atributos son static no sera necesario. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se inicializa un objeto de la clase vacío 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00059}{59}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_slope_one_abc01fdf8974e7c92209e8c9a109aa063}\label{classclases_1_1_slope_one_abc01fdf8974e7c92209e8c9a109aa063}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!SlopeOne@{SlopeOne}}
+\index{SlopeOne@{SlopeOne}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{SlopeOne()}{SlopeOne()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily clases.\+Slope\+One.\+Slope\+One (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}}}]{us,  }\item[{\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}}]{u,  }\item[{\mbox{\hyperlink{classclases_1_1_items}{Items}}}]{it }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00061}{61}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classclases_1_1_slope_one_a25c4b4a698a1b7137ef105d6450b0494}\label{classclases_1_1_slope_one_a25c4b4a698a1b7137ef105d6450b0494}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!calcularMediana@{calcularMediana}}
+\index{calcularMediana@{calcularMediana}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{calcularMediana()}{calcularMediana()}}
+{\footnotesize\ttfamily clases.\+Slope\+One.\+calcular\+Mediana (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calcular mediana del usuario, se calcula automáticamente cuando se introduce un usuario. 
+
+\begin{DoxyPrecond}{Precondición}
+Se ha introducido un usuario como usuario base para las predicciones. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha inicializado el valor de la variable de clase mediana a l 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00155}{155}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_slope_one_a9ad13a4da21e22a0e811de41b12bf7e0}\label{classclases_1_1_slope_one_a9ad13a4da21e22a0e811de41b12bf7e0}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!calcularRecomendaciones@{calcularRecomendaciones}}
+\index{calcularRecomendaciones@{calcularRecomendaciones}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{calcularRecomendaciones()}{calcularRecomendaciones()}}
+{\footnotesize\ttfamily void clases.\+Slope\+One.\+calcular\+Recomendaciones (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+para inicializar todo lo que debe calcular para sus recomendaciones 
+
+
+
+Reimplementado de \mbox{\hyperlink{classclases_1_1_algoritmos_a51e3d4de4b144bec50d7ea70fff8962d}{clases.\+Algoritmos}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00304}{304}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_slope_one_ae07ff3a44d464ab7f003b5ca7b5b2676}\label{classclases_1_1_slope_one_ae07ff3a44d464ab7f003b5ca7b5b2676}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!computarDesviacion@{computarDesviacion}}
+\index{computarDesviacion@{computarDesviacion}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{computarDesviacion()}{computarDesviacion()}}
+{\footnotesize\ttfamily clases.\+Slope\+One.\+computar\+Desviacion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Crear el mapa de desviaciones. 
+
+Cogemos la diferencia entre cada usuario que tiene valoración para dos items i, j. Añadimos la desviación al mapa de diff y añadimos a la frecuencia de usuarios que han valorado i y j.
+
+PSEUDOCÓ\+DIGO\+: for every item i for every other item j for every user u expressing preference for both i and j add the difference in u’s preference for i and j to an average
+
+\begin{DoxyPrecond}{Precondición}
+Se han inicializado las variables u y us a un usuario y un conjunto de usuarios respectivamente. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se han calculado las desviaciones entre todos los items que un mismo usuario haya valorado. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00178}{178}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_slope_one_a9ab2643fdc721d43941d9ce94f0ebad1}\label{classclases_1_1_slope_one_a9ab2643fdc721d43941d9ce94f0ebad1}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!computarPredicciones@{computarPredicciones}}
+\index{computarPredicciones@{computarPredicciones}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{computarPredicciones()}{computarPredicciones()}}
+{\footnotesize\ttfamily clases.\+Slope\+One.\+computar\+Predicciones (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calcular las predicciones para el usuario u. 
+
+A partir del mapa de desviación y frequencia podemos calcular las valoraciones que hara el usuario. Cogeremos las diferencias de todo j e i donde i ha sido valorado por nuestro usuario, y la añadimos a la mediana de valoraciones de nuestro usuario la podemos predecir el valor que le dara nuestro usuario al item j.
+
+PSEUDOCÓ\+DIGO\+: for every item i the user u expresses no preference for for every item j that user u expresses a preference for find the average preference difference between j and i add this diff to u’s preference value for j return the top items, ranked by these averages
+
+\begin{DoxyPrecond}{Precondición}
+Se han inicializado las variable u, us, diff y freq de tal manera que podamos computar las predicciones. Para inicializar a diff y freq se tiene que llamar a computar\+Predicciones. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha inicializado el mapa de predicciones de manera que este contiene todas las predicciones que podemos hacer de un usuario base. 
+\end{DoxyPostcond}
+\begin{DoxySeeAlso}{Ver también}
+\mbox{\hyperlink{classclases_1_1_slope_one_a9ab2643fdc721d43941d9ce94f0ebad1}{computar\+Predicciones()}} 
+\end{DoxySeeAlso}
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00232}{232}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_slope_one_a76a66598d01159bfb4534b54fc925320}\label{classclases_1_1_slope_one_a76a66598d01159bfb4534b54fc925320}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!getAllPredictions@{getAllPredictions}}
+\index{getAllPredictions@{getAllPredictions}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{getAllPredictions()}{getAllPredictions()}}
+{\footnotesize\ttfamily clases.\+Slope\+One.\+get\+All\+Predictions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Coger la predicción de todos los items. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+se ha devuelto el mapa de predicciones 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+se devuelve el mapa de predicciones, un mapa vacío si este no esta inicializado. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00116}{116}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_slope_one_a602ef9aa09eb549917e57940971c373e}\label{classclases_1_1_slope_one_a602ef9aa09eb549917e57940971c373e}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!getDiff@{getDiff}}
+\index{getDiff@{getDiff}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{getDiff()}{getDiff()}}
+{\footnotesize\ttfamily clases.\+Slope\+One.\+get\+Diff (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter de el mapa de desviaciones. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto el mapa de desviaciones. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+Devuelve el mapa de desviaciones. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00126}{126}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_slope_one_ae67a982a76c5239d4d4aac6a826d50f4}\label{classclases_1_1_slope_one_ae67a982a76c5239d4d4aac6a826d50f4}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!getFreq@{getFreq}}
+\index{getFreq@{getFreq}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{getFreq()}{getFreq()}}
+{\footnotesize\ttfamily clases.\+Slope\+One.\+get\+Freq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter de el mapa de frecuencias. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto el mapa de frecuencias. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+Devuelve el mapa de frecuencias. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00136}{136}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_slope_one_a4488749e8637d25775d8047f52d6b7f1}\label{classclases_1_1_slope_one_a4488749e8637d25775d8047f52d6b7f1}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!getMediana@{getMediana}}
+\index{getMediana@{getMediana}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{getMediana()}{getMediana()}}
+{\footnotesize\ttfamily double clases.\+Slope\+One.\+get\+Mediana (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00094}{94}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_slope_one_ad2786e115133ebc593b593b6b652a7e1}\label{classclases_1_1_slope_one_ad2786e115133ebc593b593b6b652a7e1}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!getPred@{getPred}}
+\index{getPred@{getPred}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{getPred()}{getPred()}}
+{\footnotesize\ttfamily clases.\+Slope\+One.\+get\+Pred (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter del mapa de predicciones. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto el mapa de predicciones. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Devuelve}
+Devuelve el mapa de predicciones. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00146}{146}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_slope_one_ab3a4c9362185c94078cd57034bbeefd1}\label{classclases_1_1_slope_one_ab3a4c9362185c94078cd57034bbeefd1}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!getPredicciones@{getPredicciones}}
+\index{getPredicciones@{getPredicciones}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{getPredicciones()}{getPredicciones()}}
+{\footnotesize\ttfamily Map$<$ Integer, Double $>$ clases.\+Slope\+One.\+get\+Predicciones (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+coger el mapa de predicciones generado por la llama a los algoritmos 
+
+\begin{DoxyReturn}{Devuelve}
+devuelve las predicciones hechas por el algoritmo de predicciones 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classclases_1_1_algoritmos_ae23f28e26b154aca8bca6876722885c9}{clases.\+Algoritmos}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00309}{309}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_slope_one_a0f13f7855f0d660aded93805864f160a}\label{classclases_1_1_slope_one_a0f13f7855f0d660aded93805864f160a}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!getPredictionOnItem@{getPredictionOnItem}}
+\index{getPredictionOnItem@{getPredictionOnItem}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{getPredictionOnItem()}{getPredictionOnItem()}}
+{\footnotesize\ttfamily clases.\+Slope\+One.\+get\+Prediction\+On\+Item (\begin{DoxyParamCaption}\item[{Integer}]{item }\end{DoxyParamCaption})}
+
+
+
+Coger la predicción de un \mbox{\hyperlink{classclases_1_1_item}{Item}} a partir de su id. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha devuelto la predicción 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em item} & el id del item para el cual queremos una \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Si el usuario ya ha valorado el item se devolverá esta valoración, si no se devolver -\/1 si no se puede conseguir valoración de este item y la predicción si se puede. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00103}{103}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_slope_one_a399d2ad60c7e86e16af7a1219f874971}\label{classclases_1_1_slope_one_a399d2ad60c7e86e16af7a1219f874971}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!printDiff@{printDiff}}
+\index{printDiff@{printDiff}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{printDiff()}{printDiff()}}
+{\footnotesize\ttfamily clases.\+Slope\+One.\+print\+Diff (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprimir mapa de desviaciones. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El mapa de desviaciones ha sido imprimido por el output estandard @format \char`\"{}\+ITEM\+: \char`\"{} + i + \char`\"{}(\char`\"{} + j + \char`\"{},\char`\"{} + desviación en j + \char`\"{})\char`\"{} + ... (para toda i, j) 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00266}{266}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_slope_one_a3fd3105ee7c163ac9394c231627815e7}\label{classclases_1_1_slope_one_a3fd3105ee7c163ac9394c231627815e7}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!printFreq@{printFreq}}
+\index{printFreq@{printFreq}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{printFreq()}{printFreq()}}
+{\footnotesize\ttfamily clases.\+Slope\+One.\+print\+Freq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprimir mapa de frecuencias. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El mapa de frequencias ha sido imprimido por el output estandard @format \char`\"{}\+ITEM\+: \char`\"{} + i + \char`\"{}(\char`\"{} + j + \char`\"{},\char`\"{} + frecuencias en j + \char`\"{})\char`\"{} + ... (para toda i, j) 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00282}{282}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_slope_one_afc1fb162b7f2edaa23eecd0a0deefc6b}\label{classclases_1_1_slope_one_afc1fb162b7f2edaa23eecd0a0deefc6b}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!printPred@{printPred}}
+\index{printPred@{printPred}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{printPred()}{printPred()}}
+{\footnotesize\ttfamily clases.\+Slope\+One.\+print\+Pred (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprimir mapa de predicciones. 
+
+\begin{DoxyPrecond}{Precondición}
+-\/ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El mapa de predicciones ha sido imprimido por el output estandard @format \char`\"{}\+PREDICTION ITEM \char`\"{} + item\+ID + \char`\"{} IS \char`\"{} + predicted\+Value 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00298}{298}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_slope_one_ada07f1274629d006509e1cfd293ec082}\label{classclases_1_1_slope_one_ada07f1274629d006509e1cfd293ec082}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!setUser@{setUser}}
+\index{setUser@{setUser}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{setUser()}{setUser()}}
+{\footnotesize\ttfamily clases.\+Slope\+One.\+set\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}}}]{user }\end{DoxyParamCaption})}
+
+
+
+Setter del usuario desde el cual ejecutaremos el \mbox{\hyperlink{class_slope}{Slope}} One También inicializa la mediana. 
+
+\begin{DoxyPrecond}{Precondición}
+No hay usuario identificado en el slope one o esta identificado un usuario distinto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El usuario de la clase \mbox{\hyperlink{class_slope}{Slope}} One es user i la variable mediana se ha inicializado con la mediana de las valoraciones del usuario. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em user} & usuario del cual queremos sacar las predicciones. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Ver también}
+\mbox{\hyperlink{classclases_1_1_slope_one_a25c4b4a698a1b7137ef105d6450b0494}{calcular\+Mediana()}} 
+\end{DoxySeeAlso}
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00089}{89}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_slope_one_a73a5ed87831b5f6bcf0af44d840c6f05}\label{classclases_1_1_slope_one_a73a5ed87831b5f6bcf0af44d840c6f05}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!setUsuarios@{setUsuarios}}
+\index{setUsuarios@{setUsuarios}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{setUsuarios()}{setUsuarios()}}
+{\footnotesize\ttfamily clases.\+Slope\+One.\+set\+Usuarios (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}}}]{users }\end{DoxyParamCaption})}
+
+
+
+Setter de cluster de usuarios. 
+
+\begin{DoxyPrecond}{Precondición}
+El conjunto de usuarios no esta inicializado o esta inicializado a un conjunto de usuarios distinto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El atributo us que contiene el conjunto de usuarios del cual se basa el algoritmo es el conjunto de usuarios users. 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em users} & conjunto de usuarios desde el cual vamos a predecir los ratings del usuario. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00071}{71}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classclases_1_1_slope_one_a81c8afb601c1513e3fb9a183a0072b58}\label{classclases_1_1_slope_one_a81c8afb601c1513e3fb9a183a0072b58}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!diff@{diff}}
+\index{diff@{diff}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{diff}{diff}}
+{\footnotesize\ttfamily Map$<$ Integer, Map$<$ Integer, Double $>$ $>$ clases.\+Slope\+One.\+diff = new Hash\+Map$<$$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mapa de desviaciones para todos los usuarios formato @format Map \texorpdfstring{$<$}{<}Item\+Id, Map \texorpdfstring{$<$}{<}Item\+Id, Score\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} 
+
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00032}{32}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_slope_one_a4862a62ccecaccab5793d5233379675d}\label{classclases_1_1_slope_one_a4862a62ccecaccab5793d5233379675d}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!freq@{freq}}
+\index{freq@{freq}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{freq}{freq}}
+{\footnotesize\ttfamily Map$<$ Integer, Map$<$ Integer, Integer $>$ $>$ clases.\+Slope\+One.\+freq = new Hash\+Map$<$$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+cuantos usuarios han valorado los items 
+
+De esta manera contamos los cardinales de la fórmula de cálculo de predicciones. @format Map \texorpdfstring{$<$}{<}Item\+Id, Map \texorpdfstring{$<$}{<}Item\+Id, Frequencia\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} 
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00040}{40}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_algoritmos_a0f9329b2de1639b893c494d91ff612e6}\label{classclases_1_1_algoritmos_a0f9329b2de1639b893c494d91ff612e6}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!it@{it}}
+\index{it@{it}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{it}{it}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classclases_1_1_items}{Items}} clases.\+Algoritmos.\+it\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Conjunto de items que se usaran para las valoraciones. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00035}{35}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_slope_one_a4c35b985d60de24e1287c67bda9beda9}\label{classclases_1_1_slope_one_a4c35b985d60de24e1287c67bda9beda9}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!mediana@{mediana}}
+\index{mediana@{mediana}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{mediana}{mediana}}
+{\footnotesize\ttfamily double clases.\+Slope\+One.\+mediana = 0.\+0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mediana de predicción de las valoraciones del usuario u. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00050}{50}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_slope_one_a09e5b3ba184acb685468376638e97ff5}\label{classclases_1_1_slope_one_a09e5b3ba184acb685468376638e97ff5}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!pred@{pred}}
+\index{pred@{pred}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{pred}{pred}}
+{\footnotesize\ttfamily Map$<$ Integer, Double $>$ clases.\+Slope\+One.\+pred = new Hash\+Map$<$$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Predicciones de la puntuación que le daria un usuario a un item. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_slope_one_8java_source_l00045}{45}} del archivo \mbox{\hyperlink{_slope_one_8java_source}{Slope\+One.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_algoritmos_a958cfc144223019d3fea366384303554}\label{classclases_1_1_algoritmos_a958cfc144223019d3fea366384303554}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!predictions@{predictions}}
+\index{predictions@{predictions}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{predictions}{predictions}}
+{\footnotesize\ttfamily Map$<$ Integer, Double $>$ clases.\+Algoritmos.\+predictions\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Mapa de predicciones de los algoritmos. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00030}{30}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_algoritmos_a9308966fa7668a0eae76215d7d9b29d4}\label{classclases_1_1_algoritmos_a9308966fa7668a0eae76215d7d9b29d4}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!u@{u}}
+\index{u@{u}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{u}{u}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} clases.\+Algoritmos.\+u\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+\mbox{\hyperlink{classclases_1_1_usuario}{Usuario}} desde el cual vamos a hacer las predicciones de los items. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00025}{25}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+\mbox{\Hypertarget{classclases_1_1_algoritmos_a2f7975f0a4de8f6f542d93614f231269}\label{classclases_1_1_algoritmos_a2f7975f0a4de8f6f542d93614f231269}} 
+\index{controladores.SlopeOne@{controladores.SlopeOne}!us@{us}}
+\index{us@{us}!controladores.SlopeOne@{controladores.SlopeOne}}
+\doxysubsubsection{\texorpdfstring{us}{us}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classclases_1_1_usuarios}{Usuarios}} clases.\+Algoritmos.\+us\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Conjunto de usuarios que vamos a usar para inicializar nuestro algoritmo de collaborative filtering. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_algoritmos_8java_source_l00019}{19}} del archivo \mbox{\hyperlink{_algoritmos_8java_source}{Algoritmos.\+java}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_slope_one_8java}{Slope\+One.\+java}}\end{DoxyCompactItemize}
